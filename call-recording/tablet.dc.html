@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&amp;family=Noto+Sans+Armenian:wght@700&amp;display=swap" rel="stylesheet">
+<style>
+@font-face { font-family:'Druk Wide Cyr'; src:url('assets/fonts/DrukWideCyr.ttf') format('truetype'); font-weight:400 900; font-display:swap; }
+* { box-sizing:border-box; }
+html,body { margin:0; padding:0; }
+body { font-family:'Nunito',-apple-system,sans-serif; background:#ffffff; color:#323030; -webkit-font-smoothing:antialiased; }
+a { color:#373BF9; text-decoration:none; }
+a:hover { color:#2F34CE; }
+#mCards, #advCards{ -ms-overflow-style:none; scrollbar-width:none; }
+#mCards::-webkit-scrollbar, #advCards::-webkit-scrollbar{ display:none; height:0; width:0; }
+@keyframes pageIn { from{ opacity:0; transform:translateX(60px); } to{ opacity:1; transform:none; } }
+#mRoot{ animation:pageIn .8s cubic-bezier(.22,.61,.36,1) backwards; }
+html,body{ overflow-x:clip; }
+</style>
+</helmet>
+
+<div id="mRoot" style="width:100%;margin:0;overflow-x:clip;background:#ffffff;">
+
+  <section data-screen-label="Обложка (планшет)" style="position:relative;overflow:hidden;box-sizing:border-box;background:#1d1f2e;height:100vh;height:100svh;padding:120px 64px 44px;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:24px;">
+    <h1 style="position:relative;z-index:2;margin:0;align-self:stretch;font-family:'Druk Wide Cyr',sans-serif;font-weight:700;font-size:44px;line-height:110%;color:#ffffff;text-transform:uppercase;">Запись<br>разговора</h1>
+    <video data-no-reveal="" src="assets/hero-mob.mp4" autoplay="" muted="" playsinline="" preload="auto" style="position:absolute;inset:0;z-index:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center center;"></video>
+    <div style="position:absolute;inset:0;z-index:0;background:rgba(0,0,0,0.4);pointer-events:none;"></div>
+  </section>
+
+  <section data-screen-label="Преимущества умной записи (планшет)" style="position:relative;overflow:hidden;background:radial-gradient(1460px 2350px at -44% -15%, rgb(146,174,255) 3%, rgb(255,255,255) 56%, rgb(189,206,255) 94%);padding:200px 0 0;">
+    <span style="display: block; padding: 0 64px; font-family: 'Druk Wide Cyr',sans-serif; font-weight: 700; font-size:32px; line-height:100%; color: rgb(105,125,255); text-transform: uppercase; max-width: 640px">Преимущества умной записи разговора</span>
+    <div id="advWrap" style="position:relative;">
+    <button id="advPrev" type="button" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);z-index:5;width:52px;height:52px;border:none;border-radius:50%;background:rgba(255,255,255,0.92);box-shadow:0 6px 18px rgba(57,60,75,0.18);cursor:pointer;opacity:0;transition:opacity .25s ease;display:flex;align-items:center;justify-content:center;font-family:'Nunito';font-size:24px;line-height:100%;font-weight:700;color:#373BF9;">‹</button>
+    <button id="advNext" type="button" style="position: absolute; right: 14px; top: 50%; transform: translateY(-50%); z-index: 5; width: 52px; height: 52px; border: none; border-radius: 50%; background: rgba(255,255,255,0.92); box-shadow: 0 6px 18px rgba(57,60,75,0.18); cursor: pointer; opacity: 0; transition: opacity .25s ease; display: flex; align-items: center; justify-content: center; font-family: 'Nunito'; font-size:24px;line-height:100%; font-weight: 700; color: #373BF9">›</button>
+    <div id="advCards" style="display:flex;flex-direction:row;gap:24px;align-items:flex-start;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-padding-left:64px;box-sizing:border-box;width:100%;padding:44px 64px 200px;">
+      <div style="position:relative;width:372px;height:604px;overflow:hidden;border-radius:24px;background-color:rgba(255,255,255,0.3);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 10px 30px rgba(57,60,75,0.15),0 0 5.4px rgba(57,60,75,0.2);flex-shrink:0;scroll-snap-align:start;">
+        <span style="position:absolute;left:26px;top:20px;width:260px;font-family:'Druk Wide Cyr',sans-serif;font-weight:500;font-size:16px;line-height:140%;color:rgb(50,48,48);">Краткое содержание разговора</span>
+        <video src="uploads/adv-01.webm" autoplay="" muted="" loop="" playsinline="" style="position:absolute;left:13px;bottom:0;width:346px;height:490px;object-fit:cover;object-position:top center;clip-path:inset(17px 4px 0 4px round 57px 57px 0 0);-webkit-clip-path:inset(17px 4px 0 4px round 57px 57px 0 0);"></video>
+      </div>
+      <div style="position:relative;width:372px;height:604px;overflow:hidden;border-radius:24px;background-color:rgba(255,255,255,0.3);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 10px 30px rgba(57,60,75,0.15),0 0 5.4px rgba(57,60,75,0.2);flex-shrink:0;scroll-snap-align:start;">
+        <span style="position:absolute;left:26px;top:20px;width:320px;font-family:'Druk Wide Cyr',sans-serif;font-weight:500;font-size:16px;line-height:140%;color:rgb(50,48,48);">Подиалоговый перевод аудио в&nbsp;текст</span>
+        <video src="uploads/adv-02.webm" autoplay="" muted="" loop="" playsinline="" style="position:absolute;left:13px;bottom:0;width:346px;height:490px;object-fit:cover;object-position:top center;clip-path:inset(17px 4px 0 4px round 57px 57px 0 0);-webkit-clip-path:inset(17px 4px 0 4px round 57px 57px 0 0);"></video>
+      </div>
+      <div style="position:relative;width:372px;height:604px;overflow:hidden;border-radius:24px;background-color:rgba(255,255,255,0.3);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 10px 30px rgba(57,60,75,0.15),0 0 5.4px rgba(57,60,75,0.2);flex-shrink:0;scroll-snap-align:start;">
+        <span style="position:absolute;left:26px;top:20px;width:320px;font-family:'Druk Wide Cyr',sans-serif;font-weight:500;font-size:16px;line-height:140%;color:rgb(50,48,48);">Аналитика вызова и&nbsp;важная информация</span>
+        <video src="uploads/adv-03.webm" autoplay="" muted="" loop="" playsinline="" style="position:absolute;left:13px;bottom:0;width:346px;height:490px;object-fit:cover;object-position:top center;clip-path:inset(17px 4px 0 4px round 57px 57px 0 0);-webkit-clip-path:inset(17px 4px 0 4px round 57px 57px 0 0);"></video>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Кому нужна запись звонков (планшет)" style="position:relative;overflow:hidden;background:radial-gradient(90% 70% at 12% 8%, rgba(154,175,255,0.95) 0%, rgba(154,175,255,0) 60%), radial-gradient(80% 80% at 92% 30%, rgba(88,80,230,0.9) 0%, rgba(88,80,230,0) 65%), linear-gradient(135deg, #5A63DE 0%, #444FBC 45%, #3A2FE0 100%);padding:200px 0 200px;">
+    <h2 style="margin: 0 64px 44px; font-family: 'Druk Wide Cyr'; font-weight: 700; font-size:32px;line-height:100%; color: #ffffff; text-transform: uppercase; text-wrap: pretty">кому нужна запись звонков</h2>
+
+    <div id="mCardsWrap" style="position:relative;">
+    <button id="mPrev" type="button" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);z-index:5;width:52px;height:52px;border:none;border-radius:50%;background:rgba(255,255,255,0.92);box-shadow:0 6px 18px rgba(57,60,75,0.18);cursor:pointer;opacity:0;transition:opacity .25s ease;display:flex;align-items:center;justify-content:center;font-family:'Nunito';font-size:24px;line-height:100%;font-weight:700;color:#373BF9;">‹</button>
+    <button id="mNext" type="button" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);z-index:5;width:52px;height:52px;border:none;border-radius:50%;background:rgba(255,255,255,0.92);box-shadow:0 6px 18px rgba(57,60,75,0.18);cursor:pointer;opacity:0;transition:opacity .25s ease;display:flex;align-items:center;justify-content:center;font-family:'Nunito';font-size:24px;line-height:100%;font-weight:700;color:#373BF9;">›</button>
+    <div id="mCards" style="display:flex;flex-direction:row;gap:20px;overflow-x:auto;width:100%;padding:0 64px 6px;scroll-snap-type:x mandatory;">
+      <article data-who-card="" style="cursor:pointer;scroll-snap-align:center;position:relative;flex:0 0 368px;width:368px;height:384px;overflow:hidden;border-radius:24px;background:rgba(255,255,255,0.3);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 20px 36.8px rgba(57,60,75,0.1);perspective:1400px;">
+        <div data-flip="" style="position:absolute;inset:0;transform-style:preserve-3d;transition:transform .65s cubic-bezier(.4,.15,.2,1);">
+        <img src="assets/who/c1.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;pointer-events:none;backface-visibility:hidden;-webkit-backface-visibility:hidden;">
+        <div style="position:absolute;inset:0;transform-style:preserve-3d;pointer-events:none;">
+          <div style="font-family:'Druk Wide Cyr';font-weight:500;font-size:16px;line-height:140%;text-transform:uppercase;color:#ffffff;position:absolute;left:24px;right:24px;top:26px;backface-visibility:hidden;-webkit-backface-visibility:hidden;">Водители</div>
+          <div style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#323030;background:#ffffff;border-radius:24px;padding:32px 28px;position:absolute;inset:0;display:flex;align-items:center;transform:rotateY(180deg);backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:auto;" data-who-body="">Все&nbsp;эти&nbsp;люди находятся постоянно в&nbsp;дороге и&nbsp;часто отвечают на&nbsp;звонки. Но&nbsp;вот возможности записать, скинуть или&nbsp;как&nbsp;следует запомнить информацию у&nbsp;них нет.</div>
+        </div>
+        </div>
+      </article>
+
+      <article data-who-card="" style="cursor:pointer;scroll-snap-align:center;position:relative;flex:0 0 368px;width:368px;height:384px;overflow:hidden;border-radius:24px;background:rgba(255,255,255,0.3);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 20px 36.8px rgba(57,60,75,0.1);perspective:1400px;">
+        <div data-flip="" style="position:absolute;inset:0;transform-style:preserve-3d;transition:transform .65s cubic-bezier(.4,.15,.2,1);">
+        <img src="assets/who/c2.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;pointer-events:none;backface-visibility:hidden;-webkit-backface-visibility:hidden;">
+        <div style="position:absolute;inset:0;transform-style:preserve-3d;pointer-events:none;">
+          <div style="font-family:'Druk Wide Cyr';font-weight:500;font-size:16px;line-height:140%;text-transform:uppercase;color:#ffffff;position:absolute;left:24px;right:24px;top:26px;backface-visibility:hidden;-webkit-backface-visibility:hidden;">Люди с&nbsp;сниженным слухом</div><div style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#323030;background:#ffffff;border-radius:24px;padding:32px 28px;position:absolute;inset:0;display:flex;align-items:center;transform:rotateY(180deg);backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:auto;" data-who-body="">В&nbsp;России нарушениями слуха страдает 10–15% населения — примерно 13 миллионов человек, и&nbsp;лишь 300 тысяч из&nbsp;них полностью глухие. Остальные слышат отдельные звуки и&nbsp;предпочли бы&nbsp;переслушать звонок или&nbsp;прочитать его&nbsp;транскрибацию.</div>
+          
+        </div>
+        </div>
+      </article>
+
+      <article data-who-card="" style="cursor:pointer;scroll-snap-align:center;position:relative;flex:0 0 368px;width:368px;height:384px;overflow:hidden;border-radius:24px;background:rgba(255,255,255,0.3);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 20px 36.8px rgba(57,60,75,0.1);perspective:1400px;">
+        <div data-flip="" style="position:absolute;inset:0;transform-style:preserve-3d;transition:transform .65s cubic-bezier(.4,.15,.2,1);">
+        <img src="assets/who/c3.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;pointer-events:none;backface-visibility:hidden;-webkit-backface-visibility:hidden;">
+        <div style="position:absolute;inset:0;transform-style:preserve-3d;pointer-events:none;">
+          <div style="font-family:'Druk Wide Cyr';font-weight:500;font-size:16px;line-height:140%;text-transform:uppercase;color:#ffffff;position:absolute;left:24px;right:24px;top:26px;backface-visibility:hidden;-webkit-backface-visibility:hidden;">Юридическая информация</div>
+          <div style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#323030;background:#ffffff;border-radius:24px;padding:32px 28px;position:absolute;inset:0;display:flex;align-items:center;transform:rotateY(180deg);backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:auto;" data-who-body="">Люди, которым нужно записать важную юридическую информацию, например угрозы.</div>
+        </div>
+        </div>
+      </article>
+
+      <article data-who-card="" style="cursor:pointer;scroll-snap-align:center;position:relative;flex:0 0 368px;width:368px;height:384px;overflow:hidden;border-radius:24px;background:rgba(255,255,255,0.3);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 20px 36.8px rgba(57,60,75,0.1);perspective:1400px;">
+        <div data-flip="" style="position:absolute;inset:0;transform-style:preserve-3d;transition:transform .65s cubic-bezier(.4,.15,.2,1);">
+        <img src="assets/who/c4.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;pointer-events:none;backface-visibility:hidden;-webkit-backface-visibility:hidden;">
+        <div style="position:absolute;inset:0;transform-style:preserve-3d;pointer-events:none;">
+          <div style="font-family:'Druk Wide Cyr';font-weight:500;font-size:16px;line-height:140%;text-transform:uppercase;color:#ffffff;position:absolute;left:24px;right:24px;top:26px;backface-visibility:hidden;-webkit-backface-visibility:hidden;">Предприниматели</div>
+          <div style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#323030;background:#ffffff;border-radius:24px;padding:32px 28px;position:absolute;inset:0;display:flex;align-items:center;transform:rotateY(180deg);backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:auto;" data-who-body="">Люди, которые ведут бизнес, но&nbsp;ещё не&nbsp;перешли в&nbsp;категорию бизнес. Это&nbsp;ипшники, самозанятые и&nbsp;люди, оказывающие услуги. Все&nbsp;эти&nbsp;люди размещают объявления и&nbsp;принимают заявки самостоятельно.</div>
+        </div>
+        </div>
+      </article>
+
+      <article data-who-card="" style="cursor:pointer;scroll-snap-align:center;position:relative;flex:0 0 368px;width:368px;height:384px;overflow:hidden;border-radius:24px;background:rgba(255,255,255,0.3);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 20px 36.8px rgba(57,60,75,0.1);perspective:1400px;">
+        <div data-flip="" style="position:absolute;inset:0;transform-style:preserve-3d;transition:transform .65s cubic-bezier(.4,.15,.2,1);">
+        <img src="assets/who/c5.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;pointer-events:none;backface-visibility:hidden;-webkit-backface-visibility:hidden;">
+        <div style="position:absolute;inset:0;transform-style:preserve-3d;pointer-events:none;">
+          <div style="font-family:'Druk Wide Cyr';font-weight:500;font-size:16px;line-height:140%;text-transform:uppercase;color:#ffffff;position:absolute;left:24px;right:24px;top:26px;backface-visibility:hidden;-webkit-backface-visibility:hidden;">Невнимательные</div>
+          <div style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#323030;background:#ffffff;border-radius:24px;padding:32px 28px;position:absolute;inset:0;display:flex;align-items:center;transform:rotateY(180deg);backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:auto;" data-who-body="">Огромное число людей моментально забывает, о&nbsp;чём они&nbsp;только что&nbsp;говорили, а&nbsp;детали и&nbsp;вовсе теряют.</div>
+        </div>
+        </div>
+      </article>
+    </div>
+    </div>
+
+    <div style="padding:120px 64px 0;">
+      <h2 style="font-family: 'Druk Wide Cyr'; font-weight: 700; font-size:16px; line-height:140%; color: #ffffff; margin: 0 0 44px 0; max-width: 640px; text-transform: uppercase">Что&nbsp;важно для&nbsp;разных пользователей</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+        <div>
+          <div style="font-family:'Druk Wide Cyr';font-weight:700;font-size:16px;line-height:140%;color:#ffffff;margin-bottom:20px;">B2B</div>
+          <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;">
+            <li style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#EEF7FF;padding-left:26px;position:relative;"><span style="position:absolute;left:0;top:0.5em;width:7px;height:7px;border-radius:50%;background:#EEF7FF;"></span>Запись звонков с&nbsp;клиентами</li>
+            <li style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#EEF7FF;padding-left:26px;position:relative;"><span style="position:absolute;left:0;top:0.5em;width:7px;height:7px;border-radius:50%;background:#EEF7FF;"></span>Анализ звонков</li>
+            <li style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#EEF7FF;padding-left:26px;position:relative;"><span style="position:absolute;left:0;top:0.5em;width:7px;height:7px;border-radius:50%;background:#EEF7FF;"></span>Поиск мест которых можно улучшить</li>
+          </ul>
+        </div>
+        <div>
+          <div style="font-family: 'Druk Wide Cyr'; font-weight: 700; font-size:16px; line-height:140%; color: #ffffff; margin-bottom: 20px; text-transform: uppercase">Клиенты</div>
+          <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;">
+            <li style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#EEF7FF;padding-left:26px;position:relative;"><span style="position:absolute;left:0;top:0.5em;width:7px;height:7px;border-radius:50%;background:#EEF7FF;"></span>Информирование о&nbsp;записи</li>
+            <li style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#EEF7FF;padding-left:26px;position:relative;"><span style="position:absolute;left:0;top:0.5em;width:7px;height:7px;border-radius:50%;background:#EEF7FF;"></span>Разделение на&nbsp;голосовые дорожки</li>
+            <li style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#EEF7FF;padding-left:26px;position:relative;"><span style="position:absolute;left:0;top:0.5em;width:7px;height:7px;border-radius:50%;background:#EEF7FF;"></span>Расшифровка диалога</li>
+            <li style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#EEF7FF;padding-left:26px;position:relative;"><span style="position:absolute;left:0;top:0.5em;width:7px;height:7px;border-radius:50%;background:#EEF7FF;"></span>Саммари</li>
+            <li style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#EEF7FF;padding-left:26px;position:relative;"><span style="position:absolute;left:0;top:0.5em;width:7px;height:7px;border-radius:50%;background:#EEF7FF;"></span>Интеграция в&nbsp;мобильное приложение и&nbsp;мессенджер</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Языковые модели (планшет)" style="position:relative;overflow:hidden;background:linear-gradient(191deg,#ffffff 13%,#EEF7FF 86%);padding:200px 64px;">
+    <img src="uploads/11.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;">
+    <div style="position:relative;z-index:1;">
+      <h2 style="font-family:'Druk Wide Cyr';font-weight:700;font-size:32px;line-height:100%;color:#373BF9;margin:0 0 20px 0;max-width:700px;">Обучаем нашу собственную языковую модель любому языку и&nbsp;диалекту</h2>
+      <p style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#323030;margin:0 0 44px 0;max-width:660px;">У&nbsp;нас собственная модель обработки аудио в&nbsp;текст, которую мы&nbsp;можем научить любому, даже не&nbsp;очень распространённому языку в&nbsp;короткие сроки. С&nbsp;распространёнными языками, такими как&nbsp;Испанский, мы&nbsp;тоже работаем. Но&nbsp;для&nbsp;них мы&nbsp;можем использовать уже&nbsp;готовую языковую модель, для&nbsp;ускорения разработки.</p>
+
+      <div style="font-family:'Nunito';font-weight:700;font-size:24px;line-height:100%;color:#323030;margin-bottom:28px;">Мы&nbsp;уже&nbsp;разработали следующие языковые модели</div>
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-bottom:44px;">
+        <div>
+          <div style="font-family:'Noto Sans Armenian';font-weight:600;font-size:24px;line-height:100%;color:#373BF9;margin-bottom:6px;">Հայերեն</div>
+          <div style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#74748F;">Армянский язык</div>
+        </div>
+        <div>
+          <div style="font-family:'Nunito';font-weight:700;font-size:24px;line-height:100%;color:#373BF9;margin-bottom:6px;">o'zbek</div>
+          <div style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#74748F;">Узбекский язык</div>
+        </div>
+        <div>
+          <div style="font-family:'Nunito';font-weight:700;font-size:24px;line-height:100%;color:#373BF9;margin-bottom:6px;">тоҷикӣ</div>
+          <div style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#74748F;">Таджикский язык</div>
+        </div>
+      </div>
+
+      <div style="border-radius: 24px; background: #ffffff; box-shadow: 0 0 16px rgba(57,60,75,0.1),0 10px 16px rgba(57,60,75,0.05); padding: 32px; display: flex; flex-direction: column; gap: 18px; max-width: none; width: 100%; flex: 1 1 100%">
+        <div id="autoToggle" style="flex:0 0 auto;width:74px;height:42px;border-radius:26px;background:#373BF9;position:relative;cursor:pointer;transition:background .3s ease;">
+          <div id="autoKnob" style="position:absolute;top:3.5px;left:36px;width:35px;height:35px;border-radius:50%;background:#ffffff;box-shadow:0 3px 9px rgba(0,0,0,0.15);transition:left .28s cubic-bezier(.4,0,.2,1);"></div>
+        </div><div style="font-family:'Druk Wide Cyr';font-weight:700;font-size:16px;line-height:140%;color:#323030;">Законно ли&nbsp;записывать звонки?</div>
+        <div style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#74748F;">Да, запись диалога законна, если уведомлена вторая сторона. Абонент может сделать это&nbsp;самостоятельно или&nbsp;воспользоваться автоинформированием.</div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Для бизнеса (планшет)" style="position:relative;overflow:hidden;background:radial-gradient(1200px 1000px at -20% -10%, rgb(55,59,249) 12%, rgb(214,219,255) 100%);padding:200px 64px;">
+    <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:44px;">
+      <div style="font-family:'Druk Wide Cyr';font-weight:700;font-size:32px;line-height:118%;color:#ffffff;text-transform:uppercase;">Для&nbsp;бизнеса</div>
+      <div style="font-family:'Nunito';font-weight:500;font-size:16px;line-height:140%;color:#ffffff;max-width:560px;">Мы&nbsp;можем настроить запись и&nbsp;аналитику под&nbsp;ваш бизнес</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 40px;margin-bottom:44px;">
+      <div data-biz-item="" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;opacity:0;transform:translateX(48px);transition:opacity .7s ease, transform .7s cubic-bezier(.22,.61,.36,1);">
+        <img src="assets/star-a.svg" alt="" style="width:44px;height:44px;flex:0 0 auto;">
+        <div style="font-family:'Druk Wide Cyr';font-weight:700;font-size:16px;line-height:140%;color:#ffffff;text-transform:uppercase;width:100%;">подсказки в&nbsp;момент разговора</div>
+      </div>
+      <div data-biz-item="" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;opacity:0;transform:translateX(48px);transition:opacity .7s ease, transform .7s cubic-bezier(.22,.61,.36,1);">
+        <img src="assets/star-b.svg" alt="" style="width:44px;height:44px;flex:0 0 auto;">
+        <div style="font-family:'Druk Wide Cyr';font-weight:700;font-size:16px;line-height:140%;color:#ffffff;text-transform:uppercase;width:100%;">анализ разговора после звонка</div>
+      </div>
+      <div data-biz-item="" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;opacity:0;transform:translateX(48px);transition:opacity .7s ease, transform .7s cubic-bezier(.22,.61,.36,1);">
+        <img src="assets/star-a.svg" alt="" style="width:44px;height:44px;flex:0 0 auto;">
+        <div style="font-family:'Druk Wide Cyr';font-weight:700;font-size:16px;line-height:140%;color:#ffffff;text-transform:uppercase;width:100%;">Напоминания о&nbsp;договорённостях в&nbsp;звонке</div>
+      </div>
+    </div>
+    <img src="uploads/analytics-2.png" alt="Аналитика разговора" style="display:block;width:100%;height:auto;border-radius:14px;box-shadow:0 7px 42px rgba(0,0,0,0.45),0 4px 26px rgba(55,59,249,0.25);">
+  </section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:834,&quot;height&quot;:1112}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const hv = document.querySelector('video[src="assets/hero-mob.mp4"]');
+    if (hv) {
+      hv.muted = true; hv.loop = false;
+      const play = () => { const p = hv.play(); if (p && p.catch) p.catch(() => {}); };
+      hv.addEventListener('ended', () => { setTimeout(() => { hv.currentTime = 0; play(); }, 10000); });
+      play();
+    }
+    // Поэлементное появление справа налево при прокрутке
+    setTimeout(() => {
+      const root = document.getElementById('pageRoot') || document.getElementById('mRoot');
+      if (!root || !('IntersectionObserver' in window)) return;
+      const SEL = 'h1,h2,h3,h4,p,img,video,article,button,a,li,label,input,[data-feat]';
+      const SKIP = '[data-slide-in],[data-demo],[data-biz-item],[data-no-reveal],#heroTrack,#mCards,#advCards,[data-noscroll]';
+      const hasText = (el) => Array.from(el.childNodes).some((n) => n.nodeType === 3 && n.textContent.trim());
+      const cand = new Set();
+      root.querySelectorAll('section').forEach((sec) => {
+        if (sec.querySelector('#heroTrack')) return;
+        sec.querySelectorAll('*').forEach((el) => {
+          if (el.dataset.elRev || el.closest(SKIP)) return;
+          const ecs = getComputedStyle(el);
+          const isCard = el.tagName === 'DIV' && (ecs.boxShadow !== 'none' || (ecs.backgroundColor !== 'rgba(0, 0, 0, 0)' && ecs.borderRadius !== '0px'));
+          const isGroup = el.tagName === 'DIV' && el.children.length > 0 && el.children.length <= 3 && Array.from(el.children).every((c) => c.children.length === 0 && hasText(c));
+          if (!(el.matches(SEL) || isCard || isGroup || (el.tagName === 'DIV' && hasText(el)) || (el.tagName === 'SPAN' && getComputedStyle(el).display === 'block'))) return;
+          if (el.offsetParent === null && getComputedStyle(el).position !== 'fixed') return;
+          if (el.tagName === 'IMG' && getComputedStyle(el).pointerEvents === 'none' && getComputedStyle(el).position === 'absolute') return;
+          cand.add(el);
+        });
+      });
+      const els = Array.from(cand).filter((el) => { let p = el.parentElement; while (p && p !== root) { if (cand.has(p)) return false; p = p.parentElement; } return true; });
+      els.forEach((el) => {
+        el.dataset.elRev = '1';
+        el._prevTr = el.style.transition;
+        el._fade = !el.style.opacity;
+        const tr = 'translate .7s cubic-bezier(.22,.61,.36,1)' + (el._fade ? ', opacity .7s ease' : '');
+        el.style.transition = (el._prevTr ? el._prevTr + ', ' : '') + tr;
+        el.style.translate = '48px 0';
+        if (el._fade) el.style.opacity = '0';
+      });
+      const io = new IntersectionObserver((es) => {
+        let i = 0;
+        es.forEach((e) => {
+          if (!e.isIntersecting) return;
+          const el = e.target; io.unobserve(el);
+          const d = Math.min(i++ * 70, 420);
+          setTimeout(() => {
+            el.style.translate = '0px 0';
+            if (el._fade) el.style.opacity = '';
+            setTimeout(() => { el.style.transition = el._prevTr; el.style.translate = ''; }, 800);
+          }, d);
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+      els.forEach((el) => io.observe(el));
+    }, 60);
+    const wrap = document.getElementById('mCardsWrap');
+    const track = document.getElementById('mCards');
+    const prev = document.getElementById('mPrev');
+    const next = document.getElementById('mNext');
+    if (wrap && track && prev && next) {
+      const step = 388;
+      const sync = () => {
+        prev.style.pointerEvents = track.scrollLeft > 8 ? 'auto' : 'none';
+        next.style.pointerEvents = track.scrollLeft < track.scrollWidth - track.clientWidth - 8 ? 'auto' : 'none';
+        prev.style.opacity = wrap.dataset.hover === '1' && track.scrollLeft > 8 ? '1' : '0';
+        next.style.opacity = wrap.dataset.hover === '1' && track.scrollLeft < track.scrollWidth - track.clientWidth - 8 ? '1' : '0';
+      };
+      wrap.addEventListener('mouseenter', () => { wrap.dataset.hover = '1'; sync(); });
+      wrap.addEventListener('mouseleave', () => { wrap.dataset.hover = '0'; sync(); });
+      track.addEventListener('scroll', sync);
+      prev.addEventListener('click', () => track.scrollBy({ left: -step, behavior: 'smooth' }));
+      next.addEventListener('click', () => track.scrollBy({ left: step, behavior: 'smooth' }));
+      sync();
+    }
+
+    const aWrap = document.getElementById('advWrap');
+    const aTrack = document.getElementById('advCards');
+    const aPrev = document.getElementById('advPrev');
+    const aNext = document.getElementById('advNext');
+    if (aWrap && aTrack && aPrev && aNext) {
+      const aStep = 400;
+      const aSync = () => {
+        const canL = aTrack.scrollLeft > 8;
+        const canR = aTrack.scrollLeft < aTrack.scrollWidth - aTrack.clientWidth - 8;
+        aPrev.style.pointerEvents = canL ? 'auto' : 'none';
+        aNext.style.pointerEvents = canR ? 'auto' : 'none';
+        aPrev.style.opacity = aWrap.dataset.hover === '1' && canL ? '1' : '0';
+        aNext.style.opacity = aWrap.dataset.hover === '1' && canR ? '1' : '0';
+      };
+      aWrap.addEventListener('mouseenter', () => { aWrap.dataset.hover = '1'; aSync(); });
+      aWrap.addEventListener('mouseleave', () => { aWrap.dataset.hover = '0'; aSync(); });
+      aTrack.addEventListener('scroll', aSync);
+      aPrev.addEventListener('click', () => aTrack.scrollBy({ left: -aStep, behavior: 'smooth' }));
+      aNext.addEventListener('click', () => aTrack.scrollBy({ left: aStep, behavior: 'smooth' }));
+      aSync();
+    }
+
+    const bizItems = Array.from(document.querySelectorAll('[data-biz-item]'));
+    if (bizItems.length) {
+      const showBiz = () => bizItems.forEach((el, i) => {
+        setTimeout(() => { el.style.opacity = '1'; el.style.transform = 'translateX(0)'; }, i * 350);
+      });
+      const bSec = bizItems[0].closest('section');
+      if (bSec && 'IntersectionObserver' in window) {
+        const bio = new IntersectionObserver((es) => {
+          es.forEach((e) => { if (e.isIntersecting) { showBiz(); bio.disconnect(); } });
+        }, { threshold: 0.15 });
+        bio.observe(bSec);
+      } else showBiz();
+    }
+    document.querySelectorAll('[data-who-card]').forEach((card) => {
+      card.addEventListener('click', () => {
+        const flip = card.querySelector('[data-flip]');
+        if (!flip) return;
+        const on = flip.dataset.on === '1';
+        document.querySelectorAll('[data-flip]').forEach((f) => { f.style.transform = 'none'; f.dataset.on = '0'; });
+        if (!on) { flip.style.transform = 'rotateY(180deg)'; flip.dataset.on = '1'; }
+      });
+    });
+    document.querySelectorAll('#mRoot video').forEach((v) => {
+      v.muted = true; v.loop = true; v.playsInline = true; v.autoplay = true;
+      const go = () => v.play().catch(() => {});
+      go(); v.addEventListener('loadeddata', go, { once: true });
+    });
+    const els = Array.from(document.querySelectorAll('#mRoot section > *:not(img)'));
+    els.forEach((el) => { el.style.opacity = '0'; el.style.transform = 'translateX(36px)'; el.style.transition = 'opacity .7s ease, transform .7s cubic-bezier(.22,.61,.36,1)'; });
+    const io = new IntersectionObserver((ents) => {
+      ents.forEach((e) => {
+        if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'none'; io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    requestAnimationFrame(() => els.forEach((el) => io.observe(el)));
+    setTimeout(() => els.forEach((el) => { el.style.opacity = '1'; el.style.transform = 'none'; }), 1200);
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+/* Sifox color tokens — exact values from the Figma palette frame. */
+:root {
+  /* Accents */
+  --accent: #373BF9;      /* primary electric blue */
+  --accent-2: #FF87CE;    /* pink */
+  --accent-3: #697DFF;    /* periwinkle */
+  --accent-4: #A5BDFF;    /* light periwinkle */
+  --accent-5: #B9D1FF;    /* pale blue */
+
+  /* Backgrounds */
+  --main: #FFFFFF;
+  --bg-soft: #E8EFFF;     /* "back ground" — info blocks */
+  --bg-message: #D1E1FF;  /* "message" — chat bubbles */
+
+  /* Text */
+  --text: #323030;        /* primary text */
+  --text-2: #74748F;      /* secondary text */
+  --text-3: #9292AD;      /* tertiary text */
+  --heading: #2E313E;     /* spec-frame display headings */
+  --label: #7F8291;       /* small labels */
+  --border-muted: #C6CADD;
+
+  /* Support */
+  --ink: #393C4B;         /* shadow base color */
+  --dark: #232323;
+  --navy: #131E55;
+  --success: #0AB290;
+  --teal: #49B1A4;
+  --badge-red: #FF3B30;
+
+  /* Semantic aliases */
+  --surface-page: var(--main);
+  --surface-block: var(--bg-soft);
+  --surface-card: var(--main);
+  --text-heading: var(--text);
+  --text-body: var(--text);
+  --text-muted: var(--text-2);
+
+  /* Gradients */
+  --grad-accent: linear-gradient(143.513deg, #92AEFF -6.09%, #373BF9 79.65%); /* @kind other */
+  --grad-accent-icon: linear-gradient(213.476deg, #7578FF 8.37%, #373BF9 110.93%); /* @kind other */
+  --grad-cover: radial-gradient(2260.994px 1275.229px at 9.19% 0.00%, #92AEFF 23.51%, #373BF9 86.70%); /* @kind other */
+  --grad-slide: linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(23.228deg, #E3E3E3 -33.35%, #FAFAFA 89.95%); /* @kind other */
+  --grad-block-tint: linear-gradient(128.755deg, #E8F0FF 17.16%, #4C5EFF 165.59%); /* @kind other */
+}

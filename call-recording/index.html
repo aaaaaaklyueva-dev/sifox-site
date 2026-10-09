@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="../sifox-menu.js" defer></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>html,body{margin:0;padding:0;background:#ffffff;overflow-x:clip;} a{color:#373BF9;text-decoration:none;} a:hover{color:#2F34CE;}</style>
+</helmet>
+<sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ false }}">
+  <dc-import name="desktop" hint-size="100%,100vh"></dc-import>
+</sc-if>
+<sc-if value="{{ isTablet }}" hint-placeholder-val="{{ false }}">
+  <dc-import name="tablet" hint-size="100%,100vh"></dc-import>
+</sc-if>
+<sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+  <dc-import name="mobile" hint-size="100%,100vh"></dc-import>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;forceVersion&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Авто&quot;,&quot;Компьютер&quot;,&quot;Планшет&quot;,&quot;Мобильная&quot;],&quot;default&quot;:&quot;Авто&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Версия&quot;}}">
+class Component extends DCLogic {
+  getMode() {
+    const f = this.props.forceVersion;
+    if (f === 'Компьютер') return 'd';
+    if (f === 'Планшет') return 't';
+    if (f === 'Мобильная') return 'm';
+    const w = window.innerWidth;
+    return w >= 1280 ? 'd' : w >= 600 ? 't' : 'm';
+  }
+  state = { mode: this.getMode() };
+  componentDidMount() {
+    // версии вешают свои обработчики на window, поэтому при смене брейкпоинта страница перезагружается
+    this.onResize = () => { if (this.getMode() !== this.state.mode) location.reload(); };
+    window.addEventListener('resize', this.onResize);
+  }
+  componentDidUpdate(prev) {
+    if (prev.forceVersion !== this.props.forceVersion) this.setState({ mode: this.getMode() });
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this.onResize); }
+  renderVals() {
+    const m = this.state.mode;
+    return { isDesktop: m === 'd', isTablet: m === 't', isMobile: m === 'm' };
+  }
+}
+</script>
+<script src="../sifox-footer.js"></script>
+</body>
+</html>

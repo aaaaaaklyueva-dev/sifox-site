@@ -1,0 +1,46 @@
+/* Sifox type system. Display = Druk LCG Wide; body = Nunito. */
+:root {
+  --font-display: "Druk LCG", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Spec-sheet title: Druk 500 */
+  --type-title-size: 82.835px;
+  --type-title-ls: 0.05em;
+
+  /* Slide title: Druk 500 */
+  --type-slide-title-size: 62px;
+  --type-slide-title-ls: 0.02em;
+
+  /* Subtitle: Nunito 500 */
+  --type-subtitle-size: 64px;
+  --type-subtitle-lh: 72px;
+
+  /* Block heading: Druk 500 */
+  --type-block-title-size: 24px;
+  --type-block-title-lh: 32px;
+  --type-block-title-ls: 0.02em;
+
+  /* Body: Nunito 400 */
+  --type-body-size: 24px;
+  --type-body-lh: 28px;
+
+  /* Small / UI: Nunito */
+  --type-small-size: 16px;
+  --type-small-lh: 20px;
+  --type-label-ls: 0.05em;
+
+  /* ---- Mobile ---- */
+  /* Title: Druk 500 */
+  --type-m-title-size: 24px;
+  --type-m-title-lh: 28px;
+  --type-m-title-ls: 0.02em;
+
+  /* Small title: Druk 500 */
+  --type-m-subtitle-size: 16px;
+  --type-m-subtitle-lh: 20px;
+  --type-m-subtitle-ls: 0.02em;
+
+  /* Body: Nunito 400 */
+  --type-m-body-size: 16px;
+  --type-m-body-lh: 22px;
+}

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="../sifox-menu.js" defer></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/tokens/fonts.css">
+  <link rel="stylesheet" href="../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/tokens/colors.css">
+  <link rel="stylesheet" href="../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/tokens/typography.css">
+  <link rel="stylesheet" href="../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/tokens/effects.css">
+  <link rel="stylesheet" href="../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/tokens/base.css">
+  <link rel="stylesheet" href="../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/components/fig-tokens.css">
+  <link rel="stylesheet" href="../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/components/fig-typography.css">
+  <link rel="stylesheet" href="../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/components/fig-assets.css">
+  <link rel="stylesheet" href="../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/styles.css">
+  <style>
+    body { margin: 0; background: #FFFFFF; }
+    a { color: #373BF9; text-decoration: none; }
+    a:hover { color: #697DFF; }
+    @keyframes phoneRise { from { transform: translateY(60px); } to { transform: translateY(0); } }
+    [data-noscroll]::-webkit-scrollbar { display: none; width: 0; height: 0; }
+    #demo input::placeholder { color: #E8EFFF; opacity: 1; }
+    @media (max-width: 900px) { #demo > div { grid-template-columns: minmax(0, 1fr) !important; gap: 40px !important; } }
+    @media (max-width: 600px) { #demo p { line-height: 150% !important; } #demo { padding-bottom: 100px !important; } [data-cover-title] { font-size: 24pt !important; } [data-cover] { display: none !important; } [data-modes-media] { display: none !important; } [data-modes-title] { font-size: 24px !important; } [data-card="2"] { display: none !important; } [data-rec-m] { display: block !important; } }
+    @media (max-width: 900px) {
+      [data-step-card] { height: auto !important; }
+      [data-step-text] { position: relative !important; left: auto !important; right: auto !important; top: auto !important; padding: 22px 24px 28px; z-index: 1; }
+      [data-modes-wrap] { min-height: 0 !important; }
+      [data-modes-pin] { position: static !important; height: auto !important; min-height: 0 !important; flex-direction: column !important; }
+      [data-modes-media] { width: 100% !important; max-width: none !important; height: 95vw !important; }
+      [data-modes-list] { padding: 56px 20px !important; }
+      [data-desc] { max-height: 400px !important; opacity: 1 !important; }
+      [data-card] { opacity: 1 !important; gap: 12px !important; }
+      [data-phone-bg] { left: 0 !important; top: 0 !important; width: 100% !important; margin-top: 0 !important; transform: none !important; aspect-ratio: auto !important; height: 100% !important; }
+      [data-phone] { left: 50% !important; top: auto !important; bottom: 0 !important; width: 92% !important; max-width: 420px !important; height: 88% !important; transform: translateX(-50%) !important; background-position: bottom center !important; background-size: contain !important; }
+    }
+  </style>
+  <script src="./image-slot.js"></script>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.184.0/build/three.module.js",
+      "three/addons/controls/OrbitControls.js": "https://unpkg.com/three@0.184.0/examples/jsm/controls/OrbitControls.js",
+      "three/addons/exporters/OBJExporter.js": "https://unpkg.com/three@0.184.0/examples/jsm/exporters/OBJExporter.js",
+      "three/addons/exporters/GLTFExporter.js": "https://unpkg.com/three@0.184.0/examples/jsm/exporters/GLTFExporter.js"
+    },
+    "integrity": {
+      "https://unpkg.com/three@0.184.0/build/three.module.js": "sha384-8FCZ1eVO6it4+pbec2aDtnTrwjWXZLJRC+MAGCIPDgsYnUrl/E0A2YlF8ioMKI/J",
+      "https://unpkg.com/three@0.184.0/build/three.core.js": "sha384-dw2ooPewaEIrAgl6oFDBmmBWCE9oW9LxRGcfwZ0hLvEprzo202wXl7vCYHRlSnOT",
+      "https://unpkg.com/three@0.184.0/examples/jsm/controls/OrbitControls.js": "sha384-4rziNxOBZKQ69i+w+f89KJ55TCYquwchVbByQwmaOeIOXdOU2PLDn3kOfXHwIJC9",
+      "https://unpkg.com/three@0.184.0/examples/jsm/exporters/OBJExporter.js": "sha384-nbwtoZENJD3Vq+ACK0CuGQdPMuDWHkamC2KJD70EV5nfg6jQjfppKOea07YJN+N3",
+      "https://unpkg.com/three@0.184.0/examples/jsm/exporters/GLTFExporter.js": "sha384-VofkvpG6HERhFCYbsUOHeNXBCqID2nfqkQqnVzE1jc/oPcz+qJ13ADdXH08hE+cQ"
+    }
+  }
+  </script>
+  <script src="./three-d-stage.js"></script>
+  <script type="module" src="./star-3d.js"></script>
+</helmet>
+
+<div style="position: relative; width: 100%; max-width: 1921px; margin: 0 auto; overflow-x: clip; display: flex; flex-direction: column; align-items: flex-start; flex-wrap: nowrap;">
+
+
+
+
+  <div style="position: relative; display: flex; flex-direction: column; align-items: flex-start; flex-wrap: nowrap; flex-shrink: 0; align-self: stretch;">
+    <div data-cover="" style="position: relative; height: 100vh; height: 100svh; overflow: hidden; background-color: rgb(60,64,249); flex-shrink: 0; align-self: stretch; display: flex; flex-direction: column; justify-content: flex-end; gap: clamp(16px, 2vw, 32px); box-sizing: border-box; padding: clamp(48px, 6vw, 115px) clamp(20px, 3.2vw, 61px) clamp(48px, 5vw, 96px)">
+      <video ref="{{ heroVid }}" src="assets/hero-phone.mp4" autoplay="" muted="" playsinline="" preload="auto" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; pointer-events: none; filter: brightness(0.8)"></video>
+      <span data-cover-title="" style="position: relative; z-index: 1; max-width: 1589px; font-family: 'Druk Wide Cyr', 'Druk LCG', sans-serif; font-weight: 700; font-size: clamp(36px, 5vw, 96px); line-height: 130%; letter-spacing: 0.02em; color: rgb(255,255,255); text-transform: uppercase">Умная<br>голосовая почта</span><span style="position: relative; z-index: 1; max-width: 1589px; font-family: 'Druk Wide Cyr', 'Druk LCG', sans-serif; font-weight: 700; font-size: clamp(20px, 2.3vw, 44px); line-height: 130%; letter-spacing: 0.02em; color: rgb(255,255,255); text-transform: uppercase">с которой ничего важного  не пропустить </span>
+    </div>
+  </div>
+  <section data-rec-m="" data-screen-label="Умная запись разговора (моб.)" style="display: none; position: relative; overflow: hidden; background: radial-gradient(756px 1215px at -44% -15%, rgb(146,174,255) 3%, rgb(255,255,255) 56%, rgb(189,206,255) 94%); padding: 80px 0 0">
+    <span style="display: block; padding: 0 20px; font-family: 'Druk Wide Cyr', 'Druk LCG', sans-serif; font-weight: 700; font-size: 32px; line-height: 130%; color: rgb(105,125,255); text-transform: uppercase; max-width: 340px">Голосовая почта</span>
+    <div data-noscroll="" style="display: flex; flex-direction: row; gap: 20px; align-items: flex-start; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; -ms-overflow-style: none; scroll-snap-type: x mandatory; scroll-padding-left: 20px; box-sizing: border-box; width: 100%; padding: 44px 20px 80px">
+      <div style="position: relative; width: 300px; height: 487px; flex-shrink: 0; overflow: hidden; border-radius: 20px; background-color: rgba(255,255,255,0.3); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 10px 30px rgba(57,60,75,0.15), 0 0 5.4px rgba(57,60,75,0.2); scroll-snap-align: start">
+        <span style="position: absolute; left: 20px; top: 16px; width: 210px; font-family: 'Druk Wide Cyr', sans-serif; font-weight: 500; font-size: 20px; line-height: 24px; color: rgb(50,48,48)">Краткое содержание разговора</span>
+        <video src="assets/rec-summary.webm" autoplay="" muted="" loop="" playsinline="" style="position: absolute; left: 10px; bottom: 0; width: 280px; height: 396px; object-fit: cover; object-position: top center; background: transparent; border: 0; outline: 0; clip-path: inset(14px 3px 0 3px round 46px 46px 0 0)"></video>
+      </div>
+      <div style="position: relative; width: 300px; height: 487px; flex-shrink: 0; overflow: hidden; border-radius: 20px; background-color: rgba(255,255,255,0.3); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 10px 30px rgba(57,60,75,0.15), 0 0 5.4px rgba(57,60,75,0.2); scroll-snap-align: start">
+        <span style="position: absolute; left: 20px; top: 16px; width: 265px; font-family: 'Druk Wide Cyr', sans-serif; font-weight: 500; font-size: 20px; line-height: 24px; color: rgb(50,48,48)">Подиалоговый перевод аудио в&nbsp;текст</span>
+        <video src="assets/rec-transcript.webm" autoplay="" muted="" loop="" playsinline="" style="position: absolute; left: 10px; bottom: 0; width: 280px; height: 396px; object-fit: cover; object-position: top center; background: transparent; border: 0; outline: 0; clip-path: inset(14px 3px 0 3px round 46px 46px 0 0)"></video>
+      </div>
+      <div style="position: relative; width: 300px; height: 487px; flex-shrink: 0; overflow: hidden; border-radius: 20px; background-color: rgba(255,255,255,0.3); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 10px 30px rgba(57,60,75,0.15), 0 0 5.4px rgba(57,60,75,0.2); scroll-snap-align: start">
+        <span style="position: absolute; left: 20px; top: 16px; width: 265px; font-family: 'Druk Wide Cyr', sans-serif; font-weight: 500; font-size: 20px; line-height: 24px; color: rgb(50,48,48)">Аналитика вызова и&nbsp;важная информация</span>
+        <video src="assets/rec-03.webm" autoplay="" muted="" loop="" playsinline="" style="position: absolute; left: 10px; bottom: 0; width: 280px; height: 396px; object-fit: cover; object-position: top center; background: transparent; border: 0; outline: 0; clip-path: inset(14px 3px 0 3px round 46px 46px 0 0)"></video>
+      </div>
+    </div>
+  </section>
+  <div data-modes-wrap="" ref="{{ modesWrap }}" style="position: relative; width: 100%; min-height: 280vh; background: rgb(242,242,242)">
+    <div data-modes-pin="" ref="{{ modesPin }}" style="position: sticky; top: 0; width: 100%; height: 100vh; min-height: 640px; display: flex; flex-direction: row; align-items: stretch; flex-wrap: nowrap; background: rgb(242,242,242)">
+      <div data-modes-media="" style="position: relative; width: 50%; max-width: 960px; flex: none; background: rgb(232,239,255); overflow: hidden">
+        <img data-base-media="" src="assets/mode-full.gif" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 1; z-index: 1; pointer-events: none"><video data-media="1" data-vid="transcript" src="assets/mode-transcript.webm" autoplay="" muted="" playsinline="" loop="" preload="auto" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; z-index: 2; pointer-events: none; transition: opacity 450ms ease"></video><video data-media="0" data-vid="summary" src="assets/mode-summary.webm" autoplay="" muted="" playsinline="" loop="" preload="auto" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; z-index: 2; pointer-events: none; transition: opacity 450ms ease"></video><img data-media="2" src="assets/mode-full-v2.gif" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; z-index: 2; pointer-events: none; transition: opacity 450ms ease">
+      </div><div data-modes-list="" style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: clamp(28px, 3.4vw, 60px); padding: 0 clamp(20px, 3.2vw, 62px) 0 clamp(20px, 2.3vw, 44px); background: rgb(255,255,255)">
+        <h2 data-modes-title="" style="margin: 0; max-width: 855px; font-family: 'Druk Wide Cyr', 'Druk LCG', sans-serif; font-weight: 700; font-size: clamp(28px, 3vw, 56px); line-height: 105%; letter-spacing: 0.02em; color: rgb(0,0,0); text-transform: uppercase; overflow-wrap: break-word">Современная голосовая почта</h2><p style="margin: calc(-1 * clamp(12px, 1.8vw, 36px)) 0 0; max-width: 855px; font-family: Nunito, sans-serif; font-weight: 400; font-size: clamp(16px, 1.25vw, 24px); line-height: 140%; color: rgb(50,48,48); text-wrap: pretty">Ассистент может не&nbsp;просто записать сообщение, а&nbsp;вести разговор и&nbsp;использовать информацию, которую пользователь заранее ему передал. Например, если звонит курьер, ассистент может уточнить проблему и&nbsp;самостоятельно объяснить, как найти нужный адрес</p>
+        <div style="display: flex; flex-direction: column; gap: clamp(20px, 3vw, 56px); max-width: 855px">
+          <div data-card="0" style="display: flex; flex-direction: column; gap: 12px; padding: 12px 0; border-bottom: 1px solid rgb(0,0,0); opacity: 1; transition: opacity 450ms ease, gap 450ms ease">
+            <span style="font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: clamp(18px, 1.4vw, 24px); line-height: 105%; letter-spacing: 0.02em; color: rgb(0,0,0); text-transform: uppercase">Краткое сообщение</span>
+            <span style="font-family: Nunito, sans-serif; font-weight: 400; font-size: clamp(16px, 1.1vw, 20px); line-height: 135%; color: rgb(116,116,143); display: block; overflow: hidden; max-height: 240px; opacity: 1; transition: max-height 450ms ease, opacity 300ms ease" data-desc="0">Ассистент делает краткую выжимку из диалога и выделяет самое важное, чтобы пользователь мог быстро понять суть и оценить важность пропущенного звонка.&nbsp;</span>
+          </div>
+          <div data-card="1" style="display: flex; flex-direction: column; gap: 0px; padding: 12px 0; border-bottom: 1px solid rgb(0,0,0); opacity: 0.5; transition: opacity 450ms ease, gap 450ms ease">
+            <span style="font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: clamp(18px, 1.4vw, 24px); line-height: 105%; letter-spacing: 0.02em; color: rgb(0,0,0); text-transform: uppercase">Транскрибация</span>
+            <span style="font-family: Nunito, sans-serif; font-weight: 400; font-size: clamp(16px, 1.1vw, 20px); line-height: 135%; color: rgb(116,116,143); display: block; overflow: hidden; max-height: 0; opacity: 0; transition: max-height 450ms ease, opacity 300ms ease" data-desc="1">Ничего не нужно слушать — всё можно прочитать. Разговор разбит на отдельные реплики участников диалога.</span>
+          </div>
+          <div data-card="2" style="display: flex; flex-direction: column; gap: 0px; padding: 12px 0; border-bottom: 1px solid rgb(0,0,0); opacity: 0.5; transition: opacity 450ms ease, gap 450ms ease">
+            <span style="font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: clamp(18px, 1.4vw, 24px); line-height: 105%; letter-spacing: 0.02em; color: rgb(0,0,0); text-transform: uppercase">Звонки в облаке</span>
+            <span style="font-family: Nunito, sans-serif; font-weight: 400; font-size: clamp(16px, 1.1vw, 20px); line-height: 135%; color: rgb(116,116,143); display: block; overflow: hidden; max-height: 0; opacity: 0; transition: max-height 450ms ease, opacity 300ms ease" data-desc="2">Все записи хранятся вне устройства и приложения, поэтому не занимают место в памяти телефона пользователя.&nbsp;</span>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div><div style="max-width:1316px;margin:0 auto" data-om-id="c72085d3:66">
+
+
+
+
+
+</div><section data-screen-label="Три шага" style="position: relative; width: 100%; overflow: hidden; background: rgb(255,255,255); padding: clamp(72px, 10vw, 200px) clamp(20px, 3.2vw, 62px); box-sizing: border-box;">
+    <div ref="{{ stepsRef }}" style="display: flex; flex-direction: column; gap: clamp(24px, 2.6vw, 43px); align-items: flex-start; max-width: 1772px;">
+      <h2 style="margin: 0; width: 1631px; max-width: 100%; {{ revealTitle }} font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: 64px; line-height: 100%; color: rgb(46,49,62); text-transform: uppercase;">
+        <span style="display: block; font-size: clamp(28px, 3vw, 56px); line-height: 105%; letter-spacing: 0.02em">КАК АССИСТЕНТ РАБОТАЕТ</span>
+        
+      </h2>
+      <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 24px; align-items: flex-start; align-self: stretch;">
+        <div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: row; flex-wrap: wrap; gap: 24px; align-items: stretch;">
+          <div data-step-card="" style="position: relative; flex: 1 1 240px; min-width: 0; height: clamp(420px, 44vw, 632px); overflow: hidden; border-radius: 24px; background: rgb(232,239,255); {{ reveal1 }}">
+            <div style="position: absolute; left: -46px; top: 52px; margin-top: 5.18%; transform: translate(-35px, 89px); width: 443.62%; aspect-ratio: 1812 / 710; background: url(assets/steps-bg.webp) center / cover no-repeat"></div>
+            <div data-step-text="" style="position: absolute; left: 24px; right: 24px; top: 22px; display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
+              <span style="align-self: stretch; font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: clamp(36px, 3vw, 54px); text-align: right; line-height: 100%; color: rgba(55,59,249,0.5); text-transform: uppercase;">01</span>
+              <div style="display: flex; flex-direction: column; gap: 20px; align-items: flex-start; align-self: stretch;">
+                <h3 style="margin: 0; align-self: stretch; font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: clamp(18px, 1.4vw, 24px); line-height: 140%; color: rgb(46,49,62); text-transform: uppercase;">ПОЛЬЗОВАТЕЛЬ ОБУЧАЕТ АССИСТЕНТА</h3>
+                <p style="margin: 0; align-self: stretch; font-family: Nunito, sans-serif; font-weight: 400; font-size: 16px; line-height: 140%; color: rgb(50,48,48);">В чате он указывает, какую информацию можно сообщать курьеру, кому именно её можно передавать, как объяснить дорогу и какие дополнительные инструкции использовать.</p>
+              </div>
+            </div>
+            
+          </div>
+          <div data-step-card="" style="position: relative; flex: 1 1 240px; min-width: 0; height: clamp(420px, 44vw, 632px); overflow: hidden; border-radius: 24px; background: rgb(232,239,255); {{ reveal2 }}">
+            <div style="position: absolute; left: -424px; top: 85px; margin-top: 5.18%; transform: translate(-35px, 49px); width: 443.62%; aspect-ratio: 1812 / 710; background: url(assets/steps-bg.webp) center / cover no-repeat"></div>
+            <div data-step-text="" style="position: absolute; left: 24px; right: 24px; top: 22px; display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
+              <span style="align-self: stretch; font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: clamp(36px, 3vw, 54px); text-align: right; line-height: 100%; color: rgba(55,59,249,0.5); text-transform: uppercase;">02</span>
+              <div style="display: flex; flex-direction: column; gap: 20px; align-items: flex-start; align-self: stretch;">
+                <h3 style="margin: 0; align-self: stretch; font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: clamp(18px, 1.4vw, 24px); line-height: 140%; color: rgb(46,49,62); text-transform: uppercase;">АССИСТЕНТ ПРИНИМАЕТ ЗВОНОК</h3>
+                <p style="margin: 0; align-self: stretch; font-family: Nunito, sans-serif; font-weight: 400; font-size: 16px; line-height: 140%; color: rgb(50,48,48);">Он сам наберёт номер, дождётся ответа и&nbsp;поговорит с&nbsp;сотрудником. Если придётся подождать на&nbsp;линии — подождёт вместо вас. В начале разговора ассистент сообщает собеседнику, что он виртуальный.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 24px; align-items: flex-start; {{ reveal3 }}">
+          <div style="position: relative; width: 100%; height: clamp(320px, 33vw, 472px); flex-shrink: 0; overflow: hidden; border-radius: 24px; background: rgb(232,239,255);">
+            <div data-phone-bg="" style="position: absolute; left: -782px; top: 69px; margin-top: 2.52%; transform: translate(-35px, 49px); width: 215.73%; aspect-ratio: 1812 / 710; background: url(assets/steps-bg.webp) center / cover no-repeat"><div data-phone="" style="position: absolute; left: 533px; top: -106px; width: 922px; height: 802px; background: url(assets/phone-hand.png) center / contain no-repeat; animation: phoneRise 1.2s cubic-bezier(.22,.61,.36,1) both; will-change: transform; pointer-events: none"></div></div>
+            
+            <span style="position: absolute; left: 24px; right: 24px; top: 22px; font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: clamp(36px, 3vw, 54px); text-align: right; line-height: 100%; color: rgba(55,59,249,0.5); text-transform: uppercase; pointer-events: none;">03</span>
+            
+          </div>
+          <div style="width: 100%; max-width: 521px; display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
+            <h3 style="margin: 0; font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: clamp(18px, 1.4vw, 24px); line-height: 140%; color: rgb(46,49,62); text-transform: uppercase;">ПОЛЬЗОВАТЕЛЬ ПОЛУЧАЕТ РЕЗУЛЬТАТ</h3>
+            <p style="margin: 0; align-self: stretch; font-family: Nunito, sans-serif; font-weight: 500; font-size: 16px; line-height: 140%; color: rgb(50,48,48);"><span style="color: var(--text); font-family: Nunito, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-size: 16px; font-weight: 400">После завершения разговора пользователь получает уведомление о звонке, который обработал ассистент.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="demo" data-screen-label="Демо" style="width: 100%; background: radial-gradient(120% 170% at 78% 10%, #92AEFF 0%, #697DFF 38%, #373BF9 100%); padding: clamp(72px, 10vw, 200px) clamp(20px, 3.2vw, 62px); box-sizing: border-box; font-family: Nunito, sans-serif; color: #323030; text-wrap: pretty">
+    <div style="max-width: none; width: 100%; margin: 0; box-sizing: border-box; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 3.4vw, 64px); align-items: start">
+      <div>
+        <h2 style="margin: 0 0 24pt; font-family: 'Druk LCG', 'Druk Wide Cyr', sans-serif; font-weight: 700; font-size: clamp(40px, 5vw, 96px); line-height: 105%; letter-spacing: 0.02em; color: #fff; text-transform: uppercase">демо</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 140%; color: #E8EFFF; width: 643px; max-width: 100%">Заинтересовались нашей голосовой почтой? Свяжитесь с&nbsp;нами&nbsp;— расскажем о&nbsp;её&nbsp;возможностях и&nbsp;покажем, как она работает.</p>
+      </div>
+      <form onSubmit="{{ submitDemo }}" style="display: flex; flex-direction: column; gap: 16px; width: 100%">
+        <input placeholder="Имя" type="text" name="name" required="" style="height: 56px; padding: 0 24px; border-radius: 12px; border: 1px solid rgba(255,255,255,.4); background: rgba(255,255,255,.14); backdrop-filter: blur(14.4px); color: #fff; font-size: 18px; font-family: inherit; outline: none; box-sizing: border-box; width: 100%" style-focus="border-color: #fff; background: rgba(255,255,255,.22)">
+        <input placeholder="Компания" type="text" name="company" style="height: 56px; padding: 0 24px; border-radius: 12px; border: 1px solid rgba(255,255,255,.4); background: rgba(255,255,255,.14); backdrop-filter: blur(14.4px); color: #fff; font-size: 18px; font-family: inherit; outline: none; box-sizing: border-box; width: 100%" style-focus="border-color: #fff; background: rgba(255,255,255,.22)">
+        <input placeholder="Почта" type="email" name="email" required="" style="height: 56px; padding: 0 24px; border-radius: 12px; border: 1px solid rgba(255,255,255,.4); background: rgba(255,255,255,.14); backdrop-filter: blur(14.4px); color: #fff; font-size: 18px; font-family: inherit; outline: none; box-sizing: border-box; width: 100%" style-focus="border-color: #fff; background: rgba(255,255,255,.22)">
+        <button type="submit" style="margin-top: 8px; cursor: pointer; border: 0; display: inline-flex; align-items: center; justify-content: center; height: 56px; padding: 0 clamp(24px, 3vw, 48px); border-radius: 12px; background: #fff; color: #373BF9; font-size: clamp(18px, 1.4vw, 24px); font-weight: 600; letter-spacing: .02em; text-transform: uppercase; box-shadow: 0 8px 24px rgba(20,24,120,.25); transition: transform .2s, box-shadow .2s; font-family: 'Druk LCG', sans-serif" style-hover="transform: translateY(-2px); box-shadow: 0 12px 32px rgba(20,24,120,.35)">запросить демо</button>
+      </form>
+    </div>
+  </section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1921,&quot;height&quot;:2462}}">class Component extends DCLogic {
+  state = { active: 0, stepsVisible: false };
+  componentDidMount() {
+    if (!this.wrap) this.wrap = React.createRef();
+    const hv = this.hero && this.hero.current;
+    if (hv) {
+      hv.muted = true; hv.defaultMuted = true; hv.volume = 0; hv.loop = false;
+      hv.addEventListener('timeupdate', () => {
+        if (hv.currentTime >= 6.5) {
+          hv.pause(); hv.currentTime = 6.5;
+          if (!hv.__holding) {
+            hv.__holding = true;
+            setTimeout(() => { hv.__holding = false; hv.currentTime = 0; hv.play().catch(() => {}); }, 3000);
+          }
+        }
+      });
+      const toBlob = () => {
+        if (hv.__blob) return; hv.__blob = true;
+        fetch('assets/hero-phone.mp4').then(r => r.blob()).then(b => {
+          hv.src = URL.createObjectURL(new Blob([b], { type: 'video/mp4' }));
+          hv.load(); hv.play().catch(() => {});
+        }).catch(() => {});
+      };
+      hv.addEventListener('error', toBlob);
+      if (hv.error) toBlob();
+      setTimeout(() => { if (hv.readyState < 2) toBlob(); }, 2500);
+      hv.play().catch(() => {});
+    }
+    this.onScroll = () => {
+      const el = this.wrap.current;
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      const span = r.height - 889;
+      if (span <= 0) return;
+      const p = Math.min(1, Math.max(0, -r.top / span));
+      const pin = this.pin && this.pin.current;
+      if (pin) {
+        if (r.top <= 0 && r.bottom >= 889) {
+          pin.style.position = 'fixed';
+          pin.style.top = '0px';
+          pin.style.left = r.left + 'px';
+          pin.style.width = r.width + 'px';
+        } else {
+          pin.style.position = 'absolute';
+          pin.style.left = '0px';
+          pin.style.width = '100%';
+          pin.style.top = r.top > 0 ? '0px' : (span + 'px');
+        }
+      }
+      const i = Math.min(3, Math.round(p * 3));
+      if (i !== this.state.active) this.pick(i);
+    };
+    document.addEventListener('scroll', this.onScroll, true);
+    window.addEventListener('resize', this.onScroll);
+    this.forceUpdate();
+    setTimeout(this.onScroll, 0);
+    const safe = (fn) => { try { fn(); } catch (e) { console.error('dc', e); } };
+    const tick = () => { safe(() => this.onScroll()); safe(() => this.onModes()); this.raf = requestAnimationFrame(tick); };
+    this.raf = requestAnimationFrame(tick);
+    this.pollIv = setInterval(() => { safe(() => this.onScroll()); safe(() => this.onModes()); safe(() => this.checkSteps()); }, 200);
+    document.addEventListener('scroll', () => { safe(() => this.onModes()); safe(() => this.checkSteps()); }, true);
+    window.addEventListener('resize', () => { safe(() => this.onModes()); });
+    setTimeout(() => { safe(() => this.onModes()); safe(() => this.checkSteps()); }, 0);
+    setTimeout(() => this.initGif(), 0);
+    const mute = () => {
+      document.querySelectorAll('video').forEach(v => {
+        v.muted = true; v.defaultMuted = true; v.volume = 0; v.removeAttribute('controls');
+        if (v.paused) v.play().catch(() => {});
+      });
+    };
+    mute();
+    this.muteIv = setInterval(mute, 600);
+  }
+  componentWillUnmount() {
+    document.removeEventListener('scroll', this.onScroll, true);
+    window.removeEventListener('resize', this.onScroll);
+    if (this.stepsObserver) this.stepsObserver.disconnect();
+    this.gifPlaying = false;
+    if (this.raf) cancelAnimationFrame(this.raf);
+    clearInterval(this.pollIv);
+    clearInterval(this.muteIv);
+  }
+  checkSteps() {
+    if (this.state.stepsVisible) return;
+    const el = this.stepsEl;
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    if (r.top < window.innerHeight * 0.9 && r.bottom > 0) {
+      this.setState({ stepsVisible: true });
+      setTimeout(() => {
+        if (!this.stepsEl) return;
+        this.stepsEl.querySelectorAll('*').forEach(n => {
+          if (n.style && n.style.transition && /opacity/.test(n.style.transition)) n.style.transition = 'none';
+        });
+        this.stepsEl.style.transition = 'none';
+      }, 1600);
+    }
+  }
+  setSteps = (el) => {
+    if (!el) return;
+    this.stepsEl = el;
+    this.checkSteps();
+    if (this.stepsObserver) return;
+    if ('IntersectionObserver' in window) {
+      this.stepsObserver = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+          this.setState({ stepsVisible: true });
+          this.stepsObserver.disconnect();
+        }
+      }, { threshold: 0.15 });
+      this.stepsObserver.observe(el);
+    } else {
+      this.setState({ stepsVisible: true });
+    }
+  };
+  gifSpeed = 1.1; // >1 = slower than original
+  async initGif() {
+    if (!('ImageDecoder' in window) || this.gifDecoder) return;
+    const res = await fetch('assets/transkribaciya.gif');
+    const data = await res.arrayBuffer();
+    const dec = new ImageDecoder({ data, type: 'image/gif' });
+    await dec.tracks.ready;
+    await dec.completed;
+    this.gifDecoder = dec;
+    this.gifFrames = dec.tracks.selectedTrack.frameCount;
+    this.playGif();
+  }
+  async playGif() {
+    const dec = this.gifDecoder, canvas = this.gif && this.gif.current;
+    if (!dec || !canvas || this.gifPlaying) return;
+    this.gifPlaying = true;
+    const ctx = canvas.getContext('2d');
+    let i = this.gifIndex || 0;
+    while (this.gifPlaying) {
+      let out;
+      try { out = await dec.decode({ frameIndex: i % this.gifFrames }); } catch (e) { break; }
+      if (!this.gifPlaying) break;
+      const img = out.image;
+      if (canvas.width !== img.displayWidth) { canvas.width = img.displayWidth; canvas.height = img.displayHeight; }
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(img, 0, 0);
+      img.close();
+      this.gifIndex = i = (i + 1) % this.gifFrames;
+      const dur = (out.duration || 100000) / 1000 * this.gifSpeed;
+      await new Promise(r => setTimeout(r, dur));
+    }
+    this.gifPlaying = false;
+  }
+  applyMode(t) {
+    const pin = this.mPin && this.mPin.current;
+    if (!pin) return;
+    try {
+    pin.querySelectorAll('[data-vid]').forEach(v => {
+      v.style.opacity = '1';
+      v.muted = true; v.defaultMuted = true; v.volume = 0; v.removeAttribute('controls'); v.playbackRate = 0.9;
+      v.loop = true;
+      if (!v.__loopBound) {
+        v.__loopBound = true;
+        const restart = () => { try { v.currentTime = 0; } catch (e) {} v.play().catch(() => {}); };
+        v.addEventListener('ended', restart);
+        v.addEventListener('pause', () => { if (!v.__intentional) v.play().catch(() => {}); });
+        v.addEventListener('timeupdate', () => {
+          if (v.duration && v.currentTime >= v.duration - 0.06) restart();
+        });
+      }
+      if (v.paused) v.play().catch(() => {});
+    });
+    if (!this.vidKeepAlive) {
+      this.vidKeepAlive = setInterval(() => {
+        pin.querySelectorAll('[data-vid]').forEach(v => {
+          if (v.paused || v.ended) { v.loop = true; v.play().catch(() => {}); }
+        });
+      }, 1000);
+    }
+    } catch (e) { console.error('video', e); }
+    pin.querySelectorAll('[data-media]').forEach(m => {
+      const on = Number(m.dataset.media) === t;
+      m.style.opacity = on ? '1' : '0';
+      m.style.pointerEvents = on ? 'auto' : 'none';
+    });
+    pin.querySelectorAll('[data-card]').forEach(c => {
+      const on = Number(c.dataset.card) === t;
+      const open = on || this.isMobile;
+      c.style.opacity = on ? '1' : (this.isMobile ? '0.75' : '0.5');
+      c.style.gap = open ? '12px' : '0px';
+      const d = c.querySelector('[data-desc]');
+      if (d) {
+        d.style.maxHeight = open ? '240px' : '0px';
+        d.style.opacity = open ? '1' : '0';
+      }
+    });
+    this.modeT = t;
+  }
+  bindModeHover() {
+    const pin = this.mPin && this.mPin.current;
+    if (!pin || this.modesBound) return;
+    this.modesBound = true;
+    pin.querySelectorAll('[data-card]').forEach(c => {
+      c.style.cursor = 'pointer';
+      const go = () => { this.modeLock = Date.now(); this.applyMode(Number(c.dataset.card)); };
+      c.addEventListener('mouseenter', go);
+      c.addEventListener('click', go);
+    });
+  }
+  onModes() {
+    const wrap = this.mWrap && this.mWrap.current, pin = this.mPin && this.mPin.current;
+    if (!wrap || !pin) return;
+    this.bindModeHover();
+    this.isMobile = window.innerWidth <= 900;
+    if (this.isMobile) return;
+    const H = pin.offsetHeight;
+    const r = wrap.getBoundingClientRect();
+    const span = r.height - H;
+    if (span <= 0) return;
+    const p = Math.min(1, Math.max(0, -r.top / span));
+    const t = Math.min(2, Math.round(p * 2));
+    if (t !== this.modeT) this.applyMode(t);
+  }
+  pick(i) {
+    if (i === this.state.active) return;
+    this.setState({ active: i });
+    if (!this.gifPlaying) this.playGif();
+  }
+  reveal(delay) {
+    const on = this.state.stepsVisible;
+    const dx = (typeof window !== 'undefined' && window.innerWidth < 900) ? 0 : 80;
+    if (on) return `opacity: 1; transform: translateX(0px); transition: transform 0.8s ease ${delay}s;`;
+    return `opacity: 0; transform: translateX(${dx}px); transition: opacity 0.5s ease ${delay}s, transform 0.8s ease ${delay}s;`;
+  }
+  renderVals() {
+    const a = this.state.active;
+    return {
+      submitDemo: e => e.preventDefault(),
+      stepsRef: this.setSteps,
+      revealTitle: this.reveal(0),
+      reveal1: this.reveal(0),
+      reveal2: this.reveal(0.5),
+      reveal3: this.reveal(1),
+      revealBtn: `opacity: ${this.state.stepsVisible ? 1 : 0}; transform: translateY(${this.state.stepsVisible ? 0 : 40}px); transition: opacity 0.7s ease 1.5s, transform 0.7s ease 1.5s;`,
+      scrollWrap: this.wrap || (this.wrap = React.createRef()),
+      pinRef: this.pin || (this.pin = React.createRef()),
+      modesWrap: this.mWrap || (this.mWrap = React.createRef()),
+      modesPin: this.mPin || (this.mPin = React.createRef()),
+      gifRef: this.gif || (this.gif = React.createRef()),
+      heroVid: this.hero || (this.hero = React.createRef()),
+      pick0: () => this.pick(0),
+      pick1: () => this.pick(1),
+      pick2: () => this.pick(2),
+      pick3: () => this.pick(3),
+      o0: a === 0 ? 1 : 0.5,
+      i0: a === 0 ? 1 : 0,
+      i1: a === 1 ? 1 : 0,
+      i2: a === 2 ? 1 : 0,
+      i3: a === 3 ? 1 : 0,
+      pe1: a === 1 ? 'auto' : 'none',
+      pe2: a === 2 ? 'auto' : 'none',
+      pe3: a === 3 ? 'auto' : 'none',
+      o1: a === 1 ? 1 : 0.5,
+      o2: a === 2 ? 1 : 0.5,
+      o3: a === 3 ? 1 : 0.5,
+    };
+  }
+}</script>
+<script src="../sifox-footer.js"></script>
+</body>
+</html>

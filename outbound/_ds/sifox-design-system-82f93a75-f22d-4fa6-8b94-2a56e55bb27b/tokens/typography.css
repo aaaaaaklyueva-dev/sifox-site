@@ -1,0 +1,46 @@
+/* Sifox type system. Display = Druk Wide Bold (single licensed weight); body = Nunito. */
+:root {
+  --font-display: "Druk LCG", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Spec-sheet title: Druk Wide */
+  --type-title-size: 82.835px;
+  --type-title-ls: 0.05em;
+
+  /* Slide title: Druk Wide */
+  --type-slide-title-size: 62px;
+  --type-slide-title-ls: 0.02em;
+
+  /* Subtitle: Nunito 500 */
+  --type-subtitle-size: 64px;
+  --type-subtitle-lh: 72px;
+
+  /* Block heading: Druk Wide */
+  --type-block-title-size: 24px;
+  --type-block-title-lh: 32px;
+  --type-block-title-ls: 0.02em;
+
+  /* Body: Nunito 400 */
+  --type-body-size: 24px;
+  --type-body-lh: 28px;
+
+  /* Small / UI: Nunito */
+  --type-small-size: 16px;
+  --type-small-lh: 20px;
+  --type-label-ls: 0.05em;
+
+  /* ---- Mobile ---- */
+  /* Title: Druk Wide */
+  --type-m-title-size: 24px;
+  --type-m-title-lh: 28px;
+  --type-m-title-ls: 0.02em;
+
+  /* Small title: Druk Wide */
+  --type-m-subtitle-size: 20px;
+  --type-m-subtitle-lh: 24px;
+  --type-m-subtitle-ls: 0.02em;
+
+  /* Body: Nunito 400 */
+  --type-m-body-size: 14px;
+  --type-m-body-lh: 1.3; /* 14 × 1.3 ≈ 18.2px */
+}

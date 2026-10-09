@@ -1,0 +1,369 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Druk LCG|Nunito))/i]",
+        "message": "Font not provided by the design system. Available: Druk LCG, Nunito."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='CardClassic'] > JSXAttribute > JSXIdentifier[name!=/^(?:className|style|icon1|key|ref|className|style|children)$/]",
+        "message": "<CardClassic> doesn't accept that prop. Declared props: className, style, icon1."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Images00'] > JSXAttribute > JSXIdentifier[name!=/^(?:className|style|key|ref|className|style|children)$/]",
+        "message": "<Images00> doesn't accept that prop. Declared props: className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Images02'] > JSXAttribute > JSXIdentifier[name!=/^(?:className|style|key|ref|className|style|children)$/]",
+        "message": "<Images02> doesn't accept that prop. Declared props: className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Images03'] > JSXAttribute > JSXIdentifier[name!=/^(?:className|style|key|ref|className|style|children)$/]",
+        "message": "<Images03> doesn't accept that prop. Declared props: className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Images04'] > JSXAttribute > JSXIdentifier[name!=/^(?:className|style|key|ref|className|style|children)$/]",
+        "message": "<Images04> doesn't accept that prop. Declared props: className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Images05'] > JSXAttribute > JSXIdentifier[name!=/^(?:className|style|key|ref|className|style|children)$/]",
+        "message": "<Images05> doesn't accept that prop. Declared props: className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Images07'] > JSXAttribute > JSXIdentifier[name!=/^(?:className|style|key|ref|className|style|children)$/]",
+        "message": "<Images07> doesn't accept that prop. Declared props: className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='LogoDark'] > JSXAttribute > JSXIdentifier[name!=/^(?:className|style|key|ref|className|style|children)$/]",
+        "message": "<LogoDark> doesn't accept that prop. Declared props: className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='LogoLight'] > JSXAttribute > JSXIdentifier[name!=/^(?:className|style|key|ref|className|style|children)$/]",
+        "message": "<LogoLight> doesn't accept that prop. Declared props: className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='PaymentMastercardColor'] > JSXAttribute > JSXIdentifier[name!=/^(?:className|style|key|ref|className|style|children)$/]",
+        "message": "<PaymentMastercardColor> doesn't accept that prop. Declared props: className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='PaymentMastercardGrayscale'] > JSXAttribute > JSXIdentifier[name!=/^(?:className|style|key|ref|className|style|children)$/]",
+        "message": "<PaymentMastercardGrayscale> doesn't accept that prop. Declared props: className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='PaymentMastercardSolidLight'] > JSXAttribute > JSXIdentifier[name!=/^(?:className|style|key|ref|className|style|children)$/]",
+        "message": "<PaymentMastercardSolidLight> doesn't accept that prop. Declared props: className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='PaymentMastercardStrokeMetal'] > JSXAttribute > JSXIdentifier[name!=/^(?:className|style|key|ref|className|style|children)$/]",
+        "message": "<PaymentMastercardStrokeMetal> doesn't accept that prop. Declared props: className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='PaypassSolid'] > JSXAttribute > JSXIdentifier[name!=/^(?:className|style|key|ref|className|style|children)$/]",
+        "message": "<PaypassSolid> doesn't accept that prop. Declared props: className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TextDateStandartDark'] > JSXAttribute > JSXIdentifier[name!=/^(?:className|style|text1|key|ref|className|style|children)$/]",
+        "message": "<TextDateStandartDark> doesn't accept that prop. Declared props: className, style, text1."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TextNameStandartDark'] > JSXAttribute > JSXIdentifier[name!=/^(?:className|style|text1|key|ref|className|style|children)$/]",
+        "message": "<TextNameStandartDark> doesn't accept that prop. Declared props: className, style, text1."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TextNumEmbossedStandart'] > JSXAttribute > JSXIdentifier[name!=/^(?:className|style|key|ref|className|style|children)$/]",
+        "message": "<TextNumEmbossedStandart> doesn't accept that prop. Declared props: className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TextNumShortStandart'] > JSXAttribute > JSXIdentifier[name!=/^(?:className|style|key|ref|className|style|children)$/]",
+        "message": "<TextNumShortStandart> doesn't accept that prop. Declared props: className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TextNumSolidStandart'] > JSXAttribute > JSXIdentifier[name!=/^(?:className|style|key|ref|className|style|children)$/]",
+        "message": "<TextNumSolidStandart> doesn't accept that prop. Declared props: className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TextureIridescent'] > JSXAttribute > JSXIdentifier[name!=/^(?:className|style|key|ref|className|style|children)$/]",
+        "message": "<TextureIridescent> doesn't accept that prop. Declared props: className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TextureMetal'] > JSXAttribute > JSXIdentifier[name!=/^(?:className|style|key|ref|className|style|children)$/]",
+        "message": "<TextureMetal> doesn't accept that prop. Declared props: className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TextureNoise'] > JSXAttribute > JSXIdentifier[name!=/^(?:className|style|key|ref|className|style|children)$/]",
+        "message": "<TextureNoise> doesn't accept that prop. Declared props: className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TexturePaper'] > JSXAttribute > JSXIdentifier[name!=/^(?:className|style|key|ref|className|style|children)$/]",
+        "message": "<TexturePaper> doesn't accept that prop. Declared props: className, style."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "CardClassic": {
+        "replaces": []
+      },
+      "Images00": {
+        "replaces": []
+      },
+      "Images02": {
+        "replaces": []
+      },
+      "Images03": {
+        "replaces": []
+      },
+      "Images04": {
+        "replaces": []
+      },
+      "Images05": {
+        "replaces": []
+      },
+      "Images07": {
+        "replaces": []
+      },
+      "LogoDark": {
+        "replaces": []
+      },
+      "LogoLight": {
+        "replaces": []
+      },
+      "PaymentMastercardColor": {
+        "replaces": []
+      },
+      "PaymentMastercardGrayscale": {
+        "replaces": []
+      },
+      "PaymentMastercardSolidLight": {
+        "replaces": []
+      },
+      "PaymentMastercardStrokeMetal": {
+        "replaces": []
+      },
+      "PaypassSolid": {
+        "replaces": []
+      },
+      "TextDateStandartDark": {
+        "replaces": []
+      },
+      "TextNameStandartDark": {
+        "replaces": []
+      },
+      "TextNumEmbossedStandart": {
+        "replaces": []
+      },
+      "TextNumShortStandart": {
+        "replaces": []
+      },
+      "TextNumSolidStandart": {
+        "replaces": []
+      },
+      "TextureIridescent": {
+        "replaces": []
+      },
+      "TextureMetal": {
+        "replaces": []
+      },
+      "TextureNoise": {
+        "replaces": []
+      },
+      "TexturePaper": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--accent",
+      "--accent-2",
+      "--accent-3",
+      "--accent-4",
+      "--accent-5",
+      "--accent5",
+      "--assistant-main",
+      "--assistant-text-dark",
+      "--badge-red",
+      "--bg-message",
+      "--bg-soft",
+      "--border-hairline",
+      "--border-muted",
+      "--connector-color",
+      "--connector-stroke",
+      "--dark",
+      "--font-body",
+      "--font-display",
+      "--grad-accent",
+      "--grad-accent-icon",
+      "--grad-block-tint",
+      "--grad-cover",
+      "--grad-slide",
+      "--heading",
+      "--ink",
+      "--label",
+      "--main",
+      "--main-2",
+      "--main-3",
+      "--navy",
+      "--radius-bankcard",
+      "--radius-block",
+      "--radius-card",
+      "--radius-chip",
+      "--radius-icon",
+      "--radius-icon-lg",
+      "--secondary",
+      "--shadow-card",
+      "--shadow-emboss",
+      "--shadow-icon",
+      "--shadow-soft",
+      "--success",
+      "--surface-block",
+      "--surface-card",
+      "--surface-page",
+      "--teal",
+      "--text",
+      "--text-2",
+      "--text-3",
+      "--text-body",
+      "--text-heading",
+      "--text-muted",
+      "--type-block-title-lh",
+      "--type-block-title-ls",
+      "--type-block-title-size",
+      "--type-body-lh",
+      "--type-body-size",
+      "--type-label-ls",
+      "--type-m-body-lh",
+      "--type-m-body-size",
+      "--type-m-subtitle-lh",
+      "--type-m-subtitle-ls",
+      "--type-m-subtitle-size",
+      "--type-m-title-lh",
+      "--type-m-title-ls",
+      "--type-m-title-size",
+      "--type-slide-title-ls",
+      "--type-slide-title-size",
+      "--type-small-lh",
+      "--type-small-size",
+      "--type-subtitle-lh",
+      "--type-subtitle-size",
+      "--type-title-ls",
+      "--type-title-size"
+    ],
+    "tokenKinds": {
+      "--accent": "color",
+      "--accent-2": "color",
+      "--accent-3": "color",
+      "--accent-4": "color",
+      "--accent-5": "color",
+      "--main": "color",
+      "--bg-soft": "color",
+      "--bg-message": "color",
+      "--text": "color",
+      "--text-2": "color",
+      "--text-3": "font",
+      "--heading": "color",
+      "--label": "color",
+      "--border-muted": "color",
+      "--ink": "color",
+      "--dark": "color",
+      "--navy": "color",
+      "--success": "color",
+      "--teal": "color",
+      "--badge-red": "color",
+      "--surface-page": "color",
+      "--surface-block": "color",
+      "--surface-card": "color",
+      "--text-heading": "font",
+      "--text-body": "font",
+      "--text-muted": "font",
+      "--grad-accent": "other",
+      "--grad-accent-icon": "other",
+      "--grad-cover": "other",
+      "--grad-slide": "other",
+      "--grad-block-tint": "other",
+      "--font-display": "font",
+      "--font-body": "font",
+      "--type-title-size": "font",
+      "--type-title-ls": "font",
+      "--type-slide-title-size": "font",
+      "--type-slide-title-ls": "font",
+      "--type-subtitle-size": "font",
+      "--type-subtitle-lh": "font",
+      "--type-block-title-size": "font",
+      "--type-block-title-lh": "font",
+      "--type-block-title-ls": "font",
+      "--type-body-size": "font",
+      "--type-body-lh": "font",
+      "--type-small-size": "font",
+      "--type-small-lh": "font",
+      "--type-label-ls": "font",
+      "--type-m-title-size": "font",
+      "--type-m-title-lh": "font",
+      "--type-m-title-ls": "font",
+      "--type-m-subtitle-size": "font",
+      "--type-m-subtitle-lh": "font",
+      "--type-m-subtitle-ls": "font",
+      "--type-m-body-size": "font",
+      "--type-m-body-lh": "font",
+      "--shadow-card": "shadow",
+      "--shadow-icon": "shadow",
+      "--shadow-soft": "shadow",
+      "--shadow-emboss": "shadow",
+      "--radius-block": "radius",
+      "--radius-chip": "radius",
+      "--radius-card": "radius",
+      "--radius-icon": "radius",
+      "--radius-icon-lg": "radius",
+      "--radius-bankcard": "radius",
+      "--border-hairline": "other",
+      "--connector-stroke": "color",
+      "--connector-color": "color",
+      "--accent5": "color",
+      "--assistant-main": "color",
+      "--assistant-text-dark": "color",
+      "--main-2": "color",
+      "--main-3": "color",
+      "--secondary": "color"
+    },
+    "fontFamilies": [
+      "Druk LCG",
+      "Nunito"
+    ]
+  }
+}

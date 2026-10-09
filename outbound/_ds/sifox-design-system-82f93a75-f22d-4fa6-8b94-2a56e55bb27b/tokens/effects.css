@@ -1,0 +1,19 @@
+/* Sifox shadows, radii, borders — exact values from the file. */
+:root {
+  --shadow-card: 0px 4px 10.7px 0px rgba(57,60,75,0.3);
+  --shadow-icon: 0px 7.5px 20.063px 0px rgba(57,60,75,0.3);
+  --shadow-soft: 0px 0px 16px 0px rgba(57,60,75,0.1), 0px 10px 16px 0px rgba(57,60,75,0.05);
+  --shadow-emboss: inset -2px -2px 4px 0px rgba(0,0,0,0.04), inset 0px 4px 4px 0px rgba(255,255,255,0.15);
+
+  /* Slide info blocks are square-cornered; cards inside schemes round to 12. */
+  --radius-block: 0px;
+  --radius-chip: 8px;
+  --radius-card: 12px;
+  --radius-icon: 11.25px;
+  --radius-icon-lg: 27px;
+  --radius-bankcard: 40px;
+
+  --border-hairline: 0.74px solid rgba(127,130,145,0.5); /* @kind other */
+  --connector-stroke: 1.5px;
+  --connector-color: var(--accent);
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="../sifox-menu.js" defer></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>html, body { margin: 0; padding: 0; } a { color: #373BF9; } a:hover { color: #131E55; }</style>
+</helmet>
+<sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+  <dc-import name="AntiscamMobile" hint-size="100%,100vh"></dc-import>
+</sc-if>
+<sc-if value="{{ isTablet }}" hint-placeholder-val="{{ false }}">
+  <dc-import name="AntiscamTablet" hint-size="100%,100vh"></dc-import>
+</sc-if>
+<sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+  <dc-import name="AntiscamDesktop" hint-size="100%,100vh"></dc-import>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;view&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Авто&quot;,&quot;Мобилка&quot;,&quot;Планшет&quot;,&quot;Десктоп&quot;],&quot;default&quot;:&quot;Авто&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1440 };
+  componentDidMount() {
+    const bp = (w) => (w < 768 ? 0 : w < 1200 ? 1 : 2);
+    this.onR = () => { const w = window.innerWidth; if (bp(w) !== bp(this.state.w)) this.setState({ w }); };
+    window.addEventListener('resize', this.onR);
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this.onR); }
+  renderVals() {
+    const f = this.props.view, w = this.state.w;
+    const v = f === 'Мобилка' ? 0 : f === 'Планшет' ? 1 : f === 'Десктоп' ? 2 : (w < 768 ? 0 : w < 1200 ? 1 : 2);
+    return { isMobile: v === 0, isTablet: v === 1, isDesktop: v === 2 };
+  }
+}
+</script>
+<script src="../sifox-footer.js"></script>
+</body>
+</html>

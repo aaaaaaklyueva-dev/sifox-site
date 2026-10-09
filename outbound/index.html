@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="../sifox-menu.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#373BF9"/><text x="50" y="64" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="40" fill="#fff">Т</text></svg></template>
+<x-dc>
+<helmet>
+<script src="../sifox-menu.js" defer></script>
+<link rel="stylesheet" href="_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/tokens/colors.css">
+<link rel="stylesheet" href="_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/tokens/typography.css">
+<link rel="stylesheet" href="_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/tokens/effects.css">
+<link rel="stylesheet" href="_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/tokens/base.css">
+<script src="_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/_ds_bundle.js"></script>
+<style>
+  html, body { margin: 0; padding: 0; background: #fff; overflow-x: clip; }
+  a { color: #373BF9; text-decoration: none; }
+  a:hover { color: #697DFF; }
+  @keyframes phoneFloat { 0%, 100% { transform: translateY(-15px) rotate(-0.3deg); } 50% { transform: translateY(15px) rotate(0.3deg); } }
+</style>
+</helmet>
+<div ref="{{ wrapperRef }}" style="{{ wrapperStyle }}">
+<sc-if value="{{ isMobile }}">
+  <iframe ref="{{ mobileRef }}" src="mobile.dc.html" title="Мобильная версия" scrolling="no" style="{{ mobileStyle }}"></iframe>
+</sc-if>
+<sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+<div ref="{{ stageRef }}" style="{{ stageStyle }}">
+
+  <section data-screen-label="Hero" style="position: relative; width: 100%; height: var(--hh, 1256px); min-height: 640px; overflow: hidden; background: linear-gradient(rgba(217,217,217,0.5), rgba(217,217,217,0.5)), #fff;">
+    <div style="position: relative; width: 100%; margin: 0 auto; height: 100%;">
+    <div style="position: absolute; left: 64px; top: 120px; width: min(856px, calc(max(var(--hh, 1256px), 640px) - 320px)); aspect-ratio: 1 / 1; overflow: hidden; border-radius: 32px; background: rgb(73,76,255); {{ heroMedia }}">
+      <video ref="{{ videoRefA }}" muted="{{ true }}" playsInline="{{ true }}" preload="auto" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center calc(50% - 100px); opacity: 1; transition: opacity 0.6s ease;"></video>
+      <video ref="{{ videoRefB }}" muted="{{ true }}" playsInline="{{ true }}" preload="auto" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center calc(50% - 100px); opacity: 0; transition: opacity 0.6s ease;"></video>
+      <div style="position: absolute; left: 39px; bottom: 38px; display: flex; flex-wrap: wrap; gap: 16px 20px; width: 700px;">
+        <sc-for list="{{ chips }}" as="chip" hint-placeholder-count="4">
+          <div onClick="{{ chip.onClick }}" style="cursor: pointer; border-radius: 15.013px; background: {{ chip.bg }}; padding: calc((8px + 4px * var(--k, 1)) / var(--s, 1)) calc((20px + 12px * var(--k, 1)) / var(--s, 1)); font-family: Nunito, sans-serif; font-weight: 700; font-size: calc((14px + 10px * var(--k, 1)) / var(--s, 1)); line-height: 100%; color: rgb(19,30,85); white-space: nowrap;">{{ chip.label }}</div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="position: absolute; left: calc(64px + min(856px, max(var(--hh, 1256px), 640px) - 320px) + 44px); right: 64px; top: 120px; display: flex; flex-direction: column; gap: 20px; align-items: flex-start; {{ heroText }}">
+      <h1 style="margin: 0; align-self: stretch; font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: calc((36px + 28px * var(--k, 1)) / var(--s, 1)); line-height: 110%; color: rgb(46,49,62); text-transform: uppercase; width: 100%; height: auto; overflow-wrap: break-word;">Звонки, которые ассистент выполняет за&nbsp;вас</h1>
+      <p style="margin: 0; align-self: stretch; font-family: Nunito, sans-serif; font-weight: 400; font-size: calc((16px + 4px * var(--k, 1)) / var(--s, 1)); line-height: 140%; color: rgb(116,116,143); white-space: pre-line;">Забронировать столик, заказать справку, поздравить,
+отменить запись — и другое.</p>
+    </div>
+    <a href="#demo" onClick="{{ openDemo }}" style="position: absolute; left: calc(64px + min(856px, max(var(--hh, 1256px), 640px) - 320px) + 44px); top: calc(120px + min(856px, max(var(--hh, 1256px), 640px) - 320px) - 76px); border-radius: 12px; background: rgb(55,59,249); padding: calc((16px + 8px * var(--k, 1)) / var(--s, 1)) calc((40px + 24px * var(--k, 1)) / var(--s, 1)); display: inline-flex; justify-content: center; align-items: center; box-sizing: border-box; font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: calc((16px + 12.149px * var(--k, 1)) / var(--s, 1)); line-height: 100%; letter-spacing: 0.563px; color: #fff; text-transform: uppercase; white-space: nowrap;" style-hover="background: rgb(105,125,255);">Демо</a>
+    </div>
+  </section>
+
+  <section data-screen-label="Какие звонки" style="position: relative; height: 823px; background: rgb(55,59,249) url('assets/images/zachem-gradient.webp') center / cover no-repeat; overflow: hidden; width: 100%; margin: 0 auto;">
+    <div ref="{{ zachemRef }}" style="{{ zachemStyle }}">
+      <h2 style="margin: 0; align-self: stretch; font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: calc((32px + 22px * var(--k, 1)) / var(--s, 1)); line-height: 118.5%; color: #fff; text-transform: uppercase;">Зачем пользователю передавать звонки ассистенту?</h2>
+      <div style="display: flex; flex-direction: column; gap: 24px; align-items: flex-start;">
+        <div style="display: flex; flex-direction: row; gap: 24px; align-items: center;">
+          <div style="width: 12px; height: 12px; border-radius: 50%; background: #fff; flex-shrink: 0;"></div>
+          <span style="font-family: Nunito, sans-serif; font-weight: 400; font-size: calc((24px + 16px * var(--k, 1)) / var(--s, 1)); line-height: 100%; color: #fff; white-space: nowrap;">Иногда сложно выполнить звонки</span>
+        </div>
+        <div style="display: flex; flex-direction: row; gap: 24px; align-items: center;">
+          <div style="width: 12px; height: 12px; border-radius: 50%; background: #fff; flex-shrink: 0;"></div>
+          <span style="font-family: Nunito, sans-serif; font-weight: 400; font-size: calc((24px + 16px * var(--k, 1)) / var(--s, 1)); line-height: 100%; color: #fff; white-space: nowrap;">А иногда просто не хочется</span>
+        </div>
+        <div style="display: flex; flex-direction: row; gap: 24px; align-items: center;">
+          <div style="width: 12px; height: 12px; border-radius: 50%; background: #fff; flex-shrink: 0;"></div>
+          <span style="font-family: Nunito, sans-serif; font-weight: 400; font-size: calc((24px + 16px * var(--k, 1)) / var(--s, 1)); line-height: 100%; color: #fff; white-space: nowrap;">Нужно сделать много однотипных звонков</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Три шага" style="position: relative; width: 100%; overflow: hidden; background: rgb(255,255,255); padding: 200px 64px; box-sizing: border-box;">
+    <div ref="{{ stepsRef }}" style="display: flex; flex-direction: column; gap: 43px; align-items: flex-start; max-width: 1772px;">
+      <h2 style="margin: 0; width: 1631px; max-width: 100%; {{ revealTitle }} font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: calc((32px + 32px * var(--k, 1)) / var(--s, 1)); line-height: 100%; color: rgb(46,49,62); text-transform: uppercase;">
+        <span style="display: block;">От задачи до результата —</span>
+        <span style="display: block; text-align: right;">три шага</span>
+      </h2>
+      <div style="display: flex; flex-direction: row; gap: 24px; align-items: flex-start; align-self: stretch; {{ stepsRow }}">
+        <div style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: row; gap: 24px; align-items: stretch; {{ stepsPair }}">
+          <div style="position: relative; flex: 1 1 0; min-width: 0; height: 632px; overflow: hidden; border-radius: 24px; background: rgb(232,239,255); {{ reveal1 }}">
+            <div style="position: absolute; left: -13.34%; top: 0; margin-top: 5.18%; transform: translate(-35px, 49px); width: 443.62%; aspect-ratio: 1812 / 710; background: url(assets/m-curve.webp) center / cover no-repeat;"></div>
+            <div style="position: absolute; left: 24px; right: 24px; top: 22px; display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
+              <span style="align-self: stretch; font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: calc((32px + 22px * var(--k, 1)) / var(--s, 1)); text-align: right; line-height: 100%; color: rgba(55,59,249,0.5); text-transform: uppercase;">01</span>
+              <div style="display: flex; flex-direction: column; gap: 20px; align-items: flex-start; align-self: stretch;">
+                <h3 style="margin: 0; align-self: stretch; font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: calc((16px + 8px * var(--k, 1)) / var(--s, 1)); line-height: 140%; color: rgb(46,49,62); text-transform: uppercase;">Поставьте задачу</h3>
+                <p style="margin: 0; align-self: stretch; font-family: Nunito, sans-serif; font-weight: 400; font-size: calc(16px / var(--s, 1)); line-height: 140%; color: rgb(50,48,48);">Напишите своими словами или выберите, что нужно сделать. Например: «Узнай, сколько стоит ОСАГО». Ассистент сам расспросит детали: на&nbsp;какую машину, в&nbsp;каком городе и&nbsp;компании.</p>
+              </div>
+            </div>
+            <div style="position: absolute; left: 23px; right: 22px; top: 493px; height: 96px; overflow: hidden; border-radius: 20px; background: rgb(255,255,255); box-shadow: inset 0 0 0 1.5px rgb(55,59,249), 0 0 0 1.5px rgb(55,59,249); display: flex; flex-direction: column; gap: 10px; padding: 24px; justify-content: center; align-items: center; box-sizing: border-box; {{ revealBtn }}">
+              <span style="align-self: stretch; font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: calc((14px + 6px * var(--k, 1)) / var(--s, 1)); text-align: center; line-height: 100%; color: rgb(50,48,48); text-transform: uppercase;">Забронировать столик</span>
+            </div>
+          </div>
+          <div style="position: relative; flex: 1 1 0; min-width: 0; height: 632px; overflow: hidden; border-radius: 24px; background: rgb(232,239,255); {{ reveal2 }}">
+            <div style="position: absolute; left: -118.99%; top: 0; margin-top: 5.18%; transform: translate(-35px, 49px); width: 443.62%; aspect-ratio: 1812 / 710; background: url(assets/m-curve.webp) center / cover no-repeat;"></div>
+            <div style="position: absolute; left: 24px; right: 24px; top: 22px; display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
+              <span style="align-self: stretch; font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: calc((32px + 22px * var(--k, 1)) / var(--s, 1)); text-align: right; line-height: 100%; color: rgba(55,59,249,0.5); text-transform: uppercase;">02</span>
+              <div style="display: flex; flex-direction: column; gap: 20px; align-items: flex-start; align-self: stretch;">
+                <h3 style="margin: 0; align-self: stretch; font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: calc((16px + 8px * var(--k, 1)) / var(--s, 1)); line-height: 140%; color: rgb(46,49,62); text-transform: uppercase;">Ассистент позвонит</h3>
+                <p style="margin: 0; align-self: stretch; font-family: Nunito, sans-serif; font-weight: 400; font-size: calc(16px / var(--s, 1)); line-height: 140%; color: rgb(50,48,48);">Он сам наберёт номер, дождётся ответа и&nbsp;поговорит с&nbsp;сотрудником. Если придётся подождать на&nbsp;линии — подождёт вместо вас. В начале разговора ассистент сообщает собеседнику, что он виртуальный.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 24px; align-items: flex-start; {{ reveal3 }} {{ step3 }}">
+          <div style="position: relative; width: 100%; height: 472px; flex-shrink: 0; overflow: hidden; border-radius: 24px; background: rgb(232,239,255); {{ step3Img }}">
+            <div style="position: absolute; left: -109.23%; top: 0; margin-top: 2.52%; transform: translate(-35px, 49px); width: 215.73%; aspect-ratio: 1812 / 710; background: url(assets/m-curve.webp) center / cover no-repeat;"></div>
+            <div style="position: absolute; left: -13.5%; top: 0; margin-top: -9.38%; width: 116.25%; aspect-ratio: 1 / 1; background: url(assets/step-02-phone.png) center / cover no-repeat; animation: phoneFloat 5s ease-in-out infinite; will-change: transform;"></div>
+            <span style="position: absolute; left: 24px; right: 24px; top: 22px; font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: calc((32px + 22px * var(--k, 1)) / var(--s, 1)); text-align: right; line-height: 100%; color: rgba(55,59,249,0.5); text-transform: uppercase;">03</span>
+          </div>
+          <div style="width: 100%; max-width: 521px; display: flex; flex-direction: column; gap: 12px; align-items: flex-start; {{ step3Text }}">
+            <h3 style="margin: 0; font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: calc((16px + 8px * var(--k, 1)) / var(--s, 1)); line-height: 140%; color: rgb(46,49,62); text-transform: uppercase;">Получите результат в&nbsp;чате</h3>
+            <p style="margin: 0; align-self: stretch; font-family: Nunito, sans-serif; font-weight: 500; font-size: calc(16px / var(--s, 1)); line-height: 140%; color: rgb(50,48,48);">После звонка ассистент пришлёт короткую сводку: что удалось узнать или сделать, сколько это стоит, на&nbsp;какое время договорились и&nbsp;нужен ли от&nbsp;вас следующий шаг.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+</sc-if>
+<sc-if value="{{ demoOpen }}">
+  <div onClick="{{ closeDemo }}" style="position: fixed; inset: 0; z-index: 2000; background: rgba(50,48,48,0.5); display: flex; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box;">
+    <div onClick="{{ stop }}" style="position: relative; width: 100%; max-width: 520px; max-height: calc(100vh - 32px); overflow-y: auto; box-sizing: border-box; background: #fff; border-radius: 20px; padding: 40px; display: flex; flex-direction: column; gap: 32px; font-family: Nunito, sans-serif; color: rgb(50,48,48);">
+      <button type="button" onClick="{{ closeDemo }}" aria-label="Закрыть" style="position: absolute; top: 24px; right: 40px; width: 44px; height: 44px; padding: 0; display: flex; align-items: center; justify-content: flex-end; border: 0; background: transparent; cursor: pointer; font-size: 28px; line-height: 1; color: rgb(50,48,48);">×</button>
+      <sc-if value="{{ demoForm }}">
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <h2 style="margin: 0; font-family: 'Druk LCG', 'Druk Wide', sans-serif; font-weight: 700; font-size: 32px; line-height: 110%; text-transform: uppercase;">Запросить демо</h2>
+          <p style="margin: 0; font-size: 16px; line-height: 140%; color: rgb(116,116,143);">Оставьте ваши контакты&nbsp;— мы свяжемся с&nbsp;вами, расскажем подробнее о&nbsp;продукте и&nbsp;предоставим доступ к&nbsp;демо.</p>
+        </div>
+        <form onSubmit="{{ submitDemo }}" style="display: flex; flex-direction: column; gap: 16px;">
+          <label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 140%; color: rgb(116,116,143);">Имя
+            <input name="name" autocomplete="name" style="height: 52px; box-sizing: border-box; padding: 0 20px; border: 1px solid #DCDCE5; border-radius: 12px; font: inherit; font-size: 16px; color: rgb(50,48,48); outline: none;" style-focus="border-color: #373BF9;"></input>
+          </label>
+          <label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 140%; color: rgb(116,116,143);">Компания
+            <input name="company" autocomplete="organization" style="height: 52px; box-sizing: border-box; padding: 0 20px; border: 1px solid #DCDCE5; border-radius: 12px; font: inherit; font-size: 16px; color: rgb(50,48,48); outline: none;" style-focus="border-color: #373BF9;"></input>
+          </label>
+          <label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 140%; color: rgb(116,116,143);">Email
+            <input name="email" type="email" required="" autocomplete="email" style="height: 52px; box-sizing: border-box; padding: 0 20px; border: 1px solid #DCDCE5; border-radius: 12px; font: inherit; font-size: 16px; color: rgb(50,48,48); outline: none;" style-focus="border-color: #373BF9;"></input>
+          </label>
+          <p style="margin: 8px 0 0; font-size: 12px; line-height: 140%; color: rgb(116,116,143); text-wrap: pretty;">Нажимая кнопку «Отправить», вы соглашаетесь с&nbsp;<a href="#privacy" style="color: #373BF9;">политикой конфиденциальности</a> и&nbsp;<a href="#personal-data" style="color: #373BF9;">условиями обработки персональных данных</a>.</p>
+          <button type="submit" style=" height: 56px; border: 0; border-radius: 12px; background: #373BF9; color: #fff; cursor: pointer; font-family: 'Druk LCG', 'Druk Wide', sans-serif; font-weight: 700; font-size: 16px; text-transform: uppercase;" style-hover="background: #697DFF;">Отправить</button>
+        </form>
+      </sc-if>
+      <sc-if value="{{ demoSent }}">
+        <div style="display: flex; flex-direction: column; gap: 12px; padding: 24px 0;">
+          <h2 style="margin: 0; font-family: 'Druk LCG', 'Druk Wide', sans-serif; font-weight: 700; font-size: 32px; line-height: 110%; text-transform: uppercase;">Спасибо!</h2>
+          <p style="margin: 0; font-size: 16px; line-height: 140%; color: rgb(116,116,143);">Заявка отправлена. Мы свяжемся с вами в ближайшее время.</p>
+        </div>
+        <button type="button" onClick="{{ closeDemo }}" style="height: 56px; border: 0; border-radius: 12px; background: #373BF9; color: #fff; cursor: pointer; font-family: 'Druk LCG', 'Druk Wide', sans-serif; font-weight: 700; font-size: 16px; text-transform: uppercase;" style-hover="background: #697DFF;">Закрыть</button>
+      </sc-if>
+    </div>
+  </div>
+</sc-if>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;videos&quot;:{&quot;editor&quot;:null,&quot;default&quot;:[&quot;assets/hero-1.mp4&quot;,&quot;assets/hero-2.mp4&quot;,&quot;assets/hero-4.mp4&quot;,&quot;assets/hero-3.mp4&quot;],&quot;tsType&quot;:&quot;string[]&quot;}}">
+class Component extends DCLogic {
+  state = { i: 0, loading: false, zachemVisible: false, stepsVisible: false, heroVisible: false, scale: 1, stageHeight: 0, isMobile: false, mobileHeight: 0 };
+  videoRefA = { current: null };
+  videoRefB = { current: null };
+  stageRef = { current: null };
+  wrapperRef = { current: null };
+  mobileRef = { current: null };
+  updateScale = () => {
+    const vw = this.wrapperRef.current?.clientWidth || window.innerWidth || 1840;
+    if (!vw) return;
+    if (window.innerHeight && window.innerHeight !== this.state.vh) this.setState({ vh: window.innerHeight });
+    const isMobile = vw < 768;
+    const scale = Math.max(0.05, Math.min(1, vw / 1840));
+    const stageHeight = this.stageRef.current ? this.stageRef.current.scrollHeight : 0;
+    if (this._measured && isMobile === this.state.isMobile && Math.abs(scale - this.state.scale) < 0.0005 && stageHeight === this.state.stageHeight) return;
+    this._measured = true;
+    this.setState({ scale, stageHeight, isMobile });
+  };
+  kickScale = () => {
+    [0, 50, 150, 400, 900, 1600].forEach((ms) => setTimeout(this.updateScale, ms));
+    requestAnimationFrame(() => { this.updateScale(); requestAnimationFrame(this.updateScale); });
+  };
+  setMobile = (el) => {
+    this.mobileRef.current = el;
+    this.mro?.disconnect();
+    if (!el) return;
+    const sync = () => {
+      const d = el.contentDocument;
+      if (!d || !d.body) return;
+      const h = Math.max(d.body.scrollHeight, d.documentElement.scrollHeight);
+      if (h && h !== this.state.mobileHeight) this.setState({ mobileHeight: h });
+    };
+    el.addEventListener("load", () => {
+      sync();
+      if ("ResizeObserver" in window && el.contentDocument?.body) {
+        this.mro = new ResizeObserver(sync);
+        this.mro.observe(el.contentDocument.body);
+      }
+      clearTimeout(this._ms);
+      this._ms = setTimeout(sync, 600);
+    });
+  };
+  observe(el) {
+    if (!el) return;
+    if ("ResizeObserver" in window) {
+      this.ro = this.ro || new ResizeObserver(this.updateScale);
+      this.ro.observe(el);
+    }
+  }
+  setWrapper = (el) => {
+    this.wrapperRef.current = el;
+    if (!el) return;
+    this.observe(el);
+    this.updateScale();
+    this.kickScale();
+    clearTimeout(this._m);
+    this._m = setTimeout(this.updateScale, 300);
+    if (!this._resizeBound) { window.addEventListener("resize", this.updateScale); this._resizeBound = true; }
+  };
+  setStage = (el) => {
+    this.stageRef.current = el;
+    if (!el) return;
+    this.observe(el);
+    this.updateScale();
+  };
+  setVideoA = (el) => { this.videoRefA.current = el; this.maybeStart(); };
+  setVideoB = (el) => { this.videoRefB.current = el; this.maybeStart(); };
+  maybeStart() {
+    const a = this.videoRefA.current, b = this.videoRefB.current;
+    if (!a || !b) return;
+    if (this._startedA === a && this._startedB === b) return;
+    this._startedA = a; this._startedB = b;
+    this.frontIdx = 0;
+    try { this.videoList.reduce((p, v) => p.then(() => this.blobSrc(v)), Promise.resolve()); } catch (e) {}
+    let done = false;
+    const go = () => { if (done) return; done = true; try { this.startFrom(this.state.i % this.videoList.length || 0); } catch (e) {} };
+    requestAnimationFrame(go);
+    setTimeout(go, 120);
+  }
+  watchReveal(el, key, threshold) {
+    if (!el || this["_w_" + key]) return;
+    this["_w_" + key] = true;
+    const fire = () => {
+      if (this.state[key]) return;
+      this.setState({ [key]: true });
+      if (io) io.disconnect();
+      window.removeEventListener("scroll", check, true);
+      clearInterval(poll);
+    };
+    const check = () => {
+      const r = el.getBoundingClientRect();
+      const vh = window.innerHeight || 800;
+      if (r.top < vh - Math.min(r.height, vh) * threshold && r.bottom > 0) fire();
+    };
+    let io = null;
+    if ("IntersectionObserver" in window) {
+      io = new IntersectionObserver((entries) => { if (entries[0].isIntersecting) fire(); }, { threshold });
+      io.observe(el);
+    }
+    const poll = setInterval(check, 250);
+    window.addEventListener("scroll", check, true);
+    setTimeout(check, 0);
+    this._cleanups = this._cleanups || [];
+    this._cleanups.push(() => { if (io) io.disconnect(); clearInterval(poll); window.removeEventListener("scroll", check, true); });
+  }
+  setZachem = (el) => { this.watchReveal(el, "zachemVisible", 0.2); };
+  setSteps = (el) => { this.watchReveal(el, "stepsVisible", 0.15); };
+  reveal(delay) {
+    const on = this.state.stepsVisible;
+    return `opacity: ${on ? 1 : 0}; transform: translateX(${on ? 0 : 80}px); transition: opacity 0.8s ease ${delay}s, transform 0.8s ease ${delay}s;`;
+  }
+  componentDidMount() {
+    this.runId = (this.runId || 0) + 1;
+    this.updateScale();
+    this.kickScale();
+    window.addEventListener("load", this.updateScale);
+    const showHero = () => { if (this._heroShown) return; this._heroShown = true; this.setState({ heroVisible: true }); };
+    requestAnimationFrame(showHero);
+    setTimeout(showHero, 120);
+  }
+  componentWillUnmount() {
+    this.runId++;
+    clearTimeout(this._t);
+    this.ro?.disconnect();
+    (this._cleanups || []).forEach((fn) => fn());
+    window.removeEventListener("resize", this.updateScale);
+  }
+  get videoList() { return this.props.videos ?? ["assets/hero-1.mp4", "assets/hero-2.mp4", "assets/hero-4.mp4", "assets/hero-3.mp4"]; }
+  get layers() { return [this.videoRefA, this.videoRefB]; }
+  posFor(i) { return ["center calc(50% - 100px)", "center calc(50% - 100px)", "center center"][i] ?? "center center"; }
+  sleep(ms) { return new Promise((r) => { this._t = setTimeout(r, ms); }); }
+  blobSrc(src) {
+    const c = (window.__heroBlobs = window.__heroBlobs || {});
+    if (!c[src]) c[src] = fetch(src).then(r => r.ok ? r.blob() : Promise.reject()).then(b => URL.createObjectURL(new Blob([b], { type: "video/mp4" }))).catch(() => src);
+    return c[src];
+  }
+  async prepare(el, rawSrc, pos) {
+    if (!el) return;
+    el.style.objectPosition = pos;
+    el.muted = true;
+    const src = await this.blobSrc(rawSrc);
+    return new Promise((res) => {
+      let settled = false;
+      let timer = null;
+      const finish = (ok) => {
+        if (settled) return;
+        settled = true;
+        clearTimeout(timer);
+        el.removeEventListener("loadeddata", onLoaded);
+        el.removeEventListener("error", onFail);
+        try { el.currentTime = 0; } catch (e) {}
+        el.pause();
+        res(ok);
+      };
+      const onLoaded = () => finish(true);
+      const onFail = () => finish(false);
+      const arm = () => {
+        el.addEventListener("loadeddata", onLoaded, { once: true });
+        el.addEventListener("error", onFail, { once: true });
+        timer = setTimeout(onFail, 6000);
+      };
+      if (el.getAttribute("src") !== src) {
+        el.setAttribute("src", src);
+        arm();
+        el.load();
+      } else if (el.readyState >= 2) { finish(true); }
+      else { arm(); }
+    });
+  }
+  startFrom(i) {
+    this.runId++;
+    clearTimeout(this._t);
+    this.setState({ i });
+    this.run(i, this.runId);
+  }
+  async run(i, token) {
+    const videos = this.videoList;
+    const alive = () => token === this.runId;
+    const front = this.layers[this.frontIdx].current;
+    const back = this.layers[1 - this.frontIdx].current;
+    if (!front || !back) return;
+    const ok = await this.prepare(front, videos[i], this.posFor(i));
+    if (!alive()) return;
+    if (!ok) {
+      const skip = (i + 1) % videos.length;
+      if (skip === i) return;
+      this.setState({ i: skip });
+      return this.run(skip, token);
+    }
+    front.style.opacity = 1;
+    back.style.opacity = 0;
+    await this.sleep(500);
+    if (!alive()) return;
+    try { front.currentTime = 0; } catch (e) {}
+    front.style.opacity = 1;
+    back.style.opacity = 0;
+    front.play().catch(() => {});
+    await this.sleep(5000);
+    if (!alive()) return;
+    front.pause();
+    const next = (i + 1) % videos.length;
+    await this.prepare(back, videos[next], this.posFor(next));
+    if (!alive()) return;
+    await this.sleep(1000);
+    if (!alive()) return;
+    back.style.opacity = 1;
+    front.style.opacity = 0;
+    await this.sleep(600);
+    if (!alive()) return;
+    front.pause();
+    this.frontIdx = 1 - this.frontIdx;
+    this.setState({ i: next });
+    this.run(next, token);
+  }
+  renderVals() {
+    const videos = this.props.videos ?? ["assets/hero-1.mp4", "assets/hero-2.mp4", "assets/hero-4.mp4", "assets/hero-3.mp4"];
+    const labels = this.props.labels ?? ["Забронировать столик", "Вместо будильника", "Узнать, где в наличии лекарство", "Отменить запись"];
+    const active = this.state.i % videos.length;
+    const chips = labels.map((label, idx) => ({
+      label,
+      bg: idx === active ? "rgba(255,255,255,1)" : "rgba(255,255,255,0.5)",
+      onClick: () => this.startFrom(idx % videos.length),
+    }));
+    const zachemStyle = `position: absolute; left: 112px; top: 200px; width: 1317px; display: flex; flex-direction: column; gap: 44px; align-items: flex-start; opacity: ${this.state.zachemVisible ? 1 : 0}; transform: translateX(${this.state.zachemVisible ? 0 : 120}px); transition: opacity 0.8s ease, transform 0.8s ease;`;
+    return {
+      demoOpen: !!this.state.demoOpen,
+      demoForm: !this.state.demoSent,
+      demoSent: !!this.state.demoSent,
+      openDemo: (e) => { e && e.preventDefault(); this.setState({ demoOpen: true, demoSent: false }); },
+      closeDemo: () => this.setState({ demoOpen: false }),
+      stop: (e) => e.stopPropagation(),
+      submitDemo: (e) => {
+        e.preventDefault();
+        const d = Object.fromEntries(new FormData(e.target).entries());
+        try { const k = "taski-demo-requests"; const a = JSON.parse(localStorage.getItem(k) || "[]"); a.push({ ...d, at: new Date().toISOString() }); localStorage.setItem(k, JSON.stringify(a)); } catch (x) {}
+        fetch("https://formsubmit.co/ajax/anastasiya.klueva@sifox.ru", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({
+            "Имя": d.name || "—", "Компания": d.company || "—", "Email": d.email,
+            _subject: "Заявка на демо Таски — " + (d.company || d.name || d.email),
+            _replyto: d.email, _template: "table", _captcha: "false",
+          }),
+        }).catch(() => {});
+        this.setState({ demoSent: true });
+      },
+      wrapperRef: this.setWrapper,
+      wrapperStyle: this.state.isMobile
+        ? `position: relative; width: 100%; height: ${this.state.mobileHeight ? this.state.mobileHeight + "px" : "auto"}; overflow: hidden;`
+        : `position: relative; width: 100%; height: ${this.state.stageHeight ? this.state.stageHeight * this.state.scale + "px" : "auto"}; overflow: hidden;`,
+      isMobile: !!this.state.isMobile,
+      isDesktop: !this.state.isMobile,
+      mobileRef: this.setMobile,
+      mobileStyle: `display: block; width: 100%; height: ${this.state.mobileHeight || 3800}px; border: 0;`,
+      stageRef: this.setStage,
+      ...(() => {
+        const tab = !this.state.isMobile && this.state.scale * 1840 < 1280;
+        return {
+          stepsRow: tab ? "flex-direction: column;" : "",
+          stepsPair: tab ? "flex: none; width: 100%;" : "",
+          step3: tab ? "flex: none; width: 100%; flex-direction: row; align-items: center;" : "",
+          step3Img: tab ? "width: calc(50% - 12px);" : "",
+          step3Text: tab ? "flex: 1 1 0; min-width: 0; max-width: none;" : "",
+        };
+      })(),
+      stageStyle: `width: 1840px; transform: scale(${this.state.scale}); transform-origin: top left; --s: ${this.state.scale}; --hh: ${Math.round((this.state.vh || window.innerHeight || 900) / this.state.scale)}px; --k: ${Math.max(0, Math.min(1, (this.state.scale * 1840 - 1024) / 816))};`,
+      zachemRef: this.setZachem,
+      zachemStyle,
+      heroMedia: `opacity: ${this.state.heroVisible ? 1 : 0}; transform: translateX(${this.state.heroVisible ? 0 : -80}px); transition: opacity 0.9s ease, transform 0.9s ease;`,
+      heroText: `opacity: ${this.state.heroVisible ? 1 : 0}; transform: translateX(${this.state.heroVisible ? 0 : 80}px); transition: opacity 0.9s ease, transform 0.9s ease;`,
+      stepsRef: this.setSteps,
+      revealTitle: this.reveal(0),
+      reveal1: this.reveal(0),
+      reveal2: this.reveal(0.5),
+      reveal3: this.reveal(1),
+      revealBtn: `opacity: ${this.state.stepsVisible ? 1 : 0}; transform: translateY(${this.state.stepsVisible ? 0 : 40}px); transition: opacity 0.7s ease 1.5s, transform 0.7s ease 1.5s;`,
+      videoRefA: this.setVideoA,
+      videoRefB: this.setVideoB,
+      chips,
+    };
+  }
+}
+</script>
+<script src="../sifox-footer.js"></script>
+</body>
+</html>

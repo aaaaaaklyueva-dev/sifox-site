@@ -1,0 +1,60 @@
+/* Sifox spacing & layout for web. 4px base; the step values follow the
+   paddings/gaps used in the Figma kit (4·8·12·16·20·24·32·64). */
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-30: 120px;
+  --space-40: 160px;
+  --space-50: 200px;
+
+  /* Inside components: padding is EQUAL on all four sides —
+     the distance from the edge to the content is the same left/right/top/bottom. */
+  --pad-chip: var(--space-3);
+  --pad-card: var(--space-5);
+  --pad-block: var(--space-6);
+  --pad-panel: var(--space-8);
+
+  /* Stacks: title→text, item→item, group→group */
+  --gap-tight: var(--space-1);
+  --gap-text: var(--space-3);
+  --gap-item: var(--space-4);
+  --gap-group: var(--space-8);
+  --gap-cards: var(--space-6);
+
+  /* Page shell — the site is FLUID: the container stretches to the full
+     viewport width, only the side gutters are fixed. No centered fixed-width
+     column; backgrounds and section fills always run edge to edge. */
+  --container-width: 100%;
+  --container-max: none; /* @kind other */
+  --gutter-mobile: var(--space-6);
+  --gutter-tablet: var(--space-10);
+  --gutter-desktop: var(--space-16);
+
+  /* 12-column grid. Every block aligns to column edges — width and
+     horizontal position are always a whole number of columns.
+     Columns are fluid (1fr) and stretch with the screen; the gutter stays fixed.
+     Desktop 12 cols / gutter 24. Tablet uses 8 of the same columns, mobile 4. */
+  --grid-cols: 12; /* @kind other */
+  --grid-gutter: var(--space-6);
+  --grid-gutter-mobile: var(--space-4);
+  --grid-col: 1fr; /* @kind other */
+
+  /* Hero / cover: the top 160px on desktop is always reserved for the menu.
+     Cover content starts below --hero-menu-reserve; never place copy or art in it. */
+  --hero-menu-reserve: 160px;
+  --hero-menu-reserve-mobile: 80px;
+
+  /* Vertical rhythm between page sections */
+  --section-y-mobile: var(--space-16);
+  --section-y: var(--space-50); /* 200px top & bottom of every section (desktop) */
+  --section-head-gap: var(--space-10);
+}

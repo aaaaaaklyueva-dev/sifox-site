@@ -1,0 +1,8 @@
+/* Minimal base — body + link colors from the palette. */
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--surface-page);
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-3); }

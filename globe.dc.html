@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<style>html,body{background:#fff;color-scheme:light}</style>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/tokens/colors.css">
+<style>
+html,body{margin:0;height:100%;overflow:hidden;background:#FFFFFF;color:#323030;text-wrap:pretty;overscroll-behavior:none}a{color:#373BF9}a:hover{color:#697DFF}
+@keyframes sfxRock{0%{transform:rotate(-14deg) scale(.96)}50%{transform:rotate(10deg) scale(1.04)}100%{transform:rotate(-14deg) scale(.96)}}
+@keyframes sfxMarq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+</style>
+</helmet>
+<sc-if value="{{ isD }}" hint-placeholder-val="{{ true }}">
+<div data-screen-label="Десктоп" style="position:fixed;inset:0;background:#FFFFFF;font-family:'Nunito',sans-serif;overflow:hidden">
+  <div style="position:absolute;left:0;right:0;bottom:0;height:42%;background:#F2F3F7;transition:opacity .6s ease;opacity:{{ bandOp }}"></div>
+
+  <div style="position:absolute;inset:0;pointer-events:none">
+    <div style="position:absolute;left:40vw;right:0;top:round(26vh + 1 * 11.7vh - 1.5px, 1px);height:1.5px;background:#323030;transition:opacity .5s ease;opacity:{{ v0.op }}"></div>
+    <div style="position:absolute;left:40vw;right:0;top:round(26vh + 2 * 11.7vh - 1.5px, 1px);height:1.5px;background:#323030;transition:opacity .5s ease;opacity:{{ v0.op }}"></div>
+    <div style="position:absolute;left:40vw;right:0;top:round(26vh + 4 * 11.7vh - 1.5px, 1px);height:1.5px;background:#323030;transition:opacity .5s ease;opacity:{{ v0.op }}"></div>
+    <div style="position:absolute;left:0;right:0;top:round(26vh + 3 * 11.7vh - 1.5px, 1px);height:1.5px;background:#323030;transition:opacity .5s ease;opacity:{{ v0.op }}"></div>
+    <div style="position:absolute;left:4vw;bottom:41.9vh;display:flex;flex-direction:column;gap:clamp(6px,1.2vh,14px);font-family:'Druk LCG',sans-serif;font-weight:700;line-height:1;letter-spacing:0.02em;text-transform:uppercase;color:#373BF9;transition:opacity .5s ease .1s, transform .6s ease .1s;opacity:{{ v0.op }};transform:{{ v0.tf }}">
+      <span style="font-size:clamp(44px,5.6vw,108px)">80</span>
+      <span style="font-size:clamp(18px,2vw,38px);max-width:9em">миллионов пользователей</span>
+    </div>
+    <p style="position:absolute;left:4vw;top:calc(64.1vh - 0.22em);margin:0;max-width:min(420px,27vw);font-size:clamp(15px,1.4vw,22px);line-height:1.45;color:#323030;transition:opacity .5s ease .1s, transform .6s ease .1s;opacity:{{ v0.op }};transform:{{ v0.tf }}">Наши продукты интегрированы в&nbsp;сети мобильных операторов по&nbsp;всему миру. Более 80&nbsp;миллионов пользователей пользуются нашими решениями для&nbsp;удобной и&nbsp;безопасной связи.</p>
+    <h2 style="position:absolute;top:8vh;left:4vw;margin:0;max-width:8.5em;font-family:'Druk LCG',sans-serif;font-weight:700;font-size:clamp(40px,calc(7.6vw - 4px),144px);line-height:1;letter-spacing:0.02em;text-transform:uppercase;color:#2E303D;transition:opacity .5s ease, transform .6s ease;opacity:{{ v0.op }};transform:{{ v0.tf }}">Где мы работаем</h2>
+    <div style="position:absolute;left:0;right:0;bottom:0;top:round(50vh + 10px - 1.5px, 1px);background:#F2F3F7;transition:opacity .6s ease;opacity:0"></div>
+    <div style="position:absolute;left:40vw;right:0;top:round(20vh + 10px + 1 * 10vh - 1.5px, 1px);height:1.5px;background:#323030;transition:opacity .5s ease;opacity:{{ v2.op }}"></div>
+    <div style="position:absolute;left:40vw;right:0;top:round(20vh + 10px + 2 * 10vh - 1.5px, 1px);height:1.5px;background:#323030;transition:opacity .5s ease;opacity:{{ v2.op }}"></div>
+    <div style="position:absolute;left:40vw;right:0;top:round(20vh + 10px + 4 * 10vh - 1.5px, 1px);height:1.5px;background:#323030;transition:opacity .5s ease;opacity:{{ v2.op }}"></div>
+    <div style="position:absolute;left:40vw;right:0;top:round(20vh + 10px + 5 * 10vh - 1.5px, 1px);height:1.5px;background:#323030;transition:opacity .5s ease;opacity:{{ v2.op }}"></div>
+    <div style="position:absolute;left:40vw;right:0;top:round(50vh + 10px - 1.5px, 1px);height:1.5px;background:#323030;transition:opacity .5s ease;opacity:{{ v2.op }}"></div>
+    <div style="position:absolute;left:4vw;top:calc(75vh + 10px - 0.5em);max-width:min(460px,30vw);font-family:'Druk LCG',sans-serif;font-weight:700;font-size:clamp(18px,2vw,38px);line-height:1;letter-spacing:0.02em;text-transform:uppercase;color:#373BF9;transition:opacity .5s ease .1s, transform .6s ease .1s;opacity:{{ v2.op }};transform:{{ v2.tf }}">Можем обучить любому языку и&nbsp;диалекту</div>
+    <p style="position:absolute;left:4vw;top:calc(75vh + 10px - 0.5 * clamp(18px,2vw,38px) + 3 * clamp(18px,2vw,38px) + 2vh);margin:0;max-width:min(420px,27vw);font-size:clamp(15px,1.4vw,22px);line-height:1.45;color:#323030;transition:opacity .5s ease .1s, transform .6s ease .1s;opacity:{{ v2.op }};transform:{{ v2.tf }}">У&nbsp;нас своя языковая модель, и&nbsp;мы можем в&nbsp;короткие сроки обучить её новому языку.</p>
+    <div style="position:absolute;left:0;right:0;bottom:0;top:round(26vh + 2 * 11.7vh - 1.5px, 1px);background:#F2F3F7;transition:opacity .6s ease;opacity:{{ v1.op }}"></div>
+    <div style="position:absolute;left:40vw;right:0;top:round(26vh + 1 * 11.7vh - 1.5px, 1px);height:1.5px;background:#323030;transition:opacity .5s ease;opacity:{{ v1.op }}"></div>
+    <div style="position:absolute;left:40vw;right:0;top:round(26vh + 3 * 11.7vh - 1.5px, 1px);height:1.5px;background:#323030;transition:opacity .5s ease;opacity:{{ v1.op }}"></div>
+    <div style="position:absolute;left:40vw;right:0;top:round(26vh + 4 * 11.7vh - 1.5px, 1px);height:1.5px;background:#323030;transition:opacity .5s ease;opacity:{{ v1.op }}"></div>
+    <div style="position:absolute;left:0;right:0;top:round(26vh + 2 * 11.7vh - 1.5px, 1px);height:1.5px;background:#323030;transition:opacity .5s ease;opacity:{{ v1.op }}"></div>
+    <div style="position:absolute;left:4vw;bottom:53.6vh;display:flex;flex-direction:column;gap:clamp(6px,1.2vh,14px);font-family:'Druk LCG',sans-serif;font-weight:700;line-height:1;letter-spacing:0.02em;text-transform:uppercase;color:#373BF9;transition:opacity .5s ease .1s, transform .6s ease .1s;opacity:{{ v1.op }};transform:{{ v1.tf }}">
+      <span style="font-size:clamp(44px,5.6vw,108px)">100+</span>
+      <span style="font-size:clamp(18px,2vw,38px);max-width:9em">сотрудников</span>
+    </div>
+    <div style="position:absolute;left:4vw;top:calc(52.4vh - 0.22 * clamp(15px,1.4vw,22px));display:inline-grid;transition:opacity .5s ease .1s, transform .6s ease .1s;opacity:{{ v1.op }};transform:{{ v1.tf }}">
+      <span aria-hidden="true" style="height:0;overflow:hidden;visibility:hidden;white-space:nowrap;font-family:'Druk LCG',sans-serif;font-weight:700;font-size:clamp(18px,2vw,38px);letter-spacing:0.02em;text-transform:uppercase">сотрудников</span>
+      <p style="width:0;min-width:100%;margin:0;font-size:clamp(15px,1.4vw,22px);line-height:1.45;color:#323030">Более 100 специалистов из&nbsp;разных стран: вайбкодим с&nbsp;Claude, настраиваем DNS и&nbsp;обучаем языковые модели&nbsp;— даже на&nbsp;фарси.</p>
+    </div>
+    <h2 style="position:absolute;top:8vh;left:4vw;margin:0;font-family:'Druk LCG',sans-serif;font-weight:700;font-size:clamp(40px,calc(7.6vw - 4px),144px);line-height:1;letter-spacing:0.02em;text-transform:uppercase;color:#2E303D;transition:opacity .5s ease, transform .6s ease;opacity:{{ v1.op }};transform:{{ v1.tf }}">Офисы</h2>
+    <h2 style="position:absolute;top:8vh;left:4vw;margin:0;font-family:'Druk LCG',sans-serif;font-weight:700;font-size:clamp(40px,calc(7.6vw - 4px),144px);line-height:1;letter-spacing:0.02em;text-transform:uppercase;color:#2E303D;transition:opacity .5s ease, transform .6s ease;opacity:{{ v2.op }};transform:{{ v2.tf }}">Языки</h2>
+    <h2 style="position:absolute;top:8vh;left:4vw;margin:0;font-family:'Druk LCG',sans-serif;font-weight:700;font-size:clamp(36px,calc(7.6vw - 4px),144px);line-height:1;letter-spacing:0.02em;text-transform:uppercase;color:#2E303D;transition:opacity .5s ease, transform .6s ease;display:none">Партнёры</h2>
+    <div style="position:absolute;left:30vw;top:0;width:1.5px;height:round(12vh + 4px + clamp(40px,calc(7.6vw - 4px),144px), 1px);background:#323030;transition:opacity .5s ease;opacity:0"></div>
+    <div style="position:absolute;left:30vw;right:0;top:round(55vh, 1px);bottom:0;background:#F2F3F7;transition:opacity .6s ease;opacity:{{ v3.op }}"></div>
+    <div style="position:absolute;left:30vw;right:0;top:round(55vh, 1px);height:1.5px;background:#323030;transition:opacity .5s ease;opacity:{{ v3.op }}"></div>
+    <div style="position:absolute;left:0;right:0;bottom:104px;background:#FFFFFF;border-top:1.5px solid #323030;border-bottom:1.5px solid #323030;overflow:hidden;display:none;flex-direction:column;transition:opacity .5s ease, transform .6s ease;opacity:{{ v3.op }};transform:{{ v3.tf }}">
+      <div style="height:clamp(64px,9vh,92px);overflow:hidden;border-bottom:1px solid #C6CADD">{{ marqA }}</div>
+      <div style="height:clamp(64px,9vh,92px);overflow:hidden">{{ marqB }}</div>
+    </div>
+  </div>
+
+  <x-import component-from-global-scope="scroll-globe" from="./scroll-globe.js" step="{{ step }}" duration="{{ duration }}" lift="{{ lift }}" variant="desk" style="position:absolute;inset:0;width:100%;height:100%;z-index:{{ gz }}" hint-size="100%,100vh"></x-import>
+
+  <div style="position:absolute;inset:0;pointer-events:none">
+    <div style="position:absolute;top:7vh;right:3vw;width:clamp(44px,4.6vw,80px);transition:opacity .5s ease;opacity:{{ starOp }}">{{ star }}</div>
+
+    <div style="position:absolute;left:30vw;right:0;top:0;display:none;flex-direction:column;transition:opacity .5s ease, transform .6s ease;opacity:{{ v3.op }};transform:{{ v3.tf }}">
+      <div style="height:calc(12vh + 4px + clamp(40px,calc(7.6vw - 4px),144px));box-sizing:border-box;padding:calc(8vh + 4px) 2vw 0 2vw">
+        <h2 style="margin:0;font-family:'Druk LCG',sans-serif;font-weight:700;font-size:clamp(40px,calc(7.6vw - 4px),144px);line-height:1;letter-spacing:0.02em;text-transform:uppercase;color:#2E303D;white-space:nowrap">Партнёры</h2>
+      </div>
+      <div style="height:calc(66vh - 12vh - 4px - clamp(40px,calc(7.6vw - 4px),144px));box-sizing:border-box;display:flex;flex-wrap:wrap;justify-content:flex-end;align-content:center;gap:clamp(8px,1.2vh,14px);padding:0 4vw 0 22vw;visibility:hidden">
+        <sc-for list="{{ dlogos }}" as="l" hint-placeholder-count="10">
+          <div style="height:clamp(44px,6.6vh,66px);padding:0 clamp(18px,1.8vw,32px);box-sizing:border-box;display:flex;align-items:center;justify-content:center;border-radius:999px;background:#C3C5D3">
+            <img src="{{ l.src }}" alt="{{ l.name }}" style="height:{{ l.h }};width:auto;max-width:180px;display:block;filter:brightness(0) invert(1)"></img>
+          </div>
+        </sc-for>
+      </div>
+      <p style="margin:0;padding:clamp(16px,3.4vh,36px) 4vw 0 30vw;font-family:'Druk LCG',sans-serif;font-weight:700;font-size:clamp(18px,1.9vw,34px);line-height:1.05;letter-spacing:0.02em;text-transform:uppercase;color:#373BF9">И&nbsp;другие компании поменьше, но&nbsp;не&nbsp;менее классные и&nbsp;любимые</p>
+    </div>
+
+    <ul style="position:absolute;right:0;top:26vh;width:29vw;margin:0;padding:0;list-style:none;display:flex;flex-direction:column;font-family:'Druk LCG',sans-serif;font-weight:700;font-size:clamp(18px,1.9vw,32px);line-height:1;letter-spacing:0.02em;color:#323030;background:transparent;transition:opacity .5s ease;opacity:{{ v0.op }}">
+      <li style="height:11.7vh;box-sizing:border-box;display:flex;align-items:center;padding:0 2vw 0 3.6vw;border-bottom:1.5px solid transparent">Россия</li>
+      <li style="height:11.7vh;box-sizing:border-box;display:flex;align-items:center;padding:0 2vw 0 3.6vw;border-bottom:1.5px solid transparent">Армения</li>
+      <li style="height:11.7vh;box-sizing:border-box;display:flex;align-items:center;padding:0 2vw 0 3.6vw;border-bottom:1.5px solid transparent">Таджикистан</li>
+      <li style="height:11.7vh;box-sizing:border-box;display:flex;align-items:center;padding:0 2vw 0 3.6vw;border-bottom:1.5px solid transparent">Кения</li>
+      <li style="height:11.7vh;box-sizing:border-box;display:flex;align-items:center;padding:0 2vw 0 3.6vw">ДР Конго</li>
+    </ul>
+
+    <ul style="position:absolute;right:0;top:26vh;width:29vw;margin:0;padding:0;list-style:none;display:flex;flex-direction:column;font-family:'Druk LCG',sans-serif;font-weight:700;font-size:clamp(18px,1.9vw,32px);line-height:1;letter-spacing:0.02em;color:#323030;transition:opacity .5s ease;opacity:{{ v1.op }}">
+      <li style="height:11.7vh;box-sizing:border-box;display:flex;align-items:center;padding:0 2vw 0 3.6vw">Кипр</li>
+      <li style="height:11.7vh;box-sizing:border-box;display:flex;align-items:center;padding:0 2vw 0 3.6vw">Таджикистан</li>
+      <li style="height:11.7vh;box-sizing:border-box;display:flex;align-items:center;padding:0 2vw 0 3.6vw">США</li>
+      <li style="height:11.7vh;box-sizing:border-box;display:flex;align-items:center;padding:0 2vw 0 3.6vw">Россия</li>
+      <li style="height:11.7vh;box-sizing:border-box;display:flex;align-items:center;padding:0 2vw 0 3.6vw">Армения</li>
+    </ul>
+
+    <ul style="position:absolute;right:0;top:calc(20vh + 10px);width:29vw;margin:0;padding:0;list-style:none;display:flex;flex-direction:column;font-family:'Druk LCG',sans-serif;font-weight:700;font-size:clamp(18px,1.9vw,32px);line-height:1;letter-spacing:0.02em;color:#323030;transition:opacity .5s ease;opacity:{{ v2.op }}">
+      <li style="height:10vh;box-sizing:border-box;display:flex;align-items:center;padding:0 2vw 0 3.6vw">Русский</li>
+      <li style="height:10vh;box-sizing:border-box;display:flex;align-items:center;padding:0 2vw 0 3.6vw">Английский</li>
+      <li style="height:10vh;box-sizing:border-box;display:flex;align-items:center;padding:0 2vw 0 3.6vw">Узбекский</li>
+      <li style="height:10vh;box-sizing:border-box;display:flex;align-items:center;padding:0 2vw 0 3.6vw">Таджикский</li>
+      <li style="height:10vh;box-sizing:border-box;display:flex;align-items:center;padding:0 2vw 0 3.6vw">Армянский</li>
+      <li style="height:10vh;box-sizing:border-box;display:flex;align-items:center;padding:0 2vw 0 3.6vw">Арабский</li>
+    </ul>
+  </div>
+
+  <div style="position:absolute;inset:0;z-index:3;pointer-events:none;transition:opacity .5s ease, transform .6s ease;opacity:{{ v3.op }};transform:{{ v3.tf }}">
+    <h2 style="position:absolute;top:8vh;right:4vw;margin:0;font-family:'Druk LCG',sans-serif;font-weight:700;font-size:clamp(40px,calc(7.6vw - 4px),144px);line-height:1;letter-spacing:0.02em;text-transform:uppercase;color:#2E303D;white-space:nowrap">Партнёры</h2>
+    <p style="position:absolute;right:4vw;top:calc(8vh + clamp(40px,calc(7.6vw - 4px),144px) + 5vh);margin:0;max-width:min(620px,38vw);text-align:right;font-size:clamp(17px,1.75vw,30px);font-weight:600;line-height:1.4;color:#323030">{{ partnersText }}</p>
+    <div style="position:absolute;right:4vw;top:59vh;width:clamp(56px,5.4vw,96px)">{{ star }}</div>
+    <div style="position:absolute;right:4vw;top:calc(59vh + clamp(56px,5.4vw,96px) + 4vh);display:flex;flex-direction:column;align-items:flex-end;gap:2vh;max-width:min(480px,28vw)">
+      <sc-if value="{{ hasBrand }}" hint-placeholder-val="{{ false }}">
+        <img src="{{ brandLogo }}" alt="{{ brandId }}" style="height:{{ brandH }};width:auto;max-width:100%;display:block;filter:brightness(0);opacity:.85"></img>
+        <p style="margin:0;text-align:right;font-size:clamp(15px,1.3vw,22px);font-weight:400;line-height:1.45;color:#323030">{{ brandText }}</p>
+      </sc-if>
+      <sc-if value="{{ noBrand }}" hint-placeholder-val="{{ true }}">
+        <p style="margin:0;text-align:right;font-size:clamp(17px,1.75vw,30px);font-weight:400;line-height:1.4;color:#323030">Нажмите, на&nbsp;интересующую компанию и&nbsp;мы немного расскажем о&nbsp;ней</p>
+      </sc-if>
+    </div>
+  </div>
+
+  <div style="position:absolute;left:50%;bottom:52px;transform:translateX(-50%);z-index:4;display:flex;gap:4px;padding:4px;background:#FFFFFF;border:1px solid #323030;border-radius:12px;box-shadow:0 0 16px rgba(57,60,75,.1), 0 10px 16px rgba(57,60,75,.05)">
+    <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="4">
+      <button onClick="{{ t.go }}" style="border:0;cursor:pointer;padding:12px 20px;border-radius:8px;font:600 16px/1 'Nunito',sans-serif;background:{{ t.bg }};color:{{ t.fg }}">{{ t.label }}</button>
+    </sc-for>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isT }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="Планшет" style="position:fixed;inset:0;background:#FFFFFF;font-family:'Nunito',sans-serif;overflow:hidden;display:flex;flex-direction:column">
+  <div data-site-menu-slot="true" style="flex:0 0 72px;background:#FFFFFF"></div>
+  <div style="flex:0 0 auto;height:65px;box-sizing:border-box;border-top:1px solid #323030;border-bottom:1px solid #323030;padding:10px 32px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px">
+    <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="4">
+      <button onClick="{{ t.go }}" style="border:0;cursor:pointer;min-height:44px;padding:0 8px;border-radius:8px;font:500 17px/1 'Nunito',sans-serif;background:{{ t.bg }};color:{{ t.fg }}">{{ t.label }}</button>
+    </sc-for>
+  </div>
+
+  <div style="position:relative;flex:0 0 auto;height:clamp(340px,50vh,600px);background:#F2F3F7;border-bottom:1px solid #323030;overflow:hidden">
+    <x-import component-from-global-scope="scroll-globe" from="./scroll-globe.js" step="{{ step }}" duration="{{ duration }}" fixedscale="{{ tscale }}" fixedy="0,0,0,-0.45" fixedpy="0,0,0,50" rotoffset="0,0;-0.0023,-0.0472;-0.3526,-0.0401;0.3206,0.0222" style="position:absolute;inset:0;width:100%;height:100%" hint-size="100%,100%"></x-import>
+  </div>
+
+  <div style="position:relative;flex:1 1 auto;min-height:0">
+    <div data-screen-label="01 Страны" style="position:absolute;inset:0;overflow-y:auto;display:flex;flex-direction:column;transition:opacity .45s ease, transform .55s ease;opacity:{{ m0.op }};transform:{{ m0.tf }};pointer-events:{{ m0.pe }}">
+      <div style="flex:0 0 auto;display:flex;align-items:center;gap:20px;padding:clamp(10px,2vh,20px) 32px;border-bottom:1px solid #323030">
+        <div style="width:48px;flex:0 0 48px">{{ mstar }}</div>
+        <h2 style="margin:0;font-family:'Druk LCG',sans-serif;font-weight:700;font-size:clamp(28px,3.4vh,40px);line-height:1;letter-spacing:0.02em;text-transform:uppercase;color:#2E303D">Где мы работаем</h2>
+      </div>
+      <div style="flex:1 0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)">
+        <ul style="margin:0;padding:clamp(14px,2.6vh,28px) 32px clamp(14px,2.6vh,28px) 52px;columns:2;column-gap:24px;font-size:clamp(16px,2vh,19px);line-height:1.4;color:#323030;border-right:1px solid #323030">
+          <li>Россия</li><li>Армения</li><li>Узбекистан</li><li>Таджикистан</li><li>ДР Конго</li><li>Кения</li>
+        </ul>
+        <div style="display:flex;flex-direction:column;gap:clamp(8px,1.6vh,16px);padding:clamp(14px,2.6vh,28px) 32px">
+          <div style="display:flex;flex-direction:column;gap:4px;font-family:'Druk LCG',sans-serif;text-transform:uppercase;color:#373BF9;line-height:1">
+            <span style="font-size:clamp(24px,3vh,34px)">80 млн</span>
+            <span style="font-size:clamp(24px,3vh,34px);letter-spacing:0.02em">пользователей</span>
+          </div>
+          <p style="margin:0;font-size:clamp(15px,2vh,18px);line-height:1.45;color:#323030">Наши продукты интегрированы в&nbsp;сети мобильных операторов по&nbsp;всему миру. Более 80&nbsp;миллионов пользователей пользуются нашими решениями для&nbsp;удобной и&nbsp;безопасной связи.</p>
+        </div>
+      </div>
+    </div>
+
+    <div data-screen-label="02 Офисы" style="position:absolute;inset:0;overflow-y:auto;display:flex;flex-direction:column;transition:opacity .45s ease, transform .55s ease;opacity:{{ m1.op }};transform:{{ m1.tf }};pointer-events:{{ m1.pe }}">
+      <div style="flex:0 0 auto;display:flex;align-items:center;gap:20px;padding:clamp(10px,2vh,20px) 32px;border-bottom:1px solid #323030">
+        <div style="width:48px;flex:0 0 48px">{{ mstar }}</div>
+        <h2 style="margin:0;font-family:'Druk LCG',sans-serif;font-weight:700;font-size:clamp(28px,3.4vh,40px);line-height:1;letter-spacing:0.02em;text-transform:uppercase;color:#2E303D">Офисы</h2>
+      </div>
+      <div style="flex:1 0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)">
+        <ul style="margin:0;padding:clamp(14px,2.6vh,28px) 32px clamp(14px,2.6vh,28px) 52px;columns:2;column-gap:24px;font-size:clamp(16px,2vh,19px);line-height:1.4;color:#323030;border-right:1px solid #323030">
+          <li>Кипр</li><li>Армения</li><li>Россия</li><li>США</li><li>Таджикистан</li>
+        </ul>
+        <div style="display:flex;flex-direction:column;gap:clamp(8px,1.6vh,16px);padding:clamp(14px,2.6vh,28px) 32px">
+          <div style="display:flex;flex-direction:column;gap:4px;font-family:'Druk LCG',sans-serif;text-transform:uppercase;color:#373BF9;line-height:1">
+            <span style="font-size:clamp(24px,3vh,34px)">100+</span>
+            <span style="font-size:clamp(24px,3vh,34px);letter-spacing:0.02em">сотрудников</span>
+          </div>
+          <p style="margin:0;font-size:clamp(15px,2vh,18px);line-height:1.45;color:#323030">Более 100 специалистов из&nbsp;разных стран: вайбкодим с&nbsp;Claude, настраиваем DNS и&nbsp;обучаем языковые модели&nbsp;— даже на&nbsp;фарси.</p>
+        </div>
+      </div>
+    </div>
+
+    <div data-screen-label="03 Языки" style="position:absolute;inset:0;overflow-y:auto;display:flex;flex-direction:column;transition:opacity .45s ease, transform .55s ease;opacity:{{ m2.op }};transform:{{ m2.tf }};pointer-events:{{ m2.pe }}">
+      <div style="flex:0 0 auto;display:flex;align-items:center;gap:20px;padding:clamp(10px,2vh,20px) 32px;border-bottom:1px solid #323030">
+        <div style="width:48px;flex:0 0 48px">{{ mstar }}</div>
+        <h2 style="margin:0;font-family:'Druk LCG',sans-serif;font-weight:700;font-size:clamp(28px,3.4vh,40px);line-height:1;letter-spacing:0.02em;text-transform:uppercase;color:#2E303D">Языки</h2>
+      </div>
+      <div style="flex:1 0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)">
+        <ul style="margin:0;padding:clamp(14px,2.6vh,28px) 32px clamp(14px,2.6vh,28px) 52px;columns:2;column-gap:24px;font-size:clamp(16px,2vh,19px);line-height:1.4;color:#323030;border-right:1px solid #323030">
+          <li>Русский</li><li>Английский</li><li>Узбекский</li><li>Таджикский</li><li>Армянский</li><li>Арабский</li>
+        </ul>
+        <div style="display:flex;flex-direction:column;gap:clamp(8px,1.6vh,16px);padding:clamp(14px,2.6vh,28px) 32px">
+          <span style="font-family:'Druk LCG',sans-serif;font-weight:700;font-size:clamp(22px,2.8vh,30px);line-height:1.05;letter-spacing:0.02em;text-transform:uppercase;color:#2E303D">Можем обучить любому языку и&nbsp;диалекту</span>
+          <p style="margin:0;font-size:clamp(15px,2vh,18px);line-height:1.45;color:#323030">У&nbsp;нас своя языковая модель, и&nbsp;мы можем в&nbsp;короткие сроки обучить её новому языку.</p>
+        </div>
+      </div>
+    </div>
+
+    <div data-screen-label="04 Партнёры" style="position:absolute;inset:0;overflow-y:auto;display:flex;flex-direction:column;transition:opacity .45s ease, transform .55s ease;opacity:{{ m3.op }};transform:{{ m3.tf }};pointer-events:{{ m3.pe }}">
+      <div style="flex:0 0 auto;display:flex;align-items:center;gap:20px;padding:clamp(10px,2vh,20px) 32px;border-bottom:1px solid #323030">
+        <div style="width:48px;flex:0 0 48px">{{ mstar }}</div>
+        <h2 style="margin:0;font-family:'Druk LCG',sans-serif;font-weight:700;font-size:clamp(28px,3.4vh,40px);line-height:1;letter-spacing:0.02em;text-transform:uppercase;color:#2E303D">Партнёры</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid #323030">
+        <sc-for list="{{ tlogos }}" as="l" hint-placeholder-count="9">
+          <div style="height:clamp(72px,9vh,104px);display:flex;align-items:center;justify-content:center;padding:18px 28px;box-sizing:border-box;border-right:{{ l.br }};border-bottom:{{ l.bb }}">
+            <img src="{{ l.src }}" alt="{{ l.name }}" style="max-width:{{ l.mw }};max-height:{{ l.mh }};transform:{{ l.tf }};display:block;filter:brightness(0);opacity:.8"></img>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isM }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="Мобильная" style="position:fixed;inset:0;background:#FFFFFF;font-family:'Nunito',sans-serif;overflow:hidden;display:flex;flex-direction:column">
+  <div data-site-menu-slot="true" style="flex:0 0 56px;background:#FFFFFF"></div>
+  <div style="flex:0 0 auto;height:57px;box-sizing:border-box;border-top:1px solid #323030;border-bottom:1px solid #323030;padding:10px 20px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px">
+    <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="4">
+      <button onClick="{{ t.go }}" style="border:0;cursor:pointer;min-height:36px;padding:0 4px;border-radius:8px;font:500 15px/1 'Nunito',sans-serif;background:{{ t.bg }};color:{{ t.fg }}">{{ t.label }}</button>
+    </sc-for>
+  </div>
+
+  <div style="position:relative;flex:0 0 auto;height:clamp(260px,47vh,400px);background:#F2F3F7;border-bottom:1px solid #323030;overflow:hidden">
+    <x-import component-from-global-scope="scroll-globe" from="./scroll-globe.js" step="{{ step }}" duration="{{ duration }}" fixedscale="{{ gscale }}" fixedy="0,0,0,-0.45" fixedpy="0,0,0,50" rotoffset="0,0;-0.0023,-0.0472;-0.3526,-0.0401;0.3206,0.0222" style="position:absolute;inset:0;width:100%;height:100%" hint-size="100%,100%"></x-import>
+  </div>
+
+  <div style="position:relative;flex:1 1 auto;min-height:0">
+    <div data-screen-label="01 Страны" style="position:absolute;inset:0;overflow-y:auto;display:flex;flex-direction:column;transition:opacity .45s ease, transform .55s ease;opacity:{{ m0.op }};transform:{{ m0.tf }};pointer-events:{{ m0.pe }}">
+      <div style="flex:0 0 auto;display:flex;align-items:center;gap:16px;padding:clamp(6px,1.6vh,14px) 20px;border-bottom:1px solid #323030">
+        <div style="width:36px;flex:0 0 36px">{{ mstar }}</div>
+        <h2 style="margin:0;font-family:'Druk LCG',sans-serif;font-weight:700;font-size:clamp(20px,2.9vh,26px);line-height:1;letter-spacing:0.02em;text-transform:uppercase;color:#2E303D">Где мы работаем</h2>
+      </div>
+      <ul style="flex:0 0 auto;margin:0;padding:clamp(8px,2.2vh,20px) 20px clamp(8px,2.2vh,20px) 38px;columns:2;column-gap:24px;font-size:clamp(13px,1.8vh,15px);line-height:1.35;color:#323030;border-bottom:1px solid #323030">
+        <li>Россия</li><li>Армения</li><li>Узбекистан</li><li>Таджикистан</li><li>ДР Конго</li><li>Кения</li>
+      </ul>
+      <div style="flex:0 0 auto;display:flex;flex-direction:column;gap:clamp(6px,1.4vh,12px);padding:clamp(8px,2.2vh,20px) 20px clamp(12px,3vh,28px)">
+        <div style="display:flex;flex-direction:column;gap:4px;font-family:'Druk LCG',sans-serif;text-transform:uppercase;color:#373BF9;line-height:1">
+          <span style="font-size:clamp(20px,2.9vh,26px)">80 млн</span>
+          <span style="font-size:clamp(20px,2.9vh,26px);letter-spacing:0.02em">пользователей</span>
+        </div>
+        <p style="margin:0;font-size:clamp(14px,1.9vh,16px);line-height:1.4;color:#323030">Наши продукты интегрированы в&nbsp;сети мобильных операторов по&nbsp;всему миру. Более 80&nbsp;миллионов пользователей пользуются нашими решениями для&nbsp;удобной и&nbsp;безопасной связи.</p>
+      </div>
+    </div>
+
+    <div data-screen-label="02 Офисы" style="position:absolute;inset:0;overflow-y:auto;display:flex;flex-direction:column;transition:opacity .45s ease, transform .55s ease;opacity:{{ m1.op }};transform:{{ m1.tf }};pointer-events:{{ m1.pe }}">
+      <div style="flex:0 0 auto;display:flex;align-items:center;gap:16px;padding:clamp(6px,1.6vh,14px) 20px;border-bottom:1px solid #323030">
+        <div style="width:36px;flex:0 0 36px">{{ mstar }}</div>
+        <h2 style="margin:0;font-family:'Druk LCG',sans-serif;font-weight:700;font-size:clamp(20px,2.9vh,26px);line-height:1;letter-spacing:0.02em;text-transform:uppercase;color:#2E303D">Офисы</h2>
+      </div>
+      <ul style="flex:0 0 auto;margin:0;padding:clamp(8px,2.2vh,20px) 20px clamp(8px,2.2vh,20px) 38px;columns:2;column-gap:24px;font-size:clamp(13px,1.8vh,15px);line-height:1.35;color:#323030;border-bottom:1px solid #323030">
+        <li>Кипр</li><li>Армения</li><li>Россия</li><li>США</li><li>Таджикистан</li>
+      </ul>
+      <div style="flex:0 0 auto;display:flex;flex-direction:column;gap:clamp(6px,1.4vh,12px);padding:clamp(8px,2.2vh,20px) 20px clamp(12px,3vh,28px)">
+        <div style="display:flex;flex-direction:column;gap:4px;font-family:'Druk LCG',sans-serif;text-transform:uppercase;color:#373BF9;line-height:1">
+          <span style="font-size:clamp(20px,2.9vh,26px)">100+</span>
+          <span style="font-size:clamp(20px,2.9vh,26px);letter-spacing:0.02em">сотрудников</span>
+        </div>
+        <p style="margin:0;font-size:clamp(14px,1.9vh,16px);line-height:1.4;color:#323030">Более 100 специалистов из&nbsp;разных стран: вайбкодим с&nbsp;Claude, настраиваем DNS и&nbsp;обучаем языковые модели&nbsp;— даже на&nbsp;фарси.</p>
+      </div>
+    </div>
+
+    <div data-screen-label="03 Языки" style="position:absolute;inset:0;overflow-y:auto;display:flex;flex-direction:column;transition:opacity .45s ease, transform .55s ease;opacity:{{ m2.op }};transform:{{ m2.tf }};pointer-events:{{ m2.pe }}">
+      <div style="flex:0 0 auto;display:flex;align-items:center;gap:16px;padding:clamp(6px,1.6vh,14px) 20px;border-bottom:1px solid #323030">
+        <div style="width:36px;flex:0 0 36px">{{ mstar }}</div>
+        <h2 style="margin:0;font-family:'Druk LCG',sans-serif;font-weight:700;font-size:clamp(20px,2.9vh,26px);line-height:1;letter-spacing:0.02em;text-transform:uppercase;color:#2E303D">Языки</h2>
+      </div>
+      <ul style="flex:0 0 auto;margin:0;padding:clamp(8px,2.2vh,20px) 20px clamp(8px,2.2vh,20px) 38px;columns:2;column-gap:24px;font-size:clamp(13px,1.8vh,15px);line-height:1.35;color:#323030;border-bottom:1px solid #323030">
+        <li>Русский</li><li>Английский</li><li>Узбекский</li><li>Таджикский</li><li>Армянский</li><li>Арабский</li>
+      </ul>
+      <div style="flex:0 0 auto;display:flex;flex-direction:column;gap:clamp(6px,1.4vh,12px);padding:clamp(8px,2.2vh,20px) 20px clamp(12px,3vh,28px)">
+        <span style="font-family:'Druk LCG',sans-serif;font-weight:700;font-size:clamp(20px,2.9vh,26px);line-height:1.05;letter-spacing:0.02em;text-transform:uppercase;color:#2E303D">Можем обучить любому языку и&nbsp;диалекту</span>
+        <p style="margin:0;font-size:clamp(14px,1.9vh,16px);line-height:1.4;color:#323030">У&nbsp;нас своя языковая модель, и&nbsp;мы можем в&nbsp;короткие сроки обучить её новому языку.</p>
+      </div>
+    </div>
+
+    <div data-screen-label="04 Партнёры" style="position:absolute;inset:0;overflow-y:auto;display:flex;flex-direction:column;transition:opacity .45s ease, transform .55s ease;opacity:{{ m3.op }};transform:{{ m3.tf }};pointer-events:{{ m3.pe }}">
+      <div style="flex:0 0 auto;display:flex;align-items:center;gap:16px;padding:clamp(6px,1.6vh,14px) 20px;border-bottom:1px solid #323030">
+        <div style="width:36px;flex:0 0 36px">{{ mstar }}</div>
+        <h2 style="margin:0;font-family:'Druk LCG',sans-serif;font-weight:700;font-size:clamp(20px,2.9vh,26px);line-height:1;letter-spacing:0.02em;text-transform:uppercase;color:#2E303D">Партнёры</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid #323030">
+        <sc-for list="{{ logos }}" as="l" hint-placeholder-count="9">
+          <div style="height:clamp(56px,8.5vh,76px);display:flex;align-items:center;justify-content:center;padding:14px;box-sizing:border-box;border-right:{{ l.br }};border-bottom:{{ l.bb }}">
+            <img src="{{ l.src }}" alt="{{ l.name }}" style="max-width:{{ l.mw }};max-height:{{ l.mh }};transform:{{ l.tf }};display:block;filter:brightness(0);opacity:.8"></img>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;duration&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0.7,&quot;min&quot;:0.3,&quot;max&quot;:1.5,&quot;step&quot;:0.1,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;},&quot;partnersText&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;A&quot;,&quot;B&quot;],&quot;default&quot;:&quot;B&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Десктоп&quot;},&quot;lift&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:60,&quot;min&quot;:0,&quot;max&quot;:200,&quot;step&quot;:10,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Десктоп&quot;},&quot;globeSize&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0.95,&quot;min&quot;:0.6,&quot;max&quot;:1.3,&quot;step&quot;:0.05,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Мобильная и планшет&quot;},&quot;partnersSize&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1.7,&quot;min&quot;:1,&quot;max&quot;:2.5,&quot;step&quot;:0.05,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Мобильная и планшет&quot;}}">
+class Component extends DCLogic {
+  state = { step: 0, mode: 'd' };
+  componentDidMount() {
+    this.onResize = () => {
+      const w = innerWidth, mode = w < 768 ? 'm' : w < 1200 ? 't' : 'd';
+      if (mode !== this.state.mode) this.setState({ mode });
+    };
+    this.onResize();
+    addEventListener('resize', this.onResize);
+    let x0 = null, y0 = null;
+    this.onTs = e => { if (e.target.closest('scroll-globe')) { x0 = null; return; } x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; };
+    this.onTe = e => {
+      if (x0 == null) return;
+      const dx = x0 - e.changedTouches[0].clientX, dy = y0 - e.changedTouches[0].clientY;
+      if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) this.go(this.state.step + (dx > 0 ? 1 : -1));
+      else if (Math.abs(dy) > 50 && this.edge(e.target, dy > 0)) this.go(this.state.step + (dy > 0 ? 1 : -1));
+      x0 = null;
+    };
+    let lock = 0;
+    this.onWheel = e => {
+      if (this.embedded) {
+        if (e.cancelable) e.preventDefault();
+        const k = e.deltaMode === 1 ? 40 : e.deltaMode === 2 ? innerHeight : 1, d = e.deltaY * k, down = d > 0;
+        const now = performance.now(), g = this.wg || (this.wg = { sum: 0, dir: 0, fired: false, last: 0, shorts: 0, shortAt: 0, passing: false });
+        if (now - g.last > 180 || Math.sign(d) !== g.dir) {
+          if (g.sum > 0 && !g.fired && !g.passing) { g.shorts = (now - g.shortAt < 1500 && g.shortDir === g.dir) ? g.shorts + 1 : 1; g.shortAt = now; g.shortDir = g.dir; }
+          g.sum = 0; g.fired = false; g.dir = Math.sign(d);
+          const s = this.state.step, r = window.frameElement.getBoundingClientRect();
+          const vh = window.parent.innerHeight, far = (down ? r.top > vh * 0.35 : r.top < -vh * 0.35);
+          g.passing = (down && s >= 3) || (!down && s <= 0) || far;
+          if (!g.passing && Math.abs(r.top) > 2) window.parent.scrollBy({ top: r.top, behavior: 'smooth' });
+        }
+        g.last = now;
+        if (g.passing) { try { window.parent.scrollBy(0, d); } catch (_) {} return; }
+        if (g.fired) return;
+        g.sum += Math.abs(d);
+        const twoShorts = g.shorts >= 1 && g.shortDir === g.dir && now - g.shortAt < 1500 && g.sum > 20;
+        if (g.sum >= 350 || twoShorts) { g.fired = true; g.shorts = 0; this.go(this.state.step + (down ? 1 : -1)); }
+        return;
+      }
+      if (Math.abs(e.deltaY) < 8) return;
+      const now = performance.now(); if (now < lock) return;
+      if (this.state.mode !== 'd' && (e.target.closest('scroll-globe') || !this.edge(e.target, e.deltaY > 0))) return;
+      lock = now + 800; this.go(this.state.step + (e.deltaY > 0 ? 1 : -1));
+    };
+    this.onKey = e => {
+      if (['ArrowDown', 'ArrowRight', 'PageDown'].includes(e.key)) this.go(this.state.step + 1);
+      if (['ArrowUp', 'ArrowLeft', 'PageUp'].includes(e.key)) this.go(this.state.step - 1);
+    };
+    try {
+      const fe = window.frameElement, sec = fe && fe.closest('[data-globe-scroll]');
+      if (sec) {
+        this.embedded = true;
+        let wasAbove = true;
+        this.onPScroll = () => {
+          const t = fe.getBoundingClientRect().top, vh = window.parent.innerHeight;
+          if (t > vh * 0.5) { if (!wasAbove && this.state.step !== 0) this.go(0); wasAbove = true; }
+          else if (t < -vh * 0.5) { if (wasAbove && this.state.step !== 3) this.go(3); wasAbove = false; }
+        };
+        window.parent.addEventListener('scroll', this.onPScroll, { passive: true });
+      }
+    } catch (_) {}
+    addEventListener('wheel', this.onWheel, { passive: false });
+    addEventListener('touchstart', this.onTs, { passive: true });
+    addEventListener('touchend', this.onTe, { passive: true });
+    addEventListener('keydown', this.onKey);
+    this.onBrand = e => { if (this.state.step === 2) this.setState({ brand: e.detail }); };
+    document.addEventListener('brandclick', this.onBrand);
+  }
+  componentWillUnmount() {
+    try { if (this.onPScroll) window.parent.removeEventListener('scroll', this.onPScroll); } catch (_) {}
+    removeEventListener('resize', this.onResize); removeEventListener('wheel', this.onWheel);
+    removeEventListener('touchstart', this.onTs); removeEventListener('touchend', this.onTe); removeEventListener('keydown', this.onKey);
+  }
+  edge(t, down) {
+    const p = t.closest && t.closest('[data-screen-label^="0"]');
+    if (!p) return true;
+    return down ? p.scrollTop + p.clientHeight >= p.scrollHeight - 2 : p.scrollTop <= 0;
+  }
+  marq(row, rev) {
+    const h = React.createElement;
+    const all = ['megafon', 't2', 'beeline', 'sber-mobile', 'team-armenia', 'gazprom-mobile', 'motiv-h', 'uzum', 'yota', 'megafon-tj'];
+    const list = row ? all.slice(5).concat(all.slice(0, 5)) : all;
+    const hs = { megafon: 30, 'megafon-tj': 30, t2: 24, beeline: 28, 'sber-mobile': 34, 'team-armenia': 28, 'gazprom-mobile': 30, 'motiv-h': 22, uzum: 26, yota: 28 };
+    const cells = list.concat(list).map((n, i) => h('div', { key: i, style: { flex: '0 0 auto', width: 'clamp(180px,14vw,260px)', height: '100%', boxSizing: 'border-box', borderRight: '1px solid #C6CADD', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 28px' } },
+      h('img', { src: 'logos/' + n + '.svg', alt: n, style: { maxHeight: hs[n] + 'px', maxWidth: '100%', display: 'block', filter: 'brightness(0)', opacity: 0.8 } })));
+    return h('div', { style: { display: 'flex', width: 'max-content', height: '100%' } }, cells);
+  }
+  go(i) { this.setState({ step: Math.max(0, Math.min(3, i)), brand: null }); }
+  renderVals() {
+    const s = [0, 1, 3, 2][this.state.step], mode = this.state.mode, h = React.createElement;
+    const v = i => ({ op: i === s ? 1 : 0, tf: i === s ? 'translateY(0)' : (i < s ? 'translateY(-24px)' : 'translateY(24px)') });
+    const m = i => ({ op: i === s ? 1 : 0, pe: i === s ? 'auto' : 'none', tf: i === s ? 'translateY(0)' : (i < s ? 'translateY(-12px)' : 'translateY(12px)') });
+    const starEl = fill => h('svg', { viewBox: '0 0 120 128', style: { width: '100%', display: 'block', transformOrigin: '50% 50%', animation: 'sfxRock 4s ease-in-out infinite' } },
+      h('path', { d: 'M54 0 L68 50 L120 64 L66 80 L50 128 L40 74 L0 60 L44 46 Z', fill }));
+    const logos = ['megafon', 't2', 'beeline', 'sber-mobile', 'team-armenia', 'gazprom-mobile', 'motiv-h', 'uzum', 'yota'].map((n, i, a) => ({
+      name: n, src: 'logos/' + n + '.svg',
+      tf: n === 'megafon' ? 'scaleX(1.047)' : 'none',
+      mhv: n === 'megafon' ? 28 : n === 'team-armenia' ? 25 : ['motiv-h', 'uzum'].includes(n) ? 24 : n === 'sber-mobile' ? 32 : n === 't2' ? 22 : ['yota', 'beeline'].includes(n) ? 26 : 30,
+      mw: n === 'motiv-h' ? '78%' : n === 'team-armenia' ? '75%' : n === 'megafon' ? '88%' : n === 'sber-mobile' ? 'calc(100% + 2px)' : n === 'uzum' ? '80%' : '100%',
+      br: i % 3 < 2 ? '1px solid #C6CADD' : '0',
+      bb: i < a.length - 3 ? '1px solid #C6CADD' : '0',
+    }));
+    const gs = this.props.globeSize ?? 0.95, ps = this.props.partnersSize ?? 1.7;
+    const BMAP = { gazprom: 'gazprom-mobile', sber: 'sber-mobile', 'motiv-h-white': 'motiv-h', 'team-armenia-white': 'team-armenia' };
+    const BTXT = {
+      'megafon-tj': 'Оператор связи, работающий в\u00a0Таджикистане с\u00a02001 года. Предоставляет мобильную связь и\u00a0интернет, развивает цифровые сервисы для\u00a0повседневной жизни и\u00a0решения для\u00a0бизнеса.',
+      'team-armenia': 'Одна из ведущих телекоммуникационных компаний Армении. Предоставляет мобильную и фиксированную связь, интернет и цифровое телевидение.',
+      uzum: 'Крупнейшая цифровая экосистема Узбекистана, основанная в\u00a02022 году. Объединяет маркетплейс, банковские услуги, рассрочку и\u00a0доставку.',
+      'gazprom-mobile': 'Молодой российский мобильный оператор, основанный Газпромбанком в\u00a02020 году. Работает на\u00a0сети T2 и\u00a0объединяет мобильную связь, интернет и\u00a0цифровые сервисы с\u00a0банковскими привилегиями.',
+      'sber-mobile': 'Мобильный оператор экосистемы Сбера, работающий под этим брендом с\u00a02018 года. Предоставляет связь и\u00a0интернет на\u00a0сетях МегаФона и\u00a0T2, дополняя их защитой от\u00a0мошенников, бонусами и\u00a0преимуществами сервисов Сбера.',
+      'motiv-h': 'Российский региональный оператор связи, работающий с\u00a01996 года. Предоставляет мобильную связь и\u00a0интернет в\u00a0Свердловской и\u00a0Курганской областях, Ханты-Мансийском и\u00a0Ямало-Ненецком автономных округах.',
+      beeline: 'Российская телекоммуникационная компания, основанная в 1992 году. Работает под брендом билайн и входит в «большую четвёрку» — число крупнейших мобильных операторов страны. Предоставляет мобильную связь, домашний интернет и цифровые сервисы для людей и бизнеса.',
+      megafon: 'Один из крупнейших российских операторов связи, работающий с 1993 года. Входит в «большую четвёрку» — группу ведущих мобильных операторов России. Предоставляет мобильную связь и интернет, развивает цифровые сервисы и технологические решения для бизнеса.',
+      t2: 'Федеральный мобильный оператор, работающий в России с 2003 года. Входит в «большую четвёрку» — число крупнейших операторов мобильной связи страны. Предоставляет связь, интернет и цифровые сервисы, а также инфраструктуру для виртуальных операторов.',
+    };
+    const bid = this.state.brand ? (BMAP[this.state.brand] || this.state.brand) : null;
+    return {
+      hasBrand: !!bid, noBrand: !bid, brandId: bid || '', brandH: this.state.brand === 'gazprom' ? 'clamp(32px,4.4vh,50px)' : 'clamp(24px,3vh,36px)', brandLogo: bid ? 'logos/' + (this.state.brand === 'gazprom' ? 'gazprom' : bid) + '.svg' : '', brandText: bid ? (BTXT[bid] || '') : '', isD: mode === 'd', isT: mode === 't', isM: mode === 'm',
+      step: String(s), duration: String(this.props.duration ?? 0.7), lift: String(this.props.lift ?? 60),
+      gscale: [gs, gs, gs, ps].join(','), tscale: [gs, gs, gs, ps].join(','),
+      v0: v(0), v1: v(1), v2: v(2), v3: v(3),
+      m0: m(0), m1: m(1), m2: m(2), m3: m(3),
+      marqA: this.marq(0, false), marqB: this.marq(1, true),
+      bandOp: 0, starOp: s === 3 ? 0 : 1, gz: s === 3 ? 2 : 0,
+      partnersText: (this.props.partnersText ?? 'B') === 'A' ? 'Наши партнёры — более девяти крупных компаний по всему миру, а ещё компании поменьше. Мы любим и ценим каждого, независимо от масштаба.' : 'Наши партнёры — более 9 крупных компаний и команды поменьше, но такие же классные и любимые.',
+      dlogos: ['beeline', 'sber-mobile', 'megafon', 'yota', 'uzum', 'motiv-h', 'megafon-tj', 't2', 'gazprom-mobile', 'team-armenia'].map(n => ({
+        name: n, src: 'logos/' + n + '.svg',
+        h: ({ beeline: '24px', 'sber-mobile': '24px', megafon: '20px', yota: '20px', uzum: '22px', 'motiv-h': '14px', 'megafon-tj': '26px', t2: '20px', 'gazprom-mobile': '22px', 'team-armenia': '26px' })[n],
+      })),
+      star: h('svg', { viewBox: '0 0 59 59', style: { width: '100%', display: 'block', transformOrigin: '50% 50%', animation: 'sfxRock 4s ease-in-out infinite' } },
+        h('path', { d: 'M29.5 0L32.4164 18.6159L44.25 3.95225L37.4677 21.5323L55.0477 14.75L40.384 26.5836L59 29.5L40.384 32.4164L55.0477 44.25L37.4677 37.4677L44.25 55.0477L32.4164 40.384L29.5 59L26.5836 40.384L14.75 55.0477L21.5323 37.4677L3.95225 44.25L18.6159 32.4164L0 29.5L18.6159 26.5836L3.95225 14.75L21.5323 21.5323L14.75 3.95225L26.5836 18.6159L29.5 0Z', fill: '#373BF9' })), mstar: starEl('#373BF9'),
+      logos: logos.map(l => ({ ...l, mh: l.mhv + 'px' })),
+      tlogos: logos.map(l => ({ ...l, mh: Math.round(l.mhv * 1.35) + 'px' })),
+      tabs: ['Страны', 'Офисы', 'Партнёры', 'Языки'].map((label, i) => ({
+        label, go: () => this.go(i),
+        bg: i === this.state.step ? '#373BF9' : 'transparent', fg: i === this.state.step ? '#FFFFFF' : '#323030',
+      })),
+    };
+  }
+}
+</script>
+</body>
+</html>

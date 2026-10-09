@@ -1,0 +1,11 @@
+/* Minimal base — body + link colors from the palette. */
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--surface-page);
+  /* No hanging short words: pretty balances the last lines, and
+     assets/js/nbsp.js glues prepositions/particles to the next word. */
+  text-wrap: pretty;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-3); }

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="../sifox-menu.js" defer></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#373BF9"/><text x="100" y="118" font-family="Helvetica,Arial,sans-serif" font-size="52" font-weight="700" fill="#323030" text-anchor="middle">ax</text></svg></template>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/tokens/fonts.css">
+<link rel="stylesheet" href="../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/tokens/colors.css">
+<link rel="stylesheet" href="../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/tokens/typography.css">
+<link rel="stylesheet" href="../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/tokens/effects.css">
+<link rel="stylesheet" href="../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/tokens/base.css">
+<link rel="stylesheet" href="../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/components/fig-tokens.css">
+<link rel="stylesheet" href="../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/components/fig-typography.css">
+<link rel="stylesheet" href="../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/components/fig-assets.css">
+<link rel="stylesheet" href="../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/styles.css">
+<script src="../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
+<script src="./assets/nbsp.js"></script>
+<style>@keyframes sway{0%,100%{transform:rotateY(-22deg) translateZ(-14px)}50%{transform:rotateY(22deg) translateZ(14px)}}
+html,body{margin:0;background:#fff;min-height:100%}a{color:#373BF9;text-decoration:none}a:hover{color:#697DFF}
+@keyframes phoneFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@media (max-width:1280px){.hero-lead{position:static !important;margin:24px 0 0 auto !important}}
+@media (max-width:1100px){
+#modes>div{grid-template-columns:1fr !important}
+#modes>div>div:first-child{position:static !important}
+#modes>div>div:first-child>div{aspect-ratio:16/9 !important}
+#steps-row{grid-template-columns:1fr !important}
+#persona>div{grid-template-columns:1fr !important;gap:32px !important}
+.step-card{height:auto !important}
+.step-art{display:none !important}
+.step-band{display:block !important}
+.step-visual{height:auto !important;display:flex;justify-content:center;padding:16px 0}
+.step-phone{position:relative !important;left:auto !important;top:auto !important;margin:0 !important;width:62% !important}
+}
+@media (max-width:1280px){
+:root{--sec-px:40px !important;--sec-pt:140px !important;--sec-pb:140px !important}
+#functions>div>div[style*="repeat(3"]{grid-template-columns:repeat(2,1fr) !important}
+#demo>div{grid-template-columns:1fr !important;gap:40px !important}
+}
+@media (max-width:900px){
+:root{--sec-px:28px !important;--sec-pt:100px !important;--sec-pb:100px !important}
+h2{font-size:40px !important;line-height:115% !important}
+h1{line-height:105% !important}
+#functions>div>div[style*="repeat(3"]{grid-template-columns:1fr !important}
+#voices>div>div[style*="grid-template-columns:1fr 1fr"],#voices>div>div[style*="1fr 1fr"]{grid-template-columns:1fr !important;gap:24px !important}
+[data-voice]{flex:1 1 100% !important;height:72px !important;padding:24px !important}
+[data-reveal-stagger]{margin-top:-56px !important}
+[data-reveal-stagger]>div:last-child{width:96px !important;height:110px !important;margin:0 auto}
+}
+@media (max-width:1100px){
+[data-hero]{padding-bottom:var(--sec-pb) !important}
+}
+@media (min-width:601px) and (max-width:1100px){
+[data-hero-clip]{object-position:70% 20% !important;left:-40px !important;width:calc(100% + 40px) !important}
+[data-hero-fade]{display:none !important}
+[data-hero-fade]+div{z-index:0}
+[data-hero-title]{position:relative}
+[data-hero-title]::before{content:"";position:absolute;z-index:-1;top:-8px;left:-100vw;right:-100vw;height:200vh;background:linear-gradient(to top,#fff 60%,rgba(255,255,255,0) 100%);backdrop-filter:blur(14.4px);-webkit-backdrop-filter:blur(14.4px);-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 48px);mask-image:linear-gradient(to bottom,transparent 0,#000 48px);pointer-events:none}
+[data-hero-title]{font-size:40px !important;line-height:105% !important;color:#323030 !important}
+[data-hero-sub]{top:0 !important;margin-top:12px !important;font-size:20px !important;line-height:130% !important;color:#323030 !important}
+.hero-lead{position:static !important;margin:20px 0 0 !important;max-width:640px !important;font-size:18px !important;line-height:150% !important;color:#323030 !important}
+}
+@media (max-width:1100px){
+:root{--pill-w:38% !important}
+[data-persona-track]>div{font-size:18px !important}
+}
+@media (max-width:600px){
+:root{--pill-w:45% !important}
+[data-feat-grid]{grid-template-columns:minmax(0,1fr) !important}
+[data-star]{display:none !important}
+[data-feat-grid]>div{padding:20px 0 !important}
+#demo>div{grid-template-columns:minmax(0,1fr) !important}
+#functions>div>div[style*="repeat(3"]{grid-template-columns:minmax(0,1fr) !important}
+[data-persona-track]>div{font-size:15px !important}
+:root{--sec-px:20px !important;--sec-pt:72px !important;--sec-pb:72px !important}
+h2{font-size:30px !important}
+p{font-size:16px !important;line-height:150% !important}
+[data-reveal-x]{transform:none !important}
+[data-hero-fade]{display:block !important}
+[data-hero-clip]{inset:20px auto auto 0 !important;height:72% !important;object-position:70% 0 !important}
+[data-hero-title]{font-size:24px !important;line-height:110% !important;color:#323030 !important}
+[data-hero-sub]{top:0 !important;margin-top:8px !important;font-size:16px !important;line-height:130% !important;color:#323030 !important}
+[data-lead-intro]{display:none}
+.hero-lead{display:none !important}
+[data-lbl-d]{display:none !important}
+[data-lbl-m]{display:inline !important}
+[data-hero]{padding-bottom:80px !important}
+[data-hero-title]{top:0 !important}
+.hero-lead::first-letter{text-transform:uppercase}
+.hero-lead{position:static !important;margin:8px 0 0 !important;max-width:none !important;font-size:16px !important;line-height:150% !important;color:#323030 !important}
+}</style>
+<style>#demo input::placeholder{color:#E8EFFF;opacity:1}</style><style>#functions{overflow-x:clip}</style>
+</helmet>
+
+<div style="background:#fff;min-height:100vh;font-family:Nunito,-apple-system,Segoe UI,sans-serif;color:#323030;text-wrap:pretty">
+
+
+<div style="position:relative;overflow:hidden;margin-top:0;height:calc(100vh - var(--sfx-menu-h, 0px));min-height:calc(100vh - var(--sfx-menu-h, 0px));max-height:calc(100vh - var(--sfx-menu-h, 0px));background:radial-gradient(3463px 2717px at -34.17% -40.18%,#323030 0%,#C6CADD 45.76%,#323030 100%);padding:200px var(--sec-px) 200px;box-sizing:border-box;display:flex;flex-direction:column" data-hero="">
+
+
+<video src="assets/persona.mp4" muted="" playsinline="" preload="auto" data-hero-clip="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;pointer-events:none"></video><div data-hero-fade="" style="display:none;position:absolute;left:0;right:0;bottom:0;height:62%;background:linear-gradient(to top,#fff 0%,#fff 35%,rgba(255,255,255,0) 100%);backdrop-filter:blur(14.4px);-webkit-backdrop-filter:blur(14.4px);-webkit-mask-image:linear-gradient(to top,#000 55%,transparent 100%);mask-image:linear-gradient(to top,#000 55%,transparent 100%);pointer-events:none"></div><div style="position:relative;max-width:var(--sec-max);width:100%;box-sizing:border-box;margin:0 auto;display:flex;flex-direction:column;flex:1;min-width:0">
+
+<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:64px">
+
+
+
+</div><div style="margin-top:auto;margin-bottom:50px;display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:48px;min-width:0">
+<div>
+
+
+
+</div>
+
+</div><h1 style="position: relative; top: 50px; margin: auto 0 0; font-family: 'Druk LCG','Druk Wide Cyr',sans-serif; font-weight: 500; font-size: 82px; line-height: 140%; letter-spacing: .02em; color: var(--text); text-transform: uppercase; font-size: 44pt" data-hero-title="">AI-ассистент<br>для нового поколения<br>голосовой связи</h1>
+<p class="hero-lead" style="position: absolute; top: -72px; max-width: 537px; margin: 0; font-size: 20.82px; line-height: 27.761px; color: #323030; left: -2px"><span data-lead-intro="">Работает как персональный цифровой секретарь: </span>управляет звонками, принимает пропущенные и нежелательные вызовы, помогает защищаться от спама и выполняет повседневные задачи.</p></div>
+</div>
+
+<section id="functions" style="padding: var(--sec-pt) var(--sec-px) var(--sec-pb); background: #323030">
+<div style="max-width:var(--sec-max);width:100%;margin:0 auto;box-sizing:border-box">
+<h2 style="max-width: 900px; margin: 0 0 48px; font-family: 'Druk LCG','Druk Wide Cyr',sans-serif; font-weight: 500; font-size: 44px; line-height: 120%; letter-spacing: 0em; color: #fff; text-transform: uppercase">Ассистент — это мультиуслуга</h2>
+
+
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#fff;border-top:2px solid #fff;border-bottom:2px solid #fff">
+<div style="background:#323030;padding:40px 32px;transition:background .25s ease" style-hover="background:#3A3838">
+
+<h3 style="margin:0 0 12px;font-family:'Druk LCG','Druk Wide Cyr',sans-serif;font-weight:500;font-size:20px;line-height:120%;letter-spacing:.02em;text-transform:uppercase;color:#fff">Секретарь</h3>
+<p style="margin:0;font-size:20px;line-height:28px;color:#fff">Проверяет входящие звонки, помогает выделять важные и не отвлекает пользователя без необходимости.</p>
+</div>
+<div style="background:#323030;padding:40px 32px;transition:background .25s ease" style-hover="background:#3A3838">
+
+<h3 style="margin:0 0 12px;font-family:'Druk LCG','Druk Wide Cyr',sans-serif;font-weight:500;font-size:20px;line-height:120%;letter-spacing:.02em;text-transform:uppercase;color:#fff">Антиспам</h3>
+<p style="margin:0;font-size:20px;line-height:28px;color:#fff">Помогает фильтровать нежелательные звонки и может работать в разных режимах защиты.</p>
+</div>
+<div style="background:#323030;padding:40px 32px;transition:background .25s ease" style-hover="background:#3A3838">
+
+<h3 style="margin:0 0 12px;font-family:'Druk LCG','Druk Wide Cyr',sans-serif;font-weight:500;font-size:20px;line-height:120%;letter-spacing:.02em;text-transform:uppercase;color:#fff">Запись звонков</h3>
+<p style="margin:0;font-size:20px;line-height:28px;color:#fff">Записывает, хранит, расшифровывает и суммаризирует разговоры.</p>
+</div><div style="background:#323030;padding:40px 32px;transition:background .25s ease" style-hover="background:#3A3838">
+
+<h3 style="margin:0 0 12px;font-family:'Druk LCG','Druk Wide Cyr',sans-serif;font-weight:500;font-size:20px;line-height:120%;letter-spacing:.02em;text-transform:uppercase;color:#fff">Умный<br>автоответчик</h3>
+<p style="margin:0;font-size:20px;line-height:28px;color:#fff">Принимает пропущенные звонки и отвечает вместо пользователя.</p>
+</div>
+<div style="background:#323030;padding:40px 32px;transition:background .25s ease" style-hover="background:#3A3838">
+
+<h3 style="margin:0 0 12px;font-family:'Druk LCG','Druk Wide Cyr',sans-serif;font-weight:500;font-size:20px;line-height:120%;letter-spacing:.02em;text-transform:uppercase;color:#fff">Исходящие поручения</h3>
+<p style="margin:0;font-size:20px;line-height:28px;color:#fff">Самостоятельно звонит, записывает пользователя на приём, бронирует столики и выполняет другие задачи по телефону.</p>
+</div>
+
+<div style="background:#323030;padding:40px 32px;transition:background .25s ease" style-hover="background:#3A3838">
+
+<h3 style="margin:0 0 12px;font-family:'Druk LCG','Druk Wide Cyr',sans-serif;font-weight:500;font-size:20px;line-height:120%;letter-spacing:.02em;text-transform:uppercase;color:#fff">Защита во время звонка</h3>
+<p style="margin:0;font-size:20px;line-height:28px;color:#fff">AI может анализировать разговор и предупреждать пользователя об угрозе.</p>
+</div>
+</div><h2 style="max-width: 900px; margin: 64px 0 0 auto; font-family: 'Druk LCG','Druk Wide Cyr',sans-serif; font-weight: 500; font-size: 44px; line-height: 120%; letter-spacing: 0em; color: #fff; text-transform: uppercase; text-align: right">ВЫ ВЫБИРАЕТЕ, ЧТО&nbsp;БУДЕТ ДОСТУПНО ВАШИМ ПОЛЬЗОВАТЕЛЯМ</h2>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="persona" style="background:#F5F7FF;padding:var(--sec-pt) var(--sec-px) 24px">
+<div style="max-width:var(--sec-max);width:100%;margin:0 auto;box-sizing:border-box;display:grid;grid-template-columns:minmax(280px,730fr) minmax(0,947fr);gap:93px;align-items:start">
+<div style="position:relative;width:100%;aspect-ratio:1/1;overflow:visible;background:#E3E5EE;margin-bottom:100px">
+<video src="assets/persona3.mp4" autoplay="" muted="" loop="" playsinline="" preload="auto" data-persona-clip="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none"></video>
+<div style="position: absolute; left: 0; top: 100%; width: 100%; overflow: hidden; background: #BAB7BB; pointer-events: none; height: 100px">
+<div data-persona-track="" style="position:absolute;left:0;top:50%;display:flex;transition:transform .55s cubic-bezier(.22,.61,.36,1);will-change:transform"></div>
+</div>
+<div data-persona-pill="" style="position:absolute;left:50%;top:calc(100% + 50px);transform:translate(-50%,-50%);width:var(--pill-w);height:13%;overflow:hidden;border-radius:44px;background:linear-gradient(180deg,rgba(255,255,255,.38) 0%,rgba(255,255,255,.08) 55%,rgba(255,255,255,.22) 100%);backdrop-filter:blur(14.4px) saturate(160%);-webkit-backdrop-filter:blur(14.4px) saturate(160%);border:1px solid rgba(255,255,255,.55);box-sizing:border-box;box-shadow:inset 0 1.5px 0 rgba(255,255,255,.9),inset 0 -1px 0 rgba(255,255,255,.35),inset 0 0 18px rgba(255,255,255,.25),0 8px 32px rgba(0,0,0,.18);pointer-events:none;display:flex;align-items:center;justify-content:center">
+<div data-persona-name="" style="font-family:'Druk LCG','Druk Wide Cyr',sans-serif;font-weight:500;font-size:12px;line-height:100%;letter-spacing:.02em;white-space:nowrap;color:#000;text-transform:uppercase;transition:opacity .25s ease"></div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:48px">
+<h2 style="margin: 0; font-family: 'Druk LCG','Druk Wide Cyr',sans-serif; font-weight: 500; font-size: 64px; line-height: 120%; letter-spacing: 0em; color: #323030; text-transform: uppercase">Создавайте любое визуальное отражение своего ассистента</h2>
+
+</div>
+</div>
+</section>
+
+
+
+<section id="voices" style="background:#F5F7FF;padding:var(--sec-pt) var(--sec-px) var(--sec-pb)">
+<div data-reveal-x="" style="max-width:var(--sec-max);width:100%;margin:0 auto;box-sizing:border-box;display:flex;flex-direction:column;gap:80px;align-items:flex-start;opacity:0;transform:translateX(-120px);transition:opacity .8s cubic-bezier(.22,.61,.36,1),transform .8s cubic-bezier(.22,.61,.36,1)">
+<h2 style="margin: 0; align-self: stretch; font-family: 'Druk Wide Cyr','Druk LCG',sans-serif; font-weight: 700; font-size: 64px; color: #323030; text-transform: uppercase">Выбирайте как будет звучать ваш ассистент</h2><p style="margin: -48px 0 0; max-width: 697px; font-size: 24px; line-height: 28px; color: #74748F">Это лишь малая часть нашей библиотеки. При необходимости мы также можем создать уникальный голос специально для вас.</p>
+<div style="position:relative;align-self:stretch;display:flex;flex-direction:row;gap:24px;align-items:center;flex-wrap:wrap;box-sizing:border-box;margin-top:-48px" data-reveal-stagger="">
+<div style="position: relative; flex: 1 1 200px; min-width: 0; height: 88px; overflow: hidden; border-radius: 55.1158px; background: rgba(233,233,233,.3); box-shadow: inset -8.768px -8.768px 5.011px 0 #fff,inset 8.768px 8.768px 5.011px 0 #fff,0 5.011px 65.763px 0 rgba(0,0,0,.25); display: flex; gap: 10px; padding: 32px 40px; justify-content: center; align-items: center; box-sizing: border-box; width: 100%; cursor: pointer; transition: background .25s ease, box-shadow .25s ease" data-voice="1">
+<span style="font-family:'Druk Wide Cyr','Druk LCG',sans-serif;font-weight:700;font-size:20.0421px;line-height:100%;white-space:nowrap;color:#000;text-transform:uppercase">Голос 1</span>
+</div>
+<div style="position: relative; flex: 1 1 200px; min-width: 0; height: 88px; overflow: hidden; border-radius: 55.1158px; background: rgba(233,233,233,.3); box-shadow: inset -8.768px -8.768px 5.011px 0 #fff,inset 8.768px 8.768px 5.011px 0 #fff,0 5.011px 65.763px 0 rgba(0,0,0,.25); display: flex; gap: 10px; padding: 32px 40px; justify-content: center; align-items: center; box-sizing: border-box; width: 100%; cursor: pointer; transition: background .25s ease, box-shadow .25s ease" data-voice="2">
+<span style="font-family:'Druk Wide Cyr','Druk LCG',sans-serif;font-weight:700;font-size:20.0421px;line-height:100%;white-space:nowrap;color:#000;text-transform:uppercase">Голос 2</span>
+</div>
+<div style="position: relative; flex: 1 1 200px; min-width: 0; height: 88px; overflow: hidden; border-radius: 55.1158px; background: rgba(233,233,233,.3); box-shadow: inset -8.768px -8.768px 5.011px 0 #fff,inset 8.768px 8.768px 5.011px 0 #fff,0 5.011px 65.763px 0 rgba(0,0,0,.25); display: flex; gap: 10px; padding: 32px 40px; justify-content: center; align-items: center; box-sizing: border-box; width: 100%; cursor: pointer; transition: background .25s ease, box-shadow .25s ease" data-voice="3">
+<span style="font-family:'Druk Wide Cyr','Druk LCG',sans-serif;font-weight:700;font-size:20.0421px;line-height:100%;white-space:nowrap;color:#000;text-transform:uppercase">Голос 3</span>
+</div>
+<div style="position: relative; flex: 1 1 200px; min-width: 0; height: 88px; overflow: hidden; border-radius: 55.1158px; background: rgba(233,233,233,.3); box-shadow: inset -8.768px -8.768px 5.011px 0 #fff,inset 8.768px 8.768px 5.011px 0 #fff,0 5.011px 65.763px 0 rgba(0,0,0,.25); display: flex; gap: 10px; padding: 32px 40px; justify-content: center; align-items: center; box-sizing: border-box; width: 100%; cursor: pointer; transition: background .25s ease, box-shadow .25s ease" data-voice="4">
+<span style="font-family:'Druk Wide Cyr','Druk LCG',sans-serif;font-weight:700;font-size:20.0421px;line-height:100%;white-space:nowrap;color:#000;text-transform:uppercase">Голос 4</span>
+</div>
+<div style="flex:0 0 auto;width:126px;height:144px;perspective:600px" data-star=""><img src="assets/starburst.png" alt="" style="width:100%;height:100%;object-fit:contain;pointer-events:none;animation:sway 5s ease-in-out infinite;transform-origin:50% 50%"></div>
+</div>
+
+<div style="align-self:stretch;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;margin-top:45px">
+<div>
+<h2 style="margin:0;font-family:'Druk LCG','Druk Wide Cyr',sans-serif;font-weight:500;font-size:44px;line-height:130%;letter-spacing:.02em;text-transform:uppercase">Обучим любому языку и диалекту</h2>
+</div>
+<div>
+<p style="margin:0 0 24px;font-size:24px;line-height:28px;color:#74748F">Хотите, чтобы ваш ассистент общался на нужном языке? Сообщите нам — благодаря собственной языковой модели мы можем адаптировать и обучить его практически для любого языка.</p>
+<p style="margin:0;font-size:24px;line-height:28px;color:#74748F">Для рынков с несколькими языками общения и смешанной речью это отдельная задача: переключение языка внутри диалога, местные имена, названия и суммы.</p>
+</div>
+</div>
+</div>
+</section><section style="padding:var(--sec-pt) var(--sec-px) var(--sec-pb)">
+<div style="max-width:var(--sec-max);width:100%;margin:0 auto;box-sizing:border-box">
+<h2 style="margin:0 0 48px;font-family:'Druk LCG','Druk Wide Cyr',sans-serif;font-weight:500;font-size:44px;line-height:100%;letter-spacing:.02em">Сложите свой функционал</h2>
+<div data-feat-grid="" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:0.74px solid rgba(127,130,145,.5)">
+<div style="border-bottom:0.74px solid rgba(127,130,145,.5);padding:24px 24px 24px 0"><h3 style="margin:0 0 8px;font-size:19px;font-weight:800">Принимать входящие звонки</h3><p style="margin:0;font-size:17px;line-height:24px;color:#74748F">Когда пользователь не хочет или не может ответить.</p></div>
+<div style="border-bottom:0.74px solid rgba(127,130,145,.5);padding:24px"><h3 style="margin:0 0 8px;font-size:19px;font-weight:800">Фильтровать звонки</h3><p style="margin:0;font-size:17px;line-height:24px;color:#74748F">Определять, какие звонки требуют внимания пользователя.</p></div>
+<div style="border-bottom:0.74px solid rgba(127,130,145,.5);padding:24px 0 24px 24px"><h3 style="margin:0 0 8px;font-size:19px;font-weight:800;filter:blur(4px)">Поддерживать диалог</h3><p style="margin:0;font-size:17px;line-height:24px;color:#74748F;filter:blur(4px)">Не просто записывать сообщение, а разговаривать со звонящим.</p></div>
+<div style="border-bottom:0.74px solid rgba(127,130,145,.5);padding:24px 24px 24px 0"><h3 style="margin:0 0 8px;font-size:19px;font-weight:800;filter:blur(4px)">Использовать знания о пользователе</h3><p style="margin:0;font-size:17px;line-height:24px;color:#74748F;filter:blur(4px)">Передавать заранее заданную информацию в нужном контексте.</p></div>
+<div style="border-bottom:0.74px solid rgba(127,130,145,.5);padding:24px"><h3 style="margin:0 0 8px;font-size:19px;font-weight:800">Работать по персональным правилам</h3><p style="margin:0;font-size:17px;line-height:24px;color:#74748F">Включая разные сценарии для разных типов звонящих.</p></div>
+<div style="border-bottom:0.74px solid rgba(127,130,145,.5);padding:24px 0 24px 24px"><h3 style="margin:0 0 8px;font-size:19px;font-weight:800;filter:blur(4px)">Обучаться через чат</h3><p style="margin:0;font-size:17px;line-height:24px;color:#74748F;filter:blur(4px)">Пользователь объясняет правила естественным языком.</p></div>
+<div style="border-bottom:0.74px solid rgba(127,130,145,.5);padding:24px 24px 24px 0"><h3 style="margin:0 0 8px;font-size:19px;font-weight:800;filter:blur(4px)">Переводить звонок пользователю</h3><p style="margin:0;font-size:17px;line-height:24px;color:#74748F;filter:blur(4px)">Когда это требуется по заданному сценарию.</p></div>
+<div style="border-bottom:0.74px solid rgba(127,130,145,.5);padding:24px"><h3 style="margin:0 0 8px;font-size:19px;font-weight:800">Саммари<br></h3><p style="margin:0;font-size:17px;line-height:24px;color:#74748F">Передавать главное содержание разговора.</p></div>
+<div style="border-bottom:0.74px solid rgba(127,130,145,.5);padding:24px 0 24px 24px"><h3 style="margin:0 0 8px;font-size:19px;font-weight:800">Делать полную расшифровку</h3><p style="margin:0;font-size:17px;line-height:24px;color:#74748F">С разделением участников.</p></div>
+<div style="border-bottom:0.74px solid rgba(127,130,145,.5);padding:24px 24px 24px 0"><h3 style="margin:0 0 8px;font-size:19px;font-weight:800;filter:blur(4px)">Сохранять аудио</h3><p style="margin:0;font-size:17px;line-height:24px;color:#74748F;filter:blur(4px)">И связывать его с текстом разговора.</p></div>
+<div style="border-bottom:0.74px solid rgba(127,130,145,.5);padding:24px"><h3 style="margin:0 0 8px;font-size:19px;font-weight:800">Самостоятельно совершать звонки</h3><p style="margin:0;font-size:17px;line-height:24px;color:#74748F">И выполнять телефонные поручения.</p></div>
+<div style="border-bottom:0.74px solid rgba(127,130,145,.5);padding:24px 0 24px 24px"><h3 style="margin:0 0 8px;font-size:19px;font-weight:800;filter:blur(4px)">Уточнять решение у пользователя</h3><p style="margin:0;font-size:17px;line-height:24px;color:#74748F;filter:blur(4px)">Если во время выполнения задачи возникает нестандартная ситуация.</p></div>
+<div style="border-bottom:0.74px solid rgba(127,130,145,.5);padding:24px 24px 24px 0"><h3 style="margin:0 0 8px;font-size:19px;font-weight:800;filter:blur(4px)">Возвращаться с готовым результатом</h3><p style="margin:0;font-size:17px;line-height:24px;color:#74748F;filter:blur(4px)">А не просто сообщать, что звонок состоялся.</p></div>
+</div>
+</div>
+</section><section id="demo" style="background:radial-gradient(120% 170% at 78% 10%,#92AEFF 0%,#697DFF 38%,#373BF9 100%);padding:var(--sec-pt) var(--sec-px) var(--sec-pb)">
+<div style="max-width: var(--sec-max); width: 100%; margin: 0 auto; box-sizing: border-box; display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: flex-start">
+<div>
+<h2 style="margin: 0 0 24pt; font-family: 'Druk LCG','Druk Wide Cyr',sans-serif; font-weight: 500; font-size: 72px; line-height: 100%; letter-spacing: 0em; color: #fff; text-transform: uppercase">демо</h2>
+<p style="margin: 0; font-size: 24px; line-height: 32pt; color: #E8EFFF; max-width: 643px">Покажем работу ассистента на реальном звонке и обсудим интеграцию в контур оператора.</p>
+</div>
+<form onSubmit="{{ submitDemo }}" style="display:flex;flex-direction:column;gap:16px;width:100%">
+<label style="display:flex;flex-direction:column;gap:8px;color:#E8EFFF;font-size:16px"><input placeholder="Имя" type="text" name="name" required="" style="height: 56px; padding: 0 24px; border-radius: 12px; border: 1px solid rgba(255,255,255,.4); background: rgba(255,255,255,.14); backdrop-filter: blur(14.4px); color: #fff; font-size: 18px; font-family: inherit; outline: none; box-sizing: border-box; width: 100%" style-focus="border-color:#fff;background:rgba(255,255,255,.22)"></label>
+<label style="display:flex;flex-direction:column;gap:8px;color:#E8EFFF;font-size:16px"><input placeholder="Компания" type="text" name="company" style="height: 56px; padding: 0 24px; border-radius: 12px; border: 1px solid rgba(255,255,255,.4); background: rgba(255,255,255,.14); backdrop-filter: blur(14.4px); color: #fff; font-size: 18px; font-family: inherit; outline: none; box-sizing: border-box; width: 100%" style-focus="border-color:#fff;background:rgba(255,255,255,.22)"></label>
+<label style="display:flex;flex-direction:column;gap:8px;color:#E8EFFF;font-size:16px"><input placeholder="Почта" type="email" name="email" required="" style="height: 56px; padding: 0 24px; border-radius: 12px; border: 1px solid rgba(255,255,255,.4); background: rgba(255,255,255,.14); backdrop-filter: blur(14.4px); color: #fff; font-size: 18px; font-family: inherit; outline: none; box-sizing: border-box; width: 100%" style-focus="border-color:#fff;background:rgba(255,255,255,.22)"></label>
+<button type="submit" style="margin-top: 8px; cursor: pointer; border: 0; display: inline-flex; align-items: center; justify-content: center; height: 56px; padding: 0 48px; border-radius: 12px; background: #fff; color: #373BF9; font-size: 24px; font-weight: 600; letter-spacing: .02em; text-transform: uppercase; box-shadow: 0 8px 24px rgba(20,24,120,.25); transition: transform .2s,box-shadow .2s; font-family: Druk LCG" style-hover="transform:translateY(-2px);box-shadow:0 12px 32px rgba(20,24,120,.35)"><span data-lbl-d="">{{ demoLabel }}</span><span data-lbl-m="" style="display:none">Отправить</span></button>
+</form>
+</div>
+</section>
+
+
+
+
+
+
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;padX&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:62,&quot;min&quot;:0,&quot;max&quot;:200,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Отступы блоков&quot;},&quot;padTop&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:208,&quot;min&quot;:0,&quot;max&quot;:400,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Отступы блоков&quot;},&quot;padBottom&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:208,&quot;min&quot;:0,&quot;max&quot;:400,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Отступы блоков&quot;},&quot;contentMax&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:1744,&quot;min&quot;:900,&quot;max&quot;:2200,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Отступы блоков&quot;},&quot;pillWidth&quot;:{&quot;editor&quot;:&quot;float&quot;,&quot;default&quot;:22,&quot;min&quot;:12,&quot;max&quot;:60,&quot;step&quot;:0.5,&quot;unit&quot;:&quot;%&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Персонажи&quot;}}">class Component extends DCLogic {
+  renderVals() {
+    return {
+      demoLabel: 'запросить демо',
+      submitDemo: e => { e.preventDefault(); this.setState({ sent: true }); }
+    };
+  }
+  _blob(src) {
+    this._blobs = this._blobs || {};
+    if (!this._blobs[src]) this._blobs[src] = fetch(src).then(r => r.ok ? r.blob() : Promise.reject()).then(b => URL.createObjectURL(b)).catch(() => src);
+    return this._blobs[src];
+  }
+  componentDidMount() {
+    document.querySelectorAll('video[src]').forEach(v => {
+      const s = v.getAttribute('src');
+      if (s.startsWith('blob:')) return;
+      this._blob(s).then(u => { v.src = u; v.load(); v.play().catch(() => {}); });
+    });
+    this._tick = () => {
+      const sec = document.getElementById('modes');
+      if (!sec) return;
+      const cards = [...sec.querySelectorAll('.modes-card')];
+      if (!cards.length) return;
+      const anchor = window.innerHeight * 0.45;
+      let active = cards[0];
+      let best = Infinity;
+      cards.forEach(c => {
+        const r = c.getBoundingClientRect();
+        const d = Math.abs(r.top + r.height / 2 - anchor);
+        if (d < best) { best = d; active = c; }
+      });
+      const mode = active.dataset.mode;
+      cards.forEach(c => { c.style.opacity = c === active ? '1' : '.5'; });
+      sec.querySelectorAll('.modes-media').forEach(el => {
+        const on = el.dataset.mode === mode;
+        el.style.visibility = on ? 'visible' : 'hidden';
+        el.style.opacity = on ? '1' : '0';
+      });
+    };
+    addEventListener('scroll', this._tick, { passive: true });
+    addEventListener('resize', this._tick);
+    const start = (el, trim) => {
+      if (!el) return;
+      el.muted = true;
+      el.defaultMuted = true;
+      el.volume = 0;
+      el.loop = true;
+      el.setAttribute('muted', '');
+      el.setAttribute('playsinline', '');
+      el.removeAttribute('controls');
+      if (trim) el.addEventListener('timeupdate', () => { if (el.currentTime >= trim) el.currentTime = 0; });
+      el.addEventListener('ended', () => { el.currentTime = 0; el.play().catch(() => {}); });
+      const kick = () => { if (el.paused) el.play().catch(() => {}); };
+      ['loadeddata', 'canplay', 'loadedmetadata'].forEach(e => el.addEventListener(e, kick));
+      ['pointerdown', 'keydown', 'scroll'].forEach(e => addEventListener(e, kick, { once: true, passive: true }));
+      kick();
+      let n = 0;
+      const retry = setInterval(() => { kick(); if (!el.paused || ++n > 20) clearInterval(retry); }, 250);
+    };
+    { const h = document.querySelector('[data-hero-clip]'); if (h) { h.muted = true; h.pause(); h.addEventListener('play', () => h.pause());
+      const tint = () => { try { if (innerWidth > 600 || !h.videoWidth) return; const c = document.createElement('canvas'); c.width = 4; c.height = 4; const g = c.getContext('2d'); g.drawImage(h, 0, 0, h.videoWidth, h.videoHeight * .1, 0, 0, 4, 4); const d = g.getImageData(0, 0, 4, 1).data; const box = h.parentElement; box.style.setProperty('background', 'rgb(' + d[0] + ',' + d[1] + ',' + d[2] + ')', 'important'); } catch (e) {} };
+      h.addEventListener('loadeddata', tint); h.addEventListener('seeked', tint, { once: true }); addEventListener('resize', tint); if (h.readyState >= 2) tint(); } }
+    start(document.querySelector('[data-persona-clip]'), 0);
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.intersectionRatio > 0.15) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateX(0)';
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: [0, 0.15, 0.5] });
+    document.querySelectorAll('section > div').forEach(el => {
+      if (el.hasAttribute('data-reveal-x')) return;
+      el.setAttribute('data-reveal-x', '');
+      el.style.opacity = '0';
+      el.style.transform = 'translateX(-120px)';
+      el.style.transition = 'opacity .8s cubic-bezier(.22,.61,.36,1),transform .8s cubic-bezier(.22,.61,.36,1)';
+    });
+    document.querySelectorAll('[data-reveal-x]').forEach(el => io.observe(el));
+    document.querySelectorAll('[data-reveal-stagger]').forEach(row => {
+      const kids = Array.from(row.children);
+      kids.forEach((k, i) => {
+        k.style.opacity = '0';
+        k.style.transform = 'translateX(-80px)';
+        k.style.transition = 'opacity .7s cubic-bezier(.22,.61,.36,1) ' + (i * 0.14) + 's,transform .7s cubic-bezier(.22,.61,.36,1) ' + (i * 0.14) + 's';
+      });
+      const rio = new IntersectionObserver((es) => {
+        es.forEach(e => {
+          if (e.intersectionRatio > 0.15) {
+            kids.forEach(k => { k.style.opacity = '1'; k.style.transform = 'translateX(0)'; });
+            rio.unobserve(e.target);
+          }
+        });
+      }, { threshold: [0, 0.15, 0.5] });
+      rio.observe(row);
+    });
+    const hv = document.querySelector('[data-hero-clip]');
+    if (hv) {
+      const box = hv.parentElement;
+      const cv = document.createElement('canvas');
+      cv.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;opacity:0;transition:opacity .2s';
+      hv.after(cv);
+      const frames = [];
+      const FN = 48, SPAN = 6;
+      const extract = async () => {
+        const src = await this._blob(hv.getAttribute('src'));
+        const v = document.createElement('video');
+        v.muted = true; v.playsInline = true; v.preload = 'auto'; v.src = src;
+        await new Promise(r => v.addEventListener('loadeddata', r, { once: true }));
+        const span = Math.min(SPAN, v.duration) - 0.05;
+        const w = Math.min(960, v.videoWidth), h = Math.round(v.videoHeight * w / v.videoWidth);
+        cv.width = w; cv.height = h;
+        for (let k = 0; k < FN; k++) {
+          v.currentTime = span * k / (FN - 1);
+          await new Promise(r => v.addEventListener('seeked', r, { once: true }));
+          frames[k] = await createImageBitmap(v, { resizeWidth: w, resizeHeight: h });
+        }
+      };
+      setTimeout(() => extract().catch(() => {}), 1500);
+      const ctx = cv.getContext('2d');
+      let tx = 0.5, cur = null, raf = 0, on = false;
+      const draw = () => {
+        raf = 0;
+        if (!on || frames.length < FN) return;
+        cur = cur === null ? tx : cur + (tx - cur) * 0.18;
+        const f = frames[Math.round(cur * (FN - 1))];
+        // cover-fit
+        cv.style.top = hv.offsetTop + 'px'; cv.style.left = hv.offsetLeft + 'px';
+        cv.style.width = hv.offsetWidth + 'px'; cv.style.height = hv.offsetHeight + 'px';
+        const bw = hv.offsetWidth, bh = hv.offsetHeight;
+        if (cv.width !== bw || cv.height !== bh) { cv.width = bw; cv.height = bh; }
+        const s = Math.max(bw / f.width, bh / f.height), dw = f.width * s, dh = f.height * s;
+        const op = getComputedStyle(hv).objectPosition.split(' ').map(v => parseFloat(v) / 100);
+        ctx.drawImage(f, (bw - dw) * (isNaN(op[0]) ? .5 : op[0]), (bh - dh) * (isNaN(op[1]) ? .5 : op[1]), dw, dh);
+        if (Math.abs(tx - cur) > 0.002) raf = requestAnimationFrame(draw);
+      };
+      const follow = x => {
+        const b = box.getBoundingClientRect();
+        tx = Math.min(1, Math.max(0, (x - b.left) / b.width));
+        if (frames.length < FN) {
+          if (hv.readyState >= 1 && !hv.seeking) hv.currentTime = tx * (Math.min(SPAN, hv.duration || SPAN) - 0.05);
+          return;
+        }
+        if (!on) { on = true; cur = null; cv.style.opacity = '1'; }
+        if (!raf) raf = requestAnimationFrame(draw);
+      };
+      box.addEventListener('mousemove', e => follow(e.clientX));
+      box.addEventListener('touchstart', e => follow(e.touches[0].clientX), { passive: true });
+      box.addEventListener('touchmove', e => follow(e.touches[0].clientX), { passive: true });
+    }
+    const pv = document.querySelector('[data-persona-clip]');
+    const track = document.querySelector('[data-persona-track]');
+    const list = [1, 2, 3, 4, 5].map(n => ({ src: 'assets/persona' + n + '.mp4', label: 'персонаж ' + n }));
+    if (pv && track) {
+      const reps = 6;
+      const items = [];
+      for (let r = 0; r < reps; r++) list.forEach(p => {
+        const s = document.createElement('div');
+        s.textContent = p.label;
+        s.style.cssText = "flex:0 0 auto;text-align:center;font-family:'Druk LCG','Druk Wide Cyr',sans-serif;font-weight:500;font-size:12px;line-height:100%;letter-spacing:.02em;white-space:nowrap;color:#000;text-transform:uppercase;transition:opacity .4s ease";
+        track.appendChild(s);
+        items.push(s);
+      });
+      const mid = Math.floor(reps / 2) * list.length;
+      let i = mid;
+      this._personaTries = 0;
+      const layout = () => {
+        const band = track.parentElement.getBoundingClientRect().width;
+        const pill = document.querySelector('[data-persona-pill]');
+        items.forEach(s => { s.style.width = 'auto'; });
+        const tw = Math.max(...items.slice(0, list.length).map(s => s.getBoundingClientRect().width));
+        const iw = Math.ceil(tw) + 64;
+        if (pill) pill.style.width = iw + 'px';
+        items.forEach(s => { s.style.width = iw + 'px'; });
+        track.style.transform = 'translate(' + (band / 2 - iw / 2 - i * iw) + 'px,-50%)';
+        items.forEach((s, k) => { s.style.opacity = k === i ? '0' : '.45'; });
+        const nm = document.querySelector('[data-persona-name]');
+        if (nm) { nm.textContent = list[i % list.length].label; nm.style.fontSize = getComputedStyle(items[0]).fontSize; }
+        if (this._personaTries === undefined) this._personaTries = 0;
+      };
+      this._personaLayout = layout;
+      const show = (n) => {
+        i = n;
+        if (i >= items.length - list.length || i < list.length) {
+          track.style.transition = 'none';
+          i = mid + (i % list.length);
+          layout();
+          void track.offsetWidth;
+          track.style.transition = 'transform .55s cubic-bezier(.22,.61,.36,1)';
+        }
+        const p = list[i % list.length];
+        pv.loop = false;
+        this._blob(p.src).then(u => { pv.src = u; pv.load(); pv.play().catch(() => {}); });
+        pv.play().then(() => { this._personaTries = 0; }).catch(() => {});
+        layout();
+      };
+      pv.addEventListener('ended', () => show(i + 1));
+      pv.addEventListener('error', () => { if (this._personaTries++ < list.length) show(i + 1); });
+      addEventListener('resize', layout);
+      if (document.fonts) document.fonts.ready.then(layout);
+      show(mid);
+    }
+    const pills = Array.from(document.querySelectorAll('[data-voice]'));
+    const idle = 'rgba(233,233,233,.3)', on = 'rgba(55,59,249,.22)';
+    let audio = null;
+    const reset = () => pills.forEach(p => {
+      p.style.background = idle;
+      p.style.boxShadow = 'inset -8.768px -8.768px 5.011px 0 #fff,inset 8.768px 8.768px 5.011px 0 #fff,0 5.011px 65.763px 0 rgba(0,0,0,.25)';
+    });
+    pills.forEach(p => {
+      p.addEventListener('click', () => {
+        const active = p.style.background === on;
+        if (audio) { audio.pause(); audio.currentTime = 0; }
+        reset();
+        if (active) return;
+        p.style.background = on;
+        p.style.boxShadow = 'inset 0 0 0 1.5px rgba(55,59,249,.55),0 5.011px 65.763px 0 rgba(0,0,0,.25)';
+        const ext = { '1': 'wav', '2': 'wav', '3': 'wav', '4': 'mp3' }[p.dataset.voice] || 'wav';
+        const a = audio = new Audio();
+        a.addEventListener('ended', reset);
+        this._blob('assets/voice' + p.dataset.voice + '.' + ext).then(u => { if (audio !== a) return; a.src = u; a.play().catch(() => {}); });
+      });
+    });
+    this._applyLayout();
+    this._tick();
+    if (window.Sifox && window.Sifox.nbsp) window.Sifox.nbsp(document.body);
+  }
+  _applyLayout() {
+    const r = document.documentElement.style;
+    r.setProperty('--sec-px', (this.props.padX ?? 62) + 'px');
+    r.setProperty('--sec-pt', (this.props.padTop ?? 208) + 'px');
+    r.setProperty('--sec-pb', (this.props.padBottom ?? 208) + 'px');
+    r.setProperty('--sec-max', (this.props.contentMax ?? 1744) + 'px');
+    r.setProperty('--pill-w', (this.props.pillWidth ?? 30.1) + '%');
+    if (this._personaLayout) this._personaLayout();
+  }
+  componentDidUpdate() { this._applyLayout(); }
+  componentWillUnmount() {
+    removeEventListener('scroll', this._tick);
+    removeEventListener('resize', this._tick);
+  }
+}</script>
+<script src="../sifox-footer.js"></script>
+</body>
+</html>

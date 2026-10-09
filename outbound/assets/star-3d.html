@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="utf-8">
+<title>Звёздочка — металл</title>
+<script type="importmap">
+{"imports":{"three":"https://unpkg.com/three@0.184.0/build/three.module.js"}}
+</script>
+<style>html,body{margin:0;height:100%;background:transparent;overflow:hidden}canvas{display:block}</style>
+</head>
+<body>
+<script type="module">
+import * as THREE from 'three';
+
+const W = () => window.innerWidth, H = () => window.innerHeight;
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.setSize(W(), H());
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+document.body.appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(35, W() / H(), 0.01, 10);
+camera.position.set(0, 0, 0.8);
+
+scene.add(new THREE.HemisphereLight(0xffffff, 0xb9c6e6, 1.5));
+const key = new THREE.DirectionalLight(0xffffff, 2.6); key.position.set(1.2, 1.6, 1.4); scene.add(key);
+const rim = new THREE.DirectionalLight(0xa5bdff, 1.8); rim.position.set(-1.4, -0.6, 0.8); scene.add(rim);
+const fill = new THREE.DirectionalLight(0xffffff, 0.9); fill.position.set(0, -1.2, 1.2); scene.add(fill);
+
+const svgPts = [
+  [66.5115,0],[76.2923,27.3176],[97.648,7.67445],[93.6133,36.4084],
+  [121.651,28.9397],[104.726,52.5073],[133.023,58.924],[107.084,71.9263],
+  [129.158,90.7585],[100.147,90.2168],[110.941,117.15],[85.5047,103.189],
+  [82.5457,132.053],[66.5115,107.87],[50.4774,132.053],[47.5183,103.189],
+  [22.0823,117.15],[32.8762,90.2168],[3.86542,90.7585],[25.9395,71.9263],
+  [0,58.924],[28.2974,52.5073],[11.3716,28.9397],[39.4097,36.4084],
+  [35.3751,7.67445],[56.7307,27.3176]
+];
+const cx = 66.5115, cy = 66.0265, S = 1 / 460;
+const shape = new THREE.Shape();
+svgPts.forEach(([x, y], i) => {
+  const px = (x - cx) * S, py = -(y - cy) * S;
+  i === 0 ? shape.moveTo(px, py) : shape.lineTo(px, py);
+});
+shape.closePath();
+
+const geo = new THREE.ExtrudeGeometry(shape, {
+  depth: 0.012, bevelEnabled: true, bevelThickness: 0.0022,
+  bevelSize: 0.0022, bevelSegments: 3, curveSegments: 1
+});
+geo.center();
+geo.computeVertexNormals();
+
+// Procedural studio environment for real metal reflections.
+const envCanvas = document.createElement('canvas');
+envCanvas.width = 512; envCanvas.height = 256;
+const ectx = envCanvas.getContext('2d');
+const g = ectx.createLinearGradient(0, 0, 0, 256);
+g.addColorStop(0, '#ffffff');
+g.addColorStop(0.35, '#dde6ff');
+g.addColorStop(0.55, '#7f8bb8');
+g.addColorStop(0.75, '#373bf9');
+g.addColorStop(1, '#0d1020');
+ectx.fillStyle = g; ectx.fillRect(0, 0, 512, 256);
+ectx.fillStyle = 'rgba(255,255,255,0.95)';
+ectx.fillRect(60, 20, 130, 60);
+ectx.fillRect(320, 40, 90, 34);
+ectx.fillStyle = 'rgba(165,189,255,0.7)';
+ectx.fillRect(210, 150, 180, 40);
+const envTex = new THREE.CanvasTexture(envCanvas);
+envTex.mapping = THREE.EquirectangularReflectionMapping;
+envTex.colorSpace = THREE.SRGBColorSpace;
+const pmrem = new THREE.PMREMGenerator(renderer);
+const envRT = pmrem.fromEquirectangular(envTex);
+scene.environment = envRT.texture;
+
+const star = new THREE.Mesh(geo, new THREE.MeshPhysicalMaterial({
+  color: 0xf0f4ff, metalness: 1, roughness: 0.14,
+  envMapIntensity: 1.6, clearcoat: 1, clearcoatRoughness: 0.08
+}));
+scene.add(star);
+
+let t = 0;
+function frame() {
+  t += 0.006;
+  star.rotation.y = Math.sin(t) * 0.6;
+  star.rotation.x = Math.sin(t * 0.7) * 0.25;
+  star.rotation.z = t * 0.12;
+  renderer.render(scene, camera);
+  requestAnimationFrame(frame);
+}
+frame();
+
+addEventListener('resize', () => {
+  camera.aspect = W() / H(); camera.updateProjectionMatrix();
+  renderer.setSize(W(), H());
+});
+</script>
+</body></html>

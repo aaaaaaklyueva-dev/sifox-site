@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/tokens/colors.css">
+<link rel="stylesheet" href="_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/tokens/typography.css">
+<link rel="stylesheet" href="_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/tokens/effects.css">
+<link rel="stylesheet" href="_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/tokens/base.css">
+<script src="_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/_ds_bundle.js"></script>
+<style>
+  html, body { margin: 0; padding: 0; background: #fff; }
+  a { color: #373BF9; text-decoration: none; }
+  a:hover { color: #697DFF; }
+  @keyframes phoneFloatM { 0%, 100% { transform: translateY(-12px); } 50% { transform: translateY(12px); } }
+</style>
+</helmet>
+<div ref="{{ wrapperRef }}" style="{{ wrapperStyle }}">
+<div ref="{{ stageRef }}" style="{{ stageStyle }}">
+
+  <section data-screen-label="Hero" style="position: relative; box-sizing: border-box; padding: 100px 24px; background: #fff; display: flex; flex-direction: column; gap: 24px; align-items: flex-start;">
+    <div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start; align-self: stretch;">
+      <h1 style="margin: 0; align-self: stretch; font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: 32px; line-height: 130%; color: rgb(46,49,62); text-transform: uppercase;">Звонки,<br>которые<br>ассистент<br>выполняет<br>за&nbsp;вас</h1>
+      <p style="margin: 0; align-self: stretch; font-family: Nunito, sans-serif; font-weight: 400; font-size: 14px; line-height: 140%; color: rgb(116,116,143);">Забронировать столик, заказать справку, поздравить, отменить запись — и&nbsp;другое.</p>
+    </div>
+    <div style="position: relative; align-self: stretch; height: 387px; overflow: hidden; border-radius: 24px; background: rgb(73,76,255);">
+      <video ref="{{ videoRefA }}" muted="{{ true }}" playsInline="{{ true }}" preload="auto" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; opacity: 1; transition: opacity 0.6s ease;"></video>
+      <video ref="{{ videoRefB }}" muted="{{ true }}" playsInline="{{ true }}" preload="auto" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; opacity: 0; transition: opacity 0.6s ease;"></video>
+      <div style="position: absolute; left: 24px; top: 337px; display: flex; flex-direction: row; gap: 12px; align-items: center;">
+        <sc-for list="{{ chips }}" as="chip" hint-placeholder-count="4">
+          <div onClick="{{ chip.onClick }}" style="cursor: pointer; display: flex; align-items: center;">
+            <sc-if value="{{ chip.active }}" hint-placeholder-val="{{ true }}">
+              <div style="height: 29px; border-radius: 10px; background: #fff; padding: 8px 14px; box-sizing: border-box; display: flex; align-items: center; font-family: Nunito, sans-serif; font-weight: 700; font-size: 13px; line-height: 13px; color: rgb(19,30,85); white-space: nowrap;">{{ chip.label }}</div>
+            </sc-if>
+            <sc-if value="{{ chip.dot }}" hint-placeholder-val="{{ false }}">
+              <div style="width: 13px; height: 13px; border-radius: 50%; background: #fff;"></div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Зачем" style="position: relative; overflow: hidden; box-sizing: border-box; padding: 100px 24px; background: url('assets/images/zachem-gradient.webp') 50% 50% / 221.836% 100% no-repeat, rgb(55,59,249);">
+    <div ref="{{ zachemRef }}" style="{{ zachemStyle }}">
+      <h2 style="margin: 0; align-self: stretch; font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: 24px; line-height: 130%; color: #fff; text-transform: uppercase;">Зачем<br>пользователю<br>передавать<br>звонки<br>ассистенту?</h2>
+      <div style="display: flex; flex-direction: column; gap: 16px; align-items: flex-start; align-self: stretch;">
+        <div style="display: flex; flex-direction: row; gap: 12px; align-items: flex-start;">
+          <div style="width: 8px; height: 8px; margin-top: 8px; border-radius: 4px; background: #fff; flex-shrink: 0;"></div>
+          <span style="font-family: Nunito, sans-serif; font-weight: 400; font-size: 14px; line-height: 24px; color: #fff;">Иногда сложно выполнить звонки</span>
+        </div>
+        <div style="display: flex; flex-direction: row; gap: 12px; align-items: flex-start;">
+          <div style="width: 8px; height: 8px; margin-top: 8px; border-radius: 4px; background: #fff; flex-shrink: 0;"></div>
+          <span style="font-family: Nunito, sans-serif; font-weight: 400; font-size: 14px; line-height: 24px; color: #fff;">А иногда просто не хочется</span>
+        </div>
+        <div style="display: flex; flex-direction: row; gap: 12px; align-items: flex-start;">
+          <div style="width: 8px; height: 8px; margin-top: 8px; border-radius: 4px; background: #fff; flex-shrink: 0;"></div>
+          <span style="font-family: Nunito, sans-serif; font-weight: 400; font-size: 14px; line-height: 24px; color: #fff;">Нужно сделать много<br>однотипных звонков</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Три шага" style="position: relative; overflow: hidden; box-sizing: border-box; padding: 100px 24px; background: #fff;">
+    <div ref="{{ stepsRef }}" style="display: flex; flex-direction: column; gap: 32px; align-items: flex-start;">
+      <h2 style="margin: 0; align-self: stretch; {{ revealTitle }} font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: 24px; line-height: 130%; color: rgb(46,49,62); text-transform: uppercase;">От задачи<br>до результата — три шага</h2>
+
+      <div style="position: relative; align-self: stretch; height: 470px; overflow: hidden; border-radius: 24px; background: rgb(232,239,255); {{ reveal1 }}">
+        <div style="position: absolute; left: 20px; top: 20px; width: 302px; display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
+          <span style="align-self: stretch; text-align: right; font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: 32px; line-height: 36px; color: rgb(123,126,255); text-transform: uppercase;">01</span>
+          <div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start; align-self: stretch;">
+            <h3 style="margin: 0; align-self: stretch; font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; color: rgb(50,48,48); text-transform: uppercase;">Поставьте<br>задачу</h3>
+            <p style="margin: 0; align-self: stretch; font-family: Nunito, sans-serif; font-weight: 400; font-size: 14px; line-height: 140%; color: rgb(50,48,48);">Напишите своими словами или выберите, что нужно сделать. Например: «Узнай, сколько стоит ОСАГО». Ассистент сам расспросит детали: на&nbsp;какую машину, в&nbsp;каком городе и&nbsp;компании.</p>
+          </div>
+        </div>
+        <div style="position: absolute; left: 20px; top: 374.2px; width: 302px; height: 58px; border-radius: 16px; background: #fff; box-shadow: inset 0 0 0 1.5px rgb(55,59,249), 0 0 0 1.5px rgb(55,59,249); display: flex; justify-content: center; align-items: center; box-sizing: border-box; padding: 12px 16px; {{ revealBtn }}">
+          <span style="font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: 14px; text-align: center; line-height: 130%; color: rgb(55,59,249); text-transform: uppercase;">Забронировать<br>столик</span>
+        </div>
+      </div>
+
+      <div style="position: relative; align-self: stretch; height: 470px; overflow: hidden; border-radius: 24px; background: rgb(232,239,255); {{ reveal2 }}">
+        <div style="position: absolute; left: 0; top: 0; transform: matrix(0.927,-0.374,-0.374,-0.927,-8.479,543.933); transform-origin: 0 0; width: 460.694px; height: 180.511px; background: url('assets/m-curve.webp') 50% 50% / 100% 100.085% no-repeat;"></div>
+        <div style="position: absolute; left: 20px; top: 20px; width: 302px; display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
+          <span style="align-self: stretch; text-align: right; font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: 32px; line-height: 36px; color: rgb(123,126,255); text-transform: uppercase;">02</span>
+          <div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start; align-self: stretch;">
+            <h3 style="margin: 0; align-self: stretch; font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; color: rgb(46,49,62); text-transform: uppercase;">Ассистент<br>позвонит</h3>
+            <p style="margin: 0; align-self: stretch; font-family: Nunito, sans-serif; font-weight: 400; font-size: 14px; line-height: 140%; color: rgb(50,48,48);">Он сам наберёт номер, дождётся ответа и&nbsp;поговорит с&nbsp;сотрудником. Если придётся подождать на&nbsp;линии — подождёт вместо вас. В начале разговора ассистент сообщает собеседнику, что он виртуальный.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="position: relative; align-self: stretch; height: 499px; overflow: hidden; border-radius: 24px; background: linear-gradient(155.445deg, rgb(232,239,255) 39.96%, rgb(232,239,255)); {{ reveal3 }}">
+        <div style="position: absolute; left: -79px; top: 118.2px; width: 527px; height: 527px; background: url('assets/step-02-phone.png') 50% 50% / 100% 100% no-repeat; animation: phoneFloatM 5s ease-in-out infinite; will-change: transform;"></div>
+        <div style="position: absolute; left: 20px; top: 20px; width: 302px; display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
+          <span style="align-self: stretch; text-align: right; font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: 32px; line-height: 36px; color: rgb(123,126,255); text-transform: uppercase;">03</span>
+          <div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start; align-self: stretch;">
+            <h3 style="margin: 0; align-self: stretch; font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; color: rgb(46,49,62); text-transform: uppercase;">Получите<br>результат в&nbsp;чате</h3>
+            <p style="margin: 0; align-self: stretch; font-family: Nunito, sans-serif; font-weight: 500; font-size: 14px; line-height: 140%; color: rgb(50,48,48);">После звонка ассистент пришлёт короткую сводку: что удалось узнать или сделать, сколько это стоит, на&nbsp;какое время договорились и&nbsp;нужен ли от&nbsp;вас следующий шаг.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Демо" style="position: relative; overflow: hidden; box-sizing: border-box; padding: 12px 24px 120px; background: #fff; display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
+    <iframe src="assets/star-3d.html" title="Звёздочка" scrolling="no" style="width: 232px; height: 232px; flex-shrink: 0; margin-left: -58px; border: 0; background: transparent; pointer-events: none;"></iframe>
+    <div style="display: flex; flex-direction: column; gap: 27.99px; align-items: flex-start; align-self: stretch;">
+      <p style="margin: 0; align-self: stretch; font-family: Nunito, sans-serif; font-weight: 700; font-size: 24px; line-height: 130%; color: rgb(50,48,48);">Хотите узнать больше про исходящие звонки ассистентом — запишитесь на&nbsp;демо</p>
+      <a href="#demo" style="align-self: stretch; height: 60px; border-radius: 16px; background: rgb(55,59,249); display: flex; justify-content: center; align-items: center; box-sizing: border-box; padding: 20px 24px; font-family: 'Druk LCG', sans-serif; font-weight: 700; font-size: 24px; line-height: 20px; letter-spacing: 0.4px; color: #fff; text-transform: uppercase;" style-hover="background: rgb(105,125,255);">Демо</a>
+    </div>
+  </section>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:390,&quot;height&quot;:900},&quot;videos&quot;:{&quot;editor&quot;:null,&quot;default&quot;:[&quot;assets/hero-1.mp4&quot;,&quot;assets/hero-2.mp4&quot;,&quot;assets/hero-4.mp4&quot;,&quot;assets/hero-3.mp4&quot;],&quot;tsType&quot;:&quot;string[]&quot;},&quot;labels&quot;:{&quot;editor&quot;:null,&quot;default&quot;:[&quot;Забронировать столик&quot;,&quot;Вместо будильника&quot;,&quot;Узнать, где в наличии лекарство&quot;,&quot;Отменить запись&quot;],&quot;tsType&quot;:&quot;string[]&quot;}}">
+class Component extends DCLogic {
+  state = { i: 0, zachemVisible: false, stepsVisible: false, scale: 1, stageHeight: 0 };
+  videoRefA = { current: null };
+  videoRefB = { current: null };
+  stageRef = { current: null };
+  wrapperRef = { current: null };
+  get baseWidth() { return 390; }
+  updateScale = () => {
+    const vw = this.wrapperRef.current?.clientWidth || window.innerWidth || this.baseWidth;
+    if (!vw) return;
+    const scale = Math.max(0.05, vw / this.baseWidth);
+    const stageHeight = this.stageRef.current ? this.stageRef.current.scrollHeight : 0;
+    if (this._measured && Math.abs(scale - this.state.scale) < 0.0005 && stageHeight === this.state.stageHeight) return;
+    this._measured = true;
+    this.setState({ scale, stageHeight });
+  };
+  kickScale = () => {
+    [0, 50, 150, 400, 900, 1600].forEach((ms) => setTimeout(this.updateScale, ms));
+    requestAnimationFrame(() => { this.updateScale(); requestAnimationFrame(this.updateScale); });
+  };
+  observe(el) {
+    if (!el) return;
+    if ("ResizeObserver" in window) {
+      this.ro = this.ro || new ResizeObserver(this.updateScale);
+      this.ro.observe(el);
+    }
+  }
+  setWrapper = (el) => {
+    this.wrapperRef.current = el;
+    if (!el) return;
+    this.observe(el);
+    this.updateScale();
+    this.kickScale();
+    clearTimeout(this._m);
+    this._m = setTimeout(this.updateScale, 300);
+    if (!this._resizeBound) { window.addEventListener("resize", this.updateScale); this._resizeBound = true; }
+  };
+  setStage = (el) => {
+    this.stageRef.current = el;
+    if (!el) return;
+    this.observe(el);
+    this.updateScale();
+  };
+  setVideoA = (el) => { this.videoRefA.current = el; this.maybeStart(); };
+  setVideoB = (el) => { this.videoRefB.current = el; this.maybeStart(); };
+  maybeStart() {
+    if (this._started || !this.videoRefA.current || !this.videoRefB.current) return;
+    this._started = true;
+    this.frontIdx = 0;
+    const go = () => { if (this._ran) return; this._ran = true; try { this.startFrom(0); } catch (e) {} };
+    requestAnimationFrame(go);
+    setTimeout(go, 120);
+  }
+  reveals(el, key, stateKey) {
+    if (!el || this["_w_" + key]) return;
+    this["_w_" + key] = true;
+    const fire = () => {
+      if (this.state[stateKey]) return;
+      this.setState({ [stateKey]: true });
+      if (io) io.disconnect();
+      window.removeEventListener("scroll", check, true);
+      clearInterval(poll);
+    };
+    const check = () => {
+      const r = el.getBoundingClientRect();
+      const vh = window.innerHeight || 800;
+      if (r.top < vh - Math.min(r.height, vh) * 0.15 && r.bottom > 0) fire();
+    };
+    let io = null;
+    if ("IntersectionObserver" in window) {
+      io = new IntersectionObserver((entries) => { if (entries[0].isIntersecting) fire(); }, { threshold: 0.15 });
+      io.observe(el);
+    }
+    const poll = setInterval(check, 250);
+    window.addEventListener("scroll", check, true);
+    setTimeout(check, 0);
+    this._cleanups = this._cleanups || [];
+    this._cleanups.push(() => { if (io) io.disconnect(); clearInterval(poll); window.removeEventListener("scroll", check, true); });
+  }
+  setZachem = (el) => this.reveals(el, "zachemObserver", "zachemVisible");
+  setSteps = (el) => this.reveals(el, "stepsObserver", "stepsVisible");
+  reveal(delay) {
+    const on = this.state.stepsVisible;
+    return `opacity: ${on ? 1 : 0}; transform: translateY(${on ? 0 : 32}px); transition: opacity 0.7s ease ${delay}s, transform 0.7s ease ${delay}s;`;
+  }
+  componentDidMount() {
+    this.runId = (this.runId || 0) + 1;
+    this.updateScale();
+    this.kickScale();
+    window.addEventListener("load", this.updateScale);
+  }
+  componentWillUnmount() {
+    this.runId++;
+    clearTimeout(this._t);
+    this.ro?.disconnect();
+    (this._cleanups || []).forEach((fn) => fn());
+    window.removeEventListener("resize", this.updateScale);
+  }
+  get videoList() { return this.props.videos ?? ["assets/hero-1.mp4", "assets/hero-2.mp4", "assets/hero-4.mp4", "assets/hero-3.mp4"]; }
+  get layers() { return [this.videoRefA, this.videoRefB]; }
+  sleep(ms) { return new Promise((r) => { this._t = setTimeout(r, ms); }); }
+  prepare(el, src) {
+    if (!el) return Promise.resolve();
+    el.muted = true;
+    return new Promise((res) => {
+      let settled = false;
+      let timer = null;
+      const finish = (ok) => {
+        if (settled) return;
+        settled = true;
+        clearTimeout(timer);
+        el.removeEventListener("loadeddata", onLoaded);
+        el.removeEventListener("error", onFail);
+        try { el.currentTime = 0; } catch (e) {}
+        el.pause();
+        res(ok);
+      };
+      const onLoaded = () => finish(true);
+      const onFail = () => finish(false);
+      const arm = () => {
+        el.addEventListener("loadeddata", onLoaded, { once: true });
+        el.addEventListener("error", onFail, { once: true });
+        timer = setTimeout(onFail, 6000);
+      };
+      if (el.getAttribute("src") !== src) {
+        el.setAttribute("src", src);
+        arm();
+        el.load();
+      } else if (el.readyState >= 2) { finish(true); }
+      else { arm(); }
+    });
+  }
+  startFrom(i) {
+    this.runId++;
+    clearTimeout(this._t);
+    this.setState({ i });
+    this.run(i, this.runId);
+  }
+  async run(i, token) {
+    const videos = this.videoList;
+    const alive = () => token === this.runId;
+    const front = this.layers[this.frontIdx].current;
+    const back = this.layers[1 - this.frontIdx].current;
+    if (!front || !back) return;
+    const ok = await this.prepare(front, videos[i]);
+    if (!alive()) return;
+    if (!ok) {
+      const skip = (i + 1) % videos.length;
+      if (skip === i) return;
+      this.setState({ i: skip });
+      return this.run(skip, token);
+    }
+    front.style.opacity = 1;
+    back.style.opacity = 0;
+    await this.sleep(500);
+    if (!alive()) return;
+    try { front.currentTime = 0; } catch (e) {}
+    front.play().catch(() => {});
+    await this.sleep(5000);
+    if (!alive()) return;
+    front.pause();
+    const next = (i + 1) % videos.length;
+    await this.prepare(back, videos[next]);
+    if (!alive()) return;
+    await this.sleep(1000);
+    if (!alive()) return;
+    back.style.opacity = 1;
+    front.style.opacity = 0;
+    await this.sleep(600);
+    if (!alive()) return;
+    front.pause();
+    this.frontIdx = 1 - this.frontIdx;
+    this.setState({ i: next });
+    this.run(next, token);
+  }
+  renderVals() {
+    const videos = this.videoList;
+    const labels = this.props.labels ?? ["Забронировать столик", "Вместо будильника", "Узнать, где в наличии лекарство", "Отменить запись"];
+    const active = this.state.i % videos.length;
+    const chips = labels.map((label, idx) => ({
+      label,
+      active: idx === active,
+      dot: idx !== active,
+      onClick: () => this.startFrom(idx % videos.length),
+    }));
+    return {
+      wrapperRef: this.setWrapper,
+      wrapperStyle: `position: relative; width: 100%; height: ${this.state.stageHeight ? this.state.stageHeight * this.state.scale + "px" : "auto"}; overflow: hidden;`,
+      stageRef: this.setStage,
+      stageStyle: `width: ${this.baseWidth}px; transform: scale(${this.state.scale}); transform-origin: top left;`,
+      zachemRef: this.setZachem,
+      zachemStyle: `display: flex; flex-direction: column; gap: 27.99px; align-items: flex-start; opacity: ${this.state.zachemVisible ? 1 : 0}; transform: translateX(${this.state.zachemVisible ? 0 : 40}px); transition: opacity 0.8s ease, transform 0.8s ease;`,
+      stepsRef: this.setSteps,
+      revealTitle: this.reveal(0),
+      reveal1: this.reveal(0),
+      reveal2: this.reveal(0.5),
+      reveal3: this.reveal(1),
+      revealBtn: `opacity: ${this.state.stepsVisible ? 1 : 0}; transform: translateY(${this.state.stepsVisible ? 0 : 40}px); transition: opacity 0.7s ease 1.5s, transform 0.7s ease 1.5s;`,
+      videoRefA: this.setVideoA,
+      videoRefB: this.setVideoB,
+      chips,
+    };
+  }
+}
+</script>
+</body>
+</html>

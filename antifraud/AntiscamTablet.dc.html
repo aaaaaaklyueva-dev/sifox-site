@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="ds/tokens/fonts.css">
+<link rel="stylesheet" href="ds/tokens/colors.css">
+<link rel="stylesheet" href="ds/tokens/typography.css">
+<link rel="stylesheet" href="ds/tokens/effects.css">
+<link rel="stylesheet" href="ds/tokens/base.css">
+<link rel="stylesheet" href="ds/components/fig-tokens.css">
+<link rel="stylesheet" href="ds/components/fig-typography.css">
+<link rel="stylesheet" href="ds/components/fig-assets.css">
+<link rel="stylesheet" href="ds/styles.css">
+<script src="ds/ds-bundle.js"></script>
+<style>
+  html, body { margin: 0; padding: 0; background: #FFFFFF; }
+  body { font-family: var(--font-body); color: #323030; -webkit-font-smoothing: antialiased; }
+  a { color: #373BF9; text-decoration: none; }
+  a:hover { color: #131E55; }
+  * { box-sizing: border-box; }
+  @keyframes shimmer { 0%, 100% { opacity: .38; transform: translate(-50%, -50%) scale(0.96); } 50% { opacity: .85; transform: translate(-50%, -50%) scale(1.04); } }
+  @keyframes tGrow { from { stroke-dashoffset: 1000; } to { stroke-dashoffset: 0; } }
+  @keyframes tFade { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes tFlow { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -240; } }
+  @keyframes swayA { 0%,100% { transform: rotate(-2.2deg) scale(1); } 50% { transform: rotate(2.4deg) scale(1.035); } }
+  @keyframes swayB { 0%,100% { transform: rotate(1.8deg) scale(1.02); } 50% { transform: rotate(-2.6deg) scale(0.98); } }
+  @keyframes swayC { 0%,100% { transform: rotate(-1.2deg) translateY(6px); } 50% { transform: rotate(2deg) translateY(-8px); } }
+  @keyframes float { 0%,100% { transform: translateY(-10px) rotate(-0.4deg); } 50% { transform: translateY(14px) rotate(0.6deg); } }
+  @keyframes blob { 0%,100% { transform: translate3d(0,0,0) scale(1); } 50% { transform: translate3d(4%,-3%,0) scale(1.12); } }
+  @keyframes pulseRing { 0% { transform: scale(0.6); opacity: 0.9; } 100% { transform: scale(2.6); opacity: 0; } }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes scan { from { transform: translateY(-100%); } to { transform: translateY(1100%); } }
+  @keyframes riseIn { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+  @keyframes barBeat { 0%,100% { transform: scaleY(0.3); } 50% { transform: scaleY(1); } }
+  @keyframes drawCheck { 0% { stroke-dashoffset: 34; } 45%,100% { stroke-dashoffset: 0; } }
+  @keyframes dotPulse { 0%,100% { opacity: 0.35; } 50% { opacity: 1; } }
+  @keyframes tapRing { 0% { transform: translate(-50%,-50%) scale(0.6); opacity: 0.9; } 100% { transform: translate(-50%,-50%) scale(1.8); opacity: 0; } }
+  @keyframes tapBob { 0%,100% { transform: translate(-50%,-50%); opacity: 1; } 50% { transform: translate(-50%,-50%); opacity: 0.35; } }
+</style>
+</helmet>
+
+<div style="position: relative; overflow-x: clip; background: #FFFFFF; min-height: 100vh;">
+
+  
+
+  
+
+  <section style="position: relative; height: 100vh; min-height: 600px; padding: 0; overflow: hidden; background: radial-gradient(1600px 1200px at 56% 58%, #3D48FF 0%, #2E33EE 55%, #2126D6 100%); width: 100%;">
+
+
+    
+  <div style="position: relative; z-index: 3; display: grid; grid-template-rows: auto minmax(0, 1fr); gap: 32px; max-width: none; height: 100%; margin: 0; padding: 120px 40px 44px; box-sizing: border-box; width: 100%">
+
+      <div>
+        <h1 style="margin: 0; font-family: var(--font-display); font-weight: 500; font-size: 40px; line-height: 130%; letter-spacing: 0.02em; text-transform: uppercase; color: #FFFFFF; text-wrap: balance;">Защита<br>от&nbsp;мошенничества<br>в&nbsp;каждом звонке</h1>
+        <p style="margin: 30px 0 0; max-width: 360px; font-size: 16px; line-height: 1.5; font-weight: 600; color: rgba(255,255,255,0.92);">Распознаем мошенника в&nbsp;реальном времени и&nbsp;поможем остановить угрозу прямо во&nbsp;время звонка.</p>
+      </div><div style="position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 32px; min-height: 0;">
+        <div style="position: absolute; inset: 0; z-index: 1; pointer-events: none;">
+            
+          <img src="assets/as-hero-phone.png" alt="Звонок с неизвестного номера" style="position: absolute; left: 50%; top: 42%; display: block; width: 135%; max-width: none; height: auto; transform: translate(-50%, -50%);"></div>
+        <div style="align-self: end; font-family: var(--font-display); font-weight: 500; font-size: 16px; line-height: 1.06; letter-spacing: 0.01em; text-transform: uppercase; color: #FFFFFF; text-align: right;">Когда опасность<br>подстерегает<br>на&nbsp;каждом звонке</div>
+      </div>
+
+      
+    </div></section>
+
+  <div style="position: relative; z-index: 6; border-top: 0.74px solid #C6CADD; border-bottom: 0.74px solid #C6CADD; background: #E8EFFF; overflow: hidden;">
+    <div style="display: flex; width: max-content; animation: marquee 70s linear infinite;">
+      <div style="display: flex; align-items: center; gap: 32px; padding: 16px; font-family: var(--font-display); font-weight: 500; font-size: 16px; letter-spacing: 0.1em; color: #74748F; white-space: nowrap; text-transform: uppercase;">
+        <span>«Ваша карта заблокирована»</span><span style="color: #373BF9;">◆</span>
+        <span>«Служба безопасности банка»</span><span style="color: #373BF9;">◆</span>
+        <span>«Назовите код из&nbsp;СМС»</span><span style="color: #373BF9;">◆</span>
+        <span>«На&nbsp;вас оформляют кредит»</span><span style="color: #373BF9;">◆</span>
+        <span>«Переведите на&nbsp;безопасный счёт»</span><span style="color: #373BF9;">◆</span>
+        <span>«Это&nbsp;ваш внук, я&nbsp;в&nbsp;беде»</span><span style="color: #373BF9;">◆</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 32px; padding: 16px; font-family: var(--font-display); font-weight: 500; font-size: 16px; letter-spacing: 0.1em; color: #74748F; white-space: nowrap; text-transform: uppercase;">
+        <span>«Ваша карта заблокирована»</span><span style="color: #373BF9;">◆</span>
+        <span>«Служба безопасности банка»</span><span style="color: #373BF9;">◆</span>
+        <span>«Назовите код из&nbsp;СМС»</span><span style="color: #373BF9;">◆</span>
+        <span>«На&nbsp;вас оформляют кредит»</span><span style="color: #373BF9;">◆</span>
+        <span>«Переведите на&nbsp;безопасный счёт»</span><span style="color: #373BF9;">◆</span>
+        <span>«Это&nbsp;ваш внук, я&nbsp;в&nbsp;беде»</span><span style="color: #373BF9;">◆</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="relevance" style="position: relative; padding: 120px 40px; background: #FFFFFF;">
+    <div style="position: relative; max-width: 1660px; margin: 0 auto;">
+
+      <h2 style="margin: 0 0 32px; font-family: var(--font-display); font-weight: 500; font-size: 40px; line-height: 130%; letter-spacing: 0.02em; text-transform: uppercase; color: #323030;"><span style="color: #373BF9;">Жертва</span>&nbsp;— любой<br>в&nbsp;этой толпе</h2>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 12px 52px; align-items: stretch;">
+      <div ref="{{ crowdBox }}" onMouseLeave="{{ leave }}" style="position: relative; flex: 1 1 560px; min-width: 0; aspect-ratio: 763 / 601; overflow: hidden; border-radius: 28px; background: #E8EFFF;">
+        <div ref="{{ crowdLayer }}" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%;">
+            <img src="assets/crowd/u2.jpg" alt="Толпа на переходе, пять человек выделены синим" style="position: absolute; inset: 0; width: 100%; height: 100%;">
+            <img src="assets/crowd/u7.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; transition: opacity .35s ease; opacity: {{ p0op }}; pointer-events: none;">
+            <img src="assets/crowd/u5.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; transition: opacity .35s ease; opacity: {{ p1op }}; pointer-events: none;">
+            <img src="assets/crowd/u4.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; transition: opacity .35s ease; opacity: {{ p2op }}; pointer-events: none;">
+            <img src="assets/crowd/u6.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; transition: opacity .35s ease; opacity: {{ p3op }}; pointer-events: none;">
+            <img src="assets/crowd/u1.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; transition: opacity .35s ease; opacity: {{ p4op }}; pointer-events: none;">
+            <div onTouchStart="{{ tapOutside }}" style="position: absolute; inset: 0; z-index: 2; touch-action: manipulation;">
+              <div ref="{{ hz0 }}" onMouseEnter="{{ hover0 }}" onFocus="{{ hover0 }}" onClick="{{ hover0 }}" onTouchStart="{{ hover0 }}" tabIndex="0" aria-label="Человек 1" style="position: absolute; left: 42.2%; top: 29.4%; width: 7.9%; height: 32.4%; transform: translate(-50%, -50%); cursor: pointer; outline: none;"></div>
+              <div ref="{{ hz1 }}" onMouseEnter="{{ hover1 }}" onFocus="{{ hover1 }}" onClick="{{ hover1 }}" onTouchStart="{{ hover1 }}" tabIndex="0" aria-label="Человек 2" style="position: absolute; left: 15.7%; top: 57.4%; width: 8.1%; height: 35.1%; transform: translate(-50%, -50%); cursor: pointer; outline: none;"></div>
+              <div ref="{{ hz2 }}" onMouseEnter="{{ hover2 }}" onFocus="{{ hover2 }}" onClick="{{ hover2 }}" onTouchStart="{{ hover2 }}" tabIndex="0" aria-label="Человек 3" style="position: absolute; left: 45.3%; top: 77.3%; width: 10.5%; height: 42.0%; transform: translate(-50%, -50%); cursor: pointer; outline: none;"></div>
+              <div ref="{{ hz3 }}" onMouseEnter="{{ hover3 }}" onFocus="{{ hover3 }}" onClick="{{ hover3 }}" onTouchStart="{{ hover3 }}" tabIndex="0" aria-label="Человек 4" style="position: absolute; left: 59.2%; top: 64.5%; width: 9.6%; height: 40.9%; transform: translate(-50%, -50%); cursor: pointer; outline: none;"></div>
+              <div ref="{{ hz4 }}" onMouseEnter="{{ hover4 }}" onFocus="{{ hover4 }}" onClick="{{ hover4 }}" onTouchStart="{{ hover4 }}" tabIndex="0" aria-label="Человек 5" style="position: absolute; left: 75.5%; top: 71.2%; width: 9.9%; height: 40.4%; transform: translate(-50%, -50%); cursor: pointer; outline: none;"></div>
+            </div>
+        </div>
+        {{ hintEl }}
+      </div>
+      <div style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 24px;">
+        <div style="background: #FFFFFF; display: flex; flex-direction: column-reverse; gap: 24px; padding: 0; align-items: flex-start; box-sizing: border-box; min-height: 265px;">
+          <div style="flex: 1 1 auto; min-width: 0; display: grid;">
+            <div style="grid-area: 1 / 1; display: flex; flex-direction: column; gap: 12px; padding: 8px 0; transition: opacity .4s ease, transform .4s cubic-bezier(.2,.8,.2,1); opacity: {{ c0op }}; transform: {{ c0tr }};">
+              <div style="font-family: var(--font-display); font-weight: 700; font-size: 24px; line-height: 140%; text-transform: uppercase; color: #373BF9; text-wrap: pretty;">Наведите курсор на&nbsp;людей в&nbsp;кадре, чтобы узнать больше.</div>
+              <p style="margin: 0; font-family: Nunito, sans-serif; font-weight: 400; font-size: 20px; line-height: 100%; color: #323030; text-wrap: pretty;">Мошенники не&nbsp;выбирают по&nbsp;возрасту и&nbsp;доходу&nbsp;— они&nbsp;звонят всем подряд и&nbsp;действуют по&nbsp;сценарию.</p>
+            </div>
+            <div style="grid-area: 1 / 1; display: flex; flex-direction: column; gap: 12px; padding: 8px 0; transition: opacity .4s ease, transform .4s cubic-bezier(.2,.8,.2,1); opacity: {{ c1op }}; transform: {{ c1tr }};">
+              <div style="font-family: var(--font-display); font-weight: 700; font-size: 24px; line-height: 140%; text-transform: uppercase; color: #373BF9; text-wrap: pretty;">Самая распространённая сумма&nbsp;— 10–15 тысяч рублей</div>
+              <p style="margin: 0; font-family: Nunito, sans-serif; font-weight: 400; font-size: 20px; line-height: 100%; color: #323030; text-wrap: pretty;">По&nbsp;данным Центробанка, средний чек одной кражи с&nbsp;помощью телефонного звонка составляет 10–15 тысяч рублей.</p>
+            </div>
+            <div style="grid-area: 1 / 1; display: flex; flex-direction: column; gap: 12px; padding: 8px 0; transition: opacity .4s ease, transform .4s cubic-bezier(.2,.8,.2,1); opacity: {{ c2op }}; transform: {{ c2tr }};">
+              <div style="font-family: var(--font-display); font-weight: 700; font-size: 24px; line-height: 140%; text-transform: uppercase; color: #373BF9; text-wrap: pretty;">Самая крупная кража&nbsp;— 298 миллионов рублей</div>
+              <p style="margin: 0; font-family: Nunito, sans-serif; font-weight: 400; font-size: 20px; line-height: 100%; color: #323030; text-wrap: pretty;">В&nbsp;2026 году 76-летний пенсионер и&nbsp;его&nbsp;сожительница отдали злоумышленникам деньги и&nbsp;золото на&nbsp;общую сумму 298 миллионов рублей.</p>
+            </div>
+            <div style="grid-area: 1 / 1; display: flex; flex-direction: column; gap: 12px; padding: 8px 0; transition: opacity .4s ease, transform .4s cubic-bezier(.2,.8,.2,1); opacity: {{ c3op }}; transform: {{ c3tr }};">
+              <div style="font-family: var(--font-display); font-weight: 700; font-size: 24px; line-height: 140%; text-transform: uppercase; color: #373BF9; text-wrap: pretty;">10% жителей РФ становились жертвами телефонного мошенничества</div>
+              <p style="margin: 0; font-family: Nunito, sans-serif; font-weight: 400; font-size: 20px; line-height: 100%; color: #323030; text-wrap: pretty;">По&nbsp;данным, 88% россиян когда-либо получали звонки или&nbsp;СМС от&nbsp;телефонных мошенников, а&nbsp;10% россиян в&nbsp;результате махинаций теряли денежные средства.</p>
+            </div>
+            <div style="grid-area: 1 / 1; display: flex; flex-direction: column; gap: 12px; padding: 8px 0; transition: opacity .4s ease, transform .4s cubic-bezier(.2,.8,.2,1); opacity: {{ c4op }}; transform: {{ c4tr }};">
+              <div style="font-family: var(--font-display); font-weight: 700; font-size: 24px; line-height: 140%; text-transform: uppercase; color: #373BF9; text-wrap: pretty;">Средний возраст жертвы&nbsp;— 48–59 лет</div>
+              <p style="margin: 0; font-family: Nunito, sans-serif; font-weight: 400; font-size: 20px; line-height: 100%; color: #323030; text-wrap: pretty;">По&nbsp;данным Центробанка РФ, средний возраст жертвы телефонного мошенничества в&nbsp;России составляет 48 лет, однако основная масса пострадавших находится в&nbsp;возрасте от&nbsp;25 до&nbsp;64 лет.</p>
+            </div>
+            <div style="grid-area: 1 / 1; display: flex; flex-direction: column; gap: 12px; padding: 8px 0; transition: opacity .4s ease, transform .4s cubic-bezier(.2,.8,.2,1); opacity: {{ c5op }}; transform: {{ c5tr }};">
+              <div style="font-family: var(--font-display); font-weight: 700; font-size: 24px; line-height: 140%; text-transform: uppercase; color: #373BF9; text-wrap: pretty;">13 тысяч несовершеннолетних стали жертвами телефонного мошенничества</div>
+              <p style="margin: 0; font-family: Nunito, sans-serif; font-weight: 400; font-size: 20px; line-height: 100%; color: #323030; text-wrap: pretty;">По&nbsp;данным МВД России, 13 тысяч детей стали жертвами цифрового мошенничества в&nbsp;2025 году и&nbsp;передали мошенникам более 1 млрд рублей.</p>
+            </div>
+          </div>
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="#373BF9" style="flex-shrink: 0; width: 80px; height: 80px;"><path d="M 40 0 L 44.721 25.469 L 63.511 7.639 L 52.361 31.019 L 78.042 27.639 L 55.279 40 L 78.042 52.361 L 52.361 48.981 L 63.511 72.361 L 44.721 54.531 L 40 80 L 35.279 54.531 L 16.489 72.361 L 27.639 48.981 L 1.958 52.361 L 24.721 40 L 1.958 27.639 L 27.639 31.019 L 16.489 7.639 L 35.279 25.469 L 40 0 Z"></path></svg>
+        </div>
+      </div>
+    </div><div style="display: flex; flex-direction: column; gap: 64px; align-items: flex-start; margin-top: 120px;">
+
+        <div style="display: flex; flex-direction: column; gap: 24px; align-items: flex-start; align-self: stretch;">
+          <h2 style="margin: 0; align-self: stretch; font-family: var(--font-display); font-weight: 500; line-height: 130%; letter-spacing: 1.52px; text-transform: uppercase; color: #323030; font-size: 32px">новый вид мощенничества и&nbsp;почему никто не&nbsp;защищен</h2>
+          <p style="margin: 0; align-self: stretch; font-family: var(--font-body); font-weight: 400; font-size: 16px; line-height: 1.3; color: #323030; white-space: pre-line;">Дипфейк&nbsp;— это&nbsp;созданное или&nbsp;изменённое с&nbsp;помощью искусственного интеллекта видео, изображение или&nbsp;аудио, которое реалистично имитирует внешность или&nbsp;голос реального человека.
+
+Например, дипфейк может заставить человека на&nbsp;видео «сказать» то, чего он&nbsp;никогда не&nbsp;говорил, или&nbsp;подделать его&nbsp;голос для&nbsp;звонка или&nbsp;голосового сообщения. Такие технологии могут использоваться как&nbsp;в&nbsp;развлекательных целях, так и&nbsp;для&nbsp;мошенничества, шантажа и&nbsp;распространения дезинформации.</p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 0; align-items: flex-start; align-self: stretch;">
+          <div style="display: flex; flex-direction: column; gap: 32px; align-items: flex-start; align-self: stretch;">
+            <h3 style="margin: 0; align-self: stretch; font-family: var(--font-display); font-weight: 500; font-size: 32px; line-height: 100%; text-transform: uppercase; color: #323030;">Как&nbsp;создаются дипфейки</h3>
+
+            <div style="display: grid; grid-template-columns: minmax(0, 1fr); align-self: stretch; border-top: 1px solid #000000; border-bottom: 1px solid #000000;">
+
+              <div style="display: flex; flex-direction: column; gap: 24px; padding: 32px 0; box-sizing: border-box; align-items: flex-start;">
+                <div style="display: flex; flex-direction: row; gap: 32px; align-items: stretch; align-self: stretch;">
+                  <div style="position: relative; width: min(247px, 44%); aspect-ratio: 247 / 329; flex-shrink: 0; overflow: hidden; border-radius: 12px; background: url('assets/df-step1.webp') 50% 50% / 100% 100.101% no-repeat"></div>
+                  <div style="display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; flex: 1 1 0; min-width: 0; align-self: stretch; gap: 24px;">
+                    <div style="display: flex; flex-direction: column; gap: 16px; align-items: flex-start; align-self: stretch;">
+                      <span style="font-family: var(--font-display); font-weight: 500; font-size: 24px; line-height: 100%; letter-spacing: 0.02em; text-transform: uppercase; color: #323030; white-space: nowrap;">шаг 1</span>
+                      <p style="margin: 0; align-self: stretch; font-family: var(--font-body); font-weight: 400; font-size: 16px; line-height: 1.3; color: #323030; white-space: pre-line;">Фото, видео и&nbsp;голос человека можно взять из&nbsp;соцсетей, мессенджеров или&nbsp;взломанных аккаунтов. Иногда голос получают через&nbsp;короткий звонок с&nbsp;неизвестного номера: задают пару вопросов, чтобы&nbsp;записать несколько фраз.</p>
+                    </div>
+                    <div onClick="{{ play1 }}" role="button" tabIndex="0" aria-label="Прослушать настоящий голос" style="position: relative; width: 78px; height: 78px; flex-shrink: 0; overflow: hidden; border-radius: 11.25px; background: #323030; box-shadow: 0px 0px 0px 0px #373BF9; cursor: pointer; transition: transform .2s ease, background .2s ease" style-hover="transform: scale(1.06); background: #373BF9;"><svg width="28.174" height="35.007" viewBox="0 0 28.174 35.007" fill="#FFFFFF" style="position: absolute; left: 25px; top: 21px;"><path d="M 26.007 13.384 C 28.897 15.371 28.897 19.637 26.007 21.624 L 7.833 34.119 C 4.515 36.4 0 34.025 0 29.999 L 0 5.009 C 0 0.983 4.515 -1.392 7.833 0.889 L 26.007 13.384 Z" fill-rule="nonzero"></path></svg></div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 24px; padding: 32px 0; box-sizing: border-box; align-items: flex-start; border-top: 1px solid #000000;">
+                <div style="display: flex; flex-direction: row; gap: 32px; align-items: stretch; align-self: stretch;">
+                  <div style="position: relative; width: min(247px, 44%); aspect-ratio: 247 / 329; flex-shrink: 0; overflow: hidden; border-radius: 12px; background: #EBEBEB">
+                    <div style="position: absolute; left: -23%; top: 3%; width: 151%; height: 127%; background: url('assets/df-face.webp') 50% 50% / 100% 119.959% no-repeat;"></div>
+                  </div>
+                  <div style="display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; flex: 1 1 0; min-width: 0; align-self: stretch; gap: 24px;">
+                    <div style="display: flex; flex-direction: column; gap: 16px; align-items: flex-start; align-self: stretch;">
+                      <span style="font-family: var(--font-display); font-weight: 500; font-size: 24px; line-height: 100%; letter-spacing: 0.02em; text-transform: uppercase; color: #323030; white-space: nowrap;">шаг 2</span>
+                      <p style="margin: 0; align-self: stretch; font-family: var(--font-body); font-weight: 400; font-size: 16px; line-height: 1.3; color: #323030; white-space: pre-line;">Создание персонажа из&nbsp;фото, копирование голоса, а&nbsp;дальше по&nbsp;сценарию сбор видео, и&nbsp;аудиоматериалы с&nbsp;просьбой занять денег или&nbsp;помочь.</p>
+                    </div>
+                    <div onClick="{{ play2 }}" role="button" tabIndex="0" aria-label="Прослушать дипфейк-голос" style="position: relative; width: 78px; height: 78px; flex-shrink: 0; overflow: hidden; border-radius: 11.25px; background: #323030; box-shadow: 0px 0px 0px 0px #373BF9; cursor: pointer; transition: transform .2s ease, background .2s ease" style-hover="transform: scale(1.06); background: #373BF9;"><svg width="28.174" height="35.007" viewBox="0 0 28.174 35.007" fill="#FFFFFF" style="position: absolute; left: 25px; top: 21px;"><path d="M 26.007 13.384 C 28.897 15.371 28.897 19.637 26.007 21.624 L 7.833 34.119 C 4.515 36.4 0 34.025 0 29.999 L 0 5.009 C 0 0.983 4.515 -1.392 7.833 0.889 L 26.007 13.384 Z" fill-rule="nonzero"></path></svg></div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 24px; padding: 32px 24px; box-sizing: border-box; align-items: flex-start; border-top: 1px solid #000000; background: #EBEBEB;">
+                <div style="display: flex; flex-direction: row; gap: 32px; align-items: stretch; align-self: stretch;">
+                  <div style="position: relative; width: min(247px, 44%); aspect-ratio: 247 / 329; flex-shrink: 0; overflow: hidden; border-radius: 24px; background: #B9D1FF;">
+                    <video ref="{{ dfVid }}" src="assets/as-product.mp4" preload="auto" poster="assets/as-girl.webp" onClick="{{ togglePlay }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; cursor: pointer;"></video>
+                    <svg onClick="{{ togglePlay }}" viewBox="0 0 28.174 35.007" fill="#FFFFFF" style="position: absolute; left: 13px; top: 163px; width: 21.8%; aspect-ratio: 53.818 / 74; cursor: pointer; transition: opacity .3s ease; opacity: {{ playOp }}; pointer-events: {{ playPe }}; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.4))"><path d="M 26.007 13.384 C 28.897 15.371 28.897 19.637 26.007 21.624 L 7.833 34.119 C 4.515 36.4 0 34.025 0 29.999 L 0 5.009 C 0 0.983 4.515 -1.392 7.833 0.889 L 26.007 13.384 Z" fill-rule="nonzero"></path></svg>
+                  </div>
+                  <div style="display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; flex: 1 1 0; min-width: 0; align-self: stretch; gap: 24px;">
+                    <div style="display: flex; flex-direction: column; gap: 16px; align-items: flex-start; align-self: stretch;">
+                      <span style="font-family: var(--font-display); font-weight: 500; font-size: 24px; line-height: 100%; letter-spacing: 0.02em; text-transform: uppercase; color: #323030; white-space: nowrap;">шаг 3</span>
+                      <p style="margin: 0; align-self: stretch; font-family: var(--font-body); font-weight: 400; font-size: 16px; line-height: 1.3; color: #323030; white-space: pre-line;">Готовый материал используют для&nbsp;выманивания денег или&nbsp;шантажа.
+Обычно со&nbsp;взломанного аккаунта рассылают сообщения с&nbsp;просьбой срочно перевести деньги, одолжить средства или&nbsp;оказать финансовую помощь.</p>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 8px; align-items: flex-start; align-self: stretch; margin-top: -4px; padding-top: 20px; border-top: 1px solid #000000;">
+                      <span style="font-family: var(--font-display); font-weight: 500; font-size: 32px; line-height: 100%; text-transform: uppercase; color: #373BF9;">18 минут</span>
+              <span style="font-family: var(--font-body); font-weight: 700; font-size: 16px; line-height: 1.25; color: #323030;">весь путь создания дипфейка занял у&nbsp;нашей команды менее 20 минут</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+
+        <audio ref="{{ v1 }}" src="assets/presale_real.wav" preload="none"></audio>
+        <audio ref="{{ v2 }}" src="assets/presale_fake.wav" preload="none"></audio>
+      </div>
+    </div>
+    </section></div>
+  
+
+  <section id="product" ref="{{ pSec }}" style="position: relative; padding: 96px 40px; background: #E8EFFF; overflow: hidden;">
+    <div ref="{{ asWrap }}" style="position: relative; width: 100%; max-width: 1660px; margin: 0 auto;">
+    <div ref="{{ asStage }}" style="width: 100%; transform-origin: top left; display: flex; flex-direction: column; gap: 64px; align-items: flex-start">
+
+      <div style="display: flex; flex-direction: column; gap: 44px; align-items: flex-start;">
+        <div style="width: 100%; max-width: 100%; display: flex; flex-direction: column; gap: 24px; align-items: flex-start; transition: opacity .7s ease, transform .7s cubic-bezier(.2,.8,.2,1); opacity: {{ pOp }}; transform: {{ pTr }}">
+          <h2 style="margin: 0; align-self: stretch; width: 100%; font-family: var(--font-display); font-weight: 500; font-size: 40px; line-height: 100%; letter-spacing: 0.02em; text-transform: uppercase; color: #373BF9;">система “антискам”</h2>
+          <p style="margin: 0; align-self: stretch; width: 100%; font-family: var(--font-body); font-weight: 400; font-size: 16px; line-height: 22px; color: #323030">Мы&nbsp;предлагаем сервис для&nbsp;проверки аудио- и&nbsp;видеосообщений на&nbsp;признаки дипфейка. При&nbsp;этом пользователь самостоятельно отправляет в&nbsp;сервис подозрительное аудио или&nbsp;видео для&nbsp;анализа.</p>
+        </div>
+
+      </div>
+
+      <div style="align-self: stretch; display: flex; flex-direction: column; gap: 44px; align-items: flex-start">
+        <h3 style="margin: 0; align-self: stretch; width: 100%; font-family: var(--font-display); font-weight: 500; font-size: 32px; line-height: 100%; text-transform: uppercase; color: #323030;">как&nbsp;это&nbsp;работает</h3>
+
+        <div style="position: relative; align-self: stretch; height: 2px; margin-top: 12px; margin-bottom: -4px; background: rgba(127,130,145,0.3);">
+          <div style="position: absolute; left: 0; top: 0; height: 100%; background: linear-gradient(90deg, #92AEFF, #373BF9); transition: width .8s cubic-bezier(.2,.8,.2,1); width: {{ pw }};"></div>
+          <span style="position: absolute; left: 0; top: 50%; width: 12px; height: 12px; margin: -6px 0 0 0; border-radius: 50%; background: {{ s0Dot }}; transition: background .35s ease;"></span>
+          <span style="position: absolute; left: calc((100% - 32px) / 3 + 16px); top: 50%; width: 12px; height: 12px; margin: -6px 0 0 0; border-radius: 50%; background: {{ s1Dot }}; transition: background .35s ease;"></span>
+          <span style="position: absolute; left: calc((100% - 32px) / 3 * 2 + 32px); top: 50%; width: 12px; height: 12px; margin: -6px 0 0 0; border-radius: 50%; background: {{ s2Dot }}; transition: background .35s ease;"></span>
+        </div>
+
+        <div style="align-self: stretch; display: flex; flex-direction: row; flex-wrap: nowrap; gap: 16px; align-items: stretch;">
+        <div onMouseEnter="{{ pick0 }}" onClick="{{ pick0 }}" style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 16px; align-items: flex-start; padding: 24px; cursor: pointer; background: #FFFFFF; border: {{ s0Bd }}; box-shadow: {{ s0Sh }}; transition: opacity .7s ease 0s, transform .55s cubic-bezier(.2,.8,.2,1), border-color .35s ease, box-shadow .35s ease; opacity: {{ pOp2 }}; transform: {{ s0Tr }};">
+          <div style="display: flex; flex-direction: column; gap: 8px; align-items: flex-start;">
+            <span style="font-family: var(--font-body); font-weight: 400; font-size: 20px; line-height: 100%; color: #74748F;">шаг 1</span>
+            <span style="font-family: var(--font-display); font-weight: 500; font-size: 20px; line-height: 130%; text-transform: uppercase; color: {{ s0Ttl }}; transition: color .35s ease">отправка  файла</span>
+          </div>
+          <p style="margin: 0; align-self: stretch; font-family: var(--font-body); font-weight: 400; font-size: 16px; line-height: 130%; color: #74748F">Пользователь отправляет файл на&nbsp;проверку, одновременно дает согласие на&nbsp;его&nbsp;проверку </p>
+        </div>
+        <div onMouseEnter="{{ pick1 }}" onClick="{{ pick1 }}" style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 16px; align-items: flex-start; padding: 24px; cursor: pointer; background: #FFFFFF; border: {{ s1Bd }}; box-shadow: {{ s1Sh }}; transition: opacity .7s ease 0.12s, transform .55s cubic-bezier(.2,.8,.2,1), border-color .35s ease, box-shadow .35s ease; opacity: {{ pOp2 }}; transform: {{ s1Tr }};">
+          <div style="display: flex; flex-direction: column; gap: 8px; align-items: flex-start;">
+            <span style="font-family: var(--font-body); font-weight: 400; font-size: 20px; line-height: 100%; color: #74748F;">шаг 2</span>
+            <span style="font-family: var(--font-display); font-weight: 500; font-size: 20px; line-height: 100%; text-transform: uppercase; color: {{ s1Ttl }}; transition: color .35s ease;">Анализ</span>
+          </div>
+          <p style="margin: 0; align-self: stretch; font-family: var(--font-body); font-weight: 400; font-size: 16px; line-height: 130%; color: #74748F">Видео или&nbsp;аудио анализируется и&nbsp;проверяется на&nbsp;наличие ИИ в&nbsp;течение пары минут.</p>
+        </div>
+        <div onMouseEnter="{{ pick2 }}" onClick="{{ pick2 }}" style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 16px; align-items: flex-start; padding: 24px; cursor: pointer; background: #FFFFFF; border: {{ s2Bd }}; box-shadow: {{ s2Sh }}; transition: opacity .7s ease 0.24s, transform .55s cubic-bezier(.2,.8,.2,1), border-color .35s ease, box-shadow .35s ease; opacity: {{ pOp2 }}; transform: {{ s2Tr }};">
+          <div style="display: flex; flex-direction: column; gap: 8px; align-items: flex-start;">
+            <span style="font-family: var(--font-body); font-weight: 400; font-size: 20px; line-height: 100%; color: #74748F;">шаг 3</span>
+            <span style="font-family: var(--font-display); font-weight: 500; font-size: 20px; line-height: 100%; text-transform: uppercase; color: {{ s2Ttl }}; transition: color .35s ease;">Результат</span>
+          </div>
+          <p style="margin: 0; align-self: stretch; font-family: var(--font-body); font-weight: 400; font-size: 16px; line-height: 130%; color: #74748F">Пользователь должен дать разрешение на&nbsp;анализ своих разговоров ИИ. </p>
+        </div>
+        </div>
+      </div>
+
+      <div style="align-self: stretch; display: flex; flex-direction: column; gap: 32px; align-items: flex-start;">
+        
+        <h3 style="margin: 0; align-self: stretch; font-family: var(--font-display); font-weight: 500; font-size: 32px; line-height: 100%; letter-spacing: 0.02em; text-transform: uppercase; color: #323030;">Точность нашей системы антискам </h3><div style="align-self: stretch; display: flex; flex-direction: row; gap: 12px; align-items: flex-start">
+
+          <div style="position: relative; flex: 1 1 auto; min-width: 0; height: 560px; overflow: hidden; border-radius: 12px; background: #FFFFFF; box-shadow: 0 0 16px rgba(57,60,75,0.1), 0 10px 16px rgba(57,60,75,0.05); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); opacity: {{ pOp3 }}; transform: {{ pTr3 }};">
+            <video ref="{{ prodVid }}" src="assets/as-video-fake.mp4" preload="auto" poster="assets/as-4.webp" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center;"></video>
+            <div style="position: absolute; left: 40px; bottom: 32px; width: min(340px, 46%); display: flex; flex-direction: column; gap: 8px; align-items: flex-start;">
+              <span style="font-family: var(--font-display); font-weight: 500; font-size: 56px; line-height: 100%; letter-spacing: 0.02em; color: #FFFFFF;">{{ n97 }}%</span>
+              <span style="font-family: var(--font-display); font-weight: 500; font-size: 24px; line-height: 100%; letter-spacing: 0.02em; text-transform: uppercase; color: #FFFFFF;">на&nbsp;ИИ-аудио</span>
+              <span style="font-family: var(--font-body); font-weight: 400; font-size: 16px; line-height: 130%; color: rgba(255,255,255,0.85);">По-нашему исследований 100 аудио в&nbsp;рамках программы.</span>
+            </div>
+            
+            <div style="position: absolute; left: 40px; right: 40px; top: 32px; display: flex; flex-direction: row-reverse; gap: 20px; align-items: center; justify-content: flex-end;">
+              
+              <span style="font-family: var(--font-display); font-weight: 500; font-size: 24px; line-height: 130%; letter-spacing: 0.02em; text-transform: uppercase; color: #FFFFFF; max-width: 300px;">точность проверки видео на&nbsp;наличие ии</span><span style="font-family: var(--font-display); font-weight: 500; font-size: 56px; line-height: 100%; letter-spacing: 0.02em; text-transform: uppercase; color: #FFFFFF;">{{ n99 }}%</span>
+
+            </div>
+            <div style="position: absolute; right: 40px; bottom: 32px; width: min(291px, 34%); display: flex; flex-direction: column; gap: 12px; align-items: flex-start">
+              <div style="width: 12px; height: 12px; border-radius: 50%; background: #FFFFFF;"></div>
+              <span style="align-self: stretch; font-family: var(--font-body); font-weight: 700; font-size: 16px; line-height: 130%; color: #FFFFFF;">С&nbsp;большой долей вероятности видео<br>и&nbsp;аудио сделано с&nbsp;использованием ИИ</span>
+              <span style="align-self: stretch; font-family: var(--font-body); font-weight: 700; font-size: 16px; line-height: 100%; text-align: right; color: #C7C7E7;">Ответ Системы</span>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  
+
+  
+
+<div style="position: fixed; inset: 0; pointer-events: none; z-index: 60; opacity: 0.07; mix-blend-mode: multiply; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%223%22/%3E%3C/filter%3E%3Crect width=%22200%22 height=%22200%22 filter=%22url(%23n)%22/%3E%3C/svg%3E'); background-size: 200px 200px; left: 5px; top: 4057px"></div>
+<template id="__bundler_thumbnail" data-bg-color="#373BF9">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#373BF9"></rect>
+    <text x="600" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="180" fill="#FFFFFF">AS</text>
+  </svg>
+</template>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;crowdTreatment&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;duotone&quot;,&quot;dither&quot;,&quot;raw&quot;],&quot;default&quot;:&quot;raw&quot;,&quot;tsType&quot;:&quot;'duotone' | 'dither' | 'raw'&quot;,&quot;section&quot;:&quot;Актуальность&quot;}}">
+const TRACKS = [];
+const LOOP_T = 3.0, TRACK_DT = 0.25;
+
+class Component extends DCLogic {
+  _hz = [];
+  state = { active: null, scrolled: false, p1: false, p2: false, rev: 0, n99: 0, n97: 0, step: 0 };
+  componentDidMount() {
+    this._fitPair = (w, s, key) => {
+      if (!w || !s) return;
+      const nat = s.style.width && s.style.width.indexOf('px') > -1 ? parseFloat(s.style.width) : w.clientWidth;
+      const k = Math.min(1, w.clientWidth / Math.max(nat, 1));
+      s.style.transform = k < 0.999 ? 'scale(' + k + ')' : 'none';
+      w.style.height = (s.offsetHeight * k) + 'px';
+    };
+    this._fit = () => {};
+    this._io = new IntersectionObserver((es) => {
+      es.forEach((e) => {
+        if (!e.isIntersecting) return;
+        this._io.disconnect();
+        this.setState({ rev: 1 });
+        setTimeout(() => this.setState({ rev: 2 }), 250);
+        setTimeout(() => { this.setState({ rev: 3 }); this._count(); }, 450);
+      });
+    }, { threshold: 0.08 });
+    if (this._pSec) this._io.observe(this._pSec);
+    const root = document.getElementById('dc-root') || document.body;
+    const sel = 'section > div > h1, section > div > h2, section > div > p, section > div > div > h2, section > div > div > h3, section > div > div > p, section > div > div > a, section > div > div > div > h3, section > div > div > div > p';
+    const targets = Array.from(root.querySelectorAll(sel)).filter((el) => !el.closest('[data-no-reveal]'));
+    targets.forEach((el) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateX(48px)';
+      el.style.transition = 'opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1)';
+      el.style.willChange = 'opacity, transform';
+    });
+    this._revealIo = new IntersectionObserver((es) => {
+      es.forEach((e) => {
+        if (!e.isIntersecting) return;
+        const el = e.target;
+        const sibs = Array.from(el.parentElement ? el.parentElement.children : []);
+        el.style.transitionDelay = Math.min(sibs.indexOf(el), 5) * 90 + 'ms';
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+        this._revealIo.unobserve(el);
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+    targets.forEach((el) => this._revealIo.observe(el));
+    this._cycle = setInterval(() => this.setState((s) => ({ step: (s.step + 1) % 3 })), 3400);
+    this._ro = new ResizeObserver(() => requestAnimationFrame(this._fit));
+    this._fit();
+    const tryPlay = () => { const v = this._v; if (v) { v.muted = true; v.volume = 0; const p = v.play(); if (p && p.catch) p.catch(() => {}); } };
+    tryPlay();
+    this._playTimer = setInterval(() => { const v = this._v; if (v && !v.paused) { clearInterval(this._playTimer); this._playTimer = null; } else tryPlay(); }, 1200);
+    this._onScroll = () => {
+      const y = window.scrollY || document.documentElement.scrollTop || 0;
+      const next = y > window.innerHeight * 0.72;
+      if (next !== this.state.scrolled) this.setState({ scrolled: next });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._cleanupReveal = () => { if (this._revealIo) this._revealIo.disconnect(); };
+    this._onScroll();
+    this._t0 = performance.now();
+    const kick = () => { const v = this._v; if (v && v.paused) { v.muted = true; const p = v.play(); if (p && p.catch) p.catch(() => {}); } };
+    this._kick = kick;
+    ['pointerdown', 'pointermove', 'keydown', 'scroll'].forEach((ev) => window.addEventListener(ev, kick, { passive: true }));
+    const track = () => {
+      const v = this._v;
+      const box = this._crowdBox, layer = this._crowdLayer;
+      if (box && layer) {
+        const bw = box.clientWidth, bh = box.clientHeight, a = 1672 / 941;
+        const lw = Math.max(bw, bh * a), lh = Math.max(bh, bw / a);
+        if (layer._lw !== lw) { layer.style.width = lw + 'px'; layer._lw = lw; }
+        if (layer._lh !== lh) { layer.style.height = lh + 'px'; layer._lh = lh; }
+      }
+      {
+        const now = performance.now();
+        const cv = this._crowdVid;
+        const clock = 0;
+        const t = (clock % LOOP_T) / TRACK_DT;
+        const i0 = Math.floor(t), f = t - i0;
+        if (this._useFlip && this._flip) {
+          const fi = i0 % 12;
+          if (this._flip._fi !== fi) { this._flip.src = 'frames/f' + String(fi).padStart(2, '0') + '.jpg'; this._flip._fi = fi; }
+        }
+
+        for (let p = 0; p < TRACKS.length; p++) {
+          const el = this._hz && this._hz[p]; if (!el) continue;
+          const tr = TRACKS[p];
+          const last = tr.length - 1;
+          const ia = Math.min(i0, last), ib = Math.min(i0 + 1, last);
+          const a0 = tr[ia], b0 = tr[ib];
+          el.style.left = ((a0.x + (b0.x - a0.x) * f) * 100).toFixed(3) + '%';
+          el.style.top = ((a0.y + (b0.y - a0.y) * f) * 100).toFixed(3) + '%';
+          el.style.opacity = '1';
+        }
+      }
+      this._raf = requestAnimationFrame(track);
+    };
+    this._raf = requestAnimationFrame(track);
+  }
+  _pick(i) {
+    if (this._cycle) { clearInterval(this._cycle); this._cycle = null; }
+    this.setState({ step: i });
+  }
+  _count() {
+    const t0 = performance.now(), dur = 1400;
+    const step = (t) => {
+      const k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+      this.setState({ n99: Math.round(99 * e), n97: Math.round(97 * e) });
+      if (k < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+  componentWillUnmount() { if (this._raf) cancelAnimationFrame(this._raf); if (this._kick) ['pointerdown', 'pointermove', 'keydown', 'scroll'].forEach((ev) => window.removeEventListener(ev, this._kick)); window.removeEventListener('scroll', this._onScroll); if (this._playTimer) clearInterval(this._playTimer); if (this._io) this._io.disconnect(); if (this._cycle) clearInterval(this._cycle); if (this._ro) this._ro.disconnect(); }
+  set(i) { this.setState({ active: i, touched: true }); }
+  renderVals() {
+    const a = this.state.active;
+    const filters = {
+      duotone: "grayscale(1) contrast(1.35) brightness(0.78)",
+      dither: "grayscale(1) contrast(2.1) brightness(0.85)",
+      raw: "saturate(1.02) contrast(1.04) brightness(0.97)"
+    };
+    const card = (i) => ({
+      op: a === i ? 1 : 0,
+      tr: a === i ? "translateY(0) scale(1)" : "translateY(28px) scale(0.98)",
+      fl: a === i ? "blur(0px)" : "blur(14px)",
+      pe: a === i ? "auto" : "none"
+    });
+    const c0 = card(0), c1 = card(1), c2 = card(2), c3 = card(3), c4 = card(4);
+    const cg = { op: a === null ? 1 : 0, tr: a === null ? 'translateY(0) scale(1)' : 'translateY(18px) scale(0.99)', pe: a === null ? 'auto' : 'none' };
+    const sc = this.state.scrolled;
+    return {
+      headerBg: sc ? 'linear-gradient(180deg, rgba(255,255,255,0.94), rgba(255,255,255,0.66))' : 'transparent',
+      headerBorder: sc ? '#C6CADD' : 'rgba(255,255,255,0.28)',
+      headerAccent: sc ? '#373BF9' : '#FFFFFF',
+      headerMuted: sc ? '#74748F' : 'rgba(255,255,255,0.82)',
+      headerBtnBg: sc ? 'var(--grad-accent-icon)' : '#FFFFFF',
+      headerBtnFg: sc ? '#FFFFFF' : '#232323',
+      logoFilter: sc ? 'none' : 'brightness(0) invert(1)',
+      crowdFilter: filters[this.props.crowdTreatment] || filters.raw,
+      asWrap: (el) => { this._asWrap = el; },
+      asStage: (el) => { this._asStage = el; },
+      pSec: (el) => { this._pSec = el; },
+      pw: ((this.state.step + 1) / 3 * 100) + '%',
+      pick0: () => this._pick(0),
+      s0Bd: this.state.step === 0 ? '1.5px solid #373BF9' : '0.74px solid rgba(127,130,145,0.5)',
+      s0Sh: this.state.step === 0 ? '0 18px 34px rgba(57,60,75,0.16)' : '0 0 16px rgba(57,60,75,0.06)',
+      s0Tr: this.state.rev >= 2 ? (this.state.step === 0 ? 'translateY(-10px)' : 'translateY(0)') : 'translateY(24px)',
+      s0Tile: this.state.step === 0 ? 'linear-gradient(143.5deg, #92AEFF, #373BF9)' : '#E8EFFF',
+      s0Ico: this.state.step === 0 ? '#FFFFFF' : '#373BF9',
+      s0Ttl: this.state.step === 0 ? '#373BF9' : '#323030',
+      s0Dot: this.state.step >= 0 ? '#373BF9' : '#C6CADD',
+      pick1: () => this._pick(1),
+      s1Bd: this.state.step === 1 ? '1.5px solid #373BF9' : '0.74px solid rgba(127,130,145,0.5)',
+      s1Sh: this.state.step === 1 ? '0 18px 34px rgba(57,60,75,0.16)' : '0 0 16px rgba(57,60,75,0.06)',
+      s1Tr: this.state.rev >= 2 ? (this.state.step === 1 ? 'translateY(-10px)' : 'translateY(0)') : 'translateY(24px)',
+      s1Tile: this.state.step === 1 ? 'linear-gradient(143.5deg, #92AEFF, #373BF9)' : '#E8EFFF',
+      s1Ico: this.state.step === 1 ? '#FFFFFF' : '#373BF9',
+      s1Ttl: this.state.step === 1 ? '#373BF9' : '#323030',
+      s1Dot: this.state.step >= 1 ? '#373BF9' : '#C6CADD',
+      pick2: () => this._pick(2),
+      s2Bd: this.state.step === 2 ? '1.5px solid #373BF9' : '0.74px solid rgba(127,130,145,0.5)',
+      s2Sh: this.state.step === 2 ? '0 18px 34px rgba(57,60,75,0.16)' : '0 0 16px rgba(57,60,75,0.06)',
+      s2Tr: this.state.rev >= 2 ? (this.state.step === 2 ? 'translateY(-10px)' : 'translateY(0)') : 'translateY(24px)',
+      s2Tile: this.state.step === 2 ? 'linear-gradient(143.5deg, #92AEFF, #373BF9)' : '#E8EFFF',
+      s2Ico: this.state.step === 2 ? '#FFFFFF' : '#373BF9',
+      s2Ttl: this.state.step === 2 ? '#373BF9' : '#323030',
+      s2Dot: this.state.step >= 2 ? '#373BF9' : '#C6CADD',
+
+      pOp: 1,
+      pTr: 'none',
+      pOp2: 1,
+      pTr2: 'none',
+      pOp3: 1,
+      pTr3: 'none',
+      n99: 99,
+      n97: 97,
+      v3: (el) => { if (el) { el.muted = true; el.volume = 0; const p = el.play(); if (p && p.catch) p.catch(() => {}); } },
+      v1: (el) => { this._v1 = el; },
+      v2: (el) => { this._v2 = el; },
+      v1op: this.state.p1 ? 1 : 0,
+      v2op: this.state.p2 ? 1 : 0,
+      play1: () => { const v = this._v1; if (!v) return; if (v.paused) { v.play(); this.setState({ p1: true }); } else { v.pause(); this.setState({ p1: false }); } },
+      play2: () => { const v = this._v2; if (!v) return; if (v.paused) { v.play(); this.setState({ p2: true }); } else { v.pause(); this.setState({ p2: false }); } },
+      videoRef: (el) => { this._v = el; if (el) { el.muted = true; el.defaultMuted = true; el.volume = 0; el.playbackRate = 0.6; const p = el.play(); if (p && p.catch) p.catch(() => {}); } },
+      crowdBox: (el) => { this._crowdBox = el; },
+      crowdVid: (el) => {
+        this._crowdVid = el;
+        if (!el || el._init) return;
+        el._init = true;
+        el.muted = true; el.defaultMuted = true; el.loop = true; el.playsInline = true; el.autoplay = true;
+        el.playbackRate = 0.8;
+        el.addEventListener('ratechange', () => { if (el.playbackRate !== 0.8) el.playbackRate = 0.8; });
+        el.addEventListener('error', () => console.warn('crowd video failed', el.currentSrc, el.error));
+        const go = () => el.play().catch(() => {});
+        go();
+        el.addEventListener('loadeddata', go, { once: true });
+        el.addEventListener('canplay', go, { once: true });
+        el.load();
+        setTimeout(() => { if (el.readyState === 0) this._useFlip = true; }, 2500);
+      },
+      crowdFallback: (el) => { this._flip = el; },
+      prodVid: (el) => {
+        if (!el || el._init) return;
+        el._init = true;
+        el.muted = true; el.defaultMuted = true; el.loop = true; el.playsInline = true; el.autoplay = true;
+        const go = () => el.play().catch(() => {});
+        go();
+        el.addEventListener('loadeddata', go, { once: true });
+        el.load();
+      },
+      dfVid: (el) => {
+        this._dfVid = el;
+        if (!el || el._init) return;
+        el._init = true;
+        el.loop = true; el.playsInline = true; el.volume = 1;
+        el.addEventListener('pause', () => this.setState({ prodPlaying: false }));
+        el.addEventListener('play', () => this.setState({ prodPlaying: true }));
+      },
+      playOp: this.state.prodPlaying ? 0 : 1,
+      playPe: this.state.prodPlaying ? 'none' : 'auto',
+      togglePlay: () => {
+        const v = this._dfVid;
+        if (!v) return;
+        if (v.paused) { v.muted = false; v.volume = 1; v.play().catch(() => { v.muted = true; v.play().catch(() => {}); }); } else v.pause();
+      },
+      crowdLayer: (el) => { this._crowdLayer = el; },
+      hz0: (el) => { (this._hz || (this._hz = []))[0] = el; },
+      hz1: (el) => { (this._hz || (this._hz = []))[1] = el; },
+      hz2: (el) => { (this._hz || (this._hz = []))[2] = el; },
+      hz3: (el) => { (this._hz || (this._hz = []))[3] = el; },
+      hz4: (el) => { (this._hz || (this._hz = []))[4] = el; },
+      zoneBorder: a === null ? 0.42 : 0.24,
+      hover0: () => this.set(0), hover1: () => this.set(1), hover2: () => this.set(2),
+      hover3: () => this.set(3), hover4: () => this.set(4),
+      hintEl: React.createElement('div', { key: 'hint', style: { position: 'absolute', right: 64, bottom: 64, width: 0, height: 0, zIndex: 3, pointerEvents: 'none', opacity: this.state.touched ? 0 : 1, transition: 'opacity .4s ease' } },
+        React.createElement('span', { style: { position: 'absolute', left: 0, top: 0, width: 72, height: 72, borderRadius: '50%', border: '2px solid #FFFFFF', animation: 'tapRing 1.6s ease-out infinite' } }),
+        React.createElement('span', { style: { position: 'absolute', left: 0, top: 0, width: 56, height: 56, borderRadius: '50%', background: '#FFFFFF', boxShadow: '0 4px 10.7px rgba(57,60,75,.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', animation: 'tapBob 1.6s ease-in-out infinite' } },
+          React.createElement('svg', { width: 30, height: 30, viewBox: '0 0 24 24', fill: '#373BF9' }, React.createElement('path', { d: 'M9 11.24V7.5C9 6.12 10.12 5 11.5 5S14 6.12 14 7.5v3.74c1.21-.81 2-2.18 2-3.74C16 5.01 13.99 3 11.5 3S7 5.01 7 7.5c0 1.56.79 2.93 2 3.74zm9.84 4.63l-4.54-2.26c-.17-.07-.35-.11-.54-.11H13v-6c0-.83-.67-1.5-1.5-1.5S10 6.67 10 7.5v10.74l-3.43-.72c-.08-.01-.15-.03-.24-.03-.31 0-.59.13-.79.33l-.79.8 4.94 4.94c.27.27.65.44 1.06.44h6.79c.75 0 1.33-.55 1.44-1.28l.75-5.27c.01-.07.02-.14.02-.2 0-.62-.38-1.16-.91-1.38z' })))),
+      p0op: a === 0 ? 1 : 0, p1op: a === 1 ? 1 : 0, p2op: a === 2 ? 1 : 0, p3op: a === 3 ? 1 : 0, p4op: a === 4 ? 1 : 0,
+      scrimOpacity: a === null ? 0 : 1,
+      leave: () => this.setState({ active: null }),
+      tapOutside: (e) => { if (e.target === e.currentTarget) this.setState({ active: null }); },
+      c0op: cg.op, c0tr: cg.tr, c0pe: cg.pe,
+      c1op: c0.op, c1tr: c0.tr, c1pe: c0.pe,
+      c2op: c1.op, c2tr: c1.tr, c2pe: c1.pe,
+      c3op: c2.op, c3tr: c2.tr, c3pe: c2.pe,
+      c4op: c3.op, c4tr: c3.tr, c4pe: c3.pe,
+      c5op: c4.op, c5tr: c4.tr, c5pe: c4.pe
+    };
+  }
+}
+
+</script>
+</body>
+</html>

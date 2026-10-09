@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="../sifox-menu.js" defer></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&amp;display=swap">
+<script type="module" src="../metal-star.js"></script>
+<script src="figma-antispam/nbsp.js"></script>
+<style>
+@font-face {
+  font-family: "Druk Wide Cyr";
+  src: url("_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/assets/fonts/DrukWideCyr.woff") format("woff"),
+       url("_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/assets/fonts/DrukWideCyr.ttf") format("truetype");
+  font-weight: 400 700; font-style: normal; font-display: swap;
+}
+html, body { margin: 0; padding: 0; background: #FFFFFF; }
+html { overflow-x: hidden; }
+a { color: #373BF9; }
+a:hover { color: #697DFF; }
+starburst-3d { display: block; }
+@keyframes star-rock { 0%, 100% { transform: rotate(-7deg); } 50% { transform: rotate(7deg); } }
+#site, #site * { box-sizing: border-box; }
+#site .dr { font-family: "Druk Wide Cyr", sans-serif; font-weight: 700; margin: 0; text-wrap: balance; }
+#site .nu { font-family: Nunito, sans-serif; font-weight: 400; margin: 0; text-wrap: pretty; }
+#site .rock { animation: star-rock 4.2s ease-in-out infinite; transform-origin: 50% 50%; }
+#site { --k: min(1px, calc(100vw / 1840)); --px: calc(64 * var(--k)); }
+#site .sec { padding: calc(200 * var(--k)) var(--px); gap: calc(44 * var(--k)); }
+#site .hero { padding: calc(200 * var(--k)) var(--px); gap: calc(64 * var(--k)); }
+#site .why-body { display: flex; flex-direction: column; gap: calc(120 * var(--k)); }
+#site .why-row { display: flex; justify-content: space-between; align-items: center; gap: calc(64 * var(--k)); }
+#site .why-media { width: min(706px, 40%); flex: none; }
+#site .stat-list { display: none; }
+#site .ov-stat { display: flex; }
+#site .m-star { display: none; }
+#site .us-top { display: flex; gap: calc(32 * var(--k)); }
+#site .chips { display: grid; grid-template-columns: repeat(2, max-content); gap: 16px 20px; }
+#site .nums { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+#site .num + .num { border-left: 1px solid #000; }
+#site .modes-run { height: calc(100vh + 700px); position: relative; }
+#site .modes { position: sticky; top: 0; height: 100vh; min-height: 640px; display: flex; }
+#site .modes-media { width: 50%; flex: none; position: relative; }
+#site .modes-text { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: calc(44 * var(--k)); padding: 0 var(--px) 0 calc(44 * var(--k)); }
+#site .vid, #site .card { transition: opacity .45s ease; }
+#site .demo-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 64px; align-items: start; }
+#site #demo input::placeholder { color: #E8EFFF; opacity: 1; }
+#site #demo input::-webkit-contacts-auto-fill-button { display: none !important; visibility: hidden !important; pointer-events: none !important; position: absolute; right: 0; width: 0 !important; }
+#site #demo input::-webkit-credentials-auto-fill-button { display: none !important; visibility: hidden !important; width: 0 !important; }
+#site #demo input:-webkit-autofill { -webkit-text-fill-color: #FFFFFF; transition: background-color 9999s; }
+#site .why-media > div > video { z-index: 0; }
+#site .why-media > div > :not(video) { z-index: 1; }
+@media (min-width: 600px) {
+  #site .why-sec .pt { font-size: clamp(16px, calc(16px + 8 * (100vw - 1024px) / 816), 24px) !important; line-height: 1.4 !important; }
+  #site .modes-cards .t-h3 { font-size: max(24px, calc(40 * var(--k))) !important; line-height: 1 !important; }
+  #site .us-col2 { flex: 0 1 auto !important; width: fit-content; }
+  #site .us-fit, #site .us-col2 .chips { contain: inline-size; }
+}
+@media (max-width: 1100px) {
+  #site .why-row { flex-direction: column; align-items: stretch; gap: calc(64 * var(--k)); }
+  #site .why-media { width: 100%; max-width: none; }
+  #site .us-top { flex-direction: column; gap: calc(44 * var(--k)); }
+  #site .us-top > div { flex: none !important; max-width: none !important; }
+  #site .modes { height: auto; min-height: 0; flex-direction: column; padding: calc(200 * var(--k)) var(--px) 0; gap: calc(44 * var(--k)); }
+  #site .modes-media { width: 100%; max-width: none; aspect-ratio: 4 / 3; order: 2; }
+  #site .modes-text { display: contents; }
+  #site .modes-title { order: 1; }
+  #site .modes-cards { order: 3; }
+  #site .demo-grid { grid-template-columns: 1fr; gap: 44px; }
+}
+@media (max-width: 599px) {
+  #site .sec { padding: 80px 20px; gap: 24px; }
+  #site .hero { padding: 80px 20px; gap: 64px; height: min(100svh, 216vw); min-height: 0 !important; }
+  #site .hero { height: 100svh !important; }
+  #site .hero > video.pp { object-fit: cover !important; object-position: 70% center !important; width: 100% !important; height: 100svh !important; inset: 0 !important; transform: none; }
+  #site .why-body { gap: 80px; }
+  #site .why-row { gap: 24px; }
+  #site .why-lead { color: #000000 !important; }
+  #site .why-intro { display: none; }
+  #site .pt { font-family: Nunito, sans-serif; font-weight: 500; letter-spacing: 0 !important; line-height: 1.3 !important; }
+  #site .pt::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #000000; vertical-align: middle; margin-right: 12px; }
+  #site .why-sec { padding-bottom: 0; }
+  #site .final { background: #323030; padding: 80px 20px; margin: 0 -20px; }
+  #site .final-txt { color: #FFFFFF !important; font-family: Nunito, sans-serif; font-weight: 500; letter-spacing: 0 !important; line-height: 1.35 !important; }
+  #site .ov-stat { display: none; }
+  #site .stat-list { display: flex; order: -1; }
+  #site .burst { width: 45px !important; height: 51px !important; }
+  #site .final { flex-direction: column; align-items: flex-start !important; gap: 20px !important; }
+  #site .us-top { gap: 44px; }
+  #site .chips { grid-template-columns: 1fr; }
+  #site .m-star { width: 34px !important; height: 34px !important; }
+  #site .chips svg { display: none; }
+  #site .chips > div::before { content: ""; flex: none; width: 6px; height: 6px; border-radius: 50%; background: #000000; }
+  #site .nums { grid-template-columns: 1fr; order: 1; }
+  #site .us-top { display: none !important; }
+  #site section[data-screen-label="03 Почему мы"] { gap: 44px; }
+  #site .m-sub { display: flex !important; padding-top: 0 !important; }
+  #site .m-sub .dr { font-family: Nunito, sans-serif; font-weight: 700; font-size: 16px !important; line-height: 1.35 !important; text-transform: none !important; }
+  #site .m-sub .nu { font-size: 16px !important; }
+  #site section[data-screen-label="03 Почему мы"] .dr, #site section[data-screen-label="03 Почему мы"] .nu { color: #323030 !important; }
+  #site .num { padding: 0 !important; gap: 12px !important; }
+  #site .nums { row-gap: 40px; }
+  #site .num > div > .dr { font-size: 32px !important; }
+  #site .num + .num { border-left: none; }
+  #site .nums { border: none !important; }
+  #site .modes { padding: 80px 20px 0; gap: 24px; }
+  #site .modes-cards { gap: 16px !important; }
+  #site .hero-ico { width: 28px !important; height: 28px !important; }
+  #site .t-h1 { font-size: 32px !important; line-height: 1.3 !important; }
+  #site .t-h2 { font-size: 24px !important; line-height: 1.3 !important; }
+  #site .t-lead { font-size: 16px !important; line-height: 1.4 !important; }
+  #site .t-acc { font-size: 16px !important; line-height: 24px !important; }
+  #site .t-num { font-size: 32px !important; line-height: 36px !important; }
+  #site .t-h3 { font-size: 20px !important; line-height: 24px !important; }
+  #site .t-body { font-size: 16px !important; line-height: 1.4 !important; }
+  #site .t-chip { font-size: 16px !important; line-height: 1.3 !important; }
+  #site .demo-grid { gap: 32px; }
+  #site #demo input { height: 48px !important; font-size: 16px !important; padding: 0 20px !important; }
+  #site #demo button { height: 48px !important; font-size: 16px !important; }
+}
+</style>
+</helmet>
+<div id="site" style="width: 100%; overflow-x: clip; background: #FFFFFF">
+
+  <template id="__bundler_thumbnail" data-bg-color="#373BF9"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><text x="50" y="62" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="34" fill="#FFFFFF">AS</text></svg></template>
+  <section class="hero" data-screen-label="01 Обложка" style="position: relative; min-height: 100vh; background: #373BF9; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between">
+    <video class="pp" src="figma-antispam/assets/hero-video.mp4" autoplay="" muted="" playsinline="" preload="auto" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right center; pointer-events: none"></video>
+    <span class="dr t-h1" style="position: relative; font-size: 64px; line-height: 1; letter-spacing: 1.345px; color: #FFFFFF; text-transform: uppercase">Антиспам</span>
+    <div style="position: relative; display: flex; flex-direction: column; gap: 16px">
+      <div style="display: flex; align-items: center; gap: 12px">
+        <svg class="rock hero-ico" width="41" height="41" viewBox="0 0 41 41" fill="none" style="flex: none; color: #FFFFFF"><path d="M 20.5 0 L 26.037 14.963 L 41 20.5 L 26.037 26.037 L 20.5 41 L 14.963 26.037 L 0 20.5 L 14.963 14.963 L 20.5 0 Z" fill="currentColor"></path></svg>
+        <span class="nu t-lead" style="font-size: clamp(16px, 1.25vw, 24px); line-height: 1.2; color: rgba(255,255,255,0.86)">Меньше назойливых звонков для абонентов.</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <svg class="rock hero-ico" width="41" height="41" viewBox="0 0 41 41" fill="none" style="flex: none; color: #FFFFFF; animation-delay: .35s"><path d="M 20.5 0 L 23.497 13.266 L 34.996 6.004 L 27.734 17.503 L 41 20.5 L 27.734 23.497 L 34.996 34.996 L 23.497 27.734 L 20.5 41 L 17.503 27.734 L 6.004 34.996 L 13.266 23.497 L 0 20.5 L 13.266 17.503 L 6.004 6.004 L 17.503 13.266 L 20.5 0 Z" fill="currentColor"></path></svg>
+        <span class="nu t-lead" style="font-size: clamp(16px, 1.25vw, 24px); line-height: 1.2; color: rgba(255,255,255,0.86)">Меньше пропущенных полезных звонков от бизнеса.</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <svg class="rock hero-ico" width="41" height="41" viewBox="0 0 41 41" fill="none" style="flex: none; color: #FFFFFF; animation-delay: .7s"><path d="M 20.5 0 L 26.037 14.963 L 41 20.5 L 26.037 26.037 L 20.5 41 L 14.963 26.037 L 0 20.5 L 14.963 14.963 L 20.5 0 Z" fill="currentColor"></path></svg>
+        <span class="nu t-lead" style="font-size: clamp(16px, 1.25vw, 24px); line-height: 1.2; color: rgba(255,255,255,0.86)">Больше доверия к голосовой связи оператора.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec why-sec" data-screen-label="02 Почему спам" style="background: #F2F2F2; display: flex; flex-direction: column">
+    <span class="dr why-title t-h2" style="font-size: clamp(24px, 3.34vw, 64px); line-height: 1.375; color: #414141; text-transform: uppercase">Почему спам — это проблема</span>
+    <div class="why-body">
+    <div class="why-row">
+      <div class="why-media" style="display: flex; flex-direction: column; gap: 24px">
+        <div style="position: relative; width: 100%; aspect-ratio: 706 / 629; background: #FFFFFF; overflow: hidden; container-type: inline-size">
+          <video class="pp" src="figma-antispam/assets/spam-video.mp4" autoplay="" muted="" playsinline="" preload="auto" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none"></video>
+          <img src="figma-antispam/assets/why-frame-lines.svg" alt="" style="position: absolute; left: 4.25%; top: 5.25%; width: 91.5%; height: 90%">
+          <div style="position: absolute; left: 2.83%; top: 82.35%; width: 2.83%; aspect-ratio: 1; border-radius: 50%; background: #111111"></div>
+          <div style="position: absolute; left: 94.33%; top: 14.63%; width: 2.83%; aspect-ratio: 1; border-radius: 50%; background: #111111"></div>
+          <div class="ov-stat" style="position: absolute; left: 35.27%; top: 7%; align-items: center; gap: 3.1cqw">
+            <span class="dr" style="font-size: 5.67cqw; line-height: 1.1; color: #373BF9; white-space: nowrap">95%</span>
+            <span class="nu" style="width: 34.6cqw; font-size: 2.27cqw; line-height: 1.25; color: #000000">пользователей из РФ получали спам-звонки в 2025 году</span>
+          </div>
+          <div class="ov-stat" style="position: absolute; left: 7.37%; top: 85.5%; align-items: center; gap: 1.7cqw">
+            <span class="dr" style="font-size: 5.67cqw; line-height: 1.1; color: #373BF9; white-space: nowrap">86%</span>
+            <span class="nu" style="width: 32.3cqw; font-size: 2.27cqw; line-height: 1.15; color: #000000">звонков с неизвестных номеров остаются без ответа</span>
+          </div>
+        </div>
+        <div class="stat-list" style="flex-direction: column; gap: 20px">
+          <div style="display: flex; align-items: center; gap: 16px">
+            <span class="dr t-num" style="font-size: 36px; line-height: 1; color: #373BF9; flex: none">95%</span>
+            <span class="nu t-body" style="font-size: 16px; line-height: 1.3; color: #000000">пользователей из РФ получали спам-звонки в 2025 году</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 16px">
+            <span class="dr t-num" style="font-size: 36px; line-height: 1; color: #373BF9; flex: none">86%</span>
+            <span class="nu t-body" style="font-size: 16px; line-height: 1.3; color: #000000">звонков с неизвестных номеров остаются без ответа</span>
+          </div>
+        </div>
+      </div>
+      <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: clamp(32px, calc(64 * var(--k)), 64px); justify-content: center">
+        <div style="display: flex; flex-direction: column; gap: clamp(12px, calc(20 * var(--k)), 20px)">
+          <span class="dr why-lead t-h3" style="font-size: clamp(20px, 1.67vw, 32px); line-height: 1.1; letter-spacing: 1px; color: #323030; text-transform: uppercase">Спам изменил отношение людей к телефонным звонкам</span>
+          <span class="nu why-intro t-lead" style="font-size: clamp(16px, 1.25vw, 24px); line-height: 1.34; color: #323030">Телефон остаётся одним из самых быстрых способов связаться с человеком. Но постоянные рекламные и назойливые звонки заставляют пользователей всё чаще игнорировать незнакомые номера.</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px">
+          <span class="dr pt t-acc" style="font-size: clamp(20px, 1.36vw, 24px); line-height: 1.1; letter-spacing: .02em; color: #323030">Вместе со спамом люди начинают игнорировать полезные звонки</span>
+          <span class="nu why-intro t-body" style="font-size: 16px; line-height: 1.6; color: #74748F">Когда неизвестный номер ассоциируется со спамом, страдает не только абонент. Люди перестают отвечать банкам, службам доставки, клиникам, интернет-магазинам, сервисным компаниям и другим легитимным организациям.</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px">
+          <span class="dr pt t-acc" style="font-size: clamp(20px, 1.36vw, 24px); line-height: 1.1; letter-spacing: .02em; color: #323030">Спам отнимает время и раздражает</span>
+          <span class="nu why-intro t-body" style="font-size: 16px; line-height: 1.6; color: #74748F">Каждый ненужный звонок требует внимания: посмотреть на экран, решить, отвечать или нет, сбросить вызов.</span>
+        </div>
+      </div>
+    </div>
+    <div class="final" style="display: flex; gap: 24px; align-items: center">
+      <div class="burst" data-r="star3d" role="img" aria-label="Металлическая звезда" style="width: 143px; height: 163px; flex: none; filter: drop-shadow(0 18px 24px rgba(0,0,40,.45))"></div>
+      <span class="dr final-txt t-acc" style="flex: 1; min-width: 0; font-size: clamp(16px, 1.67vw, 32px); line-height: 1.15; letter-spacing: 1px; color: #323030; text-wrap: pretty; font-weight: 400">В результате абоненту проще перестать отвечать на незнакомые номера вообще. Наша задача при работе со спамом не только блокировать ненужные но и пропускать полезные.</span>
+    </div>
+    </div>
+  </section>
+
+  <section class="sec" data-screen-label="03 Почему мы" style="background: #FFFFFF; display: flex; flex-direction: column">
+    <span class="dr t-h2" style="font-size: clamp(24px, 3.34vw, 64px); line-height: 1.375; color: #323030; text-transform: uppercase">Почему мы</span>
+    <div class="us-top">
+      <div style="flex: 0 1 552px; display: flex; flex-direction: column; gap: 20px">
+        <div style="display: flex; align-items: center; gap: 12px"><svg class="m-star" width="41" height="41" viewBox="0 0 41 41" fill="none" style="flex: none; color: #474FFA"><path d="M 20.5 0 L 23.497 13.266 L 34.996 6.004 L 27.734 17.503 L 41 20.5 L 27.734 23.497 L 34.996 34.996 L 23.497 27.734 L 20.5 41 L 17.503 27.734 L 6.004 34.996 L 13.266 23.497 L 0 20.5 L 13.266 17.503 L 6.004 6.004 L 17.503 13.266 L 20.5 0 Z" fill="currentColor"></path></svg><span class="dr t-h3" style="font-size: clamp(20px, 1.67vw, 32px); line-height: 1; color: #373BF9; text-transform: uppercase">Новые номера</span></div>
+        <span class="nu t-body" style="font-size: clamp(16px, 1.25vw, 24px); line-height: 1.35; color: #414141">Спамеры постоянно начинают звонить с новых номеров. Поэтому наша система постоянно анализирует новые номера и определяет признаки спама непосредственно во время разговора.</span>
+      </div>
+      <div class="us-col2" style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+        <div style="display: flex; align-items: center; gap: 12px"><svg class="m-star" width="41" height="41" viewBox="0 0 41 41" fill="none" style="flex: none; color: #474FFA"><path d="M 20.5 0 L 24.124 16.876 L 41 20.5 L 24.124 24.124 L 20.5 41 L 16.876 24.124 L 0 20.5 L 16.876 16.876 L 20.5 0 Z" fill="currentColor"></path></svg><span class="dr t-h3" style="font-size: clamp(20px, 1.67vw, 32px); line-height: 1; color: #373BF9; text-transform: uppercase">Своя уникальная спам-база</span></div>
+        <span class="nu t-body us-fit" style="font-size: clamp(16px, 1.25vw, 24px); line-height: 1.35; color: #323030">Проверяем входящий номер ещё до соединения с абонентом. Если номер уже известен как источник спама, звонок можно заблокировать или пометить как нежелательный.</span>
+        <div class="chips">
+          <div style="display: flex; align-items: center; gap: 12px">
+            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" style="flex: none; width: clamp(28px, 2.14vw, 41px); height: auto; color: #474FFA"><path d="M 20.5 0 L 23.497 13.266 L 34.996 6.004 L 27.734 17.503 L 41 20.5 L 27.734 23.497 L 34.996 34.996 L 23.497 27.734 L 20.5 41 L 17.503 27.734 L 6.004 34.996 L 13.266 23.497 L 0 20.5 L 13.266 17.503 L 6.004 6.004 L 17.503 13.266 L 20.5 0 Z" fill="currentColor"></path></svg>
+            <span class="nu t-chip" style="font-size: clamp(16px, 1.25vw, 24px); font-weight: 600; line-height: 1.2; color: #323030">Известные спам-номера</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px">
+            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" style="flex: none; width: clamp(28px, 2.14vw, 41px); height: auto; color: #474FFA"><path d="M 20.5 0 L 23.497 13.266 L 34.996 6.004 L 27.734 17.503 L 41 20.5 L 27.734 23.497 L 34.996 34.996 L 23.497 27.734 L 20.5 41 L 17.503 27.734 L 6.004 34.996 L 13.266 23.497 L 0 20.5 L 13.266 17.503 L 6.004 6.004 L 17.503 13.266 L 20.5 0 Z" fill="currentColor"></path></svg>
+            <span class="nu t-chip" style="font-size: clamp(16px, 1.25vw, 24px); font-weight: 600; line-height: 1.2; color: #323030">История массовых обзвонов</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px">
+            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" style="flex: none; width: clamp(28px, 2.14vw, 41px); height: auto; color: #474FFA"><path d="M 20.5 0 L 24.124 16.876 L 41 20.5 L 24.124 24.124 L 20.5 41 L 16.876 24.124 L 0 20.5 L 16.876 16.876 L 20.5 0 Z" fill="currentColor"></path></svg>
+            <span class="nu t-chip" style="font-size: clamp(16px, 1.25vw, 24px); font-weight: 600; line-height: 1.2; color: #323030">Репутация номера</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px">
+            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" style="flex: none; width: clamp(28px, 2.14vw, 41px); height: auto; color: #474FFA"><path d="M 20.5 0 L 24.124 16.876 L 41 20.5 L 24.124 24.124 L 20.5 41 L 16.876 24.124 L 0 20.5 L 16.876 16.876 L 20.5 0 Z" fill="currentColor"></path></svg>
+            <span class="nu t-chip" style="font-size: clamp(16px, 1.25vw, 24px); font-weight: 600; line-height: 1.2; color: #323030">Категории нежелательных звонков</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nums" style="border-top: 1px solid #000; border-bottom: 1px solid #000">
+      <div class="num" style="display: flex; flex-direction: column; gap: 24px; padding: clamp(32px, calc(64 * var(--k)), 64px) 24px">
+        <div style="display: flex; align-items: center; gap: 12px"><svg class="m-star" width="41" height="41" viewBox="0 0 41 41" fill="none" style="flex: none; color: #474FFA"><path d="M 20.5 0 L 23.497 13.266 L 34.996 6.004 L 27.734 17.503 L 41 20.5 L 27.734 23.497 L 34.996 34.996 L 23.497 27.734 L 20.5 41 L 17.503 27.734 L 6.004 34.996 L 13.266 23.497 L 0 20.5 L 13.266 17.503 L 6.004 6.004 L 17.503 13.266 L 20.5 0 Z" fill="currentColor"></path></svg><span class="dr t-num" style="font-size: clamp(64px, 6.45vw, 124px); line-height: 1; color: #373BF9; white-space: nowrap">600</span></div>
+        <span class="nu t-body" style="font-size: clamp(16px, 1.25vw, 24px); line-height: 1.35; color: #000000">Наша ML-модель использует более 600 параметров для определения спам-звонка.</span>
+        <div class="m-sub" style="display: none; flex-direction: column; gap: 12px; padding-top: 12px">
+        <div style="display: flex; align-items: center; gap: 12px"><svg class="m-star" width="41" height="41" viewBox="0 0 41 41" fill="none" style="flex: none; color: #474FFA"><path d="M 20.5 0 L 24.124 16.876 L 41 20.5 L 24.124 24.124 L 20.5 41 L 16.876 24.124 L 0 20.5 L 16.876 16.876 L 20.5 0 Z" fill="currentColor"></path></svg><span class="dr t-h3" style="font-size: clamp(16px, 1.67vw, 32px); line-height: 1; color: #373BF9; text-transform: uppercase">Своя уникальная спам-база</span></div>
+        <span class="nu t-body us-fit" style="font-size: clamp(16px, 1.25vw, 24px); line-height: 1.35; color: #323030">Проверяем входящий номер ещё до соединения с абонентом. Если номер уже известен как источник спама, звонок можно заблокировать или пометить как нежелательный.</span>
+        <div class="chips">
+          <div style="display: flex; align-items: center; gap: 12px">
+            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" style="flex: none; width: clamp(28px, 2.14vw, 41px); height: auto; color: #474FFA"><path d="M 20.5 0 L 23.497 13.266 L 34.996 6.004 L 27.734 17.503 L 41 20.5 L 27.734 23.497 L 34.996 34.996 L 23.497 27.734 L 20.5 41 L 17.503 27.734 L 6.004 34.996 L 13.266 23.497 L 0 20.5 L 13.266 17.503 L 6.004 6.004 L 17.503 13.266 L 20.5 0 Z" fill="currentColor"></path></svg>
+            <span class="nu t-chip" style="font-size: clamp(16px, 1.25vw, 24px); font-weight: 600; line-height: 1.2; color: #323030">Известные спам-номера</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px">
+            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" style="flex: none; width: clamp(28px, 2.14vw, 41px); height: auto; color: #474FFA"><path d="M 20.5 0 L 23.497 13.266 L 34.996 6.004 L 27.734 17.503 L 41 20.5 L 27.734 23.497 L 34.996 34.996 L 23.497 27.734 L 20.5 41 L 17.503 27.734 L 6.004 34.996 L 13.266 23.497 L 0 20.5 L 13.266 17.503 L 6.004 6.004 L 17.503 13.266 L 20.5 0 Z" fill="currentColor"></path></svg>
+            <span class="nu t-chip" style="font-size: clamp(16px, 1.25vw, 24px); font-weight: 600; line-height: 1.2; color: #323030">История массовых обзвонов</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px">
+            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" style="flex: none; width: clamp(28px, 2.14vw, 41px); height: auto; color: #474FFA"><path d="M 20.5 0 L 24.124 16.876 L 41 20.5 L 24.124 24.124 L 20.5 41 L 16.876 24.124 L 0 20.5 L 16.876 16.876 L 20.5 0 Z" fill="currentColor"></path></svg>
+            <span class="nu t-chip" style="font-size: clamp(16px, 1.25vw, 24px); font-weight: 600; line-height: 1.2; color: #323030">Репутация номера</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px">
+            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" style="flex: none; width: clamp(28px, 2.14vw, 41px); height: auto; color: #474FFA"><path d="M 20.5 0 L 24.124 16.876 L 41 20.5 L 24.124 24.124 L 20.5 41 L 16.876 24.124 L 0 20.5 L 16.876 16.876 L 20.5 0 Z" fill="currentColor"></path></svg>
+            <span class="nu t-chip" style="font-size: clamp(16px, 1.25vw, 24px); font-weight: 600; line-height: 1.2; color: #323030">Категории нежелательных звонков</span>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="num" style="display: flex; flex-direction: column; gap: 24px; padding: clamp(32px, calc(64 * var(--k)), 64px) 24px">
+        <div style="display: flex; align-items: center; gap: 12px"><svg class="m-star" width="41" height="41" viewBox="0 0 41 41" fill="none" style="flex: none; color: #474FFA"><path d="M 20.5 0 L 23.497 13.266 L 34.996 6.004 L 27.734 17.503 L 41 20.5 L 27.734 23.497 L 34.996 34.996 L 23.497 27.734 L 20.5 41 L 17.503 27.734 L 6.004 34.996 L 13.266 23.497 L 0 20.5 L 13.266 17.503 L 6.004 6.004 L 17.503 13.266 L 20.5 0 Z" fill="currentColor"></path></svg><span class="dr t-num" style="font-size: clamp(64px, 6.45vw, 124px); line-height: 1; color: #373BF9; white-space: nowrap">5-10</span></div>
+        <span class="nu t-body" style="font-size: clamp(16px, 1.25vw, 24px); line-height: 1.35; color: #000000">Распознаём спам-номера по 5–10 звонкам. По нескольким спам-звонкам, их параметрам и частоте определяем спам-номера и полностью убираем их от клиентов.</span>
+      </div>
+      <div class="num" style="display: flex; flex-direction: column; gap: 24px; padding: clamp(32px, calc(64 * var(--k)), 64px) 24px">
+        <div style="display: flex; align-items: center; gap: 12px"><svg class="m-star" width="41" height="41" viewBox="0 0 41 41" fill="none" style="flex: none; color: #474FFA"><path d="M 20.5 0 L 23.497 13.266 L 34.996 6.004 L 27.734 17.503 L 41 20.5 L 27.734 23.497 L 34.996 34.996 L 23.497 27.734 L 20.5 41 L 17.503 27.734 L 6.004 34.996 L 13.266 23.497 L 0 20.5 L 13.266 17.503 L 6.004 6.004 L 17.503 13.266 L 20.5 0 Z" fill="currentColor"></path></svg><span class="dr t-num" style="font-size: clamp(64px, 6.45vw, 124px); line-height: 1; color: #373BF9; white-space: nowrap">1-2</span></div>
+        <span class="nu t-body" style="font-size: clamp(16px, 1.25vw, 24px); line-height: 1.35; color: #000000">Распознаём спам-звонок на первом или втором гудке.</span>
+        <div class="m-sub" style="display: none; flex-direction: column; gap: 12px; padding-top: 12px">
+        <div style="display: flex; align-items: center; gap: 12px"><svg class="m-star" width="41" height="41" viewBox="0 0 41 41" fill="none" style="flex: none; color: #474FFA"><path d="M 20.5 0 L 23.497 13.266 L 34.996 6.004 L 27.734 17.503 L 41 20.5 L 27.734 23.497 L 34.996 34.996 L 23.497 27.734 L 20.5 41 L 17.503 27.734 L 6.004 34.996 L 13.266 23.497 L 0 20.5 L 13.266 17.503 L 6.004 6.004 L 17.503 13.266 L 20.5 0 Z" fill="currentColor"></path></svg><span class="dr t-h3" style="font-size: clamp(20px, 1.67vw, 32px); line-height: 1; color: #373BF9; text-transform: uppercase">Новые номера</span></div>
+        <span class="nu t-body" style="font-size: clamp(16px, 1.25vw, 24px); line-height: 1.35; color: #414141">Спамеры постоянно начинают звонить с новых номеров. Поэтому наша система постоянно анализирует новые номера и определяет признаки спама непосредственно во время разговора.</span>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modes-run" data-screen-label="04 2 вида защиты">
+    <section class="modes" style="background: #F2F2F2">
+      <div class="modes-media" style="background: #141669; overflow: hidden">
+        <video class="vid" data-mode="light" src="figma-antispam/assets/spam-video-2.mp4" autoplay="" muted="" playsinline="" loop="" preload="auto" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 1; pointer-events: none"></video>
+        <video class="vid" data-mode="full" src="figma-antispam/assets/spam-video-3.mp4" autoplay="" muted="" playsinline="" loop="" preload="auto" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; pointer-events: none"></video>
+      </div>
+      <div class="modes-text">
+        <span class="dr modes-title t-h2" style="font-size: clamp(24px, 2.4vw, 44px); line-height: 1.05; letter-spacing: .02em; color: #000000; text-transform: uppercase">2 вида защиты для ваших пользователей</span>
+        <div class="modes-cards" style="display: flex; flex-direction: column; gap: 24px">
+          <div class="card" data-mode="light" style="display: flex; flex-direction: column; gap: 20px; padding: 20px 0; border-bottom: 1px solid #000; opacity: 1; cursor: pointer">
+            <span class="dr t-h3" style="font-size: 32px; line-height: 1.1; color: #000000">Light Mode</span>
+            <span class="nu t-body" style="font-size: 20px; line-height: 1.35; color: #323030">Абонент видит входящие звонки спам-категорий, но они помечены меткой — и он сам решает, отвечать или нет.</span>
+          </div>
+          <div class="card" data-mode="full" style="display: flex; flex-direction: column; gap: 20px; padding: 20px 0; border-bottom: 1px solid #000; opacity: .5; cursor: pointer">
+            <span class="dr t-h3" style="font-size: 32px; line-height: 1.1; color: #000000">Full-Control Mode</span>
+            <span class="nu t-body" style="font-size: clamp(16px, 0.94vw, 20px); line-height: 1.35; color: #323030">Звонки не доходят до абонента. Абоненту предлагается либо расшифровка звонка, либо его полная блокировка.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section id="demo" class="sec" data-screen-label="05 Демо" style="background: radial-gradient(120% 170% at 78% 10%, #92AEFF 0%, #697DFF 38%, #373BF9 100%)">
+    <div class="demo-grid">
+      <div style="display: flex; flex-direction: column; gap: 24px">
+        <span class="dr t-h2" style="font-size: 64px; line-height: 1; color: #FFFFFF; text-transform: uppercase">Демо</span>
+        <p class="nu t-lead" style="font-size: 20px; line-height: 1.35; color: #E8EFFF; max-width: 640px">Покажем работу ассистента на реальном звонке и обсудим интеграцию в контур оператора.</p>
+      </div>
+      <form noValidate="" onSubmit="{{ submitDemo }}" style="display: flex; flex-direction: column; gap: 16px; width: 100%">
+        <input placeholder="Имя" type="text" autoComplete="off" data-1p-ignore="" data-lpignore="true" name="dm_a" style="height: 56px; padding: 0 24px; border-radius: 12px; border: 1px solid rgba(255,255,255,.4); background: rgba(255,255,255,.14); backdrop-filter: blur(14.4px); color: #FFFFFF; font-size: 20px; font-family: Nunito, sans-serif; outline: none; width: 100%" style-focus="border-color: #FFFFFF; background: rgba(255,255,255,.22)">
+        <input placeholder="Компания" type="text" autoComplete="off" data-1p-ignore="" data-lpignore="true" name="dm_b" style="height: 56px; padding: 0 24px; border-radius: 12px; border: 1px solid rgba(255,255,255,.4); background: rgba(255,255,255,.14); backdrop-filter: blur(14.4px); color: #FFFFFF; font-size: 20px; font-family: Nunito, sans-serif; outline: none; width: 100%" style-focus="border-color: #FFFFFF; background: rgba(255,255,255,.22)">
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <input placeholder="Почта" type="text" inputMode="email" autoComplete="off" data-1p-ignore="" data-lpignore="true" name="dm_c" onInput="{{ clearErr }}" style="height: 56px; padding: 0 24px; border-radius: 12px; border: {{ emailBorder }}; background: rgba(255,255,255,.14); backdrop-filter: blur(14.4px); color: #FFFFFF; font-size: 20px; font-family: Nunito, sans-serif; outline: none; width: 100%" style-focus="background: rgba(255,255,255,.22)">
+          <sc-if value="{{ emailErr }}" hint-placeholder-val="{{ false }}">
+            <span class="nu" style="font-size: 16px; line-height: 1.4; color: #FFFFFF">{{ emailErr }}</span>
+          </sc-if>
+        </div>
+        <button type="submit" class="dr" style="margin-top: 8px; cursor: pointer; border: 0; height: 56px; padding: 0 44px; border-radius: 12px; background: #FFFFFF; color: #373BF9; font-size: 20px; letter-spacing: .02em; text-transform: uppercase; box-shadow: 0 8px 24px rgba(20,24,120,.25); transition: transform .2s, box-shadow .2s" style-hover="transform: translateY(-2px); box-shadow: 0 12px 32px rgba(20,24,120,.35)">{{ btnLabel }}</button>
+        <p class="nu" style="font-size: 16px; line-height: 1.4; color: #E8EFFF">Нажимая кнопку «Запросить демо», вы соглашаетесь с&nbsp;<a href="#" style="color: #FFFFFF; text-decoration: underline; text-underline-offset: 3px">политикой конфиденциальности</a> и&nbsp;<a href="#" style="color: #FFFFFF; text-decoration: underline; text-underline-offset: 3px">условиями сбора и&nbsp;хранения персональных данных</a></p>
+      </form>
+    </div>
+  </section>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;formEndpoint&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Форма демо&quot;},&quot;formKey&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Форма демо&quot;}}">
+class Component extends DCLogic {
+  state = { sent: false, emailErr: '' };
+  renderVals() {
+    var err = this.state.emailErr;
+    return {
+      btnLabel: this.state.sending ? 'Отправляем…' : this.state.sent ? 'Заявка отправлена' : 'Запросить демо',
+      emailErr: err,
+      emailBorder: err ? '2px solid #FF87CE' : '1px solid rgba(255,255,255,.4)',
+      clearErr: () => { if (this.state.emailErr) this.setState({ emailErr: '' }); },
+      submitDemo: (e) => {
+        e.preventDefault();
+        var v = (e.target.elements.dm_c.value || '').trim();
+        if (!v) return this.setState({ emailErr: 'Это поле обязательное для заполнения', sent: false });
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) return this.setState({ emailErr: 'Введите корректный адрес почты', sent: false });
+        var f = e.target.elements;
+        var data = { name: f.dm_a.value.trim(), company: f.dm_b.value.trim(), email: v, subject: 'Заявка на демо — Антиспам' };
+        var url = this.props.formEndpoint || '';
+        this.setState({ emailErr: '', sending: true });
+        var done = () => { this.setState({ sending: false, sent: true }); e.target.reset(); };
+        if (!url) return done();
+        fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(Object.assign({ access_key: this.props.formKey || undefined }, data)) })
+          .then((r) => { if (!r.ok) throw 0; done(); })
+          .catch(() => this.setState({ sending: false, emailErr: 'Не удалось отправить. Попробуйте ещё раз' }));
+      }
+    };
+  }
+  componentDidMount() {
+    var root = document.getElementById('site');
+    if (!root) return;
+    root.querySelectorAll('video[src]').forEach(function (v) {
+      var src = v.getAttribute('src');
+      fetch(src).then(function (r) { return r.blob(); }).then(function (b) {
+        v.src = URL.createObjectURL(b.type ? b : new Blob([b], { type: 'video/mp4' }));
+        v.load();
+        if (v.autoplay) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+      }).catch(function () {});
+    });
+    var self = this;
+    root.querySelectorAll('video').forEach(function (v) {
+      v.muted = true; v.defaultMuted = true; v.volume = 0; v.controls = false;
+      if (v.classList.contains('vid')) v.playbackRate = 0.9;
+    });
+    root.querySelectorAll('video.pp').forEach(function (v) {
+      v.loop = false;
+      var back = false;
+      var fwd = function () { back = false; v.play().catch(function () {}); };
+      v.addEventListener('ended', function () {
+        back = true; v.pause();
+        var last = performance.now();
+        (function step(now) {
+          var t = v.currentTime - (now - last) / 1000; last = now;
+          if (t <= 0.02) { v.currentTime = 0; fwd(); return; }
+          v.currentTime = t; requestAnimationFrame(step);
+        })(last);
+      });
+      v.addEventListener('pause', function () { if (!back && !v.ended) fwd(); });
+      fwd();
+    });
+    this._iv = setInterval(function () {
+      root.querySelectorAll('video').forEach(function (v) {
+        v.muted = true; v.volume = 0;
+        if (v.classList.contains('vid') && v.paused) { v.playbackRate = 0.9; v.play().catch(function () {}); }
+      });
+    }, 800);
+
+    var run = root.querySelector('.modes-run');
+    var sec = root.querySelector('.modes');
+    var vids = sec.querySelectorAll('.vid');
+    var cards = sec.querySelectorAll('.card');
+    var paint = function (t) {
+      vids.forEach(function (v) { v.style.opacity = String(v.dataset.mode === 'full' ? t : 1 - t); });
+      cards.forEach(function (c) { var on = c.dataset.mode === 'full' ? t : 1 - t; c.style.opacity = String(0.5 + 0.5 * on); });
+    };
+    var mode = -1, forced = null;
+    var LONG = function () { return innerWidth <= 1100 ? Math.max(1200, innerHeight * 1.6) : Math.max(900, innerHeight * 1.2); };
+    var layout = function () {
+      var h = sec.offsetHeight;
+      sec.style.top = Math.min(0, innerHeight - h) + 'px';
+      run.style.height = (h + LONG()) + 'px';
+    };
+    var set = function (m) { if (m === mode) return; mode = m; paint(m); };
+    var tick = function () {
+      var top = run.getBoundingClientRect().top;
+      var span = Math.max(1, run.offsetHeight - sec.offsetHeight);
+      var p = Math.min(1, Math.max(0, (Math.min(0, innerHeight - sec.offsetHeight) - top) / span));
+      if (forced !== null) {
+        if (Math.abs(p - forced.p) > 0.08) forced = null; else { set(forced.m); return; }
+      }
+      set(p > 0.5 ? 1 : 0);
+    };
+    cards.forEach(function (c) {
+      c.addEventListener('click', function () {
+        var top = run.getBoundingClientRect().top;
+        var span = Math.max(1, run.offsetHeight - sec.offsetHeight);
+        var p = Math.min(1, Math.max(0, (Math.min(0, innerHeight - sec.offsetHeight) - top) / span));
+        forced = { m: c.dataset.mode === 'full' ? 1 : 0, p: p };
+        set(forced.m);
+      });
+    });
+    layout();
+    addEventListener('resize', layout);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { layout(); tick(); });
+    this._tick = tick;
+    addEventListener('scroll', tick, { passive: true });
+    addEventListener('resize', tick);
+    tick();
+
+    var nb = function () { if (window.Sifox && window.Sifox.nbsp) { window.Sifox.nbsp(root); return true; } return false; };
+    if (!nb()) { var i = 0, t = setInterval(function () { if (nb() || ++i > 20) clearInterval(t); }, 200); }
+  }
+  componentWillUnmount() {
+    clearInterval(this._iv);
+    removeEventListener('scroll', this._tick);
+    removeEventListener('resize', this._tick);
+  }
+}
+
+</script>
+<script src="../sifox-footer.js"></script>
+</body>
+</html>

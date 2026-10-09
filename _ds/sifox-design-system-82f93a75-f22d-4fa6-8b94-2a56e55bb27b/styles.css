@@ -1,0 +1,8 @@
+@import './tokens/fonts.css';
+@import './tokens/colors.css';
+@import './tokens/typography.css';
+@import './tokens/effects.css';
+@import './tokens/base.css';
+@import './components/fig-tokens.css';
+@import './components/fig-typography.css';
+@import './components/fig-assets.css';
