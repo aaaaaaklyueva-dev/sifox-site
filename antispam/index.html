@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -122,6 +122,27 @@ starburst-3d { display: block; }
   #site #demo input { height: 48px !important; font-size: 16px !important; padding: 0 20px !important; }
   #site #demo button { height: 48px !important; font-size: 16px !important; }
 }
+</style>
+
+<style id="sfx-type">
+/* Sifox type scale v1 — десктоп: вариант 1, планшет: вариант 3 (с правками), мобилка: вариант 2. Обложка не затронута. */
+:root{--t-h2:24px;--t-h2-lh:28px;--t-h3:20px;--t-h3-lh:24px;--t-h4:16px;--t-h4-lh:20px;--t-num:36px;--t-btn:14px;
+ --t-lead:18px;--t-lead-lh:26px;--t-body:16px;--t-body-lh:22px;--t-cap:13px;--t-cap-lh:18px}
+@media (min-width:768px){:root{--t-h2:44px;--t-h2-lh:48px;--t-h3:28px;--t-h3-lh:32px;--t-h4:20px;--t-h4-lh:26px;--t-num:48px;--t-btn:16px;
+ --t-lead:20px;--t-lead-lh:28px;--t-body:16px;--t-body-lh:24px;--t-cap:14px;--t-cap-lh:20px}}
+@media (min-width:1280px){:root{--t-h2:48px;--t-h2-lh:52px;--t-h3:32px;--t-h3-lh:36px;--t-h4:20px;--t-h4-lh:24px;--t-num:56px;--t-btn:16px}}
+html body #site section:not(.hero) :is(.t-h2,.t-h3,.t-acc:not(.final-txt),.t-num,button.dr){font-family:"Druk Wide Cyr","Druk LCG",sans-serif !important;font-weight:700 !important;text-transform:uppercase !important;letter-spacing:.02em !important}
+html body #site section:not(.hero) .t-h2:not(.modes-title){font-size:var(--t-h2) !important;line-height:var(--t-h2-lh) !important}
+html body #site section:not(.hero) :is(.why-lead,.modes-title){font-size:var(--t-h3) !important;line-height:var(--t-h3-lh) !important}
+html body #site section:not(.hero) :is(.t-h3:not(.why-lead):not(.modes-title),.t-acc:not(.final-txt)){font-size:var(--t-h4) !important;line-height:var(--t-h4-lh) !important}
+html body #site section:not(.hero) .t-num{font-size:var(--t-num) !important;line-height:1.05 !important}
+html body #site section:not(.hero) button.dr{font-size:var(--t-btn) !important;line-height:1 !important}
+html body #site section:not(.hero) .t-lead{font-size:var(--t-lead) !important;line-height:var(--t-lead-lh) !important}
+html body #site section:not(.hero) :is(.t-body,.t-chip){font-size:var(--t-body) !important;line-height:var(--t-body-lh) !important}
+html body #site section:not(.hero) :is(.stat-list .t-body, .demo-grid p.nu:not(.t-lead)){font-size:var(--t-cap) !important;line-height:var(--t-cap-lh) !important}
+html body #site section:not(.hero) .final-txt{font-family:Nunito,sans-serif !important;font-weight:600 !important;text-transform:none !important;letter-spacing:0 !important;font-size:var(--t-lead) !important;line-height:var(--t-lead-lh) !important}
+@media (max-width:767px){html body #site section:not(.hero) .t-acc.t-acc.t-acc:not(.final-txt){font-family:Nunito,sans-serif !important;font-weight:400 !important;text-transform:none !important;letter-spacing:0 !important;font-size:var(--t-body) !important;line-height:var(--t-body-lh) !important}}
+@media (max-width:767px){html body #site section:not(.hero) :is(.t-h2,.why-lead){hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}}
 </style>
 </helmet>
 <div id="site" style="width: 100%; overflow-x: clip; background: #FFFFFF">
