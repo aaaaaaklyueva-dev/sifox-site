@@ -47,11 +47,11 @@ html[data-mob]::-webkit-scrollbar{ width:0; height:0; display:none; }
 <!-- ============ HERO ============ -->
 <section data-screen-label="Hero — Запись звонков" style="position:relative;background:#ffffff;">
   <div id="heroTrack" style="position:relative;height:400vh;">
-    <div id="heroSticky" style="position:sticky;top:0;height:calc(100vh - 140px);overflow:hidden;background:#ffffff;">
-      <div id="heroInner" style="max-width:1500px;height:100%;margin:0 auto;display:grid;grid-template-columns:38% 62%;align-items:center;gap:44px;zoom:1.2;padding-bottom:0;margin-bottom:-50px;">
+    <div id="heroSticky" style="position:sticky;top:0;height:100vh;padding:clamp(44px, calc((100vh - 620px) / 2), 150px) 64px;box-sizing:border-box;overflow:hidden;background:#ffffff;">
+      <div id="heroInner" style="height:100%;margin:0;display:grid;grid-template-columns:minmax(0,38fr) minmax(0,62fr);grid-template-rows:minmax(0,1fr);min-height:0;align-items:center;gap:44px;">
 
-        <div id="heroLeft" style="position: relative; height: 100%; display: flex; align-items: center; justify-content: flex-end; padding-right: 24px; margin-right: 24px; margin-left: 44px">
-          <div id="phoneStage" style="position:relative;width:330px;height:704px;filter:drop-shadow(0 34px 54px rgba(19,30,85,0.4));">
+        <div id="heroLeft" style="position: relative; height: 100%; min-height: 0; display: flex; align-items: center; justify-content: flex-end; padding-right: 24px; margin: 0">
+          <div id="phoneStage" style="position:relative;height:100%;max-height:845px;width:auto;aspect-ratio:330/704;filter:drop-shadow(0 16px 28px rgba(19,30,85,0.2));">
             <img data-screen-idx="0" src="assets/screen-list.png" alt="Интерфейс" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:1;transition:opacity .5s ease;">
             <img data-screen-idx="1" src="assets/screen-summary.png" alt="Саммари" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .5s ease;">
             <img data-screen-idx="2" src="assets/screen-transcript.png" alt="Транскрибация" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .5s ease;">
@@ -59,9 +59,9 @@ html[data-mob]::-webkit-scrollbar{ width:0; height:0; display:none; }
           </div>
         </div>
 
-        <div id="heroRight" data-mob="hero-right" style="padding: 0 24px 0 0; margin-right: 44px; padding-right: 32px">
-          <h1 data-mob="hero-h1" style="font-family: 'Druk Wide Cyr'; font-weight: 700; font-size: 54px; line-height: 1.1; color: #373BF9; margin: 0 0 64px 0; text-transform: uppercase">Запись<br>звонков</h1>
-          <div style="display:flex;flex-direction:column;gap:32px;">
+        <div id="heroRight" data-mob="hero-right" style="height: 100%; max-height: 845px; min-height: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; padding: 0; margin: 0">
+          <h1 data-mob="hero-h1" style="font-family: 'Druk Wide Cyr'; font-weight: 700; font-size: 64px; line-height: 1.3; color: #373BF9; margin: 0; padding-top: 12px; text-transform: uppercase">Запись<br>звонков</h1>
+          <div style="display:flex;flex-direction:column;gap:32px;min-height:0;">
             <div data-feat="0" style="display:flex;gap:22px;align-items:flex-start;">
               <img data-feat-icon="" src="assets/glass-sphere.png" alt="" style="width:44px;height:44px;flex:0 0 auto;object-fit:contain;opacity:1;transition:opacity .25s ease;">
               <div>
@@ -372,7 +372,7 @@ class Component extends DCLogic {
       if (isMobile()) return;
       const trk = q('#heroTrack');
       if (!trk) return;
-      const total = trk.offsetHeight - window.innerHeight;
+      const total = trk.getBoundingClientRect().height - window.innerHeight;
       if (total <= 0) return;
       const rect = trk.getBoundingClientRect();
       const p = clamp(-rect.top / total, 0, 1);
@@ -393,6 +393,7 @@ class Component extends DCLogic {
       qa('[data-reveal]').forEach((el) => { if (el.dataset.revealed) { el.style.opacity = '1'; el.style.transform = 'none'; } });
       if (isMobile()) {
         document.body.setAttribute('data-mob', '');
+        if (q('#pageRoot')) q('#pageRoot').style.zoom = '1';
         document.documentElement.setAttribute('data-mob', '');
         // HERO (mobile) — hidden for now; will be redesigned for mobile
         const heroSection = track.closest('section');
@@ -480,14 +481,23 @@ class Component extends DCLogic {
         document.documentElement.removeAttribute('data-mob');
         const lawBody = q('[data-mob="law-body"]');
         if (lawBody && window.__lawFull) lawBody.innerHTML = window.__lawFull;
-        track.style.height = ((depth + 1) * 100) + 'vh';
+        const pr = q('#pageRoot');
+        const z = Math.min(1, Math.max(0.8, window.innerWidth / 1840));
+        if (pr) pr.style.zoom = String(z);
+        const vh = window.innerHeight / z;
+        track.style.height = ((depth + 1) * vh) + 'px';
         sticky.style.position = 'sticky';
-        sticky.style.height = '100vh';
-        inner.style.gridTemplateColumns = '38% 62%';
+        sticky.style.height = vh + 'px';
+        sticky.style.padding = Math.min(150, Math.max(44, (vh - 620) / 2)) + 'px 64px';
+        inner.style.gridTemplateColumns = 'minmax(0,38fr) minmax(0,62fr)';
         left.style.order = '';
         right.style.order = '';
         left.style.height = '100%';
         left.style.padding = '';
+        right.style.zoom = '1';
+        const avail = right.clientHeight;
+        const need = right.scrollHeight;
+        if (avail > 0 && need > avail) right.style.zoom = String(Math.max(0.6, avail / need));
         qa('[data-screen-idx]').forEach((s) => { s.style.position = 'absolute'; });
         lastStep = -1;
         applyStep(0);
