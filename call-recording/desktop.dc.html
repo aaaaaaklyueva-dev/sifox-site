@@ -1,8 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Запись звонков — Sifox</title>
+<meta name="description" content="Запись звонков с саммари, транскрибацией и аналитикой. Интеграция в ваше мобильное приложение и мессенджер.">
+<meta property="og:title" content="Запись звонков — Sifox">
+<meta property="og:description" content="Запись звонков с саммари, транскрибацией и аналитикой. Интеграция в ваше мобильное приложение и мессенджер.">
+<meta property="og:image" content="assets/screen-list.png">
+<meta property="og:type" content="website">
 <script src="./support.js"></script>
 <template id="__bundler_thumbnail">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
@@ -20,8 +26,9 @@
 <helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&amp;family=Noto+Sans+Armenian:wght@700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian:wght@700&amp;display=swap" rel="stylesheet">
 <style>
+@font-face { font-family:'Nunito'; src:url('assets/fonts/Nunito-VariableFont_wght.ttf') format('truetype-variations'), url('assets/fonts/Nunito-VariableFont_wght.ttf') format('truetype'); font-weight:200 1000; font-style:normal; font-display:swap; }
 @font-face { font-family:'Druk Wide Cyr'; src:url('assets/fonts/DrukWideCyr.ttf') format('truetype'); font-weight:400 900; font-display:swap; }
 @font-face { font-family:'Druk Wide Heavy'; src:url('assets/fonts/DrukTextWideCyr-Heavy.ttf') format('truetype'); font-weight:700 900; font-display:swap; }
 * { box-sizing:border-box; }
@@ -52,10 +59,10 @@ html[data-mob]::-webkit-scrollbar{ width:0; height:0; display:none; }
 
         <div id="heroLeft" style="position: relative; height: 100%; min-height: 0; display: flex; align-items: center; justify-content: flex-end; padding-right: 24px; margin: 0">
           <div id="phoneStage" style="position:relative;height:100%;max-height:845px;width:auto;aspect-ratio:330/704;">
-            <img data-screen-idx="0" src="assets/screen-list.png" alt="Интерфейс" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:1;transition:opacity .5s ease;">
-            <img data-screen-idx="1" src="assets/screen-summary.png" alt="Саммари" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .5s ease;">
-            <img data-screen-idx="2" src="assets/screen-transcript.png" alt="Транскрибация" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .5s ease;">
-            <img data-screen-idx="3" src="assets/screen-analytics.png" alt="Аналитика" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .5s ease;">
+            <img data-screen-idx="0" src="assets/screen-list.png" alt="Экран приложения: список записанных звонков" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:1;transition:opacity .5s ease;">
+            <img data-screen-idx="1" src="assets/screen-summary.png" alt="Экран приложения: саммари звонка" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .5s ease;">
+            <img data-screen-idx="2" src="assets/screen-transcript.png" alt="Экран приложения: транскрибация диалога" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .5s ease;">
+            <img data-screen-idx="3" src="assets/screen-analytics.png" alt="Экран приложения: аналитика звонка" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .5s ease;">
           </div>
         </div>
 
@@ -65,28 +72,28 @@ html[data-mob]::-webkit-scrollbar{ width:0; height:0; display:none; }
             <div data-feat="0" style="display:flex;gap:22px;align-items:flex-start;">
               <img data-feat-icon="" src="assets/glass-sphere.png" alt="" style="width:44px;height:44px;flex:0 0 auto;object-fit:contain;opacity:1;transition:opacity .25s ease;">
               <div>
-                <div data-feat-title="" style="font-family:'Nunito';font-weight:800;font-size:20px;line-height:140%;color:#1c1c1e;margin-bottom:6px;transition:color .25s ease;">Интерфейс</div>
-                <div data-feat-desc="" style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#5c5c6a;max-width:520px;transition:color .25s ease;">Визуальный интерфейс, который можно интегрировать в&nbsp;ваше приложение</div>
+                <h3 data-feat-title="" style="font-family:'Nunito';font-weight:800;font-size:20px;line-height:140%;color:#1c1c1e;margin:0 0 6px 0;transition:color .25s ease;">Интерфейс</h3>
+                <div data-feat-desc="" style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#5A5A6E;max-width:520px;transition:color .25s ease;">Визуальный интерфейс, который можно интегрировать в&nbsp;ваше приложение</div>
               </div>
             </div>
             <div data-feat="1" style="display:flex;gap:22px;align-items:flex-start;">
               <img data-feat-icon="" src="assets/glass-sphere-2.png" alt="" style="width:38px;height:40px;margin:4px 3px;flex:0 0 auto;object-fit:contain;opacity:0.5;transition:opacity .25s ease;">
               <div>
-                <div data-feat-title="" style="font-family:'Nunito';font-weight:800;font-size:20px;line-height:140%;color:#C2C2CE;margin-bottom:6px;transition:color .25s ease;">Саммари</div>
+                <h3 data-feat-title="" style="font-family:'Nunito';font-weight:800;font-size:20px;line-height:140%;color:#C2C2CE;margin:0 0 6px 0;transition:color .25s ease;">Саммари</h3>
                 <div data-feat-desc="" style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#CBCBD5;max-width:520px;transition:color .25s ease;">Краткое описание содержания диалога</div>
               </div>
             </div>
             <div data-feat="2" style="display:flex;gap:22px;align-items:flex-start;">
               <img data-feat-icon="" src="assets/glass-sphere.png" alt="" style="width:44px;height:44px;flex:0 0 auto;object-fit:contain;opacity:0.5;transition:opacity .25s ease;">
               <div>
-                <div data-feat-title="" style="font-family:'Nunito';font-weight:800;font-size:20px;line-height:140%;color:#C2C2CE;margin-bottom:6px;transition:color .25s ease;">Транскрибация</div>
+                <h3 data-feat-title="" style="font-family:'Nunito';font-weight:800;font-size:20px;line-height:140%;color:#C2C2CE;margin:0 0 6px 0;transition:color .25s ease;">Транскрибация</h3>
                 <div data-feat-desc="" style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#CBCBD5;max-width:520px;transition:color .25s ease;">По-диалоговый перевод записи</div>
               </div>
             </div>
             <div data-feat="3" style="display:flex;gap:22px;align-items:flex-start;">
               <img data-feat-icon="" src="assets/glass-sphere-2.png" alt="" style="width:38px;height:40px;margin:4px 3px 4px 4px;flex:0 0 auto;object-fit:contain;opacity:0.5;transition:opacity .25s ease;">
               <div>
-                <div data-feat-title="" style="font-family:'Nunito';font-weight:800;font-size:20px;line-height:140%;color:#C2C2CE;margin-bottom:6px;transition:color .25s ease;">Аналитика</div>
+                <h3 data-feat-title="" style="font-family:'Nunito';font-weight:800;font-size:20px;line-height:140%;color:#C2C2CE;margin:0 0 6px 0;transition:color .25s ease;">Аналитика</h3>
                 <div data-feat-desc="" style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#CBCBD5;max-width:520px;transition:color .25s ease;">Автоматически выделяет из&nbsp;звонков ключевые данные: даты, цены, договорённости и&nbsp;важные детали. Настраивается под&nbsp;задачи вашего бизнеса и&nbsp;специфику клиентов.</div>
               </div>
             </div>
@@ -106,16 +113,16 @@ html[data-mob]::-webkit-scrollbar{ width:0; height:0; display:none; }
   <div id="whoTrack" data-mob="who-pad" style="position: relative; padding: 200px 0; padding-left: 0px">
     <div id="whoSticky" data-slide-in="" style="position: relative; display: flex; flex-direction: column">
       <div style="position:relative;z-index:1;width:100%;margin:0;padding:0 64px;">
-        <h2 data-who-h2="" data-mob="who-h2" style="opacity:0;transform:translateX(-48px);transition:opacity .7s ease,transform .7s cubic-bezier(.22,.61,.36,1);margin:0;font-family:'Druk Wide Cyr';font-weight:700;font-size:54px;line-height:118%;color:#ffffff;text-transform:uppercase;text-wrap:pretty;">кому нужна запись звонков</h2>
+        <h2 data-who-h2="" data-mob="who-h2" style="transition:opacity .7s ease,transform .7s cubic-bezier(.22,.61,.36,1);margin:0;font-family:'Druk Wide Cyr';font-weight:700;font-size:48px;line-height:118%;color:#ffffff;text-transform:uppercase;text-wrap:pretty;">кому нужна запись звонков</h2>
       </div>
 
       <div id="accWrap" style="position:relative;z-index:1;margin:50px auto 0;width:100%;min-width:0;max-width:100%;">
         <div id="accRow" style="display:flex;flex-direction:row;gap:24px;align-items:flex-end;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-ms-overflow-style:none;padding:0 64px;">
 
-      <article data-acc-card="" data-who-card="" style="position:relative;flex:0 0 450px;width:450px;height:394px;overflow:hidden;border-radius:27px;background:rgba(255,255,255,0.3);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 20px 36.8px 0 rgba(57,60,75,0.1), 0 1px 0.5px 0 rgba(57,60,75,0.2);cursor:pointer;opacity:0;transform:translateX(-56px);transition:flex-basis .5s cubic-bezier(.22,.61,.36,1),width .5s cubic-bezier(.22,.61,.36,1),background .45s ease,opacity .6s ease,transform .6s cubic-bezier(.22,.61,.36,1);">
-        <img data-who-img="" src="assets/who/c1.png" alt="" style="position:absolute;left:0;right:0;bottom:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;transition:opacity .4s ease,transform .5s ease;pointer-events:none;">
+      <article data-acc-card="" data-who-card="" style="position:relative;flex:0 0 450px;width:450px;height:394px;overflow:hidden;border-radius:27px;background:rgba(255,255,255,0.3);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 20px 36.8px 0 rgba(57,60,75,0.1), 0 1px 0.5px 0 rgba(57,60,75,0.2);cursor:pointer;transition:flex-basis .5s cubic-bezier(.22,.61,.36,1),width .5s cubic-bezier(.22,.61,.36,1),background .45s ease,opacity .6s ease,transform .6s cubic-bezier(.22,.61,.36,1);">
+        <img data-who-img="" src="assets/who/c1.png" alt="Иллюстрация: водители, курьеры и дальнобойщики" loading="lazy" style="position:absolute;left:0;right:0;bottom:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;transition:opacity .4s ease,transform .5s ease;pointer-events:none;">
         <div style="position:absolute;left:26px;top:28px;right:26px;display:flex;flex-direction:column;gap:12px;">
-          <div data-who-title="" data-acc-head="" style="font-family:'Druk Wide Cyr';font-weight:500;font-size:20px;line-height:100%;text-transform:uppercase;color:#ffffff;transition:color .35s ease;">Водители</div>
+          <h3 data-who-title="" data-acc-head="" style="margin:0;font-family:'Druk Wide Cyr';font-weight:500;font-size:20px;line-height:100%;text-transform:uppercase;color:#ffffff;transition:color .35s ease;">Водители</h3>
           <div data-who-body="" data-acc-body="" style="font-family: 'Nunito'; font-weight: 400; font-size:20px; line-height:140%; color: #323030; opacity: 0; transform: translateY(6px); transition: opacity .4s ease .08s,transform .4s ease .08s">Все эти люди находятся постоянно в&nbsp;дороге и&nbsp;часто отвечают на&nbsp;звонки. Но&nbsp;вот возможности записать, скинуть или&nbsp;как&nbsp;следует запомнить информацию у&nbsp;них нет.</div>
         </div>
         <div data-who-tags="" style="position:absolute;right:26px;bottom:30px;display:flex;flex-direction:column;align-items:flex-end;text-align:right;gap:6px;font-family:'Druk Wide Cyr';font-weight:500;font-size:20px;line-height:100%;text-transform:uppercase;color:#ffffff;transition:color .35s ease;">
@@ -125,34 +132,34 @@ html[data-mob]::-webkit-scrollbar{ width:0; height:0; display:none; }
         </div>
       </article>
 
-      <article data-acc-card="" data-who-card="" style="position:relative;flex:0 0 450px;width:450px;height:394px;overflow:hidden;border-radius:27px;background:rgba(255,255,255,0.3);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 20px 36.8px 0 rgba(57,60,75,0.1), 0 1px 0.5px 0 rgba(57,60,75,0.2);cursor:pointer;opacity:0;transform:translateX(-56px);transition:flex-basis .5s cubic-bezier(.22,.61,.36,1),width .5s cubic-bezier(.22,.61,.36,1),background .45s ease,opacity .6s ease,transform .6s cubic-bezier(.22,.61,.36,1);">
-        <img data-who-img="" src="assets/who/c2.png" alt="" style="position:absolute;left:0;right:0;bottom:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;transition:opacity .4s ease,transform .5s ease;pointer-events:none;">
+      <article data-acc-card="" data-who-card="" style="position:relative;flex:0 0 450px;width:450px;height:394px;overflow:hidden;border-radius:27px;background:rgba(255,255,255,0.3);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 20px 36.8px 0 rgba(57,60,75,0.1), 0 1px 0.5px 0 rgba(57,60,75,0.2);cursor:pointer;transition:flex-basis .5s cubic-bezier(.22,.61,.36,1),width .5s cubic-bezier(.22,.61,.36,1),background .45s ease,opacity .6s ease,transform .6s cubic-bezier(.22,.61,.36,1);">
+        <img data-who-img="" src="assets/who/c2.png" alt="Иллюстрация: люди со сниженным слухом" loading="lazy" style="position:absolute;left:0;right:0;bottom:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;transition:opacity .4s ease,transform .5s ease;pointer-events:none;">
         <div style="position:absolute;left:26px;top:28px;right:26px;display:flex;flex-direction:column;gap:12px;">
-          <div data-who-title="" data-acc-head="" style="font-family:'Druk Wide Cyr';font-weight:500;font-size:20px;line-height:100%;text-transform:uppercase;color:#ffffff;transition:color .35s ease;">Люди с&nbsp;сниженным слухом</div>
+          <h3 data-who-title="" data-acc-head="" style="margin:0;font-family:'Druk Wide Cyr';font-weight:500;font-size:20px;line-height:100%;text-transform:uppercase;color:#ffffff;transition:color .35s ease;">Люди со&nbsp;сниженным слухом</h3>
           <div data-who-body="" data-acc-body="" style="font-family: 'Nunito'; font-weight: 400; font-size:20px; line-height:140%; color: #323030; opacity: 0; transform: translateY(6px); transition: opacity .4s ease .08s,transform .4s ease .08s">В&nbsp;России нарушениями слуха страдает 10–15% населения — примерно 13 миллионов человек, и&nbsp;лишь 300 тысяч из&nbsp;них полностью глухие. Остальные слышат отдельные звуки и&nbsp;предпочли бы&nbsp;переслушать звонок или&nbsp;прочитать его транскрибацию.</div>
         </div>
       </article>
 
-      <article data-acc-card="" data-who-card="" style="position:relative;flex:0 0 450px;width:450px;height:394px;overflow:hidden;border-radius:27px;background:rgba(255,255,255,0.3);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 20px 36.8px 0 rgba(57,60,75,0.1), 0 1px 0.5px 0 rgba(57,60,75,0.2);cursor:pointer;opacity:0;transform:translateX(-56px);transition:flex-basis .5s cubic-bezier(.22,.61,.36,1),width .5s cubic-bezier(.22,.61,.36,1),background .45s ease,opacity .6s ease,transform .6s cubic-bezier(.22,.61,.36,1);">
-        <img data-who-img="" src="assets/who/c3.png" alt="" style="position:absolute;left:0;right:0;bottom:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;transition:opacity .4s ease,transform .5s ease;pointer-events:none;">
+      <article data-acc-card="" data-who-card="" style="position:relative;flex:0 0 450px;width:450px;height:394px;overflow:hidden;border-radius:27px;background:rgba(255,255,255,0.3);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 20px 36.8px 0 rgba(57,60,75,0.1), 0 1px 0.5px 0 rgba(57,60,75,0.2);cursor:pointer;transition:flex-basis .5s cubic-bezier(.22,.61,.36,1),width .5s cubic-bezier(.22,.61,.36,1),background .45s ease,opacity .6s ease,transform .6s cubic-bezier(.22,.61,.36,1);">
+        <img data-who-img="" src="assets/who/c3.png" alt="Иллюстрация: юридическая информация" loading="lazy" style="position:absolute;left:0;right:0;bottom:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;transition:opacity .4s ease,transform .5s ease;pointer-events:none;">
         <div style="position:absolute;left:26px;top:28px;right:26px;display:flex;flex-direction:column;gap:12px;">
-          <div data-who-title="" data-acc-head="" style="font-family:'Druk Wide Cyr';font-weight:500;font-size:20px;line-height:100%;text-transform:uppercase;color:#ffffff;transition:color .35s ease;">Юридическая информация</div>
+          <h3 data-who-title="" data-acc-head="" style="margin:0;font-family:'Druk Wide Cyr';font-weight:500;font-size:20px;line-height:100%;text-transform:uppercase;color:#ffffff;transition:color .35s ease;">Юридическая информация</h3>
           <div data-who-body="" data-acc-body="" style="font-family: 'Nunito'; font-weight: 400; font-size:20px; line-height:140%; color: #323030; opacity: 0; transform: translateY(6px); transition: opacity .4s ease .08s,transform .4s ease .08s">Люди, которым нужно записать важную юридическую информацию, например угрозы.</div>
         </div>
       </article>
 
-      <article data-acc-card="" data-who-card="" style="position:relative;flex:0 0 450px;width:450px;height:394px;overflow:hidden;border-radius:27px;background:rgba(255,255,255,0.3);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 20px 36.8px 0 rgba(57,60,75,0.1), 0 1px 0.5px 0 rgba(57,60,75,0.2);cursor:pointer;opacity:0;transform:translateX(-56px);transition:flex-basis .5s cubic-bezier(.22,.61,.36,1),width .5s cubic-bezier(.22,.61,.36,1),background .45s ease,opacity .6s ease,transform .6s cubic-bezier(.22,.61,.36,1);">
-        <img data-who-img="" src="assets/who/c4.png" alt="" style="position:absolute;left:0;right:0;bottom:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;transition:opacity .4s ease,transform .5s ease;pointer-events:none;">
+      <article data-acc-card="" data-who-card="" style="position:relative;flex:0 0 450px;width:450px;height:394px;overflow:hidden;border-radius:27px;background:rgba(255,255,255,0.3);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 20px 36.8px 0 rgba(57,60,75,0.1), 0 1px 0.5px 0 rgba(57,60,75,0.2);cursor:pointer;transition:flex-basis .5s cubic-bezier(.22,.61,.36,1),width .5s cubic-bezier(.22,.61,.36,1),background .45s ease,opacity .6s ease,transform .6s cubic-bezier(.22,.61,.36,1);">
+        <img data-who-img="" src="assets/who/c4.png" alt="Иллюстрация: предприниматели" loading="lazy" style="position:absolute;left:0;right:0;bottom:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;transition:opacity .4s ease,transform .5s ease;pointer-events:none;">
         <div style="position:absolute;left:26px;top:28px;right:26px;display:flex;flex-direction:column;gap:12px;">
-          <div data-who-title="" data-acc-head="" style="font-family:'Druk Wide Cyr';font-weight:500;font-size:20px;line-height:100%;text-transform:uppercase;color:#ffffff;transition:color .35s ease;">Предприниматели</div>
+          <h3 data-who-title="" data-acc-head="" style="margin:0;font-family:'Druk Wide Cyr';font-weight:500;font-size:20px;line-height:100%;text-transform:uppercase;color:#ffffff;transition:color .35s ease;">Предприниматели</h3>
           <div data-who-body="" data-acc-body="" style="font-family:'Nunito';font-weight:400;font-size:20px;line-height:140%;color:#323030;opacity:0;transform:translateY(6px);transition:opacity .4s ease .08s,transform .4s ease .08s;">Люди, которые ведут бизнес, но&nbsp;ещё не&nbsp;перешли в&nbsp;категорию бизнес. Это ипшники, самозанятые и&nbsp;люди, оказывающие услуги. В&nbsp;России в&nbsp;сфере услуг занято 10% населения страны в&nbsp;возрасте 18–64 года — 9,4 млн человек. Все эти люди размещают объявления и&nbsp;принимают заявки самостоятельно.</div>
         </div>
       </article>
 
-      <article data-acc-card="" data-who-card="" style="position:relative;flex:0 0 450px;width:450px;height:394px;overflow:hidden;border-radius:27px;background:rgba(255,255,255,0.3);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 20px 36.8px 0 rgba(57,60,75,0.1), 0 1px 0.5px 0 rgba(57,60,75,0.2);cursor:pointer;opacity:0;transform:translateX(-56px);transition:flex-basis .5s cubic-bezier(.22,.61,.36,1),width .5s cubic-bezier(.22,.61,.36,1),background .45s ease,opacity .6s ease,transform .6s cubic-bezier(.22,.61,.36,1);">
-        <img data-who-img="" src="assets/who/c5.png" alt="" style="position:absolute;left:0;right:0;bottom:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;transition:opacity .4s ease,transform .5s ease;pointer-events:none;">
+      <article data-acc-card="" data-who-card="" style="position:relative;flex:0 0 450px;width:450px;height:394px;overflow:hidden;border-radius:27px;background:rgba(255,255,255,0.3);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 20px 36.8px 0 rgba(57,60,75,0.1), 0 1px 0.5px 0 rgba(57,60,75,0.2);cursor:pointer;transition:flex-basis .5s cubic-bezier(.22,.61,.36,1),width .5s cubic-bezier(.22,.61,.36,1),background .45s ease,opacity .6s ease,transform .6s cubic-bezier(.22,.61,.36,1);">
+        <img data-who-img="" src="assets/who/c5.png" alt="Иллюстрация: невнимательные люди" loading="lazy" style="position:absolute;left:0;right:0;bottom:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;transition:opacity .4s ease,transform .5s ease;pointer-events:none;">
         <div style="position:absolute;left:26px;top:28px;right:26px;display:flex;flex-direction:column;gap:12px;">
-          <div data-who-title="" data-acc-head="" style="font-family:'Druk Wide Cyr';font-weight:500;font-size:20px;line-height:100%;text-transform:uppercase;color:#ffffff;transition:color .35s ease;">Невнимательные</div>
+          <h3 data-who-title="" data-acc-head="" style="margin:0;font-family:'Druk Wide Cyr';font-weight:500;font-size:20px;line-height:100%;text-transform:uppercase;color:#ffffff;transition:color .35s ease;">Невнимательные</h3>
           <div data-who-body="" data-acc-body="" style="font-family:'Nunito';font-weight:400;font-size:20px;line-height:140%;color:#323030;opacity:0;transform:translateY(6px);transition:opacity .4s ease .08s,transform .4s ease .08s;">Огромное число людей моментально забывает, о&nbsp;чём они только что&nbsp;говорили, а&nbsp;детали и&nbsp;вовсе теряют.</div>
         </div>
       </article>
@@ -172,18 +179,18 @@ html[data-mob]::-webkit-scrollbar{ width:0; height:0; display:none; }
       </div>
 
       <div data-mob="b2b-pad" style="position:relative;z-index:1;padding:120px 64px 0;">
-        <h2 data-mob="b2b-h2" style="font-family:'Druk Wide Cyr';font-weight:700;font-size:54px;line-height:118%;color:#ffffff;margin:0 0 44px 0;max-width:900px;">Что&nbsp;важно для&nbsp;разных пользователей</h2>
+        <h2 data-mob="b2b-h2" style="font-family:'Druk Wide Cyr';font-weight:700;font-size:48px;line-height:118%;color:#ffffff;margin:0 0 44px 0;max-width:900px;">Что&nbsp;важно для&nbsp;разных пользователей</h2>
         <div data-mob="b2b-grid" style="display:flex;gap:64px;align-items:flex-start;justify-content:flex-start;">
-          <div style="width:400px">
-            <div data-mob="b2b-sub" style="font-family:'Druk Wide Cyr';font-weight:700;font-size:24px;line-height:140%;color:#ffffff;margin-bottom:26px">B2B</div>
+          <div style="width:400px;display:flex;flex-direction:column;gap:24px;">
+            <h3 data-mob="b2b-sub" style="margin:0;font-family:'Druk Wide Cyr';font-weight:700;font-size:24px;line-height:140%;color:#ffffff;">B2B</h3>
             <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;">
               <li style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#EEF7FF;padding-left:26px;position:relative"><span style="position:absolute;left:0;top:0.55em;width:8px;height:8px;border-radius:50%;background:#EEF7FF;"></span>Запись звонков с&nbsp;клиентами</li>
               <li style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#EEF7FF;padding-left:26px;position:relative"><span style="position:absolute;left:0;top:0.55em;width:8px;height:8px;border-radius:50%;background:#EEF7FF;"></span>Анализ звонков</li>
               <li style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#EEF7FF;padding-left:26px;position:relative"><span style="position:absolute;left:0;top:0.55em;width:8px;height:8px;border-radius:50%;background:#EEF7FF;"></span>Поиск мест которых можно улучшить</li>
             </ul>
           </div>
-          <div style="width:400px">
-            <div data-mob="b2b-sub" style="font-family:'Druk Wide Cyr';font-weight:700;font-size:24px;line-height:140%;color:#ffffff;margin-bottom:26px">Клиенты</div>
+          <div style="width:400px;display:flex;flex-direction:column;gap:24px;">
+            <h3 data-mob="b2b-sub" style="margin:0;font-family:'Druk Wide Cyr';font-weight:700;font-size:24px;line-height:140%;color:#ffffff;">Клиенты</h3>
             <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;">
               <li style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#EEF7FF;padding-left:26px;position:relative"><span style="position:absolute;left:0;top:0.55em;width:8px;height:8px;border-radius:50%;background:#EEF7FF;"></span>Информирование о&nbsp;записи</li>
               <li style="font-family:'Nunito';font-weight:400;font-size:16px;line-height:140%;color:#EEF7FF;padding-left:26px;position:relative"><span style="position:absolute;left:0;top:0.55em;width:8px;height:8px;border-radius:50%;background:#EEF7FF;"></span>Разделение на&nbsp;голосовые дорожки</li>
@@ -201,29 +208,29 @@ html[data-mob]::-webkit-scrollbar{ width:0; height:0; display:none; }
 <!-- блок «Что важно для разных пользователей» перенесён в секцию «Кто пользуется услугой» -->
 
 <section data-screen-label="Языковые модели" style="position: relative; overflow: hidden; background: linear-gradient(191deg,#ffffff 13%,#EEF7FF 86%)">
-  <img src="uploads/11.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;">
+  <img src="uploads/11.png" alt="Декоративный фон секции о языковых моделях" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;">
   
   <div data-slide-in="" data-mob="lang-pad" style="position: relative; z-index: 1; padding: 100px 48px; opacity: 1; margin: 0; width: 100%; padding-left: 64px; padding-right: 64px; padding-top: 200px; padding-bottom: 200px">
-    <h2 data-mob="lang-h1" style="font-family: 'Druk Wide Cyr'; font-weight: 700; font-size:54px; line-height:118%; color: #373BF9; margin: 0 0 16px 0; max-width: 1180px">Обучаем нашу собственную языковую модель любому языку и&nbsp;диалекту</h2>
+    <h2 data-mob="lang-h1" style="font-family: 'Druk Wide Cyr'; font-weight: 700; font-size:48px; line-height:118%; color: #373BF9; margin: 0 0 16px 0; max-width: 1180px">Обучаем нашу собственную языковую модель любому языку и&nbsp;диалекту</h2>
     <p style="font-family: 'Nunito'; font-weight: 400; font-size:16px; line-height:140%; color: #323030; max-width: 1180px; margin: 0 0 44px 0">У&nbsp;нас собственная модель обработки аудио в&nbsp;текст, которую мы можем научить любому, даже не&nbsp;очень распространённому языку в&nbsp;короткие сроки. С&nbsp;распространёнными языками, такими как&nbsp;Испанский, мы тоже работаем. Но&nbsp;для&nbsp;них мы можем использовать уже готовую языковую модель, для&nbsp;ускорения разработки.</p>
 
     <div data-mob="lang-sub" style="font-family: 'Nunito'; font-weight: 700; font-size:40px;line-height:100%; color: #323030; margin-bottom: 28px">Мы уже разработали следующие языковые модели</div>
     <div data-mob="lang-list" style="display: flex; flex-wrap: wrap; gap: 64px; margin-bottom: 64px">
       <div>
         <div style="font-family: 'Noto Sans Armenian'; font-weight: 600; font-size:40px; line-height:100%; color: #373BF9; margin-bottom: 6px">Հայերեն</div>
-        <div style="font-family: 'Nunito'; font-weight: 400; font-size:16px;line-height:140%; color: #74748F">Армянский язык</div>
+        <div style="font-family: 'Nunito'; font-weight: 400; font-size:16px;line-height:140%; color: #5A5A6E">Армянский язык</div>
       </div>
       <div>
-        <div style="font-family: 'Nunito'; font-weight: 700; font-size:40px; line-height:100%; color: #373BF9; margin-bottom: 6px">o'zbek</div><div style="font-family: 'Nunito'; font-weight: 400; font-size:16px;line-height:140%; color: #74748F">Узбекский язык</div>
+        <div style="font-family: 'Nunito'; font-weight: 700; font-size:40px; line-height:100%; color: #373BF9; margin-bottom: 6px">o'zbek</div><div style="font-family: 'Nunito'; font-weight: 400; font-size:16px;line-height:140%; color: #5A5A6E">Узбекский язык</div>
         
       </div>
       <div>
-        <div style="font-family: 'Nunito'; font-weight: 700; font-size:40px; line-height:100%; color: #373BF9; margin-bottom: 6px">тоҷикӣ</div><div style="font-family: 'Nunito'; font-weight: 400; font-size:16px;line-height:140%; color: #74748F">Таджикский язык</div>
+        <div style="font-family: 'Nunito'; font-weight: 700; font-size:40px; line-height:100%; color: #373BF9; margin-bottom: 6px">тоҷикӣ</div><div style="font-family: 'Nunito'; font-weight: 400; font-size:16px;line-height:140%; color: #5A5A6E">Таджикский язык</div>
         
       </div>
     </div><div data-mob="law-card" style="max-width: 100%; border-radius: 20px; background: #ffffff; box-shadow: 0 0 16px rgba(57,60,75,0.1),0 10px 16px rgba(57,60,75,0.05); padding: 32px; display: flex; flex-direction: column; gap: 22px; width: 817px">
-      <div data-mob="law-h" style="font-family:'Druk Wide Cyr';font-weight:700;font-size:24px;line-height:140%;color:#323030;">Законно ли&nbsp;записывать звонки?</div>
-      <div data-mob="law-body" style="font-family: 'Nunito'; font-weight: 400; font-size:16px; line-height:140%; color: #74748F">я сторона. Абонент может сделать это самостоятельно или&nbsp;воспользоваться автоинформированием. В&nbsp;соответствии с&nbsp;политикой конфиденциальности ответственность за&nbsp;уведомления о&nbsp;записи лежит на&nbsp;абоненте.</div>
+      <h3 data-mob="law-h" style="margin:0;font-family:'Druk Wide Cyr';font-weight:700;font-size:24px;line-height:140%;color:#323030;">Законно ли&nbsp;записывать звонки?</h3>
+      <div data-mob="law-body" style="font-family: 'Nunito'; font-weight: 400; font-size:16px; line-height:140%; color: #5A5A6E">Да, запись диалога законна, если уведомлена вторая сторона. Абонент может сделать это самостоятельно или&nbsp;воспользоваться автоинформированием. В&nbsp;соответствии с&nbsp;политикой конфиденциальности ответственность за&nbsp;уведомления о&nbsp;записи лежит на&nbsp;абоненте.</div>
       <div data-mob="law-toggle" style="border-radius:15px;background:#ffffff;box-shadow:0 4px 16px rgba(57,60,75,0.2);padding:12px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;">
         <span style="font-family: 'Nunito'; font-weight: 700; font-size:20px;line-height:140%; color: #323030">Автоинформирование собеседника <br>о&nbsp;записи</span>
         <div id="autoToggle" style="flex:0 0 auto;width:74px;height:42px;border-radius:26px;background:#373BF9;position:relative;cursor:pointer;transition:background .3s ease;">
@@ -239,26 +246,26 @@ html[data-mob]::-webkit-scrollbar{ width:0; height:0; display:none; }
 <!-- ============ ДЕМО ============ -->
 <section data-screen-label="Для бизнеса" style="position: relative; overflow: hidden; background: radial-gradient(1651px 1440px at -6.16% -9.52%, rgb(55,59,249) 12.36%, rgb(214,219,255) 100%); padding: 200px 0; padding-left: 64px; padding-right: 64px; display: grid; gap: 64px">
   <div data-slide-in="" style="display:flex;flex-direction:column;gap:17px;">
-        <div style="font-family: 'Druk Wide Cyr'; font-weight: 700; font-size:54px; line-height:118%; color: #ffffff; text-transform: uppercase">Для бизнеса</div>
+        <h2 style="margin:0;font-family: 'Druk Wide Cyr'; font-weight: 700; font-size:48px; line-height:118%; color: #ffffff; text-transform: uppercase">Для бизнеса</h2>
         <div style="font-family: 'Nunito'; font-weight: 500; font-size:20px; line-height:140%; color: #ffffff; width: 100%">Мы можем настроить запись и&nbsp;аналитику под&nbsp;ваш бизнес</div>
       </div><div style="width: 100%; margin: 0; padding: 0 65px; display: grid; grid-template-columns: minmax(0,1fr); gap: 44px; align-items: end; padding-left: 0px; padding-right: 0px">
     <div data-slide-in="" style="display: flex; flex-direction: row; gap: 64px; min-width: 0; width: 100%; flex: 1 1 auto; position: relative">
       
       <div style="display: flex; flex-direction: column; gap: 40px; position: relative; justify-content: flex-end; padding-bottom: 44px; align-items: stretch; flex: 0 1 36%; min-width: 0">
-          <div data-biz-item="0" style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start; opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s cubic-bezier(.22,.61,.36,1)">
-            <img src="assets/star-a.svg" alt="" style="width: 44px; height: 44px; flex: 0 0 auto">
-            <div style="font-family: 'Druk Wide Cyr'; font-weight: 700; font-size:24px; line-height:140%; color: #ffffff; text-transform: uppercase">подсказки в&nbsp;момент разговора</div>
+          <div data-biz-item="0" style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start; transition: opacity .7s ease, transform .7s cubic-bezier(.22,.61,.36,1)">
+            <img src="assets/star-a.svg" alt="Иконка-звезда" loading="lazy" style="width: 44px; height: 44px; flex: 0 0 auto">
+            <h3 style="margin:0;font-family: 'Druk Wide Cyr'; font-weight: 700; font-size:24px; line-height:140%; color: #ffffff; text-transform: uppercase">подсказки в&nbsp;момент разговора</h3>
           </div>
-          <div data-biz-item="1" style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start; opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s cubic-bezier(.22,.61,.36,1)">
-            <img src="assets/star-b.svg" alt="" style="width: 44px; height: 44px; flex: 0 0 auto">
-            <div style="font-family: 'Druk Wide Cyr'; font-weight: 700; font-size:24px; line-height:140%; color: #ffffff; text-transform: uppercase">анализ разговора после звонка</div>
+          <div data-biz-item="1" style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start; transition: opacity .7s ease, transform .7s cubic-bezier(.22,.61,.36,1)">
+            <img src="assets/star-b.svg" alt="Иконка-звезда" loading="lazy" style="width: 44px; height: 44px; flex: 0 0 auto">
+            <h3 style="margin:0;font-family: 'Druk Wide Cyr'; font-weight: 700; font-size:24px; line-height:140%; color: #ffffff; text-transform: uppercase">анализ разговора после звонка</h3>
           </div>
-          <div data-biz-item="2" style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start; opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s cubic-bezier(.22,.61,.36,1)">
-            <img src="assets/star-a.svg" alt="" style="width: 44px; height: 44px; flex: 0 0 auto">
-            <div style="font-family: 'Druk Wide Cyr'; font-weight: 700; font-size:24px; line-height:140%; color: #ffffff; text-transform: uppercase; max-width: 100%; overflow-wrap: break-word">Напоминания о&nbsp;договорённостях в&nbsp;звонке</div>
+          <div data-biz-item="2" style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start; transition: opacity .7s ease, transform .7s cubic-bezier(.22,.61,.36,1)">
+            <img src="assets/star-a.svg" alt="Иконка-звезда" loading="lazy" style="width: 44px; height: 44px; flex: 0 0 auto">
+            <h3 style="margin:0;font-family: 'Druk Wide Cyr'; font-weight: 700; font-size:24px; line-height:140%; color: #ffffff; text-transform: uppercase; max-width: 100%; overflow-wrap: break-word">Напоминания о&nbsp;договорённостях в&nbsp;звонке</h3>
           </div>
       </div><div data-mob="biz-img" style="position:relative;min-width:0;margin:0;flex:1 1 64%;align-self:flex-end;">
-      <img src="uploads/analytics-2.png" alt="Аналитика разговора" style="display: block; width: 100%; max-width: 975px; height: auto; margin-left: auto; border-radius: 18px; box-shadow: 0 7px 42.3px 0 rgba(0,0,0,0.45), 0 4px 25.8px 0 rgba(55,59,249,0.25)">
+      <img src="uploads/analytics-2.png" alt="Пример экрана аналитики разговора с выводами по звонку" loading="lazy" style="display: block; width: 100%; max-width: 975px; height: auto; margin-left: auto; border-radius: 18px; box-shadow: 0 7px 42.3px 0 rgba(0,0,0,0.45), 0 4px 25.8px 0 rgba(55,59,249,0.25)">
     </div>
     </div>
 
@@ -362,7 +369,7 @@ class Component extends DCLogic {
         const d = f.querySelector('[data-feat-desc]');
         const ic = f.querySelector('[data-feat-icon]');
         if (t) t.style.color = on ? '#1c1c1e' : '#C2C2CE';
-        if (d) d.style.color = on ? '#5c5c6a' : '#CBCBD5';
+        if (d) d.style.color = on ? '#5A5A6E' : '#CBCBD5';
         if (ic) ic.style.opacity = on ? '1' : '0.5';
       });
     };
@@ -394,6 +401,7 @@ class Component extends DCLogic {
       if (isMobile()) {
         document.body.setAttribute('data-mob', '');
         if (q('#pageRoot')) q('#pageRoot').style.zoom = '1';
+        { const ds = q('[data-mob="demo-box"]'); if (ds && ds.parentElement) ds.parentElement.style.zoom = '1'; }
         document.documentElement.setAttribute('data-mob', '');
         // HERO (mobile) — hidden for now; will be redesigned for mobile
         const heroSection = track.closest('section');
@@ -417,14 +425,14 @@ class Component extends DCLogic {
           mob(f, { gap: '16px' });
           const t = f.querySelector('[data-feat-title]'); const d = f.querySelector('[data-feat-desc]'); const ic = f.querySelector('[data-feat-icon]');
           if (t) { mob(t, { fontSize: '22px', color: '#1c1c1e' }); }
-          if (d) { mob(d, { fontSize: '15px', color: '#5c5c6a', maxWidth: 'none' }); }
+          if (d) { mob(d, { fontSize: '16px', color: '#5A5A6E', maxWidth: 'none' }); }
           if (ic) { mob(ic, { width: '48px', height: '48px', opacity: '1' }); }
         });
         qa('[data-screen-idx]').forEach((s, i) => { s.style.position = i === 0 ? 'relative' : 'absolute'; s.style.opacity = i === 0 ? '1' : '0'; s.style.transform = 'none'; });
 
         // B2B
         mob(q('[data-mob="b2b-pad"]'), { padding: '100px 20px' });
-        mob(q('[data-mob="b2b-h2"]'), { fontFamily: "'Druk Wide Cyr'", fontSize: '28px', textTransform: 'none', margin: '0 0 44px 0' });
+        mob(q('[data-mob="b2b-h2"]'), { fontFamily: "'Druk Wide Cyr'", fontSize: '24px', lineHeight: '130%', textTransform: 'none', margin: '0 0 24px 0' });
         mob(q('[data-mob="b2b-grid"]'), { gridTemplateColumns: '1fr', gap: '34px' });
         qa('[data-mob="b2b-sub"]').forEach((el) => mob(el, { fontSize: '20px', textTransform: 'none', marginBottom: '18px' }));
         qa('[data-mob="b2b-grid"] ul').forEach((el) => mob(el, { gap: '16px' }));
@@ -437,7 +445,7 @@ class Component extends DCLogic {
           lawBody.textContent = 'Да, запись диалога законна, если уведомлена вторая сторона. Абонент может сделать это самостоятельно или воспользоваться автоинформированием.';
         }
         mob(q('[data-mob="law-toggle"]'), { display: 'none' });
-        mob(q('[data-mob="lang-h1"]'), { fontFamily: "'Druk Wide Cyr'", fontSize: '28px', textTransform: 'none' });
+        mob(q('[data-mob="lang-h1"]'), { fontFamily: "'Druk Wide Cyr'", fontSize: '24px', lineHeight: '130%', textTransform: 'none' });
         mob(q('[data-mob="lang-sub"]'), { fontFamily: "'Nunito'", fontWeight: '700', fontSize: '24px', lineHeight: '1.2' });
         mob(q('[data-mob="lang-list"]'), { flexDirection: 'column', flexWrap: 'nowrap', gap: '16px', marginBottom: '48px' });
         qa('[data-mob="lang-list"] > div > div:first-child').forEach((el) => mob(el, { fontSize: '24px', marginBottom: '2px', lineHeight: '1.1' }));
@@ -463,7 +471,7 @@ class Component extends DCLogic {
         // WHO — full-screen (100vh), 100px above text / 150px below, cards fill height
         mob(q('[data-mob="who-pad"]'), { height: '120vh', padding: '100px 0 150px', display: 'flex', flexDirection: 'column', boxSizing: 'border-box' });
         mob(q('#whoSticky'), { flex: '1', minHeight: '0', display: 'flex', flexDirection: 'column' });
-        mob(q('[data-mob="who-h2"]'), { fontFamily: "'Druk Wide Cyr'", fontSize: '28px', textTransform: 'none' });
+        mob(q('[data-mob="who-h2"]'), { fontFamily: "'Druk Wide Cyr'", fontSize: '24px', lineHeight: '130%', textTransform: 'none' });
         qa('[data-mob="who-h2"]').forEach((el) => mob(el.parentElement, { padding: '0 20px 24px', flex: '0 0 auto' }));
         mob(q('#accWrap'), { flex: '1', minHeight: '0', display: 'flex' });
         const rw = (q('#pageRoot') ? q('#pageRoot').getBoundingClientRect().width : 390);
@@ -471,7 +479,7 @@ class Component extends DCLogic {
         mob(q('#accRow'), { height: '100%', alignItems: 'stretch', paddingLeft: '20px', paddingRight: '20px' });
         mm('[data-acc-card]', { flex: '0 0 ' + cardW + 'px', width: cardW + 'px', height: '100%', minHeight: '0', padding: '22px', display: 'flex', flexDirection: 'column' });
         qa('[data-acc-head]').forEach((h) => mob(h, { fontSize: '15px', lineHeight: '1.25' }));
-        qa('[data-acc-body]').forEach((b) => mob(b, { fontSize: '14px', maxHeight: '400px', opacity: '1', marginTop: '14px', transform: 'none' }));
+        qa('[data-acc-body]').forEach((b) => mob(b, { fontSize: '16px', maxHeight: '400px', opacity: '1', marginTop: '14px', transform: 'none' }));
         qa('[data-who-img]').forEach((im) => mob(im, { opacity: '0.18' }));
         qa('[data-who-card]').forEach((c) => mob(c, { opacity: '1', transform: 'none', background: 'linear-gradient(45deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.63) 100%)' }));
         qa('[data-who-title]').forEach((t) => mob(t, { color: '#323030' }));
@@ -484,6 +492,8 @@ class Component extends DCLogic {
         const pr = q('#pageRoot');
         const z = Math.min(1, Math.max(0.8, window.innerWidth / 1840));
         if (pr) pr.style.zoom = String(z);
+        const demoSec = q('[data-mob="demo-box"]');
+        if (demoSec && demoSec.parentElement) demoSec.parentElement.style.zoom = String(1 / z);
         const vh = window.innerHeight / z;
         track.style.height = ((depth + 1) * vh) + 'px';
         sticky.style.position = 'sticky';
@@ -571,6 +581,8 @@ class Component extends DCLogic {
       });
       const sec = items[0].closest('section');
       if (sec && 'IntersectionObserver' in window) {
+        items.forEach((el) => { el.style.opacity = '0'; el.style.transform = 'translateY(28px)'; });
+        setTimeout(show, 6000);
         const bio = new IntersectionObserver((es) => {
           es.forEach((e) => { if (e.isIntersecting) { show(); bio.disconnect(); } });
         }, { threshold: 0.15 });
@@ -695,7 +707,11 @@ class Component extends DCLogic {
         });
       };
       const whoSec = accRow.closest('section');
-      if ('IntersectionObserver' in window && whoSec) {
+      if ('IntersectionObserver' in window && whoSec && !isMobile()) {
+        const wh = q('[data-who-h2]');
+        if (wh) { wh.style.opacity = '0'; wh.style.transform = 'translateX(-48px)'; }
+        whoCards.forEach((c) => { c.style.opacity = '0'; c.style.transform = 'translateX(-56px)'; });
+        setTimeout(whoReveal, 6000);
         const wio = new IntersectionObserver((es) => {
           es.forEach((e) => { if (e.isIntersecting) { whoReveal(); wio.disconnect(); } });
         }, { threshold: 0.15 });
