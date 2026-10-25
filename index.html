@@ -28,23 +28,9 @@
 <link rel="stylesheet" href="_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/components/fig-typography.css">
 <link rel="stylesheet" href="_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/components/fig-assets.css">
 <script src="_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/_ds_bundle.js"></script>
-<script>
-(function(){
-function fit(){var s=document.getElementById('why'),h=s&&s.querySelector(':scope>h2');if(!h)return setTimeout(fit,300);
-h.style.removeProperty('font-size');if(!matchMedia('(min-width:1025px)').matches)return;var avail=s.clientWidth-48,i=0;
-while(i++<8){var r=document.createRange();r.selectNodeContents(h);var w=r.getBoundingClientRect().width;if(w<=avail||!w)break;var fs=parseFloat(getComputedStyle(h).fontSize);h.style.setProperty('font-size',(fs*avail/w*0.995)+'px','important');}
-h.dataset.fitText=Math.round(w);h.dataset.fitAvail=avail;}
-var t;window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(fit,100);});
-if(document.fonts)document.fonts.ready.then(fit);window.addEventListener('load',fit);setTimeout(fit,600);
-})();
-</script>
 <style>
 
-:root{--display-size:clamp(56px,10vw,152px)}
-#why>h2{font-size:var(--display-size) !important;left:24px !important;max-width:calc(100% - 48px);white-space:normal !important}
-#why{container-type:inline-size}
 h1:not(#why>h2),h2:not(#why>h2),h3{max-width:100%;box-sizing:border-box;white-space:normal}
-@media (min-width:1025px){#why>h2{font-size:min(140px,9.5cqi) !important;white-space:nowrap !important;left:0 !important;padding:0 24px;box-sizing:border-box;max-width:100% !important}}
 body{margin:0;background:#fff;font-family:var(--font-body)}
 a{color:var(--accent);text-decoration:none}
 a:hover{color:var(--accent-3)}
@@ -126,12 +112,27 @@ h1, h2, h3 {
   max-width: 100% !important;
   box-sizing: border-box !important;
 }
-@media (min-width: 1025px) {
-#why-title {
-  white-space: nowrap !important;
-  font-size: min(140px, 9vw) !important;
-  max-width: calc(100% - 48px) !important;
+/* «Почему мы»: супер-графика на всю ширину, ровно в поля 3.75% слева и ~4.5% справа.
+   Размер считается от ширины секции (cqi), а не окна, поэтому не зависит от скроллбара и масштабирования. */
+#why{container-type:inline-size}
+/* Планшет: тот же «стопочный» вариант, что на мобилке, — абсолютная раскладка с фото на этой ширине обрезает текст */
+@media (min-width:641px) and (max-width:1024px){
+  #why{height:auto !important;margin-top:0 !important;display:flex;flex-direction:column;gap:32px;padding:96px 40px;box-sizing:border-box}
+  #why>*{position:relative !important;left:auto !important;top:auto !important}
+  #why>h2{order:1}
+  #why>img[data-tilt="sony"]{order:2;width:110vw !important;height:45vw !important;margin-left:-30vw;max-width:none}
+  #why [data-r="t1"]{order:3;width:auto !important;max-width:560px;gap:12px !important}
+  #why [data-r="t2"]{order:4;width:auto !important;max-width:560px;gap:12px !important}
+  #why [data-r="t2"] svg{width:56px !important;height:56px !important}
+  #why>img[data-tilt="hand"]{order:5;width:100vw !important;height:63vw !important;margin-left:0;margin-top:-16vw;max-width:none}
+  #why p{max-width:none !important}
 }
+/* Планшет и мобилка: заголовок в одну строку ровно по ширине контента */
+@media (max-width:1024px){
+  #why>#why-title{white-space:nowrap !important;max-width:none !important;font-size:calc(97cqi / 9.75) !important}
+}
+@media (min-width:1025px){
+  #why>#why-title{left:3.75cqi !important;padding:0 !important;max-width:none !important;white-space:nowrap !important;font-size:calc(92.5cqi / 9.75) !important}
 }
 </style>
 <script type="module" src="metal-star.js"></script>
@@ -245,32 +246,32 @@ h1, h2, h3 {
 
   <section id="hero" data-screen-label="Хиро" style="box-sizing:border-box;width:100%;max-width:100%;margin-left:0;height:100vh;min-height:560px;position:relative;overflow:hidden;background:#fff">
     <div style="position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: min(100%, calc((100vh - 200px) * 1.4101)); aspect-ratio: 2063/1463; container-type: inline-size">
-      <img src="assets/cover-blob.png" alt="" style="position: absolute; left: 17.1%; top: 42.58%; width: 12.6%; mix-blend-mode: multiply; z-index: 3">
+      <img src="assets/cover-blob.webp" alt="" style="position: absolute; left: 17.1%; top: 42.58%; width: 12.6%; mix-blend-mode: multiply; z-index: 3">
       <h1 data-r="slogan" style="margin: 0; position: absolute; left: 50.24%; transform: translateX(-50%); top: 13.76%; width: 56.47%; font-family: var(--font-display); font-weight: 500; font-size: 2.3cqw; text-align: center; text-transform: uppercase; color: #5A5A6E; line-height: 160%">Ваш технологический партнёр в&nbsp;решении телеком-задач</h1>
       <img src="assets/cover-sifox.svg" alt="Sifox" style="position: absolute; left: 50%; transform: translateX(-50%); top: 24.2%; width: 28.23%; height: auto">
       <svg viewBox="0 0 160 167" style="position: absolute; left: 73.82%; top: 32.14%; width: 7.76%; z-index: 2"><path fill="rgb(55,59,249)" d="M 80 0 L 87.909 52.693 L 120 11.187 L 101.607 60.947 L 149.282 41.75 L 109.516 75.245 L 160 83.5 L 109.516 91.755 L 149.282 125.25 L 101.607 106.053 L 120 155.813 L 87.909 114.307 L 80 167 L 72.091 114.307 L 40 155.813 L 58.393 106.053 L 10.718 125.25 L 50.484 91.755 L 0 83.5 L 50.484 75.245 L 10.718 41.75 L 58.393 60.947 L 40 11.187 L 72.091 52.693 L 80 0 Z"></path></svg>
-      <img src="assets/cover-table.png" alt="Столик" style="position: absolute; left: 77.62%; top: 37.69%; width: 20.12%; filter: drop-shadow(0 4px 4px rgba(0,0,0,.25))">
-      <img src="assets/cover-assistants.png" alt="Галерея ассистентов" style="position: absolute; left: 2.29%; top: 52.83%; z-index: 2; width: 22.06%; transform: rotate(-4deg); filter: drop-shadow(0 2px 14px rgba(0,0,0,.25))">
-      <img src="assets/cover-phone.png" alt="Телефон с ассистентом Евой" style="position: absolute; left: 50.17%; transform: translateX(-50%); top: 36.48%; width: 48.73%; height: auto; z-index: 1">
+      <img src="assets/cover-table.webp" alt="Столик" style="position: absolute; left: 77.62%; top: 37.69%; width: 20.12%; filter: drop-shadow(0 4px 4px rgba(0,0,0,.25))">
+      <img src="assets/cover-assistants.webp" alt="Галерея ассистентов" style="position: absolute; left: 2.29%; top: 52.83%; z-index: 2; width: 22.06%; transform: rotate(-4deg); filter: drop-shadow(0 2px 14px rgba(0,0,0,.25))">
+      <img src="assets/cover-phone.webp" fetchpriority="high" alt="Телефон с ассистентом Евой" style="position: absolute; left: 50.17%; transform: translateX(-50%); top: 36.48%; width: 48.73%; height: auto; z-index: 1">
       <div data-r="card" style="position: absolute; z-index: 2; left: 65.11%; top: 51.36%; width: 20.12%; box-sizing: border-box; padding: 2.036cqw 1.357cqw; border-radius: 0.873cqw; background: #fff; box-shadow: 0 2px 24.8px rgba(0,0,0,.25); font-family: var(--font-display); font-weight: 500; font-size: 1.551cqw; line-height: 100%; letter-spacing: .02em; color: rgb(50,48,48)">Ассистент забронировал вам столик</div>
-      <img src="assets/cover-check.png" alt="Проверка неизвестных номеров" style="position: absolute; z-index: 2; left: 9.96%; top: 85.35%; width: 22.06%; transform: rotate(3deg); filter: drop-shadow(0 2px 14px rgba(0,0,0,.25))">
-      <img src="assets/cover-spam.png" alt="Защита от спама" style="position: absolute; z-index: 2; left: 13.03%; top: 78.7%; width: 22.06%; transform: rotate(-3deg); filter: drop-shadow(0 2px 14px rgba(0,0,0,.25))">
+      <img src="assets/cover-check.webp" alt="Проверка неизвестных номеров" style="position: absolute; z-index: 2; left: 9.96%; top: 85.35%; width: 22.06%; transform: rotate(3deg); filter: drop-shadow(0 2px 14px rgba(0,0,0,.25))">
+      <img src="assets/cover-spam.webp" alt="Защита от спама" style="position: absolute; z-index: 2; left: 13.03%; top: 78.7%; width: 22.06%; transform: rotate(-3deg); filter: drop-shadow(0 2px 14px rgba(0,0,0,.25))">
     </div>
     <div data-r="m" style="display:none;position:absolute;left:0;bottom:0;width:100%;height:100%;container-type:size;overflow:hidden">
-      <img src="assets/m-cover-assistant.png" alt="Ассистент" style="position:absolute;left:-12.214cqw;top:10.211cqh;width:56.234cqw;height:35.878cqw;object-fit:cover;box-shadow:0 2px 14.9px rgba(0,0,0,.25)">
+      <img src="assets/m-cover-assistant.webp" alt="Ассистент" style="position:absolute;left:-12.214cqw;top:10.211cqh;width:56.234cqw;height:35.878cqw;object-fit:cover;box-shadow:0 2px 14.9px rgba(0,0,0,.25)">
       <svg viewBox="0 0 61.618 64.314" style="position:absolute;left:35.369cqw;top:6.822cqh;width:15.679cqw;transform:rotate(-6.66deg);transform-origin:0 0"><path fill="rgb(55,59,249)" d="M 30.809 0 L 33.855 20.293 L 46.214 4.308 L 39.13 23.472 L 57.491 16.079 L 42.176 28.978 L 61.618 32.157 L 42.176 35.336 L 57.491 48.236 L 39.13 40.842 L 46.214 60.006 L 33.855 44.021 L 30.809 64.314 L 27.763 44.021 L 15.405 60.006 L 22.488 40.842 L 4.128 48.236 L 19.442 35.336 L 0 32.157 L 19.442 28.978 L 4.128 16.079 L 22.488 23.472 L 15.405 4.308 L 27.763 20.293 L 30.809 0 Z"></path></svg>
-      <div role="img" aria-label="Телефон с ассистентом Евой" style="position:absolute;left:-10.762cqw;top:13.498cqh;width:110.994cqw;height:148.242cqw;transform:rotate(4.01deg);transform-origin:0 0;background:url('assets/m-cover-phone.png') 99.993% 0% / 186.604% 129.837% no-repeat"></div>
+      <div role="img" aria-label="Телефон с ассистентом Евой" style="position:absolute;left:-10.762cqw;top:13.498cqh;width:110.994cqw;height:148.242cqw;transform:rotate(4.01deg);transform-origin:0 0;background:url('assets/m-cover-phone.webp') 99.993% 0% / 186.604% 129.837% no-repeat"></div>
       <div style="position:absolute;left:0;top:59.038cqh;width:100%;bottom:0;background:linear-gradient(179.015deg,rgba(255,255,255,0) 0.92%,#fff 30.3%)">
         <div style="position:absolute;left:3.817cqw;top:17.019cqh;width:92.366cqw;display:flex;flex-direction:column;align-items:center;gap:4.326cqw">
           <img src="assets/m-cover-sifox.svg" alt="Sifox" style="width:77.354cqw;height:auto">
           <span data-r="mslogan" style="align-self:stretch;font-family:var(--font-display);font-weight:500;font-size:4.071cqw;line-height:6.107cqw;text-align:center;text-transform:uppercase;color:#5A5A6E">Ваш технологический партнёр в&nbsp;решении телеком-задач</span>
         </div>
       </div>
-      <img src="assets/m-cover-choice.png" alt="Выбор" style="position:absolute;left:19.593cqw;top:61.385cqh;width:65.903cqw;height:15.267cqw;object-fit:cover;box-shadow:0 2px 24.8px rgba(0,0,0,.25)">
-      <img src="assets/m-cover-security.png" alt="Защита" style="position:absolute;left:26.933cqw;top:52.419cqh;width:68.808cqw;height:16.407cqw;object-fit:cover;transform:rotate(7.7deg);transform-origin:0 0;box-shadow:0 2px 24.8px rgba(0,0,0,.25)">
+      <img src="assets/m-cover-choice.webp" alt="Выбор" style="position:absolute;left:19.593cqw;top:61.385cqh;width:65.903cqw;height:15.267cqw;object-fit:cover;box-shadow:0 2px 24.8px rgba(0,0,0,.25)">
+      <img src="assets/m-cover-security.webp" alt="Защита" style="position:absolute;left:26.933cqw;top:52.419cqh;width:68.808cqw;height:16.407cqw;object-fit:cover;transform:rotate(7.7deg);transform-origin:0 0;box-shadow:0 2px 24.8px rgba(0,0,0,.25)">
     </div>
   </section>
-  <section id="functions" data-screen-label="Услуги" style="box-sizing:border-box;width:100%;max-width:100%;margin:0;padding:208px 62px;min-height:100vh;background:#1B1EA8 url('assets/functions-bg.png') center / cover no-repeat;font-family:Nunito,-apple-system,Segoe UI,sans-serif;color:#323030;text-wrap:pretty">
+  <section id="functions" data-screen-label="Услуги" style="box-sizing:border-box;width:100%;max-width:100%;margin:0;padding:208px 62px;min-height:100vh;background:#1B1EA8 url('assets/functions-bg.webp') center / cover no-repeat;font-family:Nunito,-apple-system,Segoe UI,sans-serif;color:#323030;text-wrap:pretty">
     
   <div style="width:100%">
       <h2 style="max-width: 1200px; margin: 0 0 24px; font-family: 'Druk LCG','Druk Wide Cyr',sans-serif; font-weight: 500; font-size: 64px; line-height: 120%; color: #fff; text-transform: uppercase; width: 1117px; max-width: 100%; box-sizing: border-box">Какие продукты<br>мы делаем</h2>
@@ -331,8 +332,8 @@ h1, h2, h3 {
       <span style="font-family:'Druk LCG',sans-serif;font-weight:700;font-size:clamp(22px,2.62vw,52px);line-height:100%;letter-spacing:.02em;text-transform:uppercase">Резиденты Сколково</span>
       <p style="margin:0;font-size:clamp(16px,1.08vw,22px);line-height:1.5;text-wrap:pretty">Мы&nbsp;— резиденты Сколково. Создаём собственные технологии в&nbsp;области телекоммуникаций, голосовых сервисов и&nbsp;защиты от&nbsp;нежелательных звонков, превращая изобретения в&nbsp;полезные продукты для&nbsp;бизнеса и&nbsp;абонентов.</p>
     </div>
-    <img src="assets/why-hand-phone.png" loading="lazy" alt="Рука держит смартфон с входящим звонком" data-tilt="hand" style="transform-origin:0 0;will-change:transform;position:absolute;left:35.4vw;top:21.81vw;width:72.53vw;height:46.01vw;object-fit:cover;display:block;pointer-events:none">
-    <img src="assets/why-sony-slider.png" loading="lazy" alt="Телефон-слайдер Sony Ericsson в ладони" data-tilt="sony" style="will-change:transform;position:absolute;z-index:3;left:-31.58vw;top:calc(6.26vw - 10px);width:81.99vw;height:33.44vw;object-fit:cover;display:block;transform:rotate(2.98deg);transform-origin:0 0;pointer-events:none">
+    <img src="assets/why-hand-phone.webp" loading="lazy" alt="Рука держит смартфон с входящим звонком" data-tilt="hand" style="transform-origin:0 0;will-change:transform;position:absolute;left:35.4vw;top:21.81vw;width:72.53vw;height:46.01vw;object-fit:cover;display:block;pointer-events:none">
+    <img src="assets/why-sony-slider.webp" loading="lazy" alt="Телефон-слайдер Sony Ericsson в ладони" data-tilt="sony" style="will-change:transform;position:absolute;z-index:3;left:-31.58vw;top:calc(6.26vw - 10px);width:81.99vw;height:33.44vw;object-fit:cover;display:block;transform:rotate(2.98deg);transform-origin:0 0;pointer-events:none">
   </section>
 
   <section id="globe" data-screen-label="Глобус" data-globe-scroll="true" style="box-sizing:border-box;width:100%;max-width:100%;margin:100px 0 150px;height:100vh;min-height:640px;position:relative;background:#fff">
