@@ -1,7 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
 <meta charset="utf-8">
+<title>Sifox — ИИ-продукты для операторов связи и бизнеса</title>
+<meta name="description" content="ИИ-ассистент, антиспам, запись звонков и защита от мошенничества. Внедряем в сеть оператора и мобильное приложение. 80 млн пользователей.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sifox — ИИ-продукты для операторов связи и бизнеса">
+<meta property="og:description" content="ИИ-ассистент, антиспам, запись звонков и защита от мошенничества. Внедряем в сеть оператора и мобильное приложение. 80 млн пользователей.">
+<meta property="og:url" content="https://aaaaaaklyueva-dev.github.io/sifox-site/">
+<meta property="og:image" content="https://aaaaaaklyueva-dev.github.io/sifox-site/assets/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
 <style>html,body{background:#fff;color-scheme:light}</style>
@@ -19,16 +27,34 @@
 <link rel="stylesheet" href="_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/components/fig-tokens.css">
 <link rel="stylesheet" href="_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/components/fig-typography.css">
 <link rel="stylesheet" href="_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/components/fig-assets.css">
-<link rel="stylesheet" href="_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/styles.css">
 <script src="_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/_ds_bundle.js"></script>
+<script>
+(function(){
+function fit(){var s=document.getElementById('why'),h=s&&s.querySelector(':scope>h2');if(!h)return setTimeout(fit,300);
+h.style.removeProperty('font-size');if(!matchMedia('(min-width:1025px)').matches)return;var avail=s.clientWidth-48,i=0;
+while(i++<8){var r=document.createRange();r.selectNodeContents(h);var w=r.getBoundingClientRect().width;if(w<=avail||!w)break;var fs=parseFloat(getComputedStyle(h).fontSize);h.style.setProperty('font-size',(fs*avail/w*0.995)+'px','important');}
+h.dataset.fitText=Math.round(w);h.dataset.fitAvail=avail;}
+var t;window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(fit,100);});
+if(document.fonts)document.fonts.ready.then(fit);window.addEventListener('load',fit);setTimeout(fit,600);
+})();
+</script>
 <style>
-html,body{overflow-x:clip}
+
+:root{--display-size:clamp(56px,10vw,152px)}
+#why>h2{font-size:var(--display-size) !important;left:24px !important;max-width:calc(100% - 48px);white-space:normal !important}
+#why{container-type:inline-size}
+h1:not(#why>h2),h2:not(#why>h2),h3{max-width:100%;box-sizing:border-box;white-space:normal}
+@media (min-width:1025px){#why>h2{font-size:min(140px,9.5cqi) !important;white-space:nowrap !important;left:0 !important;padding:0 24px;box-sizing:border-box;max-width:100% !important}}
 body{margin:0;background:#fff;font-family:var(--font-body)}
 a{color:var(--accent);text-decoration:none}
 a:hover{color:var(--accent-3)}
-#demo input::placeholder{color:#E8EFFF;opacity:1}
+#demo input::placeholder{color:#5A5A6E;opacity:1}
+#demo a{color:#fff;text-decoration:underline}
+#demo a:hover{color:#E8EFFF}
+#demo button:disabled{opacity:.7;cursor:default;transform:none}
 #functions [data-r="grid"]>[data-clone]{display:none}
 @keyframes cvT{from{translate:0 -60px;opacity:0}}
+#functions{overflow:hidden}
 @keyframes cvB{from{translate:0 100%;opacity:0}}
 @keyframes cvL{from{translate:-60vw 0;opacity:0}}
 @keyframes cvR{from{translate:60vw 0;opacity:0}}
@@ -49,14 +75,14 @@ a:hover{color:var(--accent-3)}
 #why p{font-size:16px !important}
 #demo p{font-size:20px !important;line-height:28px !important}
 #demo input,#demo button{font-size:20px !important}
+#functions h2,#demo h2{font-size:48px !important;line-height:120% !important}
 @media (max-width:600px){#hero>div:first-child{display:none !important}#hero>div[data-r="m"]{display:block !important;width:100% !important;top:auto !important;bottom:0 !important}}
 @media (max-width:1024px){
   #functions{padding:120px 40px !important;min-height:0 !important}
-  #functions h2{font-size:36px !important;height:auto !important}
+  #functions h2,#demo h2{font-size:44px !important;height:auto !important}
   #functions [data-r="lead"]{font-size:20px !important;line-height:28px !important;margin-bottom:56px !important}
   #functions [data-r="biz"] p{font-size:20px !important;line-height:28px !important}
   #functions [data-r="sub"],#functions [data-r="biz"] h3{font-size:28px !important}
-  #why>h2{font-size:72px !important}
   #why [data-r="t1"]>span,#why [data-r="t2"]>span{font-size:24px !important}
   #demo h2{width:auto !important;height:auto !important;max-width:100%}
   #functions [data-r="grid"]{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
@@ -65,7 +91,7 @@ a:hover{color:var(--accent-3)}
 }
 @media (max-width:640px){
   #functions{padding:80px 20px !important}
-  #functions h2{font-size:24px !important}
+  #functions h2,#demo h2{font-size:24px !important}
   #functions [data-r="lead"]{font-size:20px !important;line-height:28px !important;margin-bottom:40px !important}
   #functions [data-r="sub"]{font-size:20px !important;margin-bottom:20px !important}
   #functions [data-r="grid"]{display:flex !important;gap:16px !important;margin:0 -20px;padding:0 20px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
@@ -73,7 +99,7 @@ a:hover{color:var(--accent-3)}
   #functions [data-r="grid"]>div{flex:0 0 260px;box-sizing:border-box;padding:24px !important;border-radius:20px !important}
   #functions [data-r="grid"]>[data-clone]{display:block !important}
   #functions [data-r="grid"] h3{font-size:20px !important}
-  #functions [data-r="grid"] p{font-size:14px !important;line-height:20px !important}
+  #functions [data-r="grid"] p{font-size:16px !important;line-height:24px !important}
   #functions [data-r="biz"]{flex-direction:column;align-items:flex-start !important;gap:24px !important;margin-top:56px !important}
   #functions [data-r="star3d"]{width:120px !important;height:120px !important;margin:-12px !important}
   #functions [data-r="biz"] h3{font-size:20px !important}
@@ -87,15 +113,26 @@ a:hover{color:var(--accent-3)}
   #why [data-r="t2"]{order:4;width:auto !important;gap:12px !important}
   #why [data-r="t2"] svg{width:48px !important;height:48px !important}
   #why>img[data-tilt="hand"]{order:5;width:125vw !important;height:79vw !important;margin-left:-6vw;margin-top:-30vw;max-width:none}
-  #why p{max-width:none !important;font-size:14px !important}
-  #demo h2{font-size:32px !important}
-  #demo p{font-size:14px !important;line-height:20px !important}
-  #globe{margin:0 0 0 calc(50% - 50vw) !important}
+  #why p{max-width:none !important;font-size:16px !important}
+  #demo p{font-size:16px !important;line-height:24px !important}
+  #globe{margin:0 !important}
   #demo{padding:80px 20px !important}
   #demo>div{gap:40px !important}
 }
 @media (max-width:1200px){#functions [data-r="grid"] h3{font-size:20px !important}}
 @media (max-width:700px){#functions [data-r="grid"] h3{font-size:14px !important}}
+h1, h2, h3 {
+  white-space: normal !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+@media (min-width: 1025px) {
+#why-title {
+  white-space: nowrap !important;
+  font-size: min(140px, 9vw) !important;
+  max-width: calc(100% - 48px) !important;
+}
+}
 </style>
 <script type="module" src="metal-star.js"></script>
 <script>
@@ -179,13 +216,37 @@ a:hover{color:var(--accent-3)}
   }, 50);
 })();
 </script>
+<script>
+(function(){
+  const RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  document.addEventListener('submit', async e => {
+    const f = e.target; if (!f.matches || !f.matches('[data-r="demo-form"]')) return;
+    e.preventDefault();
+    const st = f.querySelector('[data-r="status"]'), er = f.querySelector('[data-r="err"]'), btn = f.querySelector('button[type="submit"]');
+    const v = n => (f.elements[n].value || '').trim();
+    st.textContent = ''; er.textContent = '';
+    if (!v('name')) { er.textContent = 'Укажите имя.'; f.elements.name.focus(); return; }
+    if (!RE.test(v('email'))) { er.textContent = 'Укажите корректный email.'; f.elements.email.focus(); return; }
+    btn.disabled = true; btn.textContent = 'Отправляем…';
+    try {
+      const r = await fetch('https://formsubmit.co/ajax/sales@sifox.ru', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ name: v('name'), company: v('company'), email: v('email'), phone: v('phone'), _subject: 'Заявка на демо — Главная' }) });
+      const d = await r.json().catch(() => ({}));
+      if (!r.ok || d.success === false || d.success === 'false') throw 0;
+      st.textContent = 'Спасибо! Заявка отправлена'; f.reset();
+    } catch (_) { st.textContent = 'Не удалось отправить. Напишите нам на sales@sifox.ru'; }
+    btn.disabled = false; btn.textContent = 'Запросить демо';
+  });
+  setTimeout(() => document.querySelectorAll('#functions [style*="opacity"]').forEach(el => { el.style.opacity = 1; el.style.translate = '0 0'; }), 4000);
+})();
+</script>
 </helmet>
-<div style="width:100%;max-width:1440px;margin:0 auto;background:#fff;color:var(--text)">
+<div style="width:100%;max-width:100%;margin:0;background:#fff;color:var(--text)">
 
-  <section id="hero" data-screen-label="Хиро" style="box-sizing:border-box;width:100vw;margin-left:calc(50% - 50vw);height:100vh;min-height:560px;position:relative;overflow:hidden;background:#fff">
-    <div style="position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: min(100vw, calc((100vh - 200px) * 1.4101)); aspect-ratio: 2063/1463; container-type: inline-size">
+  <section id="hero" data-screen-label="Хиро" style="box-sizing:border-box;width:100%;max-width:100%;margin-left:0;height:100vh;min-height:560px;position:relative;overflow:hidden;background:#fff">
+    <div style="position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: min(100%, calc((100vh - 200px) * 1.4101)); aspect-ratio: 2063/1463; container-type: inline-size">
       <img src="assets/cover-blob.png" alt="" style="position: absolute; left: 17.1%; top: 42.58%; width: 12.6%; mix-blend-mode: multiply; z-index: 3">
-      <span data-r="slogan" style="position: absolute; left: 50.24%; transform: translateX(-50%); top: 13.76%; width: 56.47%; font-family: var(--font-display); font-weight: 500; font-size: 2.3cqw; text-align: center; text-transform: uppercase; color: rgb(116,116,143); line-height: 160%">Ваш технологический партнер в&nbsp;решении телеком задач</span>
+      <h1 data-r="slogan" style="margin: 0; position: absolute; left: 50.24%; transform: translateX(-50%); top: 13.76%; width: 56.47%; font-family: var(--font-display); font-weight: 500; font-size: 2.3cqw; text-align: center; text-transform: uppercase; color: #5A5A6E; line-height: 160%">Ваш технологический партнёр в&nbsp;решении телеком-задач</h1>
       <img src="assets/cover-sifox.svg" alt="Sifox" style="position: absolute; left: 50%; transform: translateX(-50%); top: 24.2%; width: 28.23%; height: auto">
       <svg viewBox="0 0 160 167" style="position: absolute; left: 73.82%; top: 32.14%; width: 7.76%; z-index: 2"><path fill="rgb(55,59,249)" d="M 80 0 L 87.909 52.693 L 120 11.187 L 101.607 60.947 L 149.282 41.75 L 109.516 75.245 L 160 83.5 L 109.516 91.755 L 149.282 125.25 L 101.607 106.053 L 120 155.813 L 87.909 114.307 L 80 167 L 72.091 114.307 L 40 155.813 L 58.393 106.053 L 10.718 125.25 L 50.484 91.755 L 0 83.5 L 50.484 75.245 L 10.718 41.75 L 58.393 60.947 L 40 11.187 L 72.091 52.693 L 80 0 Z"></path></svg>
       <img src="assets/cover-table.png" alt="Столик" style="position: absolute; left: 77.62%; top: 37.69%; width: 20.12%; filter: drop-shadow(0 4px 4px rgba(0,0,0,.25))">
@@ -202,43 +263,43 @@ a:hover{color:var(--accent-3)}
       <div style="position:absolute;left:0;top:59.038cqh;width:100%;bottom:0;background:linear-gradient(179.015deg,rgba(255,255,255,0) 0.92%,#fff 30.3%)">
         <div style="position:absolute;left:3.817cqw;top:17.019cqh;width:92.366cqw;display:flex;flex-direction:column;align-items:center;gap:4.326cqw">
           <img src="assets/m-cover-sifox.svg" alt="Sifox" style="width:77.354cqw;height:auto">
-          <span data-r="mslogan" style="align-self:stretch;font-family:var(--font-display);font-weight:500;font-size:4.071cqw;line-height:6.107cqw;text-align:center;text-transform:uppercase;color:rgb(116,116,143)">Ваш технологический партнер в&nbsp;решении телеком задач</span>
+          <span data-r="mslogan" style="align-self:stretch;font-family:var(--font-display);font-weight:500;font-size:4.071cqw;line-height:6.107cqw;text-align:center;text-transform:uppercase;color:#5A5A6E">Ваш технологический партнёр в&nbsp;решении телеком-задач</span>
         </div>
       </div>
       <img src="assets/m-cover-choice.png" alt="Выбор" style="position:absolute;left:19.593cqw;top:61.385cqh;width:65.903cqw;height:15.267cqw;object-fit:cover;box-shadow:0 2px 24.8px rgba(0,0,0,.25)">
       <img src="assets/m-cover-security.png" alt="Защита" style="position:absolute;left:26.933cqw;top:52.419cqh;width:68.808cqw;height:16.407cqw;object-fit:cover;transform:rotate(7.7deg);transform-origin:0 0;box-shadow:0 2px 24.8px rgba(0,0,0,.25)">
     </div>
   </section>
-  <section id="functions" data-screen-label="Услуги" style="box-sizing:border-box;width:100vw;margin:0 0 0 calc(50% - 50vw);padding:208px 62px;min-height:100vh;background:#1B1EA8 url('assets/functions-bg.png') center / cover no-repeat;font-family:Nunito,-apple-system,Segoe UI,sans-serif;color:#323030;text-wrap:pretty">
+  <section id="functions" data-screen-label="Услуги" style="box-sizing:border-box;width:100%;max-width:100%;margin:0;padding:208px 62px;min-height:100vh;background:#1B1EA8 url('assets/functions-bg.png') center / cover no-repeat;font-family:Nunito,-apple-system,Segoe UI,sans-serif;color:#323030;text-wrap:pretty">
     
   <div style="width:100%">
-      <h2 style="max-width: 1200px; margin: 0 0 24px; font-family: 'Druk LCG','Druk Wide Cyr',sans-serif; font-weight: 500; font-size: 64px; line-height: 120%; color: #fff; text-transform: uppercase; width: 1117px">Какие продукты<br>мы делаем</h2>
+      <h2 style="max-width: 1200px; margin: 0 0 24px; font-family: 'Druk LCG','Druk Wide Cyr',sans-serif; font-weight: 500; font-size: 64px; line-height: 120%; color: #fff; text-transform: uppercase; width: 1117px; max-width: 100%; box-sizing: border-box">Какие продукты<br>мы делаем</h2>
       <p data-r="lead" style="margin:0 0 72px;max-width:820px;font-size:26px;line-height:36px;color:#fff;text-wrap:pretty">Мы делаем ИИ-продукты для операторов и предприятий: одни решают задачи самого бизнеса, другие — задачи его клиентов. Внедряем быстро и подстраиваемся под инфраструктуру, которая у вас уже есть.</p>
       <h3 data-r="sub" style="margin:0 0 32px;font-family:'Druk LCG','Druk Wide Cyr',sans-serif;font-weight:500;font-size:28px;line-height:120%;letter-spacing:.02em;color:#fff;text-transform:uppercase">Для&nbsp;ваших абонентов</h3>
       <div data-r="grid" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px">
         <div style="background:#fff;border-radius:24px;padding:32px;transition:box-shadow .25s ease" style-hover="box-shadow:0 0 24px rgba(165,189,255,.9),0 0 0 1px rgba(165,189,255,.8)">
           <h3 style="margin:0 0 8px;font-family:'Druk LCG','Druk Wide Cyr',sans-serif;font-weight:500;font-size:24px;line-height:120%;letter-spacing:.02em;text-transform:uppercase">Секретарь</h3>
-          <p style="margin:0;font-size:16px;line-height:24px;color:#74748F">Проверяет входящие звонки, помогает выделять важные и&nbsp;не&nbsp;отвлекает пользователя без необходимости.</p>
+          <p style="margin:0;font-size:16px;line-height:24px;color:#5A5A6E">Проверяет входящие звонки, помогает выделять важные и&nbsp;не&nbsp;отвлекает пользователя без необходимости.</p>
         </div>
         <div style="background:#fff;border-radius:24px;padding:32px;transition:box-shadow .25s ease" style-hover="box-shadow:0 0 24px rgba(165,189,255,.9),0 0 0 1px rgba(165,189,255,.8)">
           <h3 style="margin:0 0 8px;font-family:'Druk LCG','Druk Wide Cyr',sans-serif;font-weight:500;font-size:24px;line-height:120%;letter-spacing:.02em;text-transform:uppercase">Антиспам</h3>
-          <p style="margin:0;font-size:16px;line-height:24px;color:#74748F">Помогает фильтровать нежелательные звонки и&nbsp;может работать в&nbsp;разных режимах защиты.</p>
+          <p style="margin:0;font-size:16px;line-height:24px;color:#5A5A6E">Помогает фильтровать нежелательные звонки и&nbsp;может работать в&nbsp;разных режимах защиты.</p>
         </div>
         <div style="background:#fff;border-radius:24px;padding:32px;transition:box-shadow .25s ease" style-hover="box-shadow:0 0 24px rgba(165,189,255,.9),0 0 0 1px rgba(165,189,255,.8)">
           <h3 style="margin:0 0 8px;font-family:'Druk LCG','Druk Wide Cyr',sans-serif;font-weight:500;font-size:24px;line-height:120%;letter-spacing:.02em;text-transform:uppercase">Запись звонков</h3>
-          <p style="margin:0;font-size:16px;line-height:24px;color:#74748F">Записывает, хранит, расшифровывает и&nbsp;суммаризирует разговоры.</p>
+          <p style="margin:0;font-size:16px;line-height:24px;color:#5A5A6E">Записывает, хранит, расшифровывает и&nbsp;суммаризирует разговоры.</p>
         </div>
         <div style="background:#fff;border-radius:24px;padding:32px;transition:box-shadow .25s ease" style-hover="box-shadow:0 0 24px rgba(165,189,255,.9),0 0 0 1px rgba(165,189,255,.8)">
           <h3 style="margin:0 0 8px;font-family:'Druk LCG','Druk Wide Cyr',sans-serif;font-weight:500;font-size:24px;line-height:120%;letter-spacing:.02em;text-transform:uppercase">Умный<br>автоответчик</h3>
-          <p style="margin:0;font-size:16px;line-height:24px;color:#74748F">Принимает пропущенные звонки и&nbsp;отвечает вместо пользователя.</p>
+          <p style="margin:0;font-size:16px;line-height:24px;color:#5A5A6E">Принимает пропущенные звонки и&nbsp;отвечает вместо пользователя.</p>
         </div>
         <div style="background:#fff;border-radius:24px;padding:32px;transition:box-shadow .25s ease" style-hover="box-shadow:0 0 24px rgba(165,189,255,.9),0 0 0 1px rgba(165,189,255,.8)">
           <h3 style="margin:0 0 8px;font-family:'Druk LCG','Druk Wide Cyr',sans-serif;font-weight:500;font-size:24px;line-height:120%;letter-spacing:.02em;text-transform:uppercase">Исходящие поручения</h3>
-          <p style="margin:0;font-size:16px;line-height:24px;color:#74748F">Самостоятельно звонит, записывает пользователя на&nbsp;приём, бронирует столики и&nbsp;выполняет другие задачи по&nbsp;телефону.</p>
+          <p style="margin:0;font-size:16px;line-height:24px;color:#5A5A6E">Самостоятельно звонит, записывает пользователя на&nbsp;приём, бронирует столики и&nbsp;выполняет другие задачи по&nbsp;телефону.</p>
         </div>
         <div style="background:#fff;border-radius:24px;padding:32px;transition:box-shadow .25s ease" style-hover="box-shadow:0 0 24px rgba(165,189,255,.9),0 0 0 1px rgba(165,189,255,.8)">
           <h3 style="margin:0 0 8px;font-family:'Druk LCG','Druk Wide Cyr',sans-serif;font-weight:500;font-size:24px;line-height:120%;letter-spacing:.02em;text-transform:uppercase">Защита во&nbsp;время звонка</h3>
-          <p style="margin:0;font-size:16px;line-height:24px;color:#74748F">AI может анализировать разговор и&nbsp;предупреждать пользователя об&nbsp;угрозе.</p>
+          <p style="margin:0;font-size:16px;line-height:24px;color:#5A5A6E">ИИ может анализировать разговор и&nbsp;предупреждать пользователя об&nbsp;угрозе.</p>
         </div>
       </div>
       <div data-r="biz" style="margin-top:100px;display:flex;align-items:center;gap:40px;max-width:1100px">
@@ -249,28 +310,7 @@ a:hover{color:var(--accent-3)}
         </div>
       </div>
     </div></section>
-  <section data-screen-label="Интро" style="display:none">
-    <p style="margin:0;max-width:820px;font-size:26px;line-height:36px;color:var(--text-2);text-wrap:pretty">Мы делаем ИИ-продукты для операторов и предприятий: одни решают задачи самого бизнеса, другие — задачи его клиентов. Внедряем быстро и подстраиваемся под инфраструктуру, которая у вас уже есть.</p>
-  </section>
 
-  <section id="audience" data-screen-label="Кому" style="display:none;padding:96px 72px 0;flex-direction:column;gap:40px">
-    <div style="display:flex;flex-direction:column;gap:14px;max-width:900px">
-      <span style="font-size:16px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--accent)">Кому мы нужны</span>
-      <h2 style="margin:0;font-family:var(--font-display);font-weight:500;font-size:52px;line-height:100%;letter-spacing:.02em;text-transform:uppercase;color:var(--text);text-wrap:pretty">Две аудитории, один стек</h2>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:24px">
-      <div style="background:var(--bg-soft);padding:40px 36px;display:flex;flex-direction:column;gap:16px">
-        <span style="font-size:14px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--accent)">01 · Для бизнеса</span>
-        <span style="font-family:var(--font-display);font-weight:500;font-size:32px;line-height:110%;text-transform:uppercase;color:rgb(57,60,75);overflow-wrap:anywhere">Операторы и предприятия</span>
-        <p style="margin:0;font-size:20px;line-height:30px;color:var(--text-2);text-wrap:pretty">Снижаем нагрузку на контакт-центр, ускоряем решение обращений, даём аналитику по всем каналам общения с абонентом.</p>
-      </div>
-      <div style="background:var(--bg-soft);padding:40px 36px;display:flex;flex-direction:column;gap:16px">
-        <span style="font-size:14px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--accent)">02 · Для клиентов бизнеса</span>
-        <span style="font-family:var(--font-display);font-weight:500;font-size:32px;line-height:110%;text-transform:uppercase;color:rgb(57,60,75);overflow-wrap:anywhere">Абоненты и пользователи</span>
-        <p style="margin:0;font-size:20px;line-height:30px;color:var(--text-2);text-wrap:pretty">Сервисы, которые абонент видит сам: запись и расшифровка звонков, защита от спама, уведомления и саммари диалогов.</p>
-      </div>
-    </div>
-  </section>
 
   
 
@@ -280,68 +320,41 @@ a:hover{color:var(--accent-3)}
 
   
 
-  <section id="why" data-screen-label="Почему мы" style="box-sizing:border-box;width:100vw;margin:100px 0 0 calc(50% - 50vw);height:calc(70.92vw - 44px);position:relative;overflow:hidden;background:#fff;color:#323030">
-    <h2 style="position:absolute;left:3.75vw;top:7.63vw;margin:0;font-family:'Druk LCG',sans-serif;font-weight:700;font-size:10.6vw;line-height:100%;letter-spacing:.02em;text-transform:uppercase;color:#373BF9;white-space:nowrap">Почему мы</h2>
+  <section id="why" data-screen-label="Почему мы" style="box-sizing:border-box;width:100%;max-width:100%;margin:100px 0 0;height:calc(70.92vw - 44px);position:relative;overflow:hidden;background:#fff;color:#323030">
+    <h2 id="why-title" style="position:absolute;left:3.75vw;top:7.63vw;margin:0;font-family:'Druk LCG',sans-serif;font-weight:700;font-size:10.6vw;line-height:100%;letter-spacing:.02em;text-transform:uppercase;color:#373BF9;white-space:nowrap">Почему мы</h2>
     <div data-r="t1" style="position:absolute;z-index:2;left:43.74vw;top:26.94vw;width:max(33.07vw,320px);display:flex;flex-direction:column;gap:.83vw">
       <span style="font-family:'Druk LCG',sans-serif;font-weight:700;font-size:clamp(22px,2.62vw,52px);line-height:100%;letter-spacing:.02em;text-transform:uppercase">Мы работаем с&nbsp;2009&nbsp;года</span>
-      <p style="margin:0;max-width:max(28vw,300px);font-size:clamp(15px,1.08vw,22px);line-height:1.5;text-wrap:pretty">От&nbsp;культовых Sony Ericsson и&nbsp;Nokia до&nbsp;новейших iPhone&nbsp;— наши технологии прошли через поколения телефонов. Меняются устройства, растёт наш опыт, появляются новые идеи.</p>
+      <p style="margin:0;max-width:max(28vw,300px);font-size:clamp(16px,1.08vw,22px);line-height:1.5;text-wrap:pretty">От&nbsp;культовых Sony Ericsson и&nbsp;Nokia до&nbsp;новейших iPhone&nbsp;— наши технологии прошли через поколения телефонов. Меняются устройства, растёт наш опыт, появляются новые идеи.</p>
     </div>
     <div data-r="t2" style="position:absolute;z-index:2;left:3.75vw;top:44.86vw;width:max(33.43vw,340px);display:flex;flex-direction:column;gap:.83vw;align-items:flex-start">
       <svg width="80" height="80" viewBox="0 0 80 80" style="width:4.77vw;height:4.77vw;display:block;flex-shrink:0"><path fill="#373BF9" d="M 40 0 L 43.954 25.242 L 60 5.359 L 50.804 29.196 L 74.641 20 L 54.758 36.046 L 80 40 L 54.758 43.954 L 74.641 60 L 50.804 50.804 L 60 74.641 L 43.954 54.758 L 40 80 L 36.046 54.758 L 20 74.641 L 29.196 50.804 L 5.359 60 L 25.242 43.954 L 0 40 L 25.242 36.046 L 5.359 20 L 29.196 29.196 L 20 5.359 L 36.046 25.242 L 40 0 Z"></path></svg>
-      <span style="font-family:'Druk LCG',sans-serif;font-weight:700;font-size:clamp(22px,2.62vw,52px);line-height:100%;letter-spacing:.02em;text-transform:uppercase">Резиденты сколково</span>
-      <p style="margin:0;font-size:clamp(15px,1.08vw,22px);line-height:1.5;text-wrap:pretty">Мы&nbsp;— резиденты Сколково. Создаём собственные технологии в&nbsp;области телекоммуникаций, голосовых сервисов и&nbsp;защиты от&nbsp;нежелательных звонков, превращая изобретения в&nbsp;полезные продукты для&nbsp;бизнеса и&nbsp;абонентов.</p>
+      <span style="font-family:'Druk LCG',sans-serif;font-weight:700;font-size:clamp(22px,2.62vw,52px);line-height:100%;letter-spacing:.02em;text-transform:uppercase">Резиденты Сколково</span>
+      <p style="margin:0;font-size:clamp(16px,1.08vw,22px);line-height:1.5;text-wrap:pretty">Мы&nbsp;— резиденты Сколково. Создаём собственные технологии в&nbsp;области телекоммуникаций, голосовых сервисов и&nbsp;защиты от&nbsp;нежелательных звонков, превращая изобретения в&nbsp;полезные продукты для&nbsp;бизнеса и&nbsp;абонентов.</p>
     </div>
-    <img src="assets/why-hand-phone.png" alt="Рука держит телефон со звонком" data-tilt="hand" style="transform-origin:0 0;will-change:transform;position:absolute;left:35.4vw;top:21.81vw;width:72.53vw;height:46.01vw;object-fit:cover;display:block;pointer-events:none">
-    <img src="assets/why-sony-slider.png" alt="Слайдер Sony Ericsson в ладони" data-tilt="sony" style="will-change:transform;position:absolute;z-index:3;left:-31.58vw;top:calc(6.26vw - 10px);width:81.99vw;height:33.44vw;object-fit:cover;display:block;transform:rotate(2.98deg);transform-origin:0 0;pointer-events:none">
+    <img src="assets/why-hand-phone.png" loading="lazy" alt="Рука держит смартфон с входящим звонком" data-tilt="hand" style="transform-origin:0 0;will-change:transform;position:absolute;left:35.4vw;top:21.81vw;width:72.53vw;height:46.01vw;object-fit:cover;display:block;pointer-events:none">
+    <img src="assets/why-sony-slider.png" loading="lazy" alt="Телефон-слайдер Sony Ericsson в ладони" data-tilt="sony" style="will-change:transform;position:absolute;z-index:3;left:-31.58vw;top:calc(6.26vw - 10px);width:81.99vw;height:33.44vw;object-fit:cover;display:block;transform:rotate(2.98deg);transform-origin:0 0;pointer-events:none">
   </section>
 
-  <section id="globe" data-screen-label="Глобус" data-globe-scroll="true" style="box-sizing:border-box;width:100vw;margin:100px 0 150px calc(50% - 50vw);height:100vh;min-height:640px;position:relative;background:#fff">
+  <section id="globe" data-screen-label="Глобус" data-globe-scroll="true" style="box-sizing:border-box;width:100%;max-width:100%;margin:100px 0 150px;height:100vh;min-height:640px;position:relative;background:#fff">
     <div style="height:100%">
-      <iframe src="globe.dc.html" title="Глобус" style="width:100%;height:100%;border:0;display:block"></iframe>
+      <iframe src="globe.dc.html" loading="lazy" title="Карта присутствия и партнёры Sifox" style="width:100%;height:100%;border:0;display:block"></iframe>
     </div>
   </section>
-<!--OLD style="display:none;padding:208px 62px;min-height:100vh;background:#1B1EA8 url('assets/functions-bg.png') center / cover no-repeat;font-family:Nunito,-apple-system,Segoe UI,sans-serif;color:#323030;text-wrap:pretty">
-    <div style="width:100%">
-      <h2 style="max-width:900px;margin:0 0 48px;font-family:'Druk LCG','Druk Wide Cyr',sans-serif;font-weight:500;font-size:44px;line-height:120%;color:#fff;text-transform:uppercase">НАШИ УСЛУГИ<br>ДЛЯ&nbsp;ВАШИХ АБОНЕНТОВ</h2>
-      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px">
-        <div style="background:#fff;border-radius:24px;padding:32px;transition:box-shadow .25s ease" style-hover="box-shadow:0 0 24px rgba(165,189,255,.9),0 0 0 1px rgba(165,189,255,.8)">
-          <h3 style="margin:0 0 8px;font-family:'Druk LCG','Druk Wide Cyr',sans-serif;font-weight:500;font-size:24px;line-height:120%;letter-spacing:.02em;text-transform:uppercase">Секретарь</h3>
-          <p style="margin:0;font-size:16px;line-height:24px;color:#74748F">Проверяет входящие звонки, помогает выделять важные и&nbsp;не&nbsp;отвлекает пользователя без необходимости.</p>
-        </div>
-        <div style="background:#fff;border-radius:24px;padding:32px;transition:box-shadow .25s ease" style-hover="box-shadow:0 0 24px rgba(165,189,255,.9),0 0 0 1px rgba(165,189,255,.8)">
-          <h3 style="margin:0 0 8px;font-family:'Druk LCG','Druk Wide Cyr',sans-serif;font-weight:500;font-size:24px;line-height:120%;letter-spacing:.02em;text-transform:uppercase">Антиспам</h3>
-          <p style="margin:0;font-size:16px;line-height:24px;color:#74748F">Помогает фильтровать нежелательные звонки и&nbsp;может работать в&nbsp;разных режимах защиты.</p>
-        </div>
-        <div style="background:#fff;border-radius:24px;padding:32px;transition:box-shadow .25s ease" style-hover="box-shadow:0 0 24px rgba(165,189,255,.9),0 0 0 1px rgba(165,189,255,.8)">
-          <h3 style="margin:0 0 8px;font-family:'Druk LCG','Druk Wide Cyr',sans-serif;font-weight:500;font-size:24px;line-height:120%;letter-spacing:.02em;text-transform:uppercase">Запись звонков</h3>
-          <p style="margin:0;font-size:16px;line-height:24px;color:#74748F">Записывает, хранит, расшифровывает и&nbsp;суммаризирует разговоры.</p>
-        </div>
-        <div style="background:#fff;border-radius:24px;padding:32px;transition:box-shadow .25s ease" style-hover="box-shadow:0 0 24px rgba(165,189,255,.9),0 0 0 1px rgba(165,189,255,.8)">
-          <h3 style="margin:0 0 8px;font-family:'Druk LCG','Druk Wide Cyr',sans-serif;font-weight:500;font-size:24px;line-height:120%;letter-spacing:.02em;text-transform:uppercase">Умный<br>автоответчик</h3>
-          <p style="margin:0;font-size:16px;line-height:24px;color:#74748F">Принимает пропущенные звонки и&nbsp;отвечает вместо пользователя.</p>
-        </div>
-        <div style="background:#fff;border-radius:24px;padding:32px;transition:box-shadow .25s ease" style-hover="box-shadow:0 0 24px rgba(165,189,255,.9),0 0 0 1px rgba(165,189,255,.8)">
-          <h3 style="margin:0 0 8px;font-family:'Druk LCG','Druk Wide Cyr',sans-serif;font-weight:500;font-size:24px;line-height:120%;letter-spacing:.02em;text-transform:uppercase">Исходящие поручения</h3>
-          <p style="margin:0;font-size:16px;line-height:24px;color:#74748F">Самостоятельно звонит, записывает пользователя на&nbsp;приём, бронирует столики и&nbsp;выполняет другие задачи по&nbsp;телефону.</p>
-        </div>
-        <div style="background:#fff;border-radius:24px;padding:32px;transition:box-shadow .25s ease" style-hover="box-shadow:0 0 24px rgba(165,189,255,.9),0 0 0 1px rgba(165,189,255,.8)">
-          <h3 style="margin:0 0 8px;font-family:'Druk LCG','Druk Wide Cyr',sans-serif;font-weight:500;font-size:24px;line-height:120%;letter-spacing:.02em;text-transform:uppercase">Защита во&nbsp;время звонка</h3>
-          <p style="margin:0;font-size:16px;line-height:24px;color:#74748F">AI может анализировать разговор и&nbsp;предупреждать пользователя об&nbsp;угрозе.</p>
-        </div>
-      </div>
-    </div>
-  </section>OLD-->
-  <section id="demo" data-screen-label="Демо" style="box-sizing:border-box;width:100vw;margin-left:calc(50% - 50vw);padding:200px clamp(20px,3.2vw,62px);background:radial-gradient(120% 170% at 78% 10%,#92AEFF 0%,#697DFF 38%,#373BF9 100%);font-family:Nunito,-apple-system,Segoe UI,sans-serif;text-wrap:pretty">
+  <section id="demo" data-screen-label="Демо" style="box-sizing:border-box;width:100%;max-width:100%;margin-left:0;padding:200px clamp(20px,3.2vw,62px);background:radial-gradient(120% 170% at 78% 10%,#4F5BFA 0%,#373BF9 45%,#2326C9 100%);font-family:Nunito,-apple-system,Segoe UI,sans-serif;text-wrap:pretty">
     <div style="max-width:1744px;width:100%;margin:0 auto;box-sizing:border-box;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,520px),1fr));gap:64px;align-items:start">
       <div>
-        <h2 style="margin: 0 0 24pt; font-family: 'Druk LCG','Druk Wide Cyr',sans-serif; font-weight: 500; font-size: 44px; line-height: 130%; color: #fff; text-transform: uppercase; width: 572px; height: 116px">Свяжитесь с&nbsp;нами</h2>
-        <p style="margin:0;font-size:clamp(16px,1.25vw,24px);line-height:1.5;color:#E8EFFF;max-width:643px">Если вас заинтересовали наши продукты, вы&nbsp;хотите обсудить сотрудничество или узнать, что мы&nbsp;можем вам предложить, оставьте свои контактные данные&nbsp;— мы&nbsp;обязательно свяжемся.</p>
+        <h2 style="margin: 0 0 24pt; font-family: 'Druk LCG','Druk Wide Cyr',sans-serif; font-weight: 500; font-size: 44px; line-height: 130%; color: #fff; text-transform: uppercase">Свяжитесь с&nbsp;нами</h2>
+        <p style="margin:0;font-size:clamp(16px,1.25vw,24px);line-height:1.5;color:#fff;max-width:643px">Если вас заинтересовали наши продукты, вы&nbsp;хотите обсудить сотрудничество или узнать, что мы&nbsp;можем вам предложить, оставьте свои контактные данные&nbsp;— мы&nbsp;обязательно свяжемся.</p>
       </div>
-      <form action="javascript:void(0)" style="display:flex;flex-direction:column;gap:16px;width:100%">
-        <input placeholder="Имя" type="text" name="name" required="" style="height:56px;padding:0 24px;border-radius:12px;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.14);backdrop-filter:blur(14.4px);color:#fff;font-size:18px;font-family:inherit;outline:none;box-sizing:border-box;width:100%" style-focus="border-color:#fff;background:rgba(255,255,255,.22)">
-        <input placeholder="Компания" type="text" name="company" style="height:56px;padding:0 24px;border-radius:12px;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.14);backdrop-filter:blur(14.4px);color:#fff;font-size:18px;font-family:inherit;outline:none;box-sizing:border-box;width:100%" style-focus="border-color:#fff;background:rgba(255,255,255,.22)">
-        <input placeholder="Почта" type="email" name="email" required="" style="height:56px;padding:0 24px;border-radius:12px;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.14);backdrop-filter:blur(14.4px);color:#fff;font-size:18px;font-family:inherit;outline:none;box-sizing:border-box;width:100%" style-focus="border-color:#fff;background:rgba(255,255,255,.22)">
-        <button type="submit" style="margin-top:8px;cursor:pointer;border:0;display:inline-flex;align-items:center;justify-content:center;height:56px;padding:0 48px;border-radius:12px;background:#fff;color:#373BF9;font-family:'Druk LCG',sans-serif;font-size:clamp(18px,1.25vw,24px);font-weight:600;letter-spacing:.02em;text-transform:uppercase;box-shadow:0 8px 24px rgba(20,24,120,.25);transition:transform .2s,box-shadow .2s" style-hover="transform:translateY(-2px);box-shadow:0 12px 32px rgba(20,24,120,.35)">отправить</button>
+      <form data-r="demo-form" novalidate="" style="display:flex;flex-direction:column;gap:16px;width:100%">
+        <label style="display:flex;flex-direction:column;gap:8px;font-size:16px;font-weight:600;line-height:1.3;color:#fff">Имя *<input type="text" name="name" autocomplete="name" placeholder="Иван" required="" style="height:56px;padding:0 20px;border-radius:12px;border:1px solid #fff;background:#fff;color:#323030;font-size:18px;font-family:inherit;outline:none;box-sizing:border-box;width:100%" style-focus="box-shadow:0 0 0 3px rgba(255,255,255,.6)"></label>
+        <label style="display:flex;flex-direction:column;gap:8px;font-size:16px;font-weight:600;line-height:1.3;color:#fff">Компания<input type="text" name="company" autocomplete="organization" placeholder="Название компании" style="height:56px;padding:0 20px;border-radius:12px;border:1px solid #fff;background:#fff;color:#323030;font-size:18px;font-family:inherit;outline:none;box-sizing:border-box;width:100%" style-focus="box-shadow:0 0 0 3px rgba(255,255,255,.6)"></label>
+        <label style="display:flex;flex-direction:column;gap:8px;font-size:16px;font-weight:600;line-height:1.3;color:#fff">Email *<input type="email" name="email" autocomplete="email" placeholder="name@company.ru" required="" style="height:56px;padding:0 20px;border-radius:12px;border:1px solid #fff;background:#fff;color:#323030;font-size:18px;font-family:inherit;outline:none;box-sizing:border-box;width:100%" style-focus="box-shadow:0 0 0 3px rgba(255,255,255,.6)"></label>
+        <label style="display:flex;flex-direction:column;gap:8px;font-size:16px;font-weight:600;line-height:1.3;color:#fff">Телефон<input type="tel" name="phone" autocomplete="tel" placeholder="+7 900 000-00-00" style="height:56px;padding:0 20px;border-radius:12px;border:1px solid #fff;background:#fff;color:#323030;font-size:18px;font-family:inherit;outline:none;box-sizing:border-box;width:100%" style-focus="box-shadow:0 0 0 3px rgba(255,255,255,.6)"></label>
+        <p data-r="err" role="alert" style="margin:0;font-size:16px;line-height:24px;color:#fff;font-weight:700"></p>
+        <p style="margin:8px 0 0;font-size:16px;line-height:24px;color:#fff">Нажимая кнопку, вы соглашаетесь с&nbsp;<a href="/sifox-site/privacy.html">политикой обработки персональных данных</a></p>
+        <button type="submit" style="cursor:pointer;border:0;display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 48px;border-radius:12px;background:#fff;color:#373BF9;font-family:'Druk LCG',sans-serif;font-size:clamp(18px,1.25vw,24px);font-weight:600;letter-spacing:.02em;text-transform:uppercase;box-shadow:0 8px 24px rgba(20,24,120,.25);transition:transform .2s,box-shadow .2s" style-hover="transform:translateY(-2px);box-shadow:0 12px 32px rgba(20,24,120,.35)">Запросить демо</button>
+        <p data-r="status" role="status" aria-live="polite" style="margin:0;font-size:18px;line-height:26px;font-weight:700;color:#fff"></p>
       </form>
     </div>
   </section>
