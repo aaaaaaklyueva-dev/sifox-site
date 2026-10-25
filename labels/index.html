@@ -1,47 +1,5 @@
 <!DOCTYPE html>
-<html><head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="../sifox-menu.js" defer></script>
-<script src="./support.js"></script>
-</head>
-<body>
-
-<x-dc>
-<helmet>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>html,body{margin:0;padding:0;background:#FFFFFF}a{color:#373BF9}a:hover{color:#697DFF}</style>
-</helmet>
-<sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
-  <dc-import name="mobile" hint-size="100%,844px"></dc-import>
-</sc-if>
-<sc-if value="{{ isTablet }}" hint-placeholder-val="{{ false }}">
-  <dc-import name="tablet" hint-size="100%,1112px"></dc-import>
-</sc-if>
-<sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
-  <dc-import name="desktop" hint-size="100%,100vh"></dc-import>
-</sc-if>
-</x-dc>
-<script type="text/x-dc" data-dc-script="" data-props="{&quot;layout&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;auto&quot;,&quot;mobile&quot;,&quot;tablet&quot;,&quot;desktop&quot;],&quot;default&quot;:&quot;auto&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Версия&quot;}}">
-class Component extends DCLogic {
-  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1707 };
-  componentDidMount() {
-    this.onResize = () => {
-      cancelAnimationFrame(this.raf);
-      this.raf = requestAnimationFrame(() => this.setState({ w: window.innerWidth }));
-    };
-    window.addEventListener('resize', this.onResize);
-  }
-  componentWillUnmount() { window.removeEventListener('resize', this.onResize); }
-  renderVals() {
-    const forced = this.props.layout ?? 'auto';
-    const w = this.state.w;
-    const mode = forced !== 'auto' ? forced : (w < 600 ? 'mobile' : w < 1200 ? 'tablet' : 'desktop');
-    return { isMobile: mode === 'mobile', isTablet: mode === 'tablet', isDesktop: mode === 'desktop' };
-  }
-}
-</script>
-
-
-<script src="../sifox-footer.js"></script>
-</body></html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Брендированные звонки (Этикетки) — Sifox</title>
+<script>(function(){var w=window.innerWidth;location.replace(w<600?'mobile.html':w<1200?'tablet.html':'desktop.html');})();</script>
+</head><body style="margin:0;background:#373BF9"></body></html>

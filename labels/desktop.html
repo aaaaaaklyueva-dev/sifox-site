@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preload" as="image" href="img/7773bfe0.webp" fetchpriority="high">
+<script src="../sifox-menu.js" defer></script>
+<script src="../support.js"></script>
+</head>
+<body>
+
+<x-dc>
+<helmet>
+<template data-x id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" sc-camel-view-box="0 0 100 100"><rect width="100" height="100" fill="#373BF9"></rect><rect x="30" y="22" width="40" height="56" rx="8" fill="#fff" opacity="0.95"></rect><rect x="36" y="34" width="28" height="6" rx="3" fill="#373BF9"></rect><rect x="36" y="46" width="20" height="5" rx="2.5" fill="#A5BDFF"></rect><rect x="36" y="56" width="24" height="5" rx="2.5" fill="#A5BDFF"></rect></svg></template>
+<style>/* Sifox webfonts. Druk Wide Cyr covers Latin + Cyrillic. */
+@font-face {
+  font-family: "Druk LCG";
+  src: url("../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/assets/fonts/DrukWideCyr.woff") format("woff"),
+       url("../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/assets/fonts/DrukWideCyr.ttf") format("truetype");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nunito";
+  src: url("../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/assets/fonts/Nunito-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 200 1000;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nunito";
+  src: url("../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/assets/fonts/Nunito-Italic-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 200 1000;
+  font-style: italic;
+  font-display: swap;
+}
+</style>
+<style>/* Sifox color tokens — exact values from the Figma palette frame. */
+:root {
+  /* Accents */
+  --accent: #373BF9;      /* primary electric blue */
+  --accent-2: #FF87CE;    /* pink */
+  --accent-3: #697DFF;    /* periwinkle */
+  --accent-4: #A5BDFF;    /* light periwinkle */
+  --accent-5: #B9D1FF;    /* pale blue */
+
+  /* Backgrounds */
+  --main: #FFFFFF;
+  --bg-soft: #E8EFFF;     /* "back ground" — info blocks */
+  --bg-message: #D1E1FF;  /* "message" — chat bubbles */
+
+  /* Text */
+  --text: #323030;        /* primary text */
+  --text-2: #74748F;      /* secondary text */
+  --text-3: #9292AD;      /* tertiary text */
+  --heading: #2E313E;     /* spec-frame display headings */
+  --label: #7F8291;       /* small labels */
+  --border-muted: #C6CADD;
+
+  /* Support */
+  --ink: #393C4B;         /* shadow base color */
+  --dark: #232323;
+  --navy: #131E55;
+  --success: #0AB290;
+  --teal: #49B1A4;
+  --badge-red: #FF3B30;
+
+  /* Semantic aliases */
+  --surface-page: var(--main);
+  --surface-block: var(--bg-soft);
+  --surface-card: var(--main);
+  --text-heading: var(--text);
+  --text-body: var(--text);
+  --text-muted: var(--text-2);
+
+  /* Gradients */
+  --grad-accent: linear-gradient(143.513deg, #92AEFF -6.09%, #373BF9 79.65%); /* @kind other */
+  --grad-accent-icon: linear-gradient(213.476deg, #7578FF 8.37%, #373BF9 110.93%); /* @kind other */
+  --grad-cover: radial-gradient(2260.994px 1275.229px at 9.19% 0.00%, #92AEFF 23.51%, #373BF9 86.70%); /* @kind other */
+  --grad-slide: linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(23.228deg, #E3E3E3 -33.35%, #FAFAFA 89.95%); /* @kind other */
+  --grad-block-tint: linear-gradient(128.755deg, #E8F0FF 17.16%, #4C5EFF 165.59%); /* @kind other */
+}
+</style>
+<style>/* Sifox type system. Display = Druk LCG Wide; body = Nunito. */
+:root {
+  --font-display: "Druk LCG", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Spec-sheet title: Druk 500 */
+  --type-title-size: 82.835px;
+  --type-title-ls: 0.05em;
+
+  /* Slide title: Druk 500 */
+  --type-slide-title-size: 62px;
+  --type-slide-title-ls: 0.02em;
+
+  /* Subtitle: Nunito 500 */
+  --type-subtitle-size: 64px;
+  --type-subtitle-lh: 72px;
+
+  /* Block heading: Druk 500 */
+  --type-block-title-size: 24px;
+  --type-block-title-lh: 32px;
+  --type-block-title-ls: 0.02em;
+
+  /* Body: Nunito 400 */
+  --type-body-size: 24px;
+  --type-body-lh: 28px;
+
+  /* Small / UI: Nunito */
+  --type-small-size: 16px;
+  --type-small-lh: 20px;
+  --type-label-ls: 0.05em;
+}
+</style>
+<style>/* Sifox shadows, radii, borders — exact values from the file. */
+:root {
+  --shadow-card: 0px 4px 10.7px 0px rgba(57,60,75,0.3);
+  --shadow-icon: 0px 7.5px 20.063px 0px rgba(57,60,75,0.3);
+  --shadow-soft: 0px 0px 16px 0px rgba(57,60,75,0.1), 0px 10px 16px 0px rgba(57,60,75,0.05);
+  --shadow-emboss: inset -2px -2px 4px 0px rgba(0,0,0,0.04), inset 0px 4px 4px 0px rgba(255,255,255,0.15);
+
+  /* Slide info blocks are square-cornered; cards inside schemes round to 12. */
+  --radius-block: 0px;
+  --radius-chip: 8px;
+  --radius-card: 12px;
+  --radius-icon: 11.25px;
+  --radius-icon-lg: 27px;
+  --radius-bankcard: 40px;
+
+  --border-hairline: 0.74px solid rgba(127,130,145,0.5); /* @kind other */
+  --connector-stroke: 1.5px;
+  --connector-color: var(--accent);
+}
+</style>
+<style>/* Minimal base — body + link colors from the palette. */
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--surface-page);
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-3); }
+</style>
+<style>/* Sifox webfonts. Druk Wide Cyr covers Latin + Cyrillic. */
+@font-face {
+  font-family: "Druk LCG";
+  src: url("../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/assets/fonts/DrukWideCyr.woff") format("woff"),
+       url("../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/assets/fonts/DrukWideCyr.ttf") format("truetype");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nunito";
+  src: url("../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/assets/fonts/Nunito-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 200 1000;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nunito";
+  src: url("../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/assets/fonts/Nunito-Italic-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 200 1000;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Sifox color tokens — exact values from the Figma palette frame. */
+:root {
+  /* Accents */
+  --accent: #373BF9;      /* primary electric blue */
+  --accent-2: #FF87CE;    /* pink */
+  --accent-3: #697DFF;    /* periwinkle */
+  --accent-4: #A5BDFF;    /* light periwinkle */
+  --accent-5: #B9D1FF;    /* pale blue */
+
+  /* Backgrounds */
+  --main: #FFFFFF;
+  --bg-soft: #E8EFFF;     /* "back ground" — info blocks */
+  --bg-message: #D1E1FF;  /* "message" — chat bubbles */
+
+  /* Text */
+  --text: #323030;        /* primary text */
+  --text-2: #74748F;      /* secondary text */
+  --text-3: #9292AD;      /* tertiary text */
+  --heading: #2E313E;     /* spec-frame display headings */
+  --label: #7F8291;       /* small labels */
+  --border-muted: #C6CADD;
+
+  /* Support */
+  --ink: #393C4B;         /* shadow base color */
+  --dark: #232323;
+  --navy: #131E55;
+  --success: #0AB290;
+  --teal: #49B1A4;
+  --badge-red: #FF3B30;
+
+  /* Semantic aliases */
+  --surface-page: var(--main);
+  --surface-block: var(--bg-soft);
+  --surface-card: var(--main);
+  --text-heading: var(--text);
+  --text-body: var(--text);
+  --text-muted: var(--text-2);
+
+  /* Gradients */
+  --grad-accent: linear-gradient(143.513deg, #92AEFF -6.09%, #373BF9 79.65%); /* @kind other */
+  --grad-accent-icon: linear-gradient(213.476deg, #7578FF 8.37%, #373BF9 110.93%); /* @kind other */
+  --grad-cover: radial-gradient(2260.994px 1275.229px at 9.19% 0.00%, #92AEFF 23.51%, #373BF9 86.70%); /* @kind other */
+  --grad-slide: linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(23.228deg, #E3E3E3 -33.35%, #FAFAFA 89.95%); /* @kind other */
+  --grad-block-tint: linear-gradient(128.755deg, #E8F0FF 17.16%, #4C5EFF 165.59%); /* @kind other */
+}
+
+/* Sifox type system. Display = Druk LCG Wide; body = Nunito. */
+:root {
+  --font-display: "Druk LCG", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Spec-sheet title: Druk 500 */
+  --type-title-size: 82.835px;
+  --type-title-ls: 0.05em;
+
+  /* Slide title: Druk 500 */
+  --type-slide-title-size: 62px;
+  --type-slide-title-ls: 0.02em;
+
+  /* Subtitle: Nunito 500 */
+  --type-subtitle-size: 64px;
+  --type-subtitle-lh: 72px;
+
+  /* Block heading: Druk 500 */
+  --type-block-title-size: 24px;
+  --type-block-title-lh: 32px;
+  --type-block-title-ls: 0.02em;
+
+  /* Body: Nunito 400 */
+  --type-body-size: 24px;
+  --type-body-lh: 28px;
+
+  /* Small / UI: Nunito */
+  --type-small-size: 16px;
+  --type-small-lh: 20px;
+  --type-label-ls: 0.05em;
+}
+
+/* Sifox shadows, radii, borders — exact values from the file. */
+:root {
+  --shadow-card: 0px 4px 10.7px 0px rgba(57,60,75,0.3);
+  --shadow-icon: 0px 7.5px 20.063px 0px rgba(57,60,75,0.3);
+  --shadow-soft: 0px 0px 16px 0px rgba(57,60,75,0.1), 0px 10px 16px 0px rgba(57,60,75,0.05);
+  --shadow-emboss: inset -2px -2px 4px 0px rgba(0,0,0,0.04), inset 0px 4px 4px 0px rgba(255,255,255,0.15);
+
+  /* Slide info blocks are square-cornered; cards inside schemes round to 12. */
+  --radius-block: 0px;
+  --radius-chip: 8px;
+  --radius-card: 12px;
+  --radius-icon: 11.25px;
+  --radius-icon-lg: 27px;
+  --radius-bankcard: 40px;
+
+  --border-hairline: 0.74px solid rgba(127,130,145,0.5); /* @kind other */
+  --connector-stroke: 1.5px;
+  --connector-color: var(--accent);
+}
+
+/* Minimal base — body + link colors from the palette. */
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--surface-page);
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-3); }
+
+/* Generated from Figma Variables. First mode = :root default.
+   FLOAT tokens are unitless — multiply by 1px in calc() where a length is needed. */
+
+:root {
+  --accent-2: rgb(55,59,249); /* @kind color */
+  --accent-4: rgb(165,189,255); /* @kind color */
+  --accent5: rgb(185,209,255); /* @kind color */
+  --accent: rgb(55,59,249); /* @kind color */
+  --assistant-main: rgb(255,255,255); /* @kind color */
+  --assistant-text-dark: rgb(35,35,35); /* @kind color */
+  --main-2: rgb(255,255,255); /* @kind color */
+  --main-3: rgb(57,60,75); /* @kind color */
+  --main: rgb(255,255,255); /* @kind color */
+  --secondary: rgb(116,116,143); /* @kind color */
+  --text-2: rgb(50,48,48); /* @kind color */
+  --text: rgb(50,48,48); /* @kind color */
+}
+
+/* No TEXT/EFFECT styles in this file. */
+
+/* Generated by fig_materialize — background/mask classes for extracted bitmaps.
+ * One rule per line; url()s are relative to this file, so it must stay
+ * next to the assets/ directory it references. */
+.fig-asset-6314ca2c11127627-a28138bc { background: url(./assets/6314ca2c11127627.png) top left / 1720px 1080px repeat; }
+.fig-asset-809afe28d47dd07b { background: url(./assets/809afe28d47dd07b.jpg) center / cover no-repeat; }
+
+</style>
+<script src="../_ds/sifox-design-system-82f93a75-f22d-4fa6-8b94-2a56e55bb27b/_ds_bundle.js"></script>
+<title>Брендированные звонки (Этикетки) — Sifox</title>
+<meta name="description" content="Имя компании, логотип и цель звонка на экране абонента. Через VoLTE без приложений или через SDK в мобильном приложении.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Брендированные звонки (Этикетки) — Sifox">
+<meta property="og:description" content="Имя компании, логотип и цель звонка на экране абонента. Через VoLTE без приложений или через SDK в мобильном приложении.">
+<meta property="og:image" content="https://aaaaaaklyueva-dev.github.io/sifox-site/labels/img/og.jpg">
+<script src="js/nbsp.js"></script>
+<script src="js/demo-modal.js"></script>
+<style>
+  body { margin: 0; background: #FFFFFF; font-family: "Nunito", sans-serif; color: #323030; overflow-x: hidden; }
+  a { color: #373BF9; text-decoration: none; }
+  a:hover { color: #697DFF; }
+  @keyframes fl { 0% { transform: translateY(0) } 50% { transform: translateY(-18px) } 100% { transform: translateY(0) } }
+  @keyframes blobA { 0% { transform: translate3d(0,0,0) scale(1) } 33% { transform: translate3d(220px,-120px,0) scale(1.18) } 66% { transform: translate3d(-140px,140px,0) scale(.92) } 100% { transform: translate3d(0,0,0) scale(1) } }
+  @keyframes blobB { 0% { transform: translate3d(0,0,0) scale(1) } 40% { transform: translate3d(-260px,160px,0) scale(1.22) } 75% { transform: translate3d(180px,-90px,0) scale(.9) } 100% { transform: translate3d(0,0,0) scale(1) } }
+  @keyframes blobC { 0% { transform: translate3d(0,0,0) scale(1.05) } 50% { transform: translate3d(140px,200px,0) scale(.88) } 100% { transform: translate3d(0,0,0) scale(1.05) } }
+  @keyframes arrowGrow {
+    0% { clip-path: inset(0 100% 0 0) }
+    55% { clip-path: inset(0 0 0 0) }
+    88% { clip-path: inset(0 0 0 0) }
+    100% { clip-path: inset(0 100% 0 0) }
+  }
+  @keyframes ringGlow {
+    0%, 46%, 100% { opacity: 0 }
+    6% { opacity: .95 }
+    16% { opacity: .15 }
+    24% { opacity: .9 }
+    38% { opacity: 0 }
+  }
+  @keyframes ringWave {
+    0% { transform: translate(-50%, -50%) scale(.35); opacity: .55 }
+    70% { transform: translate(-50%, -50%) scale(1.6); opacity: 0 }
+    100% { transform: translate(-50%, -50%) scale(1.6); opacity: 0 }
+  }
+  @keyframes ringShake {
+    0%, 44%, 100% { transform: rotate(0deg) }
+    4% { transform: rotate(.5deg) }
+    8% { transform: rotate(-.5deg) }
+    12% { transform: rotate(.35deg) }
+    16% { transform: rotate(-.35deg) }
+    20% { transform: rotate(.2deg) }
+    26% { transform: rotate(0deg) }
+  }
+</style>
+<style>[data-demo] input::placeholder{color:#5A5A6E;opacity:1}</style>
+</helmet>
+
+<div data-stage="" style="position:relative; width:100%; overflow:hidden">
+<div data-canvas="" style="position:relative; width:1707px; height:7559px; transform-origin:0 0">
+
+  <section data-screen-label="Этикетки" style="position:relative; width:1707px; height:1237px; overflow:hidden; background:#FFFFFF">
+    <div style="position:absolute; left:64px; top:150px; width:970.2px; display:flex; flex-direction:column; gap:20px; align-items:flex-start">
+      <h1 data-fade="0" style="margin:0; font-family:var(--font-display); font-weight:700; font-size:111.6px; line-height:100%; color:rgb(0,0,0); text-transform:uppercase; white-space:nowrap">ЭТИКЕТКИ</h1>
+      <div data-fade="1" style="display:flex; flex-direction:column; gap:8px">
+        <span style="font-family:var(--font-display); font-weight:500; font-size:21.6px; line-height:28.215px; letter-spacing:0.02em; color:#5A5A6E; text-transform:uppercase; white-space:nowrap">АБОНЕНТ САМ РЕШАЕТ, КОМУ ОТВЕЧАТЬ.</span>
+        <span style="font-family:'Nunito',sans-serif; font-weight:500; font-size:24px; line-height:32px; color:#5A5A6E">Имя компании, логотип и цель звонка — прямо на экране входящего вызова.</span>
+      </div>
+    </div>
+    <div data-fade="2" style="position:absolute; left:64px; top:397px; width:1579px; height:640px; overflow:hidden; background:#FFFFFF">
+      <div data-hero-img="" style="position:absolute; inset:0; background:url(&quot;img/7773bfe0.webp&quot;) center 56% / cover no-repeat"></div>
+    </div>
+  </section>
+
+  <section data-screen-label="Преимущества" style="position:relative; width:1707px; height:885px; overflow:hidden; background:#FFFFFF; box-sizing:border-box; padding:50px 64px 200px 64px; display:flex; flex-direction:column; gap:44px; align-items:flex-start">
+    <h2 data-reveal="" style="margin:0; width:1579px; font-family:var(--font-display); font-weight:700; font-size:48px; line-height:100%; color:rgb(50,48,48); text-transform:uppercase">преимущества категоризации звонков</h2>
+    <div style="position:relative; height:463px; display:flex; flex-direction:row; gap:32px; align-items:flex-start">
+
+      <div data-reveal="" style="position:relative; width:699px; height:463px; overflow:hidden; background:#FFFFFF; flex-shrink:0">
+        <div style="position:absolute; inset:0; background:url(&quot;img/57d08fc4.webp&quot;) center / cover no-repeat"></div>
+        <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0) 32%), linear-gradient(0deg, rgba(4,16,43,0.85) 0%, rgba(4,16,43,0.45) 32%, rgba(4,16,43,0) 58%)"></div>
+        <span style="position:absolute; left:26.828px; top:37px; width:398px; font-family:'Nunito',sans-serif; font-weight:700; font-size:32px; line-height:38px; color:#FFFFFF">Актуально для пользователей и бизнеса</span>
+        <div style="position:absolute; left:26.657px; bottom:24px; width:290px; display:flex; flex-direction:column; gap:8px; align-items:flex-start">
+          <div style="display:flex; flex-direction:row; gap:16px; align-items:center">
+            <span style="font-family:var(--font-display); font-weight:700; font-size:43.4797px; line-height:51.632px; color:#FFFFFF; white-space:nowrap">+20%<sup style="font-size:0.5em">*</sup></span>
+            <img loading="lazy" decoding="async" src="img/0e6a9a88.svg" alt="Стрелка роста" style="width:75px; height:65px; animation:arrowGrow 3s ease-in-out 1 both">
+          </div>
+          <span style="font-family:'Nunito',sans-serif; font-weight:700; font-size:28px; line-height:34px; color:#FFFFFF">Пользователи чаще и&nbsp;охотнее отвечают на звонки</span>
+          <span style="font-family:'Nunito',sans-serif; font-weight:500; font-size:16px; line-height:24px; color:#FFFFFF">* Источник: [плейсхолдер]</span>
+        </div>
+      </div>
+
+      <div data-reveal="" style="position:relative; width:424px; height:463px; overflow:hidden; background:rgba(191,199,255,0.5); flex-shrink:0">
+        <div data-float="1" style="position:absolute; left:0; top:0; width:195.469px; height:267.364px; transform:matrix(0.460,0.888,-0.888,0.460,135.183,-81); transform-origin:0 0; background:url(&quot;img/3bdf4808.webp&quot;) center / contain no-repeat"></div>
+        <div data-float="2" style="position:absolute; left:0; top:0; width:84.563px; height:115.667px; transform:matrix(-0.902,0.432,-0.432,-0.902,424.096,346.291); transform-origin:0 0; background:url(&quot;img/3bdf4808.webp&quot;) center / contain no-repeat"></div>
+        <span style="position:absolute; left:30.828px; top:316px; width:372px; font-family:'Nunito',sans-serif; font-weight:700; font-size:32px; line-height:38px; color:rgb(50,48,48)">Не&nbsp;требует дополнительных приложений</span>
+      </div>
+
+      <div data-reveal="" style="position:relative; width:392px; height:463px; overflow:hidden; background:rgba(105,125,255,0.5); flex-shrink:0">
+        <div style="position:absolute; left:-458.343px; top:-200px; width:1232px; height:1064px; background:url(&quot;img/2c7e6a28.webp&quot;) center / cover no-repeat"></div>
+        <div style="position:absolute; left:-20.343px; top:197px; width:432px; height:290px; background:linear-gradient(180.363deg, rgba(0,0,0,0) 21.65%, rgb(4,16,43) 95.72%)"></div>
+        <span style="position:absolute; left:26px; top:404px; width:340px; font-family:'Nunito',sans-serif; font-weight:700; font-size:32px; line-height:24px; color:#FFFFFF; white-space:nowrap">Защита от спама</span>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Технологии" style="position: relative; width: 1707px; overflow: hidden; background: url(&quot;img/177b2492.webp&quot;) center / cover no-repeat, radial-gradient(2412px 2642px at 9.19% 0%, rgb(146,174,255) 20.42%, rgb(55,59,249) 55.67%); box-sizing: border-box; padding: 150px 64px 200px 64px">
+    <div style="position:absolute; left:-8%; top:-14%; width:1100px; height:1100px; border-radius:50%; background:radial-gradient(circle, rgba(169,190,255,0.85) 0%, rgba(146,174,255,0) 62%); filter:blur(60px); pointer-events:none; animation:blobA 12s ease-in-out infinite"></div>
+    <div style="position:absolute; right:-12%; top:18%; width:1000px; height:1000px; border-radius:50%; background:radial-gradient(circle, rgba(20,26,90,0.75) 0%, rgba(20,26,90,0) 64%); filter:blur(70px); pointer-events:none; animation:blobB 15s ease-in-out infinite"></div>
+    <div style="position:absolute; left:24%; bottom:-22%; width:1200px; height:1000px; border-radius:50%; background:radial-gradient(circle, rgba(55,59,249,0.9) 0%, rgba(55,59,249,0) 66%); filter:blur(80px); pointer-events:none; animation:blobC 13.5s ease-in-out infinite"></div>
+    <div style="position:relative; width:1579px; display:flex; flex-direction:column; gap:64px; align-items:flex-start">
+      <h2 data-reveal="" style="margin:0; font-family:var(--font-display); font-weight:700; font-size:48px; line-height:100%; color:rgb(240,241,246); text-transform:uppercase; white-space:nowrap">Технологии</h2>
+      <div style="display:flex; flex-direction:column; gap:44px; align-items:flex-start; align-self:stretch">
+
+        <div data-reveal="" style="position:relative; height:756px; overflow:hidden; border-radius:28px; background:rgba(255,255,255,0.2); backdrop-filter:blur(7.6px); box-shadow:0px 0px 6.8px 0px rgba(0,0,0,0.1), 0px 4px 16px 0px rgba(57,60,75,0.15); align-self:stretch; flex-shrink:0">
+          <div style="position:absolute; left:40px; top:44px; width:671px; display:flex; flex-direction:column; gap:24px; align-items:flex-start">
+            <div style="display:flex; flex-direction:column; gap:12px; align-items:flex-start; width:671px">
+              <h3 style="margin:0; font-family:var(--font-display); font-weight:700; font-size:48px; line-height:1.3; color:#FFFFFF; text-transform:uppercase">VoLTE</h3>
+              <span style="font-family:'Nunito',sans-serif; font-weight:500; font-size:24px; line-height:28px; color:#FFFFFF">Работает на 80% устройств при звонках через VoLTE, не&nbsp;требует установки приложений и&nbsp;предоставления дополнительных разрешений. Поддерживает кириллицу, эмодзи и другие символы — в&nbsp;зависимости от&nbsp;возможностей устройства.</span>
+            </div>
+            <span style="font-family:var(--font-display); font-weight:500; font-size:20px; line-height:100%; color:#FFFFFF; text-transform:uppercase; white-space:nowrap">Возможность передачи любого текста: </span>
+            <div style="display:flex; flex-direction:row; gap:15px; align-items:center; width:545.561px">
+              <div style="display:flex; flex-direction:row; gap:17.951px; align-items:center; width:276px">
+                <div style="width:44.878px; height:44.878px; flex-shrink:0; background:url(&quot;img/21b393d6.webp&quot;) center / cover no-repeat"></div>
+                <span style="width:135.756px; font-family:'Nunito',sans-serif; font-weight:700; font-size:24px; line-height:24px; color:rgb(246,247,251)">Unicode</span>
+              </div>
+              <div style="display:flex; flex-direction:row; gap:17.951px; align-items:center; width:254.561px">
+                <span style="width:47px; font-family:'Helvetica',sans-serif; font-weight:400; font-size:40.39px; text-align:center; line-height:100%; color:rgb(246,247,251)">🙂</span>
+                <span style="width:189.61px; font-family:'Nunito',sans-serif; font-weight:700; font-size:24px; line-height:24px; color:rgb(246,247,251)">Emoji</span>
+              </div>
+            </div>
+          </div>
+          <span style="position: absolute; left: 40px; top: 623.029px; width: 696.5px; font-family: var(--font-display); font-weight: 700; font-size: 24px; line-height: 130%; color: #FFFFFF; text-transform: uppercase">Решение устанавливается исключительно в сети оператора.</span>
+          <img loading="lazy" decoding="async" src="img/e9d7b292.webp" alt="Экран входящего звонка с целью «Работа»" style="position:absolute; left:903px; top:44.2px; width:600px; height:704px; object-fit:cover; object-position:top">
+        </div>
+
+        <div style="position:relative; height:756px; overflow:hidden; border-radius:28px; background:rgba(255,255,255,0.2); backdrop-filter:blur(7.6px); box-shadow:0px 0px 6.8px 0px rgba(0,0,0,0.1), 0px 4px 16px 0px rgba(57,60,75,0.15); align-self:stretch; flex-shrink:0">
+          <img loading="lazy" decoding="async" src="img/7e5354d8.webp" alt="Экран входящего звонка от курьера с подтверждённым номером" style="position:absolute; left:60px; top:52.2px; width:600px; height:704px; object-fit:cover; object-position:top">
+          <div style="position:absolute; left:724px; top:110.029px; width:716px; display:flex; flex-direction:column; gap:40px; align-items:flex-start">
+            <div style="display:flex; flex-direction:column; gap:12px; align-items:flex-start; align-self:stretch">
+              <h3 style="margin:0; font-family:var(--font-display); font-weight:700; font-size:48px; line-height:1.3; color:#FFFFFF; text-transform:uppercase">SDK для&nbsp;мобильного приложения</h3>
+              <span style="font-family:'Nunito',sans-serif; font-weight:400; font-size:24px; line-height:28px; color:#FFFFFF">Решение встраивается в&nbsp;мобильное приложение, интегрируется с внутренними базами данных и становится доступным на&nbsp;всех устройствах, на&nbsp;которых установлено приложение.</span>
+            </div>
+            <div style="position:relative; display:flex; flex-direction:column; gap:12px; align-items:flex-start; align-self:stretch">
+              <div style="position:relative; width:74.123px; height:54.191px; flex-shrink:0">
+                <div data-float="3" style="position:absolute; left:0; top:0; width:54.191px; height:74.123px; transform:matrix(0.016,1.000,-1.000,0.016,74.113,0); transform-origin:0 0; background:url(&quot;img/3bdf4808.webp&quot;) center / contain no-repeat"></div>
+              </div>
+              <span style="font-family:'Nunito',sans-serif; font-weight:400; font-size:24px; line-height:28px; color:#FFFFFF">Продукт может создавать ценность для&nbsp;банков, телеком-операторов, маркетплейсов и других компаний с&nbsp;высокой долей пользователей мобильного приложения.</span>
+            </div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Для обычных пользователей" style="position: relative; overflow: hidden; background: #FFFFFF; box-sizing: border-box; padding: 150px 64px 82px 64px; display: flex; flex-direction: row; gap: 37px; justify-content: flex-end; align-items: flex-start; padding-bottom: 200px; width: 1707px">
+    <div style="position:relative; width:1579px; height:1157px; display:flex; flex-direction:column; gap:64px; align-items:flex-start; flex-shrink:0">
+      <h2 data-reveal="" style="margin:0; width:1579px; font-family:var(--font-display); font-weight:700; font-size:48px; line-height:100%; color:rgb(50,48,48); text-transform:uppercase">для&nbsp;обычных пользователей</h2>
+      <div style="position:relative; height:965px; align-self:stretch; flex-shrink:0">
+        <div data-reveal="" style="position:absolute; left:0; top:0.029px; width:767.5px; height:965px; overflow:hidden; border-radius:28px; background:rgb(232,239,255); box-shadow:0px 0px 6.8px 0px rgba(0,0,0,0.1), 0px 4px 16px 0px rgba(57,60,75,0.15); box-sizing:border-box; padding:44px 40px; display:flex; flex-direction:column; gap:113px; align-items:flex-start">
+          <div style="display:flex; flex-direction:column; gap:32px; align-items:flex-start; align-self:stretch; flex-shrink:0">
+            <h3 style="margin:0; font-family:var(--font-display); font-weight:700; font-size:44px; line-height:50px; color:rgb(50,48,48); text-transform:uppercase; align-self:stretch">Пассивная защита от&nbsp;спама</h3>
+            <span style="width:687px; font-family:'Nunito',sans-serif; font-weight:400; font-size:24px; line-height:28px; color:#5A5A6E; white-space:pre-line">Помогает защитить клиента от нежелательных и подозрительных звонков, не&nbsp;блокируя вызов.
+
+Подходит пользователям, которые не хотят блокировать все&nbsp;подозрительные номера.  </span>
+          </div>
+          <img loading="lazy" decoding="async" src="img/6cd9d104.webp" alt="Экран входящего звонка с меткой «Спам: социологический опрос»" style="position:absolute; left:40px; bottom:0; width:693px; height:471px; object-fit:cover; object-position:top">
+        </div>
+        <div data-reveal="" style="position:absolute; left:811.5px; top:0; width:767.5px; height:965px; overflow:hidden; border-radius:28px; background:rgb(232,239,255); box-shadow:0px 0px 6.8px 0px rgba(0,0,0,0.1), 0px 4px 16px 0px rgba(57,60,75,0.15)">
+          <div style="position:absolute; left:39.5px; top:44.029px; width:699px; display:flex; flex-direction:column; gap:12px; align-items:flex-start">
+            <h3 style="margin:0; font-family:var(--font-display); font-weight:700; font-size:44px; line-height:100%; color:rgb(50,48,48); text-transform:uppercase">Подписанные звонки</h3>
+            <span style="width:661px; font-family:'Nunito',sans-serif; font-weight:400; font-size:24px; line-height:28px; color:#5A5A6E">Когда&nbsp;звонки подписаны и&nbsp;ясно, кто&nbsp;звонит, пользователям легче не&nbsp;пропустить важный звонок и&nbsp;не&nbsp;ответить на&nbsp;потенциально неприятный звонок, который не относится к категории спама или&nbsp;мошенничества.</span>
+          </div>
+          <img loading="lazy" decoding="async" src="img/9fff2b40.webp" alt="Экран входящего звонка: «Банк X», курьер, доставка карты" style="position:absolute; left:42.5px; top:360.2px; width:693px; height:655px; object-fit:cover; object-position:top">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Для бизнеса" style="position:relative; width:1707px; height:1236px; overflow:hidden; background:#FFFFFF">
+    <div style="position:absolute; left:64px; top:50px; width:1579px; display:flex; flex-direction:column; gap:32px; align-items:flex-start">
+      <div style="display:flex; flex-direction:row; justify-content:space-between; align-items:flex-end; align-self:stretch; height:186px">
+        <div style="width:704px; height:186px; display:flex; flex-direction:column; gap:24px; align-items:flex-start; flex-shrink:0">
+          <h2 data-reveal="" style="margin:0; width:704px; font-family:var(--font-display); font-weight:700; font-size:48px; line-height:100%; color:rgb(50,48,48); text-transform:uppercase">для бизнеса</h2>
+          <span data-reveal="" style="align-self:stretch; font-family:'Nunito',sans-serif; font-weight:400; font-size:24px; line-height:28px; color:rgb(50,48,48)">Бизнес получает возможность идентифицировать свои звонки, повысить доверие пользователей и увеличить конверсию в ответ.</span>
+        </div>
+        <div style="width:530px; height:80px; display:flex; flex-direction:row; gap:35px; align-items:center; flex-shrink:0">
+          <div style="width:249px; height:80px; display:flex; flex-direction:row; gap:12px; align-items:center; flex-shrink:0">
+            <svg data-float="4" width="80" height="80" sc-camel-view-box="0 0 80 80" style="flex-shrink:0"><path d="M 40 0 L 43.954 25.242 L 60 5.359 L 50.804 29.196 L 74.641 20 L 54.758 36.046 L 80 40 L 54.758 43.954 L 74.641 60 L 50.804 50.804 L 60 74.641 L 43.954 54.758 L 40 80 L 36.046 54.758 L 20 74.641 L 29.196 50.804 L 5.359 60 L 25.242 43.954 L 0 40 L 25.242 36.046 L 5.359 20 L 29.196 29.196 L 20 5.359 L 36.046 25.242 L 40 0 Z" fill="rgb(55,59,249)"></path></svg>
+            <span style="font-family:var(--font-display); font-weight:500; font-size:50.868px; line-height:100%; color:rgb(50,48,48); white-space:nowrap">B2C</span>
+          </div>
+          <div data-reveal="" data-reveal-delay="1" style="width:246px; height:80px; display:flex; flex-direction:row; gap:12px; align-items:center; flex-shrink:0">
+            <svg width="80" height="80" sc-camel-view-box="0 0 80 80" style="flex-shrink:0"><path d="M 40 0 L 44.721 25.469 L 63.511 7.639 L 52.361 31.019 L 78.042 27.639 L 55.279 40 L 78.042 52.361 L 52.361 48.981 L 63.511 72.361 L 44.721 54.531 L 40 80 L 35.279 54.531 L 16.489 72.361 L 27.639 48.981 L 1.958 52.361 L 24.721 40 L 1.958 27.639 L 27.639 31.019 L 16.489 7.639 L 35.279 25.469 L 40 0 Z" fill="rgb(55,59,249)"></path></svg>
+            <span style="font-family:var(--font-display); font-weight:500; font-size:50.868px; line-height:100%; color:rgb(50,48,48); white-space:nowrap">B2B</span>
+          </div>
+        </div>
+      </div>
+      <div style="height:768px; display:flex; flex-direction:row; gap:52px; align-items:flex-end; align-self:stretch">
+        <div style="width:738px; height:768px; display:flex; flex-direction:column; flex-shrink:0">
+          <div data-reveal="" style="flex:1 1 0; min-height:0; background:#FFFFFF; border:1px solid rgb(0,0,0); display:flex; flex-direction:row; gap:24px; padding:24px 12px 24px 40px; align-items:flex-start; box-sizing:border-box">
+            <span style="flex-shrink:0; font-family:var(--font-display); font-weight:700; font-size:60px; line-height:100%; color:rgb(50,48,48); text-transform:uppercase">97%<sup style="font-size:0.5em">*</sup></span>
+            <div style="flex:1 1 0; min-width:0; display:flex; flex-direction:column; gap:12px; padding:8px 0; align-items:flex-start; box-sizing:border-box; flex-shrink:0">
+              <span style="align-self: stretch; font-family: var(--font-display); font-weight: 700; font-size: 20px; line-height: 110%; color: rgb(55,59,249); text-transform: uppercase">компаний готовы доплачивать за брендированный звонок</span>
+              <span style="align-self: stretch; font-family: 'Nunito',sans-serif; font-weight: 400; font-size: 16px; line-height: 130%; color: rgb(50,48,48)">Подпись номера повышает вероятность ответа, сокращает количество повторных дозвонов и делает каждый исходящий звонок эффективнее. </span>
+            </div>
+          </div>
+          <div data-reveal="" style="flex:1 1 0; min-height:0; margin-top:-1px; background:#FFFFFF; border:1px solid rgb(0,0,0); display:flex; flex-direction:row; gap:24px; padding:24px 12px 24px 40px; align-items:flex-start; box-sizing:border-box">
+            <span style="flex-shrink:0; font-family:var(--font-display); font-weight:700; font-size:60px; line-height:100%; color:rgb(50,48,48); text-transform:uppercase">60%<sup style="font-size:0.5em">*</sup></span>
+            <div style="flex:1 1 0; min-width:0; display:flex; flex-direction:column; gap:12px; padding:8px 0; align-items:flex-start; box-sizing:border-box; flex-shrink:0">
+              <span style="align-self: stretch; font-family: var(--font-display); font-weight: 700; font-size: 20px; line-height: 110%; color: rgb(55,59,249); text-transform: uppercase">подписанных вызовов принимают уже с первой попытки</span>
+              <span style="align-self: stretch; font-family: 'Nunito',sans-serif; font-weight: 400; font-size: 16px; line-height: 130%; color: rgb(50,48,48)">Подписанный звонок заметно повышает шанс сразу установить контакт — против примерно 15–20% у неизвестного номера.</span>
+            </div>
+          </div>
+          <div data-reveal="" style="flex:1 1 0; min-height:0; margin-top:-1px; background:#FFFFFF; border:1px solid rgb(0,0,0); display:flex; flex-direction:row; gap:24px; padding:24px 12px 24px 40px; align-items:flex-start; box-sizing:border-box">
+            <span style="flex-shrink:0; font-family:var(--font-display); font-weight:700; font-size:60px; line-height:100%; color:rgb(50,48,48); text-transform:uppercase">15%<sup style="font-size:0.5em">*</sup></span>
+            <div style="flex:1 1 0; min-width:0; display:flex; flex-direction:column; gap:12px; padding:8px 0; align-items:flex-start; box-sizing:border-box; flex-shrink:0">
+              <span style="align-self: stretch; font-family: var(--font-display); font-weight: 700; font-size: 20px; line-height: 110%; color: rgb(55,59,249); text-transform: uppercase">меньше затрат на обзвон</span>
+              <span style="align-self: stretch; font-family: 'Nunito',sans-serif; font-weight: 400; font-size: 16px; line-height: 130%; color: rgb(50,48,48)">Подписанные звонки чаще получают ответ, поэтому бизнес тратит меньше попыток и ресурсов на один успешный контакт.</span>
+            </div>
+          </div>
+          <span style="flex:none; margin-top:16px; font-family:'Nunito',sans-serif; font-weight:500; font-size:16px; line-height:24px; color:#5A5A6E">* Источник: [плейсхолдер]</span>
+        </div>
+        <div data-reveal="" style="position:relative; width:789px; height:768px; overflow:hidden; border-radius:28px; background:rgb(232,239,255); flex-shrink:0">
+          <div style="position:absolute; left:-431px; top:-153px; width:1881px; height:1410px; background:url(&quot;img/c6ec0713.webp&quot;) center / cover no-repeat"></div>
+          <div style="position:absolute; left:29px; top:546px; width:247px; height:199px; display:flex; flex-direction:column; gap:20px; justify-content:center; align-items:flex-start">
+            <div data-reveal="" data-reveal-delay="0.9" style="height:53px; overflow:hidden; border-radius:12px; background:#FFFFFF; display:flex; gap:10px; padding:12px 20px; justify-content:center; align-items:center; box-sizing:border-box">
+              <span style="font-family:var(--font-display); font-weight:500; font-size:24px; line-height:100%; color:rgb(55,59,249); white-space:nowrap">Эмодзи</span>
+            </div>
+            <div data-reveal="" data-reveal-delay="1.4" style="height:53px; overflow:hidden; border-radius:12px; background:#FFFFFF; display:flex; gap:10px; padding:12px 20px; justify-content:center; align-items:center; box-sizing:border-box">
+              <span style="font-family:var(--font-display); font-weight:500; font-size:24px; line-height:100%; color:rgb(55,59,249); white-space:nowrap">Логотип</span>
+            </div>
+            <div data-reveal="" data-reveal-delay="1.9" style="height:53px; overflow:hidden; border-radius:12px; background:#FFFFFF; display:flex; gap:10px; padding:12px 20px; justify-content:center; align-items:center; box-sizing:border-box">
+              <span style="font-family:var(--font-display); font-weight:500; font-size:24px; line-height:100%; color:rgb(55,59,249); white-space:nowrap">Тема звонка</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Демо" data-demo="" style="position:relative; width:1707px; overflow:hidden; box-sizing:border-box; padding:120px 64px; display:flex; flex-direction:column; align-items:flex-start; gap:24px; background:radial-gradient(120% 170% at 78% 10%, #92AEFF 0%, #697DFF 38%, #373BF9 100%)">
+        <h2 data-reveal="" style="margin:0; font-family:var(--font-display); font-weight:700; font-size:48px; line-height:100%; color:#FFFFFF; text-transform:uppercase">демо</h2>
+        <p data-reveal="" style="margin:0; max-width:560px; font-family:'Nunito',sans-serif; font-weight:500; font-size:20px; line-height:28px; color:#FFFFFF">Покажем, как брендированные звонки выглядят на экране абонента, и обсудим подключение в вашей сети.</p>
+        <button type="button" data-demo-open="" aria-haspopup="dialog" style="margin-top:8px; cursor:pointer; border:0; display:flex; align-items:center; justify-content:center; min-height:56px; padding:0 48px; border-radius:12px; background:#fff; color:#373BF9; font-family:var(--font-display); font-weight:700; font-size:24px; letter-spacing:.02em; text-transform:uppercase; box-shadow:0 8px 24px rgba(20,24,120,.25); transition:transform .2s, box-shadow .2s" style-hover="transform:translateY(-2px);box-shadow:0 12px 32px rgba(20,24,120,.35)">Запросить демо</button>
+  </section>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;animate&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Движение&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    this.animate = this.props.animate !== false;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) this.animate = false;
+    this.safety = setInterval(() => {
+      document.querySelectorAll('[data-reveal],[data-fade]').forEach(el => {
+        if (el.style.opacity === '1' || el.style.opacity === '') return;
+        const r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight && r.bottom > 0) {
+          el.__seen = el.__seen || Date.now();
+          if (Date.now() - el.__seen > 3000) { el.style.opacity = '1'; el.style.transform = 'none'; }
+        }
+      });
+    }, 1000);
+    this.fit = this.fit.bind(this);
+    this.onScroll = this.onScroll.bind(this);
+    window.addEventListener('resize', this.fit);
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.fit();
+    [150, 600, 1500, 3000].forEach(t => setTimeout(() => { this.fit(); this.scan(); }, t));
+    this.scan();
+    this.intro();
+  }
+  componentWillUnmount() {
+    clearInterval(this.safety);
+    window.removeEventListener('resize', this.fit);
+    window.removeEventListener('scroll', this.onScroll);
+    if (this.io) this.io.disconnect();
+  }
+  fit() {
+    const canvas = document.querySelector('[data-canvas]');
+    const stage = document.querySelector('[data-stage]');
+    if (!canvas || !stage) return;
+    const W = 1707;
+    const s = stage.clientWidth / W;
+    canvas.style.transform = 'scale(' + s + ')';
+    let h = 0;
+    canvas.querySelectorAll(':scope > section').forEach(sec => { h += sec.offsetHeight; });
+    if (h) canvas.style.height = h + 'px';
+    stage.style.height = (h * s) + 'px';
+  }
+  intro() {
+    if (!this.animate) return;
+    document.querySelectorAll('[data-fade]').forEach(el => {
+      const i = parseInt(el.getAttribute('data-fade'), 10) || 0;
+      el.style.opacity = '0';
+      el.style.transform = 'translateX(80px)';
+      el.style.transition = 'opacity 800ms cubic-bezier(.16,.84,.44,1) ' + (100 + i * 140) + 'ms, transform 900ms cubic-bezier(.16,.84,.44,1) ' + (100 + i * 140) + 'ms';
+      requestAnimationFrame(() => requestAnimationFrame(() => { el.style.opacity = '1'; el.style.transform = 'none'; }));
+    });
+  }
+  scan() {
+    if (!this.animate) return;
+    if (!this.io) {
+      this.io = new IntersectionObserver(es => {
+        es.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.style.opacity = '1';
+            e.target.style.transform = 'none';
+            this.io.unobserve(e.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+    }
+    document.querySelectorAll('[data-reveal]').forEach(el => {
+      if (!el.hasAttribute('data-rv')) {
+        el.setAttribute('data-rv', '1');
+        el.style.opacity = '0';
+        el.style.transform = 'translateX(100px)';
+        const dl = parseFloat(el.getAttribute('data-reveal-delay')) || 0;
+        el.style.transition = 'opacity 800ms cubic-bezier(.16,.84,.44,1) ' + (dl * 1000) + 'ms, transform 950ms cubic-bezier(.16,.84,.44,1) ' + (dl * 1000) + 'ms';
+      }
+      if (el.style.opacity === '1') return;
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight && r.bottom > 0) {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      } else {
+        this.io.observe(el);
+      }
+    });
+    if (!this.vio) {
+      this.vio = new IntersectionObserver(es => {
+        es.forEach(e => {
+          const a = e.target.__fl;
+          if (a) { e.isIntersecting ? a.play() : a.pause(); }
+          e.target.style.animationPlayState = e.isIntersecting ? 'running' : 'paused';
+          e.target.querySelectorAll('[style*="animation"]').forEach(k => { k.style.animationPlayState = e.isIntersecting ? 'running' : 'paused'; });
+        });
+      }, { rootMargin: '200px 0px' });
+    }
+    document.querySelectorAll('[data-float]:not([data-fl])').forEach(el => {
+      el.setAttribute('data-fl', '1');
+      const base = el.style.transform;
+      const i = parseInt(el.getAttribute('data-float'), 10) || 0;
+      el.style.transform = base;
+      el.__fl = el.animate(
+        [{ transform: base + ' translateY(0px)' },
+         { transform: base + ' translateY(-16px)' },
+         { transform: base + ' translateY(0px)' }],
+        { duration: 6000 + i * 900, iterations: Infinity, easing: 'ease-in-out', delay: i * 400 }
+      );
+      this.vio.observe(el);
+    });
+    document.querySelectorAll('section').forEach(sec => {
+      if (sec.hasAttribute('data-vio')) return;
+      sec.setAttribute('data-vio', '1');
+      this.vio.observe(sec);
+    });
+  }
+  onScroll() {
+    if (!this.animate || this.rafPending) return;
+    this.rafPending = true;
+    requestAnimationFrame(() => {
+      this.rafPending = false;
+      this.scan();
+      const img = document.querySelector('[data-hero-img]');
+      if (img) {
+        const p = Math.min(1, Math.max(0, window.scrollY / 900));
+        img.style.transform = 'scale(' + (1 + p * 0.06) + ')';
+      }
+    });
+  }
+}
+</script>
+
+
+
+<script src="../sifox-footer.js"></script>
+</body></html>

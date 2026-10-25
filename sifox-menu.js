@@ -23,6 +23,7 @@
   var abs = function (h) { return /^(https?:|mailto:|tel:|#)/.test(h) ? h : new URL(h, BASE).href; };
   var norm = function (u) { return new URL(u, location.href).pathname.replace(/index\.html$/, '').replace(/\.html$/, '').replace(/\/$/, ''); };
   var here = norm(location.href);
+  var isOn = function (u) { var n = norm(u), root = norm(abs('index.html')); return n === here || (n !== root && here.indexOf(n + '/') === 0); };
 
   var fonts = document.createElement('style');
   fonts.textContent =
@@ -67,7 +68,7 @@
   var BURGER = '<svg width="18" height="18" viewBox="0 0 22 22"><path d="M3 7h16M3 15h16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>';
   var CLOSE = '<svg width="18" height="18" viewBox="0 0 22 22"><path d="M5 5l12 12M17 5L5 17" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>';
 
-  var link = function (l) { var u = abs(l.href); return '<a href="' + u + '"' + (norm(u) === here ? ' class="on" aria-current="page"' : '') + '>' + l.label + '</a>'; };
+  var link = function (l) { var u = abs(l.href); return '<a href="' + u + '"' + (isOn(u) ? ' class="on" aria-current="page"' : '') + '>' + l.label + '</a>'; };
 
   class SifoxMenu extends HTMLElement {
     connectedCallback() {
