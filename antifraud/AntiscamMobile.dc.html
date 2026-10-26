@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,6 +19,7 @@
 <link rel="stylesheet" href="ds/styles.css">
 <script src="ds/ds-bundle.js"></script>
 <style>
+  input::placeholder { color: #5A5A6E; opacity: 1; }
   html, body { margin: 0; padding: 0; background: #F2F4FA; }
   body { font-family: var(--font-body); color: #323030; -webkit-font-smoothing: antialiased; }
   a { color: #373BF9; text-decoration: none; }
@@ -35,22 +36,25 @@
 
   <section style="position: relative; min-height: 780px; padding: 64px 20px 32px; overflow: hidden; background: radial-gradient(760px 620px at 56% 52%, #92AEFF 0%, #4A57FF 46%, #373BF9 100%); display: flex; flex-direction: column;">
     <h1 style="margin: 0; position: relative; z-index: 2; font-family: var(--font-display); font-weight: 500; font-size: 24px; line-height: 1.12; letter-spacing: 0.02em; color: #FFFFFF; overflow-wrap: break-word">Защита<br>от&nbsp;мошенничества<br>в&nbsp;каждом звонке</h1>
-    <p style="margin: 20px 0 0; position: relative; z-index: 2; font-size: 14px; line-height: 1.3; font-weight: 600; color: rgba(255,255,255,0.92);">Распознаем мошенника в&nbsp;реальном времени и&nbsp;поможем остановить угрозу прямо во&nbsp;время звонка.</p>
-    <div style="position: absolute; left: 50%; top: 54%; transform: translate(-50%, -50%); width: 430px; pointer-events: none;">
+    <p style="margin: 20px 0 0; position: relative; z-index: 2; font-size: 16px; line-height: 1.3; font-weight: 600; color: rgba(255,255,255,0.92);">Предупреждаем о&nbsp;мошеннических сценариях и&nbsp;проверяем аудио и&nbsp;видео на&nbsp;дипфейк.</p>
+        <a href="#demo" data-demo-open="" aria-haspopup="dialog" style="display: inline-flex; align-items: center; justify-content: center; margin-top: 24px; min-height: 48px; padding: 14px 28px; border-radius: 12px; background: #FFFFFF; color: #373BF9; font-family: var(--font-body); font-weight: 700; font-size: 16px; line-height: 1; text-decoration: none; position: relative; z-index: 2; align-self: flex-start;" style-hover="background: #E8EFFF; color: #373BF9;">Запросить демо</a>
+    <div style="position: absolute; left: 50%; top: 54%; transform: translate(-50%, -50%); width: 100%; pointer-events: none;">
       
     </div>
-    <div style="margin-top: auto; position: relative; z-index: 2; font-family: var(--font-display); font-weight: 500; font-size: 24px; line-height: 1.12; letter-spacing: 0.02em; color: #FFFFFF; text-align: right">Когда опасность<br>подстерегает<br>на&nbsp;каждом звонке</div>
+    
   </section>
+  <div style="padding: 32px 20px; background: #FFFFFF;"><div style="font-family: var(--font-display); font-weight: 500; font-size: 20px; line-height: 1.2; letter-spacing: 0.02em; text-transform: uppercase; color: #373BF9; text-wrap: balance;">Когда опасность подстерегает в&nbsp;каждом звонке</div></div>
+
 
   <div style="border-top: 0.74px solid #C6CADD; border-bottom: 0.74px solid #C6CADD; background: #E8EFFF; overflow: hidden;">
     <div style="display: flex; width: max-content; animation: marquee 32s linear infinite;">
-      <div style="display: flex; align-items: center; gap: 20px; padding: 12px 20px; font-family: var(--font-display); font-weight: 500; font-size: 14px; line-height: 1.3; letter-spacing: 0.08em; color: #9292AD; white-space: nowrap;">
+      <div style="display: flex; align-items: center; gap: 20px; padding: 12px 20px; font-family: var(--font-display); font-weight: 500; font-size: 16px; line-height: 1.3; letter-spacing: 0.08em; color: #5A5A6E; white-space: nowrap;">
         <span>«Ваша карта заблокирована»</span><span style="color: #373BF9;">◆</span>
         <span>«Служба безопасности банка»</span><span style="color: #373BF9;">◆</span>
         <span>«Назовите код из&nbsp;СМС»</span><span style="color: #373BF9;">◆</span>
         <span>«Переведите на&nbsp;безопасный счёт»</span><span style="color: #373BF9;">◆</span>
       </div>
-      <div style="display: flex; align-items: center; gap: 20px; padding: 12px 20px; font-family: var(--font-display); font-weight: 500; font-size: 14px; line-height: 1.3; letter-spacing: 0.08em; color: #9292AD; white-space: nowrap;">
+      <div style="display: flex; align-items: center; gap: 20px; padding: 12px 20px; font-family: var(--font-display); font-weight: 500; font-size: 16px; line-height: 1.3; letter-spacing: 0.08em; color: #5A5A6E; white-space: nowrap;">
         <span>«Ваша карта заблокирована»</span><span style="color: #373BF9;">◆</span>
         <span>«Служба безопасности банка»</span><span style="color: #373BF9;">◆</span>
         <span>«Назовите код из&nbsp;СМС»</span><span style="color: #373BF9;">◆</span>
@@ -61,37 +65,37 @@
 
   <section style="padding: 64px 20px; background: #FFFFFF; display: flex; flex-direction: column; gap: 12px; padding-top: 100px; padding-bottom: 100px">
     <h2 style="margin: 0; font-family: var(--font-display); font-weight: 500; font-size: 24px; line-height: 1.12; letter-spacing: 0.02em; color: #323030; overflow-wrap: break-word;"><span style="color: #373BF9;">Жертва</span>&nbsp;— любой<br>в&nbsp;этой толпе</h2>
-    <p style="margin: 0; font-size: 14px; line-height: 1.3; color: #323030;">Мошенники не&nbsp;выбирают по&nbsp;возрасту и&nbsp;доходу&nbsp;— они&nbsp;звонят всем подряд и&nbsp;работают со&nbsp;сценарием, а&nbsp;не&nbsp;с&nbsp;человеком.</p>
+    <p style="margin: 0; font-size: 16px; line-height: 1.3; color: #323030;">Мошенники не&nbsp;выбирают по&nbsp;возрасту и&nbsp;доходу&nbsp;— они&nbsp;звонят всем подряд и&nbsp;работают со&nbsp;сценарием, а&nbsp;не&nbsp;с&nbsp;человеком.</p>
     <div style="position: relative; height: 300px; overflow: hidden; background: #E8EFFF;">
-      <img src="frames/f00.jpg" alt="Толпа на переходе" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+      <img loading="lazy" src="frames/f00.jpg" alt="Толпа на переходе" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
       <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,8,26,0) 40%, rgba(6,8,26,0.55) 100%); width: 367px; height: 438px"></div>
-      <div style="position: absolute; left: 16px; right: 16px; bottom: 16px; font-family: var(--font-display); font-weight: 500; font-size: 14px; line-height: 1.3; letter-spacing: 0.02em; color: #FFFFFF;">Листайте факты&nbsp;→</div>
+      <div style="position: absolute; left: 16px; right: 16px; bottom: 16px; font-family: var(--font-display); font-weight: 500; font-size: 16px; line-height: 1.3; letter-spacing: 0.02em; color: #FFFFFF;">Листайте факты&nbsp;→</div>
     </div>
 
     <div class="m-scroll" style="display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 -20px; padding: 0 20px;">
       <div style="flex: 0 0 288px; scroll-snap-align: start; display: flex; flex-direction: column; gap: 12px; padding: 24px; background: #E8EFFF;">
-        <div style="font-family: var(--font-display); font-weight: 500; font-size: 14px; line-height: 1.3; letter-spacing: 0.02em; overflow-wrap: break-word; color: #323030">29,3 млрд ₽ похищено у&nbsp;россиян в&nbsp;2025 году</div>
-        <p style="margin: 0; font-size: 14px; line-height: 1.3; color: #74748F">По&nbsp;данным официального отчёта Банка России, в&nbsp;2025 году мошенники похитили у&nbsp;граждан 29,3 млрд рублей&nbsp;— на&nbsp;6,4% больше, чем&nbsp;годом ранее.</p>
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: 16px; line-height: 1.3; letter-spacing: 0.02em; overflow-wrap: break-word; color: #323030">29,3 млрд ₽ похищено у&nbsp;россиян в&nbsp;2025 году</div>
+        <p style="margin: 0; font-size: 16px; line-height: 1.3; color: #5A5A6E">По&nbsp;данным официального отчёта Банка России, в&nbsp;2025 году мошенники похитили у&nbsp;граждан 29,3 млрд рублей&nbsp;— на&nbsp;6,4% больше, чем&nbsp;годом ранее.</p>
       </div>
       <div style="flex: 0 0 288px; scroll-snap-align: start; display: flex; flex-direction: column; gap: 12px; padding: 24px; background: #E8EFFF;">
         <div style="font-family: var(--font-display); font-weight: 500; font-size: 20px; line-height: 1.16; letter-spacing: 0.02em; overflow-wrap: break-word; color: #323030;">Самая распространённая сумма&nbsp;— 10–15 тысяч рублей</div>
-        <p style="margin: 0; font-size: 14px; line-height: 1.3; color: #74748F;">По&nbsp;данным Центробанка, средний чек одной кражи с&nbsp;помощью телефонного звонка составляет 10–15 тысяч рублей.</p>
+        <p style="margin: 0; font-size: 16px; line-height: 1.3; color: #5A5A6E;">По&nbsp;данным Центробанка, средний чек одной кражи с&nbsp;помощью телефонного звонка составляет 10–15 тысяч рублей.</p>
       </div>
       <div style="flex: 0 0 288px; scroll-snap-align: start; display: flex; flex-direction: column; gap: 12px; padding: 24px; background: #E8EFFF;">
-        <div style="font-family: var(--font-display); font-weight: 500; font-size: 20px; line-height: 1.16; letter-spacing: 0.02em; overflow-wrap: break-word; color: #323030;">Средний возраст жертвы&nbsp;— 48–59 лет</div>
-        <p style="margin: 0; font-size: 14px; line-height: 1.3; color: #74748F;">По&nbsp;данным Центробанка РФ, средний возраст жертвы&nbsp;— 48 лет, но&nbsp;основная масса пострадавших в&nbsp;возрасте от&nbsp;25 до&nbsp;64 лет.</p>
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: 20px; line-height: 1.16; letter-spacing: 0.02em; overflow-wrap: break-word; color: #323030;">Средний возраст жертвы&nbsp;— 48 лет</div>
+        <p style="margin: 0; font-size: 16px; line-height: 1.3; color: #5A5A6E;">По&nbsp;данным Центробанка РФ, средний возраст жертвы&nbsp;— 48 лет, но&nbsp;основная масса пострадавших в&nbsp;возрасте от&nbsp;25 до&nbsp;64 лет.</p>
       </div>
       <div style="flex: 0 0 288px; scroll-snap-align: start; display: flex; flex-direction: column; gap: 12px; padding: 24px; background: #E8EFFF;">
         <div style="font-family: var(--font-display); font-weight: 500; font-size: 20px; line-height: 1.16; letter-spacing: 0.02em; overflow-wrap: break-word; color: #323030;">13 тысяч несовершеннолетних стали жертвами</div>
-        <p style="margin: 0; font-size: 14px; line-height: 1.3; color: #74748F;">По&nbsp;данным МВД России, 13 тысяч детей стали жертвами цифрового мошенничества в&nbsp;2025 году и&nbsp;передали мошенникам более 1 млрд рублей.</p>
+        <p style="margin: 0; font-size: 16px; line-height: 1.3; color: #5A5A6E;">По&nbsp;данным МВД России, 13 тысяч детей стали жертвами цифрового мошенничества в&nbsp;2025 году и&nbsp;передали мошенникам более 1 млрд рублей.</p>
       </div>
     </div>
   </section>
 
   <section style="padding: 0 20px 64px; background: #FFFFFF; display: flex; flex-direction: column; gap: 32px;">
     <div style="display: flex; flex-direction: column; gap: 16px;">
-      <h2 style="margin: 0; font-family: var(--font-display); font-weight: 500; font-size: 20px; line-height: 1.14; letter-spacing: 0.02em; color: #323030; overflow-wrap: break-word;">Новый вид мошенничества и&nbsp;почему никто не&nbsp;защищен</h2>
-      <p style="margin: 0; font-size: 14px; line-height: 1.3; color: #323030;">Дипфейк&nbsp;— это&nbsp;созданное или&nbsp;изменённое с&nbsp;помощью искусственного интеллекта видео, изображение или&nbsp;аудио, которое реалистично имитирует внешность или&nbsp;голос реального человека.</p>
+      <h2 style="margin: 0; font-family: var(--font-display); font-weight: 500; font-size: 24px; line-height: 1.14; letter-spacing: 0.02em; color: #323030; overflow-wrap: break-word;">Новый вид мошенничества и&nbsp;почему никто не&nbsp;защищён</h2>
+      <p style="margin: 0; font-size: 16px; line-height: 1.3; color: #323030;">Дипфейк&nbsp;— это&nbsp;созданное или&nbsp;изменённое с&nbsp;помощью искусственного интеллекта видео, изображение или&nbsp;аудио, которое реалистично имитирует внешность или&nbsp;голос реального человека.</p>
       
     </div>
 
@@ -104,13 +108,13 @@
         <div style="display: flex; gap: 16px; align-items: flex-end;">
           <div style="position: relative; width: 130px; aspect-ratio: 247 / 329; flex-shrink: 0; overflow: hidden; border-radius: 12px; background: url('assets/df-step1.webp') 50% 50% / cover no-repeat;"></div>
           <div style="display: flex; flex-direction: column; justify-content: space-between; align-self: stretch; gap: 16px; flex-grow: 1;">
-            <span style="font-family: var(--font-display); font-weight: 500; font-size: 20px; line-height: 1; letter-spacing: 0.02em; color: #373BF9;">шаг 1</span>
+            <span style="font-family: var(--font-display); font-weight: 500; font-size: 20px; line-height: 1; letter-spacing: 0.02em; color: #373BF9;">Шаг 1</span>
             <div onClick="{{ play1 }}" role="button" tabIndex="0" aria-label="Прослушать настоящий голос" style="position: relative; width: 56px; height: 56px; border-radius: 11.25px; background: {{ p1bg }}; cursor: pointer; transition: background .2s ease;">
               <svg viewBox="0 0 28.174 35.007" fill="#FFFFFF" style="position: absolute; left: 20px; top: 16px; width: 20px; height: 24px;"><path d="M 26.007 13.384 C 28.897 15.371 28.897 19.637 26.007 21.624 L 7.833 34.119 C 4.515 36.4 0 34.025 0 29.999 L 0 5.009 C 0 0.983 4.515 -1.392 7.833 0.889 L 26.007 13.384 Z" fill-rule="nonzero"></path></svg>
             </div>
           </div>
         </div>
-        <p style="margin: 0; font-size: 14px; line-height: 1.3; color: #323030;">Фото, видео и&nbsp;голос человека можно взять из&nbsp;соцсетей, мессенджеров или&nbsp;взломанных аккаунтов. Иногда голос получают через&nbsp;короткий звонок с&nbsp;неизвестного номера.</p>
+        <p style="margin: 0; font-size: 16px; line-height: 1.3; color: #323030;">Фото, видео и&nbsp;голос человека можно взять из&nbsp;соцсетей, мессенджеров или&nbsp;взломанных аккаунтов. Иногда голос получают через&nbsp;короткий звонок с&nbsp;неизвестного номера.</p>
       </div>
 
       <div style="display: flex; flex: 0 0 276px; scroll-snap-align: start; flex-direction: column; gap: 16px; padding: 24px 20px 24px 0;">
@@ -119,42 +123,42 @@
             <div style="position: absolute; left: -23%; top: 3%; width: 151%; height: 127%; background: url('assets/df-face.webp') 50% 50% / 100% 119.959% no-repeat;"></div>
           </div>
           <div style="display: flex; flex-direction: column; justify-content: space-between; align-self: stretch; gap: 16px; flex-grow: 1;">
-            <span style="font-family: var(--font-display); font-weight: 500; font-size: 20px; line-height: 1; letter-spacing: 0.02em; color: #373BF9;">шаг 2</span>
+            <span style="font-family: var(--font-display); font-weight: 500; font-size: 20px; line-height: 1; letter-spacing: 0.02em; color: #373BF9;">Шаг 2</span>
             <div onClick="{{ play2 }}" role="button" tabIndex="0" aria-label="Прослушать дипфейк-голос" style="position: relative; width: 56px; height: 56px; border-radius: 11.25px; background: {{ p2bg }}; cursor: pointer; transition: background .2s ease;">
               <svg viewBox="0 0 28.174 35.007" fill="#FFFFFF" style="position: absolute; left: 20px; top: 16px; width: 20px; height: 24px;"><path d="M 26.007 13.384 C 28.897 15.371 28.897 19.637 26.007 21.624 L 7.833 34.119 C 4.515 36.4 0 34.025 0 29.999 L 0 5.009 C 0 0.983 4.515 -1.392 7.833 0.889 L 26.007 13.384 Z" fill-rule="nonzero"></path></svg>
             </div>
           </div>
         </div>
-        <p style="margin: 0; font-size: 14px; line-height: 1.3; color: #323030;">Создание персонажа из&nbsp;фото, копирование голоса, а&nbsp;дальше по&nbsp;сценарию сбор видео и&nbsp;аудиоматериалов с&nbsp;просьбой занять денег или&nbsp;помочь.</p>
+        <p style="margin: 0; font-size: 16px; line-height: 1.3; color: #323030;">По&nbsp;фото создают цифровой образ, копируют голос и&nbsp;записывают видео- и&nbsp;аудиосообщения с&nbsp;просьбой занять денег или&nbsp;помочь.</p>
       </div>
 
       <div style="display: flex; flex: 0 0 276px; scroll-snap-align: start; flex-direction: column; gap: 16px; padding: 24px; background: #E8EFFF;">
         <div style="display: flex; gap: 16px; align-items: flex-end;">
           <div style="position: relative; width: 130px; aspect-ratio: 247 / 329; flex-shrink: 0; overflow: hidden; border-radius: 24px; background: #B9D1FF;">
-            <video ref="{{ dfVid }}" src="assets/as-product.mp4" preload="auto" poster="assets/as-girl.webp" onClick="{{ togglePlay }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; cursor: pointer;"></video>
+            <video ref="{{ dfVid }}" src="assets/as-product.mp4" preload="none" poster="assets/as-girl.webp" onClick="{{ togglePlay }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; cursor: pointer;" playsinline="" muted=""></video>
             <svg onClick="{{ togglePlay }}" viewBox="0 0 28.174 35.007" fill="#FFFFFF" style="position: absolute; left: 39%; top: 43.5%; width: 22%; cursor: pointer; transition: opacity .3s ease; opacity: {{ playOp }}; pointer-events: {{ playPe }}; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.4));"><path d="M 26.007 13.384 C 28.897 15.371 28.897 19.637 26.007 21.624 L 7.833 34.119 C 4.515 36.4 0 34.025 0 29.999 L 0 5.009 C 0 0.983 4.515 -1.392 7.833 0.889 L 26.007 13.384 Z" fill-rule="nonzero"></path></svg>
           </div>
-          <span style="align-self: flex-start; font-family: var(--font-display); font-weight: 500; font-size: 20px; line-height: 1; letter-spacing: 0.02em; color: #373BF9;">шаг 3</span>
+          <span style="align-self: flex-start; font-family: var(--font-display); font-weight: 500; font-size: 20px; line-height: 1; letter-spacing: 0.02em; color: #373BF9;">Шаг 3</span>
         </div>
-        <p style="margin: 0; font-size: 14px; line-height: 1.3; color: #323030;">Готовый материал используют для&nbsp;выманивания денег или&nbsp;шантажа. Обычно со&nbsp;взломанного аккаунта рассылают сообщения с&nbsp;просьбой срочно перевести деньги.</p>
+        <p style="margin: 0; font-size: 16px; line-height: 1.3; color: #323030;">Готовый материал используют для&nbsp;выманивания денег или&nbsp;шантажа. Обычно со&nbsp;взломанного аккаунта рассылают сообщения с&nbsp;просьбой срочно перевести деньги.</p>
       </div>
 
       </div>
 
       <div style="display: flex; flex-direction: column; gap: 12px; padding: 24px 0;">
         <span style="font-family: var(--font-display); font-weight: 500; font-size: 20px; line-height: 1; color: #373BF9">18 минут</span>
-        <span style="font-family: var(--font-body); font-weight: 700; font-size: 14px; line-height: 1.3; color: #323030">весь путь создания дипфейка занял у&nbsp;нашей команды менее 20 минут</span>
+        <span style="font-family: var(--font-body); font-weight: 700; font-size: 16px; line-height: 1.3; color: #323030">столько у&nbsp;нашей команды заняло создание дипфейка с&nbsp;нуля</span>
       </div>
     </div>
 
-    <audio ref="{{ v1 }}" src="assets/presale_real.wav" preload="none"></audio>
-    <audio ref="{{ v2 }}" src="assets/presale_fake.wav" preload="none"></audio>
+    <audio ref="{{ v1 }}" src="assets/presale_real.mp3" preload="none"></audio>
+    <audio ref="{{ v2 }}" src="assets/presale_fake.mp3" preload="none"></audio>
   </section>
 
   <section style="padding: 64px 20px; background: #E8EFFF; display: flex; flex-direction: column; gap: 44px;">
     <div style="display: flex; flex-direction: column; gap: 16px;">
       <h2 style="margin: 0; font-family: var(--font-display); font-weight: 500; font-size: 24px; line-height: 1.1; letter-spacing: 0.02em; color: #373BF9; overflow-wrap: break-word;">Система «Антискам»</h2>
-      <p style="margin: 0; font-size: 14px; line-height: 1.3; color: #323030;">Мы&nbsp;предлагаем сервис для&nbsp;проверки аудио- и&nbsp;видеосообщений на&nbsp;признаки дипфейка. Пользователь самостоятельно отправляет в&nbsp;сервис подозрительное аудио или&nbsp;видео для&nbsp;анализа.</p>
+      <p style="margin: 0; font-size: 16px; line-height: 1.3; color: #323030;">Мы&nbsp;предлагаем сервис для&nbsp;проверки аудио- и&nbsp;видеосообщений на&nbsp;признаки дипфейка. Пользователь самостоятельно отправляет в&nbsp;сервис подозрительное аудио или&nbsp;видео для&nbsp;анализа.</p>
     </div>
 
     <div style="display: flex; flex-direction: column; gap: 16px;">
@@ -163,48 +167,56 @@
       <div onClick="{{ pick0 }}" style="display: flex; flex-direction: column; gap: 16px; padding: 24px; background: #FFFFFF; cursor: pointer; border: {{ s0Bd }}; transition: border-color .3s ease; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px">
         
         <div style="display: flex; flex-direction: column; gap: 6px;">
-          <span style="font-size: 14px; line-height: 1.3; color: #74748F;">шаг 1</span>
-          <span style="font-family: var(--font-display); font-weight: 500; font-size: 14px; line-height: 1.3; letter-spacing: 0.02em; overflow-wrap: break-word; color: {{ s0Ttl }}; transition: color .3s ease">Отправка файла</span>
+          <span style="font-size: 16px; line-height: 1.3; color: #5A5A6E;">Шаг 1</span>
+          <span style="font-family: var(--font-display); font-weight: 500; font-size: 16px; line-height: 1.3; letter-spacing: 0.02em; overflow-wrap: break-word; color: {{ s0Ttl }}; transition: color .3s ease">Отправка файла</span>
         </div>
-        <p style="margin: 0; font-size: 14px; line-height: 1.3; color: #74748F;">Пользователь отправляет файл на&nbsp;проверку, одновременно дает согласие на&nbsp;его&nbsp;проверку</p>
+        <p style="margin: 0; font-size: 16px; line-height: 1.3; color: #5A5A6E;">Пользователь отправляет файл и&nbsp;даёт согласие на&nbsp;проверку</p>
       </div>
 
       <div onClick="{{ pick1 }}" style="display: flex; flex-direction: column; gap: 16px; padding: 24px; background: #FFFFFF; cursor: pointer; border: {{ s1Bd }}; transition: border-color .3s ease; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px">
         
         <div style="display: flex; flex-direction: column; gap: 6px;">
-          <span style="font-size: 14px; line-height: 1.3; color: #74748F;">шаг 2</span>
-          <span style="font-family: var(--font-display); font-weight: 500; font-size: 14px; line-height: 1.3; letter-spacing: 0.02em; overflow-wrap: break-word; color: {{ s1Ttl }}; transition: color .3s ease">Анализ</span>
+          <span style="font-size: 16px; line-height: 1.3; color: #5A5A6E;">Шаг 2</span>
+          <span style="font-family: var(--font-display); font-weight: 500; font-size: 16px; line-height: 1.3; letter-spacing: 0.02em; overflow-wrap: break-word; color: {{ s1Ttl }}; transition: color .3s ease">Анализ</span>
         </div>
-        <p style="margin: 0; font-size: 14px; line-height: 1.3; color: #74748F">Видео или&nbsp;аудио анализируется и&nbsp;проверяется на&nbsp;наличие ИИ в&nbsp;течение пары минут.</p>
+        <p style="margin: 0; font-size: 16px; line-height: 1.3; color: #5A5A6E">Видео или&nbsp;аудио анализируется и&nbsp;проверяется на&nbsp;наличие ИИ в&nbsp;течение пары минут.</p>
       </div>
 
       <div onClick="{{ pick2 }}" style="display: flex; flex-direction: column; gap: 16px; padding: 24px; background: #FFFFFF; cursor: pointer; border: {{ s2Bd }}; transition: border-color .3s ease; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px">
         
         <div style="display: flex; flex-direction: column; gap: 6px;">
-          <span style="font-size: 14px; line-height: 1.3; color: #74748F;">шаг 3</span>
-          <span style="font-family: var(--font-display); font-weight: 500; font-size: 14px; line-height: 1.3; letter-spacing: 0.02em; overflow-wrap: break-word; color: {{ s2Ttl }}; transition: color .3s ease">Результат</span>
+          <span style="font-size: 16px; line-height: 1.3; color: #5A5A6E;">Шаг 3</span>
+          <span style="font-family: var(--font-display); font-weight: 500; font-size: 16px; line-height: 1.3; letter-spacing: 0.02em; overflow-wrap: break-word; color: {{ s2Ttl }}; transition: color .3s ease">Результат</span>
         </div>
-        <p style="margin: 0; font-size: 14px; line-height: 1.3; color: #74748F;">Пользователь должен дать разрешение на&nbsp;анализ своих разговоров ИИ.</p>
+        <p style="margin: 0; font-size: 16px; line-height: 1.3; color: #5A5A6E;">Пользователь получает вердикт: вероятность, что запись создана ИИ, и&nbsp;рекомендацию, что делать дальше.</p>
       </div>
     </div>
 
     <div style="display: flex; flex-direction: column; gap: 16px;">
-      <h3 style="margin: 0; font-family: var(--font-display); font-weight: 500; font-size: 20px; line-height: 1.14; letter-spacing: 0.02em; color: #323030; overflow-wrap: break-word;">Точность нашей системы антискам</h3>
+      <h3 style="margin: 0; font-family: var(--font-display); font-weight: 500; font-size: 20px; line-height: 1.14; letter-spacing: 0.02em; color: #323030; overflow-wrap: break-word;">Точность нашей системы «Антискам»</h3>
       <div style="position: relative; height: 460px; overflow: hidden; background: #FFFFFF; box-shadow: 0 0 16px rgba(57,60,75,0.1), 0 10px 16px rgba(57,60,75,0.05);">
-        <video ref="{{ prodVid }}" src="assets/as-video-fake.mp4" preload="auto" poster="assets/as-4.webp" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"></video>
+        <video ref="{{ prodVid }}" src="assets/as-video-fake.mp4" preload="none" poster="assets/as-4.webp" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" playsinline="" muted=""></video>
         <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,8,26,0.45) 0%, rgba(6,8,26,0.1) 45%, rgba(6,8,26,0.7) 100%); left: -112px; top: -2px; width: 481px; height: 449px"></div>
         <div style="position: absolute; left: 20px; right: 20px; top: 24px; display: flex; flex-direction: column; gap: 8px;">
           
-          <span style="font-family: var(--font-display); font-weight: 500; font-size: 40px; line-height: 1; letter-spacing: 0.02em; color: #FFFFFF;">99%</span><span style="font-family: var(--font-display); font-weight: 500; font-size: 14px; line-height: 1.3; letter-spacing: 0.02em; overflow-wrap: break-word; color: #FFFFFF;">Точность проверки видео на&nbsp;наличие ИИ</span>
+          <span style="font-family: var(--font-display); font-weight: 500; font-size: 40px; line-height: 1; letter-spacing: 0.02em; color: #FFFFFF;">99%</span><span style="font-family: var(--font-display); font-weight: 500; font-size: 16px; line-height: 1.3; letter-spacing: 0.02em; overflow-wrap: break-word; color: #FFFFFF;">Точность проверки видео на&nbsp;наличие ИИ</span>
         </div>
         <div style="position: absolute; left: 20px; right: 20px; bottom: 20px; display: flex; flex-direction: column; gap: 6px;">
-          <span style="font-family: var(--font-display); font-weight: 500; font-size: 14px; line-height: 1.3; letter-spacing: 0.02em; color: #FFFFFF;">на&nbsp;ИИ-аудио</span><span style="font-family: var(--font-display); font-weight: 500; font-size: 40px; line-height: 1; letter-spacing: 0.02em; color: #FFFFFF;">97%</span>
+          <span style="font-family: var(--font-display); font-weight: 500; font-size: 16px; line-height: 1.3; letter-spacing: 0.02em; color: #FFFFFF;">на&nbsp;ИИ-аудио</span><span style="font-family: var(--font-display); font-weight: 500; font-size: 40px; line-height: 1; letter-spacing: 0.02em; color: #FFFFFF;">97%</span>
           
           
-          <span style="margin-top: 8px; font-weight: 700; font-size: 14px; line-height: 1.3; color: #FFFFFF;">С&nbsp;большой долей вероятности видео и&nbsp;аудио сделано с&nbsp;использованием ИИ</span><span style="font-size: 14px; line-height: 1.3; color: rgba(255,255,255,0.85);">По-нашему исследований 100 аудио в&nbsp;рамках программы.</span>
-          <span style="font-weight: 700; font-size: 14px; line-height: 1.3; text-align: right; color: #B9D1FF;">Ответ Системы</span>
+          <span style="margin-top: 8px; font-weight: 700; font-size: 16px; line-height: 1.3; color: #FFFFFF;">С&nbsp;большой долей вероятности видео и&nbsp;аудио сделано с&nbsp;использованием ИИ</span><span style="font-size: 16px; line-height: 1.3; color: rgba(255,255,255,0.85);">По&nbsp;внутреннему тестированию на&nbsp;[N] записях.</span>
+          <span style="font-weight: 700; font-size: 16px; line-height: 1.3; text-align: right; color: #B9D1FF;">Ответ системы</span>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section id="demo" style="padding: 64px 20px; background: #FFFFFF;">
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px; max-width: 720px;">
+      <h2 style="margin: 0; font-family: var(--font-display); font-weight: 500; font-size: 24px; line-height: 1.1; letter-spacing: 0.02em; text-transform: uppercase; color: #323030;">Демо</h2>
+      <p style="margin: 0; max-width: 560px; font-family: var(--font-body); font-size: 16px; line-height: 1.4; color: #323030; text-wrap: pretty;">Покажем, как система распознаёт мошенничество и&nbsp;дипфейки, и&nbsp;обсудим интеграцию.</p>
+      <button type="button" data-demo-open="" aria-haspopup="dialog" style="margin-top: 8px; width: 100%; min-height: 56px; padding: 16px 32px; border: 0; border-radius: 12px; background: #373BF9; color: #FFFFFF; font-family: var(--font-body); font-weight: 700; font-size: 16px; cursor: pointer;" style-hover="background: #697DFF;">Запросить демо</button>
     </div>
   </section>
 </div>
@@ -222,8 +234,24 @@ class Component extends DCLogic {
   componentDidMount() {
     this._cycle = setInterval(() => this.setState((s) => ({ step: (s.step + 1) % 3 })), 3400);
   }
-  componentWillUnmount() { if (this._cycle) clearInterval(this._cycle); }
+  componentWillUnmount() { if (this._pvIo) this._pvIo.disconnect(); if (this._cycle) clearInterval(this._cycle); }
   _pick(i) { if (this._cycle) { clearInterval(this._cycle); this._cycle = null; } this.setState({ step: i }); }
+  _submitDemo(e) {
+    e.preventDefault();
+    if (this.state.demoStatus === 'sending') return;
+    const f = e.currentTarget;
+    if (f.checkValidity && !f.checkValidity()) { f.reportValidity(); return; }
+    const v = (n) => ((f.elements[n] && f.elements[n].value) || '').trim();
+    this.setState({ demoStatus: 'sending' });
+    fetch('https://formsubmit.co/ajax/sales@sifox.ru', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({ name: v('name'), company: v('company'), email: v('email'), phone: v('phone'), _subject: 'Заявка на демо — Антифрод' })
+    })
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+      .then((d) => { if (d && (d.success === true || d.success === 'true')) this.setState({ demoStatus: 'ok' }); else throw new Error('rejected'); })
+      .catch(() => this.setState({ demoStatus: 'error' }));
+  }
   renderVals() {
     const st = this.state.step;
     const bd = (i) => st === i ? '1.5px solid #373BF9' : '0.74px solid rgba(127,130,145,0.5)';
@@ -231,6 +259,11 @@ class Component extends DCLogic {
     const ico = (i) => st === i ? '#FFFFFF' : '#373BF9';
     const ttl = (i) => st === i ? '#373BF9' : '#323030';
     return {
+      hintText: (typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(hover: none)').matches) ? 'Нажмите на\u00a0человека в\u00a0кадре' : 'Наведите курсор на\u00a0людей в\u00a0кадре, чтобы узнать больше.',
+      demoSent: this.state.demoStatus === 'ok', demoFormShown: this.state.demoStatus !== 'ok',
+      demoError: this.state.demoStatus === 'error', demoSending: this.state.demoStatus === 'sending',
+      demoBtnText: this.state.demoStatus === 'sending' ? 'Отправляем…' : 'Запросить демо', demoBtnOp: this.state.demoStatus === 'sending' ? 0.6 : 1,
+      demoSubmit: (e) => this._submitDemo(e),
       pick0: () => this._pick(0), pick1: () => this._pick(1), pick2: () => this._pick(2),
       s0Bd: bd(0), s1Bd: bd(1), s2Bd: bd(2),
       s0Tile: tile(0), s1Tile: tile(1), s2Tile: tile(2),
@@ -245,11 +278,11 @@ class Component extends DCLogic {
       prodVid: (el) => {
         if (!el || el._init) return;
         el._init = true;
-        el.muted = true; el.defaultMuted = true; el.loop = true; el.playsInline = true; el.autoplay = true;
+        el.muted = true; el.defaultMuted = true; el.loop = true; el.playsInline = true;
         const go = () => el.play().catch(() => {});
-        go();
-        el.addEventListener('loadeddata', go, { once: true });
-        el.load();
+        if (!('IntersectionObserver' in window)) { el.preload = 'auto'; go(); return; }
+        this._pvIo = new IntersectionObserver((es) => es.forEach((x) => { if (x.isIntersecting) { if (el.preload !== 'auto') el.preload = 'auto'; go(); } else if (!el.paused) el.pause(); }), { threshold: 0.2 });
+        this._pvIo.observe(el);
       },
       dfVid: (el) => {
         this._dfVid = el;

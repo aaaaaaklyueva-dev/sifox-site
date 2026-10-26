@@ -1,22 +1,22 @@
 /* Sifox webfonts. Druk Wide Cyr covers Latin + Cyrillic. */
 @font-face {
   font-family: "Druk LCG";
-  src: url("../assets/fonts/DrukWideCyr.woff") format("woff"),
-       url("../assets/fonts/DrukWideCyr.ttf") format("truetype");
+  src: url("../assets/fonts/DrukWideCyr.woff2") format("woff2"),
+       url("../assets/fonts/DrukWideCyr.woff") format("woff");
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Nunito";
-  src: url("../assets/fonts/Nunito-VariableFont_wght.ttf") format("truetype-variations");
+  src: url("../assets/fonts/Nunito-VariableFont_wght.woff2") format("woff2");
   font-weight: 200 1000;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Nunito";
-  src: url("../assets/fonts/Nunito-Italic-VariableFont_wght.ttf") format("truetype-variations");
+  src: url("../assets/fonts/Nunito-Italic-VariableFont_wght.woff2") format("woff2");
   font-weight: 200 1000;
   font-style: italic;
   font-display: swap;
