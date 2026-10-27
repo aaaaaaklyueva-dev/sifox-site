@@ -8,15 +8,7 @@
 <body>
 <x-dc>
 <helmet>
-<link rel="stylesheet" href="ds/tokens/fonts.css">
-<link rel="stylesheet" href="ds/tokens/colors.css">
-<link rel="stylesheet" href="ds/tokens/typography.css">
-<link rel="stylesheet" href="ds/tokens/effects.css">
-<link rel="stylesheet" href="ds/tokens/base.css">
-<link rel="stylesheet" href="ds/components/fig-tokens.css">
-<link rel="stylesheet" href="ds/components/fig-typography.css">
-<link rel="stylesheet" href="ds/components/fig-assets.css">
-<link rel="stylesheet" href="ds/styles.css">
+<link rel="stylesheet" href="ds/all.css">
 <script src="ds/ds-bundle.js"></script>
 <style>
   input::placeholder { color: #5A5A6E; opacity: 1; }
@@ -34,12 +26,12 @@
 
 <div style="width: 100%; max-width: 430px; margin: 0 auto; background: #FFFFFF; overflow-x: clip;">
 
-  <section style="position: relative; min-height: 780px; padding: 64px 20px 32px; overflow: hidden; background: radial-gradient(760px 620px at 56% 52%, #92AEFF 0%, #4A57FF 46%, #373BF9 100%); display: flex; flex-direction: column;">
-    <h1 style="margin: 0; position: relative; z-index: 2; font-family: var(--font-display); font-weight: 500; font-size: 24px; line-height: 1.12; letter-spacing: 0.02em; color: #FFFFFF; overflow-wrap: break-word">Защита<br>от&nbsp;мошенничества<br>в&nbsp;каждом звонке</h1>
+  <section style="position: relative; min-height: calc(100svh - var(--sfx-menu-h, 0px)); max-height: 900px; box-sizing: border-box; padding: 64px 20px 32px; overflow: hidden; background: radial-gradient(760px 620px at 56% 52%, #92AEFF 0%, #4A57FF 46%, #373BF9 100%); display: flex; flex-direction: column;">
+    <h1 style="margin: 0; position: relative; z-index: 2; font-family: var(--font-display); font-weight: 500; font-size: clamp(20px, 6.15vw, 24px); line-height: 1.12; letter-spacing: 0.02em; color: #FFFFFF; overflow-wrap: normal">Защита<br>от&nbsp;мошенничества<br>в&nbsp;каждом звонке</h1>
     <p style="margin: 20px 0 0; position: relative; z-index: 2; font-size: 16px; line-height: 1.3; font-weight: 600; color: rgba(255,255,255,0.92);">Предупреждаем о&nbsp;мошеннических сценариях и&nbsp;проверяем аудио и&nbsp;видео на&nbsp;дипфейк.</p>
         <a href="#demo" data-demo-open="" aria-haspopup="dialog" style="display: inline-flex; align-items: center; justify-content: center; margin-top: 24px; min-height: 48px; padding: 14px 28px; border-radius: 12px; background: #FFFFFF; color: #373BF9; font-family: var(--font-body); font-weight: 700; font-size: 16px; line-height: 1; text-decoration: none; position: relative; z-index: 2; align-self: flex-start;" style-hover="background: #E8EFFF; color: #373BF9;">Запросить демо</a>
-    <div style="position: absolute; left: 50%; top: 54%; transform: translate(-50%, -50%); width: 100%; pointer-events: none;">
-      
+    <div style="position: relative; z-index: 1; margin: auto -20px -32px; pointer-events: none; overflow: hidden;">
+      <img src="assets/as-hero-phone.webp" alt="Звонок с неизвестного номера" style="display: block; width: 175%; max-width: none; margin-left: -37.5%; height: auto; aspect-ratio: 1324 / 746; animation: float 9s ease-in-out infinite">
     </div>
     
   </section>

@@ -8,15 +8,7 @@
 <body>
 <x-dc>
 <helmet>
-<link rel="stylesheet" href="ds/tokens/fonts.css">
-<link rel="stylesheet" href="ds/tokens/colors.css">
-<link rel="stylesheet" href="ds/tokens/typography.css">
-<link rel="stylesheet" href="ds/tokens/effects.css">
-<link rel="stylesheet" href="ds/tokens/base.css">
-<link rel="stylesheet" href="ds/components/fig-tokens.css">
-<link rel="stylesheet" href="ds/components/fig-typography.css">
-<link rel="stylesheet" href="ds/components/fig-assets.css">
-<link rel="stylesheet" href="ds/styles.css">
+<link rel="stylesheet" href="ds/all.css">
 <script src="ds/ds-bundle.js"></script>
 <style>
   input::placeholder { color: #5A5A6E; opacity: 1; }
@@ -53,7 +45,7 @@
 
   
 
-  <section style="position: relative; height: 100vh; min-height: 600px; padding: 0; overflow: hidden; background: radial-gradient(1600px 1200px at 56% 58%, #3D48FF 0%, #2E33EE 55%, #2126D6 100%); width: 100%;">
+  <section style="position: relative; height: calc(100vh - var(--sfx-menu-h, 0px)); height: calc(100svh - var(--sfx-menu-h, 0px)); min-height: 600px; padding: 0; overflow: hidden; background: radial-gradient(1600px 1200px at 56% 58%, #3D48FF 0%, #2E33EE 55%, #2126D6 100%); width: 100%;">
 
 
     

@@ -8,15 +8,7 @@
 <body>
 <x-dc>
 <helmet>
-<link rel="stylesheet" href="ds/tokens/fonts.css">
-<link rel="stylesheet" href="ds/tokens/colors.css">
-<link rel="stylesheet" href="ds/tokens/typography.css">
-<link rel="stylesheet" href="ds/tokens/effects.css">
-<link rel="stylesheet" href="ds/tokens/base.css">
-<link rel="stylesheet" href="ds/components/fig-tokens.css">
-<link rel="stylesheet" href="ds/components/fig-typography.css">
-<link rel="stylesheet" href="ds/components/fig-assets.css">
-<link rel="stylesheet" href="ds/styles.css">
+<link rel="stylesheet" href="ds/all.css">
 <script src="ds/ds-bundle.js"></script>
 <style>
   input::placeholder { color: #5A5A6E; opacity: 1; }
@@ -53,26 +45,26 @@
 
   
 
-  <section style="position: relative; min-height: 100vh; padding: 0; overflow: hidden; background: radial-gradient(1600px 1200px at 56% 58%, #3D48FF 0%, #2E33EE 55%, #2126D6 100%); width: 100%; height: 100%">
+  <section style="position: relative; min-height: 0; padding: 0; overflow: hidden; background: radial-gradient(1600px 1200px at 56% 58%, #3D48FF 0%, #2E33EE 55%, #2126D6 100%); width: 100%; height: 100%">
 
 
     
-  <div style="position: relative; z-index: 3; display: grid; grid-template-rows: auto minmax(0, 1fr); gap: 32px; max-width: none; height: 1144px; min-height: 540px; margin: 0; padding: 108px 64px 48px; width: 100%">
+  <div style="position: relative; z-index: 3; display: grid; grid-template-rows: auto minmax(0, 1fr); gap: 32px; max-width: none; height: calc(100vh - var(--sfx-menu-h, 0px)); height: calc(100svh - var(--sfx-menu-h, 0px)); min-height: 560px; max-height: 1144px; margin: 0; padding: clamp(48px, 9vh, 108px) 80px 48px; width: 100%; box-sizing: border-box">
 
-      <div>
+      <div style="position: relative; z-index: 2;">
         <h1 style="margin: 0; font-family: var(--font-display); font-weight: 500; font-size: clamp(30px, 4.6vw, 84px); line-height: 1; letter-spacing: 0.02em; text-transform: uppercase; color: #FFFFFF; text-wrap: balance;">Защита<br>от&nbsp;мошенничества<br>в&nbsp;каждом звонке</h1>
         <p style="margin: 30px 0 0; max-width: 360px; font-size: 16px; line-height: 1.5; font-weight: 600; color: rgba(255,255,255,0.92);">Предупреждаем о&nbsp;мошеннических сценариях и&nbsp;проверяем аудио и&nbsp;видео на&nbsp;дипфейк.</p>
         <a href="#demo" data-demo-open="" aria-haspopup="dialog" style="display: inline-flex; align-items: center; justify-content: center; margin-top: 32px; min-height: 48px; padding: 14px 28px; border-radius: 12px; background: #FFFFFF; color: #373BF9; font-family: var(--font-body); font-weight: 700; font-size: 16px; line-height: 1; text-decoration: none; position: relative; z-index: 2; align-self: flex-start;" style-hover="background: #E8EFFF; color: #373BF9;">Запросить демо</a>
-      </div><div style="position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 32px; min-height: 0;">
-        <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, calc(-50% - 45px)); display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; z-index: 1; pointer-events: none;">
+      </div><div style="position: static; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 32px; min-height: 0;">
+        <div style="position: absolute; inset: 0; display: flex; align-items: flex-end; justify-content: flex-end; z-index: 1; pointer-events: none; overflow: hidden;">
             
-          <img src="assets/as-hero-phone.webp" alt="Звонок с неизвестного номера" style="display: block; width: 1689px; height: 1195px; object-fit: contain; object-position: center; animation: float 9s ease-in-out infinite"></div>
+          <img src="assets/as-hero-phone.webp" alt="Звонок с неизвестного номера" style="display: block; width: auto; height: 76%; max-width: none; aspect-ratio: 1324 / 746; object-fit: contain; object-position: right bottom; margin-right: -7%; margin-bottom: -3%; animation: float 9s ease-in-out infinite"></div>
         
       </div>
 
       
     </div></section>
-  <div style="padding: 48px 64px; background: #FFFFFF;"><div style="font-family: var(--font-display); font-weight: 500; font-size: 32px; line-height: 1.2; letter-spacing: 0.02em; text-transform: uppercase; color: #373BF9; text-wrap: balance;">Когда опасность подстерегает в&nbsp;каждом звонке</div></div>
+  <div style="padding: 80px 80px 48px; background: #FFFFFF;"><div style="font-family: var(--font-display); font-weight: 500; font-size: 32px; line-height: 1.2; letter-spacing: 0.02em; text-transform: uppercase; color: #373BF9; text-wrap: balance;">Когда опасность подстерегает в&nbsp;каждом звонке</div></div>
 
 
   <div style="position: relative; z-index: 6; border-top: 0.74px solid #C6CADD; border-bottom: 0.74px solid #C6CADD; background: #E8EFFF; overflow: hidden;">
@@ -96,7 +88,7 @@
     </div>
   </div>
 
-  <section id="relevance" style="position: relative; padding: 250px 80px 120px; background: #FFFFFF;">
+  <section id="relevance" style="position: relative; padding: 120px 80px 120px; background: #FFFFFF;">
     <div style="position: relative; max-width: 1660px; margin: 0 auto;">
 
       <h2 style="margin: 0 0 32px; font-family: var(--font-display); font-weight: 500; font-size: 48px; line-height: 1; letter-spacing: 0.02em; text-transform: uppercase; color: #323030;"><span style="color: #373BF9;">Жертва</span>&nbsp;— любой<br>в&nbsp;этой толпе</h2>
@@ -167,7 +159,7 @@
           <div style="display: flex; flex-direction: column; gap: 32px; align-items: flex-start; align-self: stretch;">
             <h3 style="margin: 0; align-self: stretch; font-family: var(--font-display); font-weight: 500; font-size: clamp(28px, 2.6vw, 44px); line-height: 100%; text-transform: uppercase; color: #323030;">Как&nbsp;создаются дипфейки</h3>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); align-self: stretch; border-top: 1px solid #000000; border-bottom: 1px solid #000000;">
+            <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-self: stretch; border-top: 1px solid #000000; border-bottom: 1px solid #000000;">
 
               <div style="display: flex; flex-direction: column; gap: 24px; padding: 44px 32px; box-sizing: border-box; align-items: flex-start;">
                 <div style="display: flex; flex-direction: row; gap: 24px; align-items: flex-end; align-self: stretch;">

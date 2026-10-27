@@ -1,0 +1,180 @@
+/* tokens/fonts.css */
+/* Sifox webfonts. Druk Wide Cyr covers Latin + Cyrillic. */
+@font-face {
+  font-family: "Druk LCG";
+  src: url("assets/fonts/DrukWideCyr.woff2") format("woff2"),
+       url("assets/fonts/DrukWideCyr.woff") format("woff");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nunito";
+  src: url("assets/fonts/Nunito-VariableFont_wght.woff2") format("woff2");
+  font-weight: 200 1000;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nunito";
+  src: url("assets/fonts/Nunito-Italic-VariableFont_wght.woff2") format("woff2");
+  font-weight: 200 1000;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* tokens/colors.css */
+/* Sifox color tokens — exact values from the Figma palette frame. */
+:root {
+  /* Accents */
+  --accent: #373BF9;      /* primary electric blue */
+  --accent-2: #FF87CE;    /* pink */
+  --accent-3: #697DFF;    /* periwinkle */
+  --accent-4: #A5BDFF;    /* light periwinkle */
+  --accent-5: #B9D1FF;    /* pale blue */
+
+  /* Backgrounds */
+  --main: #FFFFFF;
+  --bg-soft: #E8EFFF;     /* "back ground" — info blocks */
+  --bg-message: #D1E1FF;  /* "message" — chat bubbles */
+
+  /* Text */
+  --text: #323030;        /* primary text */
+  --text-2: #74748F;      /* secondary text */
+  --text-3: #9292AD;      /* tertiary text */
+  --heading: #2E313E;     /* spec-frame display headings */
+  --label: #7F8291;       /* small labels */
+  --border-muted: #C6CADD;
+
+  /* Support */
+  --ink: #393C4B;         /* shadow base color */
+  --dark: #232323;
+  --navy: #131E55;
+  --success: #0AB290;
+  --teal: #49B1A4;
+  --badge-red: #FF3B30;
+
+  /* Semantic aliases */
+  --surface-page: var(--main);
+  --surface-block: var(--bg-soft);
+  --surface-card: var(--main);
+  --text-heading: var(--text);
+  --text-body: var(--text);
+  --text-muted: var(--text-2);
+
+  /* Gradients */
+  --grad-accent: linear-gradient(143.513deg, #92AEFF -6.09%, #373BF9 79.65%); /* @kind other */
+  --grad-accent-icon: linear-gradient(213.476deg, #7578FF 8.37%, #373BF9 110.93%); /* @kind other */
+  --grad-cover: radial-gradient(2260.994px 1275.229px at 9.19% 0.00%, #92AEFF 23.51%, #373BF9 86.70%); /* @kind other */
+  --grad-slide: linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(23.228deg, #E3E3E3 -33.35%, #FAFAFA 89.95%); /* @kind other */
+  --grad-block-tint: linear-gradient(128.755deg, #E8F0FF 17.16%, #4C5EFF 165.59%); /* @kind other */
+}
+
+/* tokens/typography.css */
+/* Sifox type system. Display = Druk LCG Wide; body = Nunito. */
+:root {
+  --font-display: "Druk LCG", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Spec-sheet title: Druk 500 */
+  --type-title-size: 82.835px;
+  --type-title-ls: 0.05em;
+
+  /* Slide title: Druk 500 */
+  --type-slide-title-size: 62px;
+  --type-slide-title-ls: 0.02em;
+
+  /* Subtitle: Nunito 500 */
+  --type-subtitle-size: 64px;
+  --type-subtitle-lh: 72px;
+
+  /* Block heading: Druk 500 */
+  --type-block-title-size: 24px;
+  --type-block-title-lh: 32px;
+  --type-block-title-ls: 0.02em;
+
+  /* Body: Nunito 400 */
+  --type-body-size: 24px;
+  --type-body-lh: 28px;
+
+  /* Small / UI: Nunito */
+  --type-small-size: 16px;
+  --type-small-lh: 20px;
+  --type-label-ls: 0.05em;
+
+  /* ---- Mobile ---- */
+  /* Title: Druk 500 */
+  --type-m-title-size: 24px;
+  --type-m-title-lh: 28px;
+  --type-m-title-ls: 0.02em;
+
+  /* Small title: Druk 500 */
+  --type-m-subtitle-size: 16px;
+  --type-m-subtitle-lh: 20px;
+  --type-m-subtitle-ls: 0.02em;
+
+  /* Body: Nunito 400 */
+  --type-m-body-size: 16px;
+  --type-m-body-lh: 22px;
+}
+
+/* tokens/effects.css */
+/* Sifox shadows, radii, borders — exact values from the file. */
+:root {
+  --shadow-card: 0px 4px 10.7px 0px rgba(57,60,75,0.3);
+  --shadow-icon: 0px 7.5px 20.063px 0px rgba(57,60,75,0.3);
+  --shadow-soft: 0px 0px 16px 0px rgba(57,60,75,0.1), 0px 10px 16px 0px rgba(57,60,75,0.05);
+  --shadow-emboss: inset -2px -2px 4px 0px rgba(0,0,0,0.04), inset 0px 4px 4px 0px rgba(255,255,255,0.15);
+
+  /* Slide info blocks are square-cornered; cards inside schemes round to 12. */
+  --radius-block: 0px;
+  --radius-chip: 8px;
+  --radius-card: 12px;
+  --radius-icon: 11.25px;
+  --radius-icon-lg: 27px;
+  --radius-bankcard: 40px;
+
+  --border-hairline: 0.74px solid rgba(127,130,145,0.5); /* @kind other */
+  --connector-stroke: 1.5px;
+  --connector-color: var(--accent);
+}
+
+/* tokens/base.css */
+/* Minimal base — body + link colors from the palette. */
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--surface-page);
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-3); }
+
+/* components/fig-tokens.css */
+/* Generated from Figma Variables. First mode = :root default.
+   FLOAT tokens are unitless — multiply by 1px in calc() where a length is needed. */
+
+:root {
+  --accent-2: rgb(55,59,249); /* @kind color */
+  --accent-4: rgb(165,189,255); /* @kind color */
+  --accent5: rgb(185,209,255); /* @kind color */
+  --accent: rgb(55,59,249); /* @kind color */
+  --assistant-main: rgb(255,255,255); /* @kind color */
+  --assistant-text-dark: rgb(35,35,35); /* @kind color */
+  --main-2: rgb(255,255,255); /* @kind color */
+  --main-3: rgb(57,60,75); /* @kind color */
+  --main: rgb(255,255,255); /* @kind color */
+  --secondary: rgb(116,116,143); /* @kind color */
+  --text-2: rgb(50,48,48); /* @kind color */
+  --text: rgb(50,48,48); /* @kind color */
+}
+
+/* components/fig-typography.css */
+/* No TEXT/EFFECT styles in this file. */
+
+/* components/fig-assets.css */
+/* Generated by fig_materialize — background/mask classes for extracted bitmaps.
+ * One rule per line; url()s are relative to this file, so it must stay
+ * next to the assets/ directory it references. */
+.fig-asset-6314ca2c11127627-a28138bc { background: url(./assets/6314ca2c11127627.png) top left / 1720px 1080px repeat; }
+.fig-asset-809afe28d47dd07b { background: url(./assets/809afe28d47dd07b.jpg) center / cover no-repeat; }
+
